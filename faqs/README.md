@@ -190,7 +190,7 @@ Ja – es hängt von Ihrem Anwendungsfall ab. Im industriellen Umfeld werden Ras
 Dies sind die derzeit verfügbaren [Modelle des Raspberry Pi](https://www.raspberrypi.org/products/): das Pi 3 Model B, das Pi 2 Model B, das Pi Zero, das Pi Zero W und das Pi 1 Modell B+ und A+.
 
 | Produkt | SoC | Geschwindigkeit | RAM | USB-Anschlüsse | Ethernet | Drahtlos | Bluetooth |
-|---------|-----|-------|-----|:--------:|:--------- -:|:--------:|:---------:|
+|---------|-----|-------|-----|:--------:|:--------:|:--------:|:---------:|
 | Raspberry Pi Modell A+ | BCM2835 | 700MHz | 512 MB | 1 | Nein | Nein | Nein |
 | Raspberry Pi Modell B+ | BCM2835 | 700MHz | 512 MB | 4 |100Base-T | Nein | Nein |
 | Raspberry Pi 2 Modell B | BCM2836/7 | 900MHz | 1GB | 4 |100Base-T| Nein | Nein |
