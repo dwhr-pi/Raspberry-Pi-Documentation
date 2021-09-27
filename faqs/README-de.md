@@ -453,7 +453,7 @@ Das Gerät muss mit einem 5V-Netzteil mit USB-Anschluss versorgt werden; USB-C f
 
 | Produkt | Empfohlene Stromkapazität des Netzteils | Maximale Gesamtstromaufnahme von USB-Peripheriegeräten | Typischer aktiver Stromverbrauch des Bare-Boards |
 |-|-|-|-|
-|Himbeer-Pi-Modell A | 700mA | 500mA | 200mA |
+| Raspberry-Pi-Modell A | 700mA | 500mA | 200mA |
 | Raspberry Pi-Modell B |1,2A | 500mA | 500mA |
 | Raspberry Pi Modell A+ | 700mA | 500mA | 180mA
 | Raspberry Pi Modell B+ | 1,8A | 1,2A | 330mA |
@@ -488,7 +488,7 @@ Dies ist die typische Strommenge (in Ampere), die von verschiedenen Raspberry Pi
 
 <a name="pi-power-usbhub"></a>
 ### Kann ich den Raspberry Pi über einen USB-Hub mit Strom versorgen?
-XXXXXXXXXXXXXX
+
 Es hängt von dem Hub ab. Einige Hubs entsprechen dem USB 2.0-Standard und bieten nur 500 mA pro Port, was möglicherweise nicht ausreicht, um Ihren Raspberry Pi mit Strom zu versorgen. Andere Hubs betrachten die USB-Standards eher als Richtlinien und liefern von jedem Port so viel Strom, wie Sie möchten. Bitte beachten Sie auch, dass einige Hubs dafür bekannt sind, den Raspberry Pi *zurückzuspeisen*. Dies bedeutet, dass die Hubs den Raspberry Pi über sein USB-Eingangskabel mit Strom versorgen, ohne dass ein separates Micro-USB-Stromkabel erforderlich ist, und den Spannungsschutz umgehen. Wenn Sie einen Hub verwenden, der zum Raspberry Pi *zurückgespeist* wird und der Hub einen Stromstoß erfährt, könnte Ihr Raspberry Pi möglicherweise beschädigt werden.
 
 <a name="pi-power-battbackup"></a>
@@ -539,7 +539,6 @@ Wenn Sie das Gerät blockieren, können Sie es wiederherstellen, indem Sie die S
 
 Die Versionen Raspberry Pi 1 Model B und B+, Raspberry Pi 2 und Raspberry Pi 3 Model B des Geräts verfügen über ein integriertes 10/100 verkabeltes Ethernet. Der Raspberry Pi 3B+ und Raspberry Pi 4 verfügen über 1000BaseT verkabeltes Ethernet, aber beim 3B+ ist der Durchsatz durch die USB 2.0-Verbindung zum SoC begrenzt. Beim Raspberry Pi 1 Model A und A+ und beim Raspberry Pi Zero/Zero W gibt es kein Ethernet.
 
-XXXXXXXXXXXXXXXXXXX
 <a name="networking-builtinwifi"></a>
 ### Gibt es ein integriertes drahtloses Netzwerk?
 

@@ -27,7 +27,7 @@ Grundlegende Beispiele, die Ihnen den Einstieg in einige der in Raspberry Pi OS 
     - Anwendungen und Bibliotheken sind verfügbar für:
         - [Linux-Befehlszeile](camera/raspicam/README.md)
         - [Python](Kamera/Python/README.md)
-- [Webcams](Webcams/README.md)
+- [Webcams](webcams/README.md)
     - Verwendung einer Standard-USB-Webcam anstelle des Raspberry Pi-Kameramoduls
 - [Kodi](kodi/README.md)
     - Installieren der Media Center-Software auf Ihrem Raspberry Pi
