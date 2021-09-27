@@ -147,9 +147,9 @@ Die folgenden Preise sind in US-Dollar und exklusive lokaler Steuern und Versand
 
 Raspberry Pi-Computer sind einzeln oder als komplette Kits erhältlich, die alles enthalten, was Sie für den Einstieg benötigen, einschließlich Maus, HDMI-Kabel, SD-Karte, Netzteil sowie unserem offiziellen Einsteigerhandbuch. Der Raspberry Pi 400 ist ein Computer in einer Tastatur: Andere Kits werden mit einem separaten Gehäuse und einer separaten Tastatur geliefert.
 
-Raspberry Pi verkauft auch alle Geräte, die Sie benötigen, um Ihren Raspberry Pi separat zum Laufen zu bringen. Wir empfehlen die Verwendung eines offiziellen Raspberry Pi Netzteils. Verwenden Sie für den Pi Zero, 1, 2 und 3 das [Raspberry Pi 1, 2 und 3 Netzteil](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/), für die Pi 4B und Pi 400 verwenden das [Raspberry Pi USB-C Netzteil] (https://www.raspberrypi.org/products/type-c-power-supply/).
+Raspberry Pi verkauft auch alle Geräte, die Sie benötigen, um Ihren Raspberry Pi separat zum Laufen zu bringen. Wir empfehlen die Verwendung eines offiziellen Raspberry Pi Netzteils. Verwenden Sie für den Pi Zero, 1, 2 und 3 das [Raspberry Pi 1, 2 und 3 Netzteil](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/), für die Pi 4B und Pi 400 verwenden das [Raspberry Pi USB-C Netzteil](https://www.raspberrypi.org/products/type-c-power-supply/).
 
-Offizielle Hüllen für die Raspberry Pi-Reihe sind separat erhältlich [von unseren Distributoren](https://www.raspberrypi.org/products/). Community-Mitglieder haben viele tolle [3D-druckbare Hüllen] entworfen (https://www.raspberrypi.org/blog/3d-printed-raspberry-pi-cases/)
+Offizielle Hüllen für die Raspberry Pi-Reihe sind separat erhältlich [von unseren Distributoren](https://www.raspberrypi.org/products/). Community-Mitglieder haben viele tolle [3D-druckbare Hüllen](https://www.raspberrypi.org/blog/3d-printed-raspberry-pi-cases/) entworfen. 
 
 Ausführliche Informationen zu all unseren Produkten finden Sie auf unserer [Produktseite](https://www.raspberrypi.org/products/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 
@@ -164,7 +164,7 @@ Keine Sorge, soweit wir wissen, gibt es keine gefälschten Raspberry Pis. Die in
 <a name="commercial-resell"></a>
 ### Ich möchte Reseller von Raspberry Pi werden.
 
-Wir haben eine exklusive Herstellungs- und Vertriebsvereinbarung mit [RS](http://uk.rs-online.com/web/generalDisplay.html?id=raspberrypi) und [Farnell](https://www.element14.com/ Community/Community/Himbeer-Pi). Wiederverkäufer kaufen den Raspberry Pi in großen Mengen bei ihnen (was die Versandkosten auf fast nichts reduziert) und verkaufen sie weiter. Für den Weiterverkauf benötigen Sie keine spezielle Lizenz, und die Distributoren verkaufen sehr gerne an Wiederverkäufer. Wenn Sie daran interessiert sind, an unserem [Approved Reseller](https://www.raspberrypi.org/blog/approved-reseller/)-Programm teilzunehmen, kontaktieren Sie uns per E-Mail an info@raspberrypi.com.
+Wir haben eine exklusive Herstellungs- und Vertriebsvereinbarung mit [RS](http://uk.rs-online.com/web/generalDisplay.html?id=raspberrypi) und [Farnell](https://www.element14.com/community/community/raspberry-pi). Wiederverkäufer kaufen den Raspberry Pi in großen Mengen bei ihnen (was die Versandkosten auf fast nichts reduziert) und verkaufen sie weiter. Für den Weiterverkauf benötigen Sie keine spezielle Lizenz, und die Distributoren verkaufen sehr gerne an Wiederverkäufer. Wenn Sie daran interessiert sind, an unserem [Zugelassener Wiederverkäufer](https://www.raspberrypi.org/blog/approved-reseller/)-Programm mit teilzunehmen, kontaktieren Sie uns per E-Mail an info@raspberrypi.com.
 
 <a name="commercial-compliance"></a>
 ### Welche Fertigungsstandards etc. erfüllt der Raspberry Pi?
@@ -190,7 +190,7 @@ Ja – es hängt von Ihrem Anwendungsfall ab. Im industriellen Umfeld werden Ras
 Dies sind die derzeit verfügbaren [Modelle des Raspberry Pi](https://www.raspberrypi.org/products/): das Pi 3 Model B, das Pi 2 Model B, das Pi Zero, das Pi Zero W und das Pi 1 Modell B+ und A+.
 
 | Produkt | SoC | Geschwindigkeit | RAM | USB-Anschlüsse | Ethernet | Drahtlos | Bluetooth |
-|---------|-----|-------|-----|:--------:|:--------- -:|:--------:|:---------:|
+|---------|-----|-------|-----|:--------:|:--------:|:--------:|:---------:|
 | Raspberry Pi Modell A+ | BCM2835 | 700MHz | 512 MB | 1 | Nein | Nein | Nein |
 | Raspberry Pi Modell B+ | BCM2835 | 700MHz | 512 MB | 4 |100Base-T | Nein | Nein |
 | Raspberry Pi 2 Modell B | BCM2836/7 | 900MHz | 1GB | 4 |100Base-T| Nein | Nein |
@@ -237,12 +237,12 @@ Die gesamte verfügbare Dokumentation befindet sich in unserem [Dokumentations-R
 
 Je nach Modell verfügt der Raspberry Pi über 40 oder 26 dedizierte Schnittstellenpins. Dazu gehören in allen Fällen ein UART, ein I2C-Bus, ein SPI-Bus mit zwei Chip-Selects, I2S-Audio, 3V3, 5V und Masse. Die maximale Anzahl von GPIOs kann theoretisch durch die Nutzung des I2C- oder SPI-Busses unbegrenzt erweitert werden.
 
-Es gibt auch einen dedizierten CSI-2-Kamera-Port für das [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/) und einen DSI-Display-Port für das [Raspberry Pi LCD-Touchscreen-Display](https: //www.raspberrypi.org/products/raspberry-pi-touch-display/).
+Es gibt auch einen dedizierten CSI-2-Kamera-Port für das [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/) und einen DSI-Display-Port für das [Raspberry Pi LCD-Touchscreen-Display](https://www.raspberrypi.org/products/raspberry-pi-touch-display/).
 
 <a name="hardware-inputs"></a>
 ### Kann ich einen Raspberry Pi für die Audio- oder Videoeingabe verwenden?
 
-Nicht an sich: Es gibt keine Audio- oder Video-(HDMI/Composite)-IN-Fähigkeit auf dem Raspberry Pi. Sie können Boards von Drittanbietern hinzufügen, um diese Art von Funktionalität hinzuzufügen. Der Raspberry Pi verfügt über eine Kameraschnittstelle, die Videos vom [Raspberry Pi Camera Module] (https://www.raspberrypi.org/products/) aufnehmen kann – Sie finden den Abschnitt [FAQ zum Kameramodul hier](#cameramodule) .
+Nicht an sich: Es gibt keine Audio- oder Video-(HDMI/Composite)-IN-Fähigkeit auf dem Raspberry Pi. Sie können Boards von Drittanbietern hinzufügen, um diese Art von Funktionalität hinzuzufügen. Der Raspberry Pi verfügt über eine Kameraschnittstelle, die Videos vom [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/) aufnehmen kann – Sie finden den Abschnitt [FAQ zum Kameramodul hier](#cameramodule).
 
 <a name="hardware-onoff"></a>
 ### Wo ist der Ein-/Ausschalter?
@@ -304,8 +304,7 @@ Sie sollten keinen Kühlkörper verwenden, da der im Raspberry Pi verwendete Chi
 Der Raspberry Pi 400 verwendet einen großen Heatspreader im Gehäuse und benötigt keine zusätzliche Kühlung.
 
 <a name="pi-software"></a>
-
-##Software
+## Software
 
 <a name="pi-software-os"></a>
 ### Welches Betriebssystem verwendet es?
@@ -355,9 +354,9 @@ Raspberry Pi selbst unterstützt nicht die Consumer-Version von Android, die Sie
 Google unterstützt Android Things auf dem Raspberry Pi 3 als Entwicklungsplattform. Android Things ist eine Variante der Android-Plattform, die es Entwicklern ermöglicht, mit dem Android SDK Software für eingebettete Geräte und Geräte für das Internet der Dinge (IoT) zu erstellen. Um mehr über die Plattform und die ersten Schritte zu erfahren, besuchen Sie [developer.android.com/things](https://developer.android.com/things/index.html).
 
 <a name="pi-software-oldcompat"></a>
-### Wird alte Software ausgeführt?
+### Kann alte Software ausgeführt werden?
 
-Generell müssen Sie prüfen, ob das gewünschte Programm für die Architektur Armv6 (Raspberry Pi 1/Zero/Zero W/CM), Armv7 (Raspberry Pi 2) oder Armv8 (Raspberry Pi 3) unter Linux kompiliert werden kann. In den meisten Fällen wird die Antwort ja sein. Spezifische Programme werden in [unseren Foren] (https://www.raspberrypi.org/forums/) diskutiert, daher sollten Sie dort nach einer Antwort suchen. Letztendlich gibt es nichts Besseres, als sich einen Raspberry Pi zu schnappen und die Antwort durch direktes Testen herauszufinden!
+Generell müssen Sie prüfen, ob das gewünschte Programm für die Architektur Armv6 (Raspberry Pi 1/Zero/Zero W/CM), Armv7 (Raspberry Pi 2) oder Armv8 (Raspberry Pi 3) unter Linux kompiliert werden kann. In den meisten Fällen wird die Antwort ja sein. Spezifische Programme werden in [unseren Foren](https://www.raspberrypi.org/forums/) diskutiert, daher sollten Sie dort nach einer Antwort suchen. Letztendlich gibt es nichts Besseres, als sich einen Raspberry Pi zu schnappen und die Antwort durch direktes Testen herauszufinden!
 
 <a name="pi-software-exefail"></a>
 ### Meine `.exe`-Datei wird nicht ausgeführt!
@@ -367,7 +366,7 @@ Die meisten `.exe`-Dateien stammen von Windows und sind für die x86-Prozessorar
 <a name="pi-software-fileshare"></a>
 ### Kann ich Dateien von meinem Raspberry Pi mit meinen Windows-Rechnern teilen?
 
-Ja, es gibt eine Reihe von Möglichkeiten, dies zu tun, und die gebräuchlichste ist die Verwendung sogenannter Samba-Freigaben. Wir haben noch keine spezifische Dokumentation zu Samba-Freigaben in unseren offiziellen Dokumenten, aber [hier] (https://www.raspberrypi.org/magpi/samba-file-server/) finden Sie einige aus unserem Magazin [The MagPi](https://www.raspberrypi.org/magpi).
+Ja, es gibt eine Reihe von Möglichkeiten, dies zu tun, und die gebräuchlichste ist die Verwendung sogenannter Samba-Freigaben. Wir haben noch keine spezifische Dokumentation zu Samba-Freigaben in unseren offiziellen Dokumenten, aber [hier](https://www.raspberrypi.org/magpi/samba-file-server/) finden Sie einige aus unserem Magazin [The MagPi](https://www.raspberrypi.org/magpi).
 
 Es ist auch einfach, Dateien auf und von Windows-Geräten zu kopieren, anstatt Ordner freizugeben. Es gibt reichlich Dokumentation [hier](../remote-access/README.md).
 
@@ -414,7 +413,7 @@ Die Raspberry Pi Foundation stellt einen 7" kapazitiven [Touchscreen](https://ww
 <a name="pi-video-codecs"></a>
 ### Welche Codecs kann es abspielen?
 
-Der Raspberry Pi kann H.264 (MP4/MKV) out of the box kodieren (aufzeichnen) und dekodieren (wiedergeben). Es gibt auch zwei zusätzliche Codecs, die Sie [über unseren Swag Store kaufen](http://swag.raspberrypi.org/collections/software) können, mit denen Sie [MPEG-2] entschlüsseln können (http://swag.raspberrypi.org .). /collections/software/products/mpeg-2-license-key), ein sehr beliebtes und weit verbreitetes Format zum Kodieren von DVDs, Videokameraaufnahmen, TV und vielen anderen, und [VC-1](http://swag.raspberrypi .org/collections/software/products/vc-1-license-key), ein Microsoft-Format, das auf Blu-ray-Discs, Windows Media, Slingbox und HD-DVDs zu finden ist.
+Der Raspberry Pi kann H.264 (MP4/MKV) out of the box kodieren (aufzeichnen) und dekodieren (wiedergeben). Es gibt auch zwei zusätzliche Codecs, die Sie [über unseren Swag Store kaufen](http://swag.raspberrypi.org/collections/software) können, mit denen Sie [MPEG-2](http://swag.raspberrypi.org/collections/software/products/mpeg-2-license-key) entschlüsseln können, ein sehr beliebtes und weit verbreitetes Format zum Kodieren von DVDs, Videokameraaufnahmen, TV und vielen anderen, und [VC-1](http://swag.raspberrypi.org/collections/software/products/vc-1-license-key), ein Microsoft-Format, das auf Blu-ray-Discs, Windows Media, Slingbox und HD-DVDs zu finden ist.
 
 Auf dem Raspberry Pi 4 ist die zusätzliche Hardware-CODEC-Unterstützung für MPEG-2 und VC-1 nicht verfügbar: Da die Prozessoren des Raspberry Pi 4 leistungsstark genug sind, um diese in Software zu entschlüsseln, ist keine CODEC-Lizenz erforderlich. Darüber hinaus verfügt der Raspberry Pi 4 auch über Hardware-Unterstützung für die Dekodierung von H265/HEVC.
 
@@ -513,7 +512,7 @@ Die GPIO-Pins sind nativ 3,3 V, daher MÜSSEN 5-V-Geräte ** NICHT ** direkt ohn
 <a name="sd-cards-need"></a>
 ### Welche SD-Kartengröße benötige ich?
 
-Ob Sie das [offizielle Raspberry Pi OS Betriebssystem](https://www.raspberrypi.org/downloads/raspbian/) (oder den [NOOBS Installer für Raspberry Pi OS](https://www.raspberrypi. org/downloads/noobs/) oder ein anderes eigenständiges Betriebssystem-Image (siehe [empfohlenes Betriebssystem von Drittanbietern](https://www.raspberrypi.org/downloads/)), **die von uns empfohlene SD-Karte mit minimaler Größe ist 8 GB**. Dies gibt Ihnen den freien Speicherplatz, den Sie benötigen, um zusätzliche Pakete zu installieren oder eigene Programme zu erstellen. Die ursprünglichen Raspberry Pi Modell A und Modell B erfordern SD-Karten in voller Größe. Das neuere Raspberry Pi 1 Modell A+, Modell 1 B+, 2B, 3B, 3B+, 3A+, 4B, Zero, Zero W und Zero WH erfordern microSD-Karten.
+Ob Sie das [offizielle Raspberry Pi OS Betriebssystem](https://www.raspberrypi.org/downloads/raspbian/) (oder den [NOOBS Installer für Raspberry Pi OS](https://www.raspberrypi.org/downloads/noobs/) oder ein anderes eigenständiges Betriebssystem-Image (siehe [empfohlenes Betriebssystem von Drittanbietern](https://www.raspberrypi.org/downloads/)), **die von uns empfohlene SD-Karte mit minimaler Größe ist 8 GB**. Dies gibt Ihnen den freien Speicherplatz, den Sie benötigen, um zusätzliche Pakete zu installieren oder eigene Programme zu erstellen. Die ursprünglichen Raspberry Pi Modell A und Modell B erfordern SD-Karten in voller Größe. Das neuere Raspberry Pi 1 Modell A+, Modell 1 B+, 2B, 3B, 3B+, 3A+, 4B, Zero, Zero W und Zero WH erfordern microSD-Karten.
 
 <a name="sd-cards-want"></a>
 ### Welche SD-Kartengröße wird unterstützt?
@@ -625,7 +624,7 @@ Um Ihre Informationen zu schützen, zeigt Linux nichts an, wenn Sie Passwörter 
 <a name="troubleshoot-boot"></a>
 ### Warum startet/bootet mein Raspberry Pi nicht?
 
-Die wohl am häufigsten gestellte Frage! Wir haben eine vollständige Anleitung zum Einrichten Ihres Raspberry Pi [hier](../setup/), aber wenn er immer noch nicht bootet, finden Sie im [Troubleshooting-Beitrag in unserem Forum](https:/ /www.raspberrypi.org/forums/viewtopic.php?f=28&t=58151).
+Die wohl am häufigsten gestellte Frage! Wir haben eine vollständige Anleitung zum Einrichten Ihres Raspberry Pi [hier](../setup/), aber wenn er immer noch nicht bootet, finden Sie im [Troubleshooting-Beitrag in unserem Forum](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=58151).
 
 <a name="troubleshoot-temp"></a>
 ### Warum ist mein Raspberry Pi heiß?
@@ -649,10 +648,10 @@ SD-Karten haben aufgrund ihrer Funktionsweise eine begrenzte Lebensdauer. In den
 <a name="troubleshoot-fs"></a>
 ### Ich habe eine SD-Karte mit Raspberry Pi OS/NOOBS erstellt, aber wenn ich sie mit meinem Windows-PC betrachte, ist nicht alles da!
 
-Dies hat mit den Fähigkeiten von Windows zu tun, Linux-formatierte Partitionen zu lesen. Wenn Sie die SD-Karte abbilden, wird sie automatisch in mehrere Partitionen aufgeteilt. Die erste Partition verwendet ein Format, das Windows lesen kann, aber die anderen Partitionen verwenden ein Linux-spezifisches Dateisystem, das Windows einfach nicht erkennt. Das bedeutet, wenn Sie eine SD-Karte in einen Windows-Rechner einlegen, wird nur die erste Partition angezeigt, und es kann durchaus sein, dass die anderen Partitionen beschädigt sind und formatiert werden müssen - **nicht formatieren**! Hier sind einige Informationen darüber, was in dieser ersten [Partition] (../configuration/boot_folder.md) enthalten ist. Wenn Sie die SD-Karte in einen Computer mit Linux einlegen, werden alle Partitionen korrekt angezeigt.
+Dies hat mit den Fähigkeiten von Windows zu tun, Linux-formatierte Partitionen zu lesen. Wenn Sie die SD-Karte abbilden, wird sie automatisch in mehrere Partitionen aufgeteilt. Die erste Partition verwendet ein Format, das Windows lesen kann, aber die anderen Partitionen verwenden ein Linux-spezifisches Dateisystem, das Windows einfach nicht erkennt. Das bedeutet, wenn Sie eine SD-Karte in einen Windows-Rechner einlegen, wird nur die erste Partition angezeigt, und es kann durchaus sein, dass die anderen Partitionen beschädigt sind und formatiert werden müssen - **nicht formatieren**! Hier sind einige Informationen darüber, was in dieser ersten [Partition](../configuration/boot_folder.md) enthalten ist. Wenn Sie die SD-Karte in einen Computer mit Linux einlegen, werden alle Partitionen korrekt angezeigt.
 
 ## Ich habe noch weitere Fragen!
 
-Lesen Sie die wichtigen Themen im [Unterforum für Anfänger](https://www.raspberrypi.org/forums/viewforum.php?f=91) und überprüfen Sie die [Hilfeseiten](https://www.raspberrypi.org/help /) für mehr Informationen. Wenn die Antwort nicht dabei ist, frag in [den Foren] (https://www.raspberrypi.org/forums), wo es viele hilfreiche Raspberry Pi-Besitzer, -Benutzer und -Fans gibt, die dir gerne weiterhelfen aus.
+Lesen Sie die wichtigen Themen im [Unterforum für Anfänger](https://www.raspberrypi.org/forums/viewforum.php?f=91) und überprüfen Sie die [Hilfeseiten](https://www.raspberrypi.org/help/) für mehr Informationen. Wenn die Antwort nicht dabei ist, frag in [den Foren](https://www.raspberrypi.org/forums), wo es viele hilfreiche Raspberry Pi-Besitzer, -Benutzer und -Fans gibt, die dir gerne weiterhelfen aus.
 
 
