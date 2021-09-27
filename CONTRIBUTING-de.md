@@ -25,8 +25,8 @@ Die Lizenz muss in allen Derivaten dieses Werkes verbleiben.
 
 ## Lizenz
 
-[![Creative Commons-Lizenz](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![Creative Commons Attribution-ShareAlike 4.0 International](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/ )
 
-***Raspberry Pi Documentation*** von der [Raspberry Pi Foundation](https://www.raspberrypi.org/) ist unter der [Creative Commons Attribution 4.0 International Licence](http://creativecommons.org/licenses .) lizenziert /von-sa/4.0/).
+***Raspberry Pi Dokumentation*** von der [Raspberry Pi Foundation](https://www.raspberrypi.org/) ist unter der [Creative Commons Attribution 4.0 International Licence](https://creativecommons.org/licenses/by-sa/4.0/) lizenziert.
 
 Basierend auf einer Arbeit unter https://github.com/raspberrypi/documentation

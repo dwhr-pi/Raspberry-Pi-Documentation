@@ -6,13 +6,13 @@ Dies ist die offizielle Dokumentation für den Raspberry Pi, geschrieben von der
 
 - [Setup/Schnellstart](setup/README.md)
     - Erste Schritte mit Ihrem Raspberry Pi, einschließlich dessen, was Sie brauchen und wie Sie ihn booten können
-- [Installation](Installation/README.md)
+- [Installation](installation/README.md)
     - Installieren eines Betriebssystems auf Ihrem Raspberry Pi
 - [Bedienungsanleitung](usage/README.md)
     - Erkunden Sie den Desktop und probieren Sie alle Hauptanwendungen aus
-- [Konfiguration] (Konfiguration/README.md)
+- [Konfiguration](configuration/README.md)
     - Konfigurieren Sie die Einstellungen des Pi nach Ihren Bedürfnissen
-- [Fernzugriff] (Fernzugriff/README.md)
+- [Fernzugriff](remote-access/README.md)
     - Fernzugriff auf Ihren Pi über SSH, VNC oder über das Web
 - [Linux](linux/README.md)
     - Grundlegende Linux-Nutzung für Anfänger und fortgeschrittene Informationen für Power-User
@@ -39,6 +39,6 @@ Sofern nicht anders angegeben, unterliegt alles in diesem Repository der folgend
 
 [![Creative Commons Attribution-ShareAlike 4.0 International](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/ )
 
-***Raspberry Pi Documentation*** von der [Raspberry Pi Foundation](https://www.raspberrypi.org/) ist unter der [Creative Commons Attribution 4.0 International Licence](https://creativecommons.org/licenses .) lizenziert /von-sa/4.0/).
+***Raspberry Pi Dokumentation*** von der [Raspberry Pi Foundation](https://www.raspberrypi.org/) ist unter der [Creative Commons Attribution 4.0 International Licence](https://creativecommons.org/licenses/by-sa/4.0/) lizenziert.
 
 Basierend auf einer Arbeit unter https://github.com/raspberrypi/documentation
