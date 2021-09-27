@@ -1,78 +1,78 @@
-# Updating and upgrading Raspberry Pi OS
+# Aktualisieren und Aktualisieren von Raspberry Pi OS
 
-This section covers how to deploy software updates to devices running Raspberry Pi OS.
+In diesem Abschnitt wird beschrieben, wie Sie Softwareupdates auf Geräten bereitstellen, auf denen Raspberry Pi OS ausgeführt wird.
 
-Before we go any further, let's investigate why keeping our devices updated is important.
+Bevor wir fortfahren, untersuchen wir, warum es wichtig ist, unsere Geräte auf dem neuesten Stand zu halten.
 
-The first and probably the most important reason is security. A device running Raspberry Pi OS contains millions lines of code that you rely on. Over time, these millions lines of code will expose well-known vulnerabilities known as [Common Vulnerabilities and Exposures (CVE)](https://cve.mitre.org/index.html), which are documented in publicly available databases meaning that they are easy to exploit. [Here is a example](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8831) of a recent CVE found in KODI that provides a bit more insight on what information is available in the database and how CVEs are tracked. The only way to mitigate these exploits as a user of Raspberry Pi OS is to keep your software up to date, as the upstream repositories track CVEs closely and try to mitigate them quickly.
+Der erste und wahrscheinlich wichtigste Grund ist die Sicherheit. Ein Gerät mit Raspberry Pi OS enthält Millionen Codezeilen, auf die Sie sich verlassen. Im Laufe der Zeit werden diese Millionen Codezeilen bekannte Schwachstellen aufdecken, die als [Common Vulnerabilities and Exposures (CVE)] (https://cve.mitre.org/index.html) bekannt sind und in öffentlich zugänglichen Datenbanken dokumentiert sind sie sind leicht auszunutzen. [Hier ist ein Beispiel](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8831) eines kürzlich in KODI gefundenen CVE, das einen etwas mehr Einblick in die Informationen bietet in der Datenbank verfügbar sind und wie CVEs verfolgt werden. Die einzige Möglichkeit, diese Exploits als Benutzer von Raspberry Pi OS abzuschwächen, besteht darin, Ihre Software auf dem neuesten Stand zu halten, da die vorgelagerten Repositorys CVEs genau verfolgen und versuchen, sie schnell zu entschärfen.
 
-The second reason, which is related to the first, is that the software you are running on your device most certainly contains bugs. Some bugs are CVEs, but bugs could also be affecting the desired functionality without being related to security. By keeping your software up to date, you are lowering the chances of hitting these bugs.
+Der zweite Grund, der mit dem ersten zusammenhängt, ist, dass die Software, die Sie auf Ihrem Gerät ausführen, mit Sicherheit Fehler enthält. Einige Fehler sind CVEs, aber Fehler können auch die gewünschte Funktionalität beeinträchtigen, ohne mit der Sicherheit zu tun zu haben. Indem Sie Ihre Software auf dem neuesten Stand halten, verringern Sie die Wahrscheinlichkeit, dass diese Fehler auftreten.
 
-## APT (Advanced Packaging Tool)
+## APT (Erweitertes Verpackungstool)
 
-To update software in Raspberry Pi OS, you can use the [apt](../linux/software/apt.md) tool in a terminal. Open a terminal window from the taskbar or application menu:
+Um Software in Raspberry Pi OS zu aktualisieren, können Sie das Tool [apt](../linux/software/apt.md) in einem Terminal verwenden. Öffnen Sie ein Terminalfenster über die Taskleiste oder das Anwendungsmenü:
 
 ![Terminal](../usage/terminal/images/terminal.png)
 
-First, **update** your system's package list by entering the following command:
+**Aktualisieren** Sie zuerst die Paketliste Ihres Systems, indem Sie den folgenden Befehl eingeben:
 
 ```bash
-sudo apt update
+sudo apt-Update
 ```
 
-Next, **upgrade** all your installed packages to their latest versions with the following command:
+**Aktualisieren** Sie als Nächstes alle Ihre installierten Pakete mit dem folgenden Befehl auf die neueste Version:
 
 ```bash
-sudo apt full-upgrade
+sudo apt Voll-Upgrade
 ```
 
-Note that `full-upgrade` is used in preference to a simple `upgrade`, as it also picks up any dependency changes that may have been made. 
+Beachten Sie, dass `full-upgrade` einem einfachen `upgrade` vorgezogen wird, da es auch eventuell vorgenommene Abhängigkeitsänderungen aufnimmt.
 
-Generally speaking, doing this regularly will keep your installation up to date for the particular major Raspberry Pi OS release you are using (e.g. Stretch). It will not update from one major release to another, for example, Stretch to Buster.
+Im Allgemeinen hält dies regelmäßig Ihre Installation für die von Ihnen verwendete Hauptversion des Raspberry Pi-Betriebssystems (z. B. Stretch) auf dem neuesten Stand. Es wird nicht von einer Hauptversion auf eine andere aktualisiert, zum Beispiel Stretch to Buster.
 
-However, there are occasional changes made in the Foundation's Raspberry Pi OS image that require manual intervention, for example a newly introduced package. These are not installed with an upgrade, as this command only updates the packages you already have installed.
+Im Raspberry Pi OS-Image der Foundation werden jedoch gelegentlich Änderungen vorgenommen, die einen manuellen Eingriff erfordern, beispielsweise ein neu eingeführtes Paket. Diese werden bei einem Upgrade nicht installiert, da dieser Befehl nur die bereits installierten Pakete aktualisiert.
 
-### Updating the kernel and firmware
+### Aktualisieren des Kernels und der Firmware
 
-The kernel and firmware are installed as a Debian package, and so will also get updates when using the procedure above. These packages are updated infrequently and after extensive testing.
+Der Kernel und die Firmware werden als Debian-Paket installiert und erhalten daher auch Updates, wenn Sie das obige Verfahren verwenden. Diese Pakete werden selten und nach umfangreichen Tests aktualisiert.
 
-### Running out of space
+### Kein Platz mehr
 
-When running `sudo apt full-upgrade`, it will show how much data will be downloaded and how much space it will take up on the SD card. It's worth checking with `df -h` that you have enough free disk space, as unfortunately `apt` will not do this for you. Also be aware that downloaded package files (`.deb` files) are kept in `/var/cache/apt/archives`. You can remove these in order to free up space with `sudo apt clean` (`sudo apt-get clean` in older releases of apt).
+Beim Ausführen von `sudo apt full-upgrade` wird angezeigt, wie viele Daten heruntergeladen werden und wie viel Speicherplatz sie auf der SD-Karte einnehmen. Es lohnt sich, mit `df -h` zu überprüfen, ob Sie über genügend freien Speicherplatz verfügen, da `apt` dies leider nicht für Sie erledigt. Beachten Sie auch, dass heruntergeladene Paketdateien (`.deb`-Dateien) in `/var/cache/apt/archives` aufbewahrt werden. Sie können diese entfernen, um mit `sudo apt clean` (`sudo apt-get clean` in älteren Versionen von apt) Speicherplatz freizugeben.
 
-### Upgrading from Stretch to Buster
+### Upgrade von Stretch auf Buster
 
-**Warning**: Upgrading an existing Stretch image is possible, but is not guaranteed to work in every circumstance and we do not recommend it. If you do wish to try upgrading a Stretch image to Buster, we strongly suggest making a backup first — we can accept no responsibility for loss of data from a failed update.
+**Warnung**: Das Aktualisieren eines vorhandenen Stretch-Bildes ist möglich, aber es kann nicht garantiert werden, dass es unter allen Umständen funktioniert, und wir empfehlen es nicht. Wenn Sie versuchen möchten, ein Stretch-Image auf Buster zu aktualisieren, empfehlen wir dringend, zuerst ein Backup zu erstellen – wir übernehmen keine Verantwortung für Datenverluste durch ein fehlgeschlagenes Update.
 
-To upgrade, first modify the files `/etc/apt/sources.list` and `/etc/apt/sources.list.d/raspi.list`. In both files, change every occurrence of the word `stretch` to `buster`. (Both files will require sudo to edit.)
+Um ein Upgrade durchzuführen, ändern Sie zuerst die Dateien `/etc/apt/sources.list` und `/etc/apt/sources.list.d/raspi.list`. Ändern Sie in beiden Dateien jedes Vorkommen des Wortes `stretch` in `buster`. (Beide Dateien benötigen zum Bearbeiten sudo.)
 
-Then open a terminal window and execute:
+Öffnen Sie dann ein Terminalfenster und führen Sie Folgendes aus:
 
 ```bash
-sudo apt update
+sudo apt-Update
 sudo apt -y dist-upgrade
 ```
-Answer 'yes' to any prompts. There may also be a point at which the install pauses while a page of information is shown on the screen – hold the <kbd>space</kbd> key to scroll through all of this and then press <kbd>q</kbd> to continue.
+Beantworten Sie alle Eingabeaufforderungen mit „Ja“. Es kann auch vorkommen, dass die Installation an einer Stelle pausiert, während eine Seite mit Informationen auf dem Bildschirm angezeigt wird – halten Sie die <kbd>Leertaste</kbd> gedrückt, um durch all dies zu scrollen, und drücken Sie dann <kbd>q</kbd> weitermachen.
 
-Finally, if you are not using PulseAudio for anything other than Bluetooth audio, remove it from the image by entering:
+Wenn Sie PulseAudio schließlich nur für Bluetooth-Audio verwenden, entfernen Sie es aus dem Bild, indem Sie Folgendes eingeben:
 
 ```bash
 sudo apt -y purge "pulseaudio*"
 ```
 
-If moving to a new Pi model (for example the Pi 3B+), you may also need to update the kernel and the firmware using the instructions above.
+Wenn Sie zu einem neuen Pi-Modell (z. B. dem Pi 3B+) wechseln, müssen Sie möglicherweise auch den Kernel und die Firmware gemäß den obigen Anweisungen aktualisieren.
 
-## Third-party solutions
+## Lösungen von Drittanbietern
 
-This section addresses why third-party solutions may be of interest and why [apt](../linux/software/apt.md) is not optimal for all situations. Raspberry Pi do not recommend any specific third-party tools. Prospective users should determine the most suitable tool for their particular requirements.
+In diesem Abschnitt wird erläutert, warum Lösungen von Drittanbietern von Interesse sein können und warum [apt](../linux/software/apt.md) nicht für alle Situationen optimal ist. Raspberry Pi empfiehlt keine speziellen Tools von Drittanbietern. Potenzielle Benutzer sollten das für ihre speziellen Anforderungen am besten geeignete Werkzeug ermitteln.
 
-[Apt](../linux/software/apt.md) is a convenient way of updating the software of your device running Raspberry Pi OS, but the limitation of this method becomes apparent when you have a larger pool of devices to update, and especially when you do not have physical access to your devices and when they are distributed geographically.
+[Apt](../linux/software/apt.md) ist eine bequeme Möglichkeit, die Software Ihres Geräts mit Raspberry Pi OS zu aktualisieren, aber die Einschränkung dieser Methode wird deutlich, wenn Sie einen größeren Pool von zu aktualisierenden Geräten haben. und insbesondere, wenn Sie keinen physischen Zugriff auf Ihre Geräte haben und diese geografisch verteilt sind.
 
-If you lack physical access to your devices and want to deploy unattended updates Over-The-Air (OTA), here are some general requirements:
+Wenn Sie keinen physischen Zugriff auf Ihre Geräte haben und unbeaufsichtigte Updates Over-The-Air (OTA) bereitstellen möchten, finden Sie hier einige allgemeine Anforderungen:
 
-- Updating must not under any circumstances break (“brick”) the devices, e.g if the update is interrupted (power loss, network loss, etc.), the system should fall back to a working state
-- Updating must be [atomic](https://en.wikipedia.org/wiki/Atomicity_%28database_systems%29): update succeeded or update failed; nothing in between that could result in a device still “functioning” but with undefined behavior
-- Updating must be able to install images/packages that are cryptographically signed, preventing third parties from installing software on your device
-- Updating must be able to install updates using an secure communication channel
+- Das Update darf auf keinen Fall die Geräte brechen („Brick“), z.B. wenn das Update unterbrochen wird (Stromausfall, Netzwerkausfall, etc.), sollte das System in einen funktionierenden Zustand zurückfallen
+- Die Aktualisierung muss [atomar] sein (https://en.wikipedia.org/wiki/Atomicity_%28database_systems%29): Aktualisierung erfolgreich oder Aktualisierung fehlgeschlagen; nichts dazwischen, was dazu führen könnte, dass ein Gerät noch „funktioniert“, aber mit undefiniertem Verhalten
+- Bei der Aktualisierung müssen kryptographisch signierte Images/Pakete installiert werden können, um zu verhindern, dass Dritte Software auf Ihrem Gerät installieren
+- Das Update muss in der Lage sein, Updates über einen sicheren Kommunikationskanal zu installieren
 
-Unfortunately [apt](../linux/software/apt.md) lacks the robustness features, i.e. atomicity and fall-back. This is why third-party solutions have started to appear that try to solve the problems that need to be addressed for deploying unattended updates OTA.
+Leider fehlen [apt](../linux/software/apt.md) die Robustheitsmerkmale, d.h. Atomicity und Fallback. Aus diesem Grund sind Lösungen von Drittanbietern aufgetaucht, die versuchen, die Probleme zu lösen, die für die Bereitstellung unbeaufsichtigter OTA-Updates behoben werden müssen.

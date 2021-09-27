@@ -1,25 +1,25 @@
-# Formatting an SDXC card for use with NOOBS
+# Formatieren einer SDXC-Karte für die Verwendung mit NOOBS
 
-According to the [SD specifications](https://www.sdcard.org/developers/overview/capacity/), any SD card larger than 32GB is an SDXC card and has to be formatted with the exFAT filesystem. This means the official SD Formatter tool will *always* format cards that are 64GB or larger as exFAT.
+Gemäß den [SD-Spezifikationen](https://www.sdcard.org/developers/overview/capacity/) ist jede SD-Karte, die größer als 32 GB ist, eine SDXC-Karte und muss mit dem exFAT-Dateisystem formatiert werden. Dies bedeutet, dass das offizielle SD-Formatierungstool *immer* Karten mit 64 GB oder mehr als exFAT formatiert.
 
-The Raspberry Pi's bootloader, built into the GPU and non-updateable, only has support for reading from FAT filesystems (both FAT16 and FAT32), and is unable to boot from an exFAT filesystem. So if you want to use NOOBS on a card that is 64GB or larger, you need to reformat it as FAT32 first before copying the NOOBS files to it.
+Der in die GPU integrierte und nicht aktualisierbare Bootloader des Raspberry Pi unterstützt nur das Lesen von FAT-Dateisystemen (sowohl FAT16 als auch FAT32) und kann nicht von einem exFAT-Dateisystem booten. Wenn Sie also NOOBS auf einer Karte mit 64 GB oder mehr verwenden möchten, müssen Sie sie zuerst als FAT32 neu formatieren, bevor Sie die NOOBS-Dateien darauf kopieren.
 
-## Using Raspberry Pi Imager
+## Raspberry Pi Imager verwenden
 
-Our imaging tool has an option to format an SD card to the correct FAT filesystem. Download the tool from [here](https://www.raspberrypi.org/downloads/).
+Unser Imaging-Tool bietet die Möglichkeit, eine SD-Karte mit dem richtigen FAT-Dateisystem zu formatieren. Laden Sie das Tool von [hier](https://www.raspberrypi.org/downloads/) herunter.
 
-Run the Raspberry Pi Imager application, then from the `Choose OS option`, select `Erase (Format card as FAT32)`. Now select the SD card you wish to format from the `Choose SD Card` option, and finally click on `Write`. 
+Führen Sie die Raspberry Pi Imager-Anwendung aus, und wählen Sie dann aus der Option "Betriebssystem auswählen" die Option "Löschen (Karte als FAT32 formatieren)". Wählen Sie nun die SD-Karte, die Sie formatieren möchten, aus der Option "SD-Karte auswählen" aus und klicken Sie abschließend auf "Schreiben".
 
-## Other Options
+## Andere Optionen
 
-### Linux and Mac OS
+###Linux und Mac OS
 
-The standard formatting tools built into these operating systems are able to create FAT32 partitions; they might also be labelled as FAT or MS-DOS. Simply delete the existing exFAT partition and create and format a new FAT32 primary partition, before proceeding with the rest of the [NOOBS instructions](noobs.md). On a Mac, this means using the command-line diskutil program and choosing the Master Boot Record scheme.
+Die in diesen Betriebssystemen integrierten Standardformatierungstools können FAT32-Partitionen erstellen. sie können auch als FAT oder MS-DOS bezeichnet werden. Löschen Sie einfach die vorhandene exFAT-Partition und erstellen und formatieren Sie eine neue primäre FAT32-Partition, bevor Sie mit dem Rest der [NOOBS-Anweisungen](noobs.md) fortfahren. Auf einem Mac bedeutet dies, dass Sie das Befehlszeilenprogramm diskutil verwenden und das Master Boot Record-Schema auswählen.
 
-### Windows
+### Fenster
 
-The standard formatting tools built into Windows are limited, as they only allow partitions up to 32GB to be formatted as FAT32, so to format a 64GB partition as FAT32 you need to use a third-party formatting tool. A simple tool to do this is [FAT32 Format](http://www.ridgecrop.demon.co.uk/guiformat.htm) which downloads as a single file named `guiformat.exe` - no installation is necessary.
+Die in Windows integrierten Standardformatierungstools sind begrenzt, da nur Partitionen bis zu 32 GB als FAT32 formatiert werden können. Um eine 64 GB-Partition als FAT32 zu formatieren, müssen Sie also ein Formatierungstool eines Drittanbieters verwenden. Ein einfaches Tool dafür ist [FAT32 Format](http://www.ridgecrop.demon.co.uk/guiformat.htm), das als einzelne Datei namens `guiformat.exe` heruntergeladen wird - es ist keine Installation erforderlich.
 
-Run the [SD Formatter](https://www.sdcard.org/downloads/formatter_4/) tool first to ensure that any other partitions on the SD card are deleted. Then run the FAT32 Format (guiformat.exe) tool, ensure you choose the correct drive letter, leave the other options at their default settings, and click "Start". After it has finished, you can proceed with the rest of the [NOOBS instructions](noobs.md).
+Führen Sie zuerst das Tool [SD Formatter](https://www.sdcard.org/downloads/formatter_4/) aus, um sicherzustellen, dass alle anderen Partitionen auf der SD-Karte gelöscht werden. Führen Sie dann das FAT32-Format (guiformat.exe)-Tool aus, stellen Sie sicher, dass Sie den richtigen Laufwerksbuchstaben wählen, belassen Sie die anderen Optionen auf ihren Standardeinstellungen und klicken Sie auf "Start". Nach Abschluss können Sie mit dem Rest der [NOOBS-Anweisungen] (noobs.md) fortfahren.
 
-If the FAT32 Format tool doesn't work for you, alternative options are [MiniTool Partition Wizard Free Edition](http://www.minitool.com/partition-manager/partition-wizard-home.html) and [EaseUS Partition Master Free](http://www.easeus.com/partition-manager/epm-free.html) which are "home user" versions of fully featured partition editor tools, and so not as straightforward to use.
+Wenn das FAT32-Formatierungstool für Sie nicht funktioniert, sind alternative Optionen [MiniTool Partition Wizard Free Edition](http://www.minitool.com/partition-manager/partition-wizard-home.html) und [EaseUS Partition Master Free](http://www.easeus.com/partition-manager/epm-free.html), die "Heimbenutzer"-Versionen von voll ausgestatteten Partitionseditor-Tools sind und daher nicht so einfach zu verwenden sind.

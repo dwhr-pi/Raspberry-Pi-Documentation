@@ -1,98 +1,98 @@
 # FTP
 
-FTP (File Transfer Protocol) can be used to transfer files between a Raspberry Pi and another computer. Although with default program `sftp-server` of Raspberry Pi OS the users with sufficient privilege can transfer files or directories, access to the filesystem of the limited users is also required often. Follow the steps below to set up an FTP server:
+FTP (File Transfer Protocol) kann verwendet werden, um Dateien zwischen einem Raspberry Pi und einem anderen Computer zu übertragen. Obwohl mit dem Standardprogramm `sftp-server` von Raspberry Pi OS die Benutzer mit ausreichenden Berechtigungen Dateien oder Verzeichnisse übertragen können, wird oft auch Zugriff auf das Dateisystem der eingeschränkten Benutzer benötigt. Führen Sie die folgenden Schritte aus, um einen FTP-Server einzurichten:
 
-## Install Pure-FTPd
+## Pure-FTPd installieren
 
-First, install `Pure-FTPd` using the following command line in Terminal:
+Installieren Sie zuerst `Pure-FTPd` mit der folgenden Befehlszeile im Terminal:
 
 ```bash
 sudo apt install pure-ftpd
 ```
 
-## Basic Configurations
+## Grundkonfigurationen
 
-We need to create a new user group named `ftpgroup` and a new user named `ftpuser` for FTP users, and make sure this "user" has **no** login privilege and **no** home directory:
+Wir müssen eine neue Benutzergruppe namens `ftpgroup` und einen neuen Benutzer namens `ftpuser` für FTP-Benutzer erstellen und sicherstellen, dass dieser "Benutzer" **keine** Anmeldeberechtigung und **kein** Heimatverzeichnis hat:
 
 ```bash
 sudo groupadd ftpgroup
 sudo useradd ftpuser -g ftpgroup -s /sbin/nologin -d /dev/null
 ```
 
-### FTP Home Directory, Virtual User, and User Group
+### FTP-Basisverzeichnis, virtueller Benutzer und Benutzergruppe
 
-For instance, make a new directory named `FTP` for the first user:
+Erstellen Sie beispielsweise ein neues Verzeichnis namens `FTP` für den ersten Benutzer:
 
 ```bash
 sudo mkdir /home/pi/FTP
 ```
 
-Make sure the directory is accessible for `ftpuser`:
+Stellen Sie sicher, dass das Verzeichnis für `ftpuser` zugänglich ist:
 
 ```bash
 sudo chown -R ftpuser:ftpgroup /home/pi/FTP
 ```
 
-Create a virtual user named `upload`, mapping the virtual user to `ftpuser` and `ftpgroup`, setting home directory `/home/pi/FTP`, and record password of the user in database:
+Erstellen Sie einen virtuellen Benutzer namens `upload`, ordnen Sie den virtuellen Benutzer `ftpuser` und `ftpgroup` zu, legen Sie das Home-Verzeichnis `/home/pi/FTP` fest und notieren Sie das Passwort des Benutzers in der Datenbank:
 
 ```bash
 sudo pure-pw useradd upload -u ftpuser -g ftpgroup -d /home/pi/FTP -m
 ```
 
-A password of that virtual user will be required after this command line is entered. And next, set up a virtual user database by typing:
+Nach der Eingabe dieser Befehlszeile ist ein Kennwort dieses virtuellen Benutzers erforderlich. Als nächstes richten Sie eine virtuelle Benutzerdatenbank ein, indem Sie Folgendes eingeben:
 
 ```bash
 sudo pure-pw mkdb
 ```
 
-Last but not least, define an authentication method by making a link of file `/etc/pure-ftpd/conf/PureDB`, the number `60` is only for demonstration, make it as small as necessary:
+Definieren Sie zu guter Letzt eine Authentifizierungsmethode, indem Sie einen Link der Datei `/etc/pure-ftpd/conf/PureDB` erstellen, die Nummer `60` dient nur zur Demonstration, machen Sie sie so klein wie nötig:
 
 ```bash
 sudo ln -s /etc/pure-ftpd/conf/PureDB /etc/pure-ftpd/auth/60puredb
 ```
 
-Restart the program:
+Starten Sie das Programm neu:
 
 ```bash
-sudo service pure-ftpd restart
+sudo service pure-ftpd neustart
 ```
 
-Test it with an FTP client, like FileZilla.
+Testen Sie es mit einem FTP-Client wie FileZilla.
 
-## More Detailed Configurations:
+## Detailliertere Konfigurationen:
 
-The configuration of Pure-FTPd is simple and intuitive. The administrator only needs to define the necessary settings by making files with option names, like `ChrootEveryone`, and typing `yes`, then storing in the directory `/etc/pure-ftpd/conf`, if all FTP users are to be locked in their FTP home directory (`/home/pi/FTP`). Here are some recommended settings:
+Die Konfiguration von Pure-FTPd ist einfach und intuitiv. Der Administrator muss nur die notwendigen Einstellungen vornehmen, indem er Dateien mit Optionsnamen wie `ChrootEveryone` erstellt und `yes` eingibt und dann im Verzeichnis `/etc/pure-ftpd/conf` ablegt, wenn alle FTP-Benutzer sein sollen in ihrem FTP-Home-Verzeichnis (`/home/pi/FTP`) gesperrt. Hier sind einige empfohlene Einstellungen:
 
 ```bash
 sudo nano /etc/pure-ftpd/conf/ChrootEveryone
 ```
 
-Type `yes`, and press `Ctrl + X`, `Y`, and Enter.
+Geben Sie „ja“ ein und drücken Sie „Strg + X“, „Y“ und die Eingabetaste.
 
-Likewise,
+Gleichfalls,
 
-Make a file named `NoAnonymous` and type `yes`;
+Erstellen Sie eine Datei namens `NoAnonymous` und geben Sie `yes` ein;
 
-Make a file named `AnonymousCantUpload` and type `yes`;
+Erstellen Sie eine Datei namens `AnonymousCantUpload` und geben Sie `yes` ein;
 
-Make a file named `AnonymousCanCreateDirs` and type `no`;
+Erstellen Sie eine Datei namens `AnonymousCanCreateDirs` und geben Sie `no` ein;
 
-Make a file named `DisplayDotFiles` and type `no`;
+Erstellen Sie eine Datei namens `DisplayDotFiles` und geben Sie `no` ein;
 
-Make a file named `DontResolve` and type `yes`;
+Erstellen Sie eine Datei namens `DontResolve` und geben Sie `yes` ein;
 
-Make a file named `ProhibitDotFilesRead` and type `yes`;
+Erstellen Sie eine Datei namens `ProhibitDotFilesRead` und geben Sie `yes` ein;
 
-Make a file named `ProhibitDotFilesWrite` and type `yes`;
+Erstellen Sie eine Datei namens `ProhibitDotFilesWrite` und geben Sie `yes` ein;
 
-Make a file named `FSCharset` and type`UTF-8`;
+Erstellen Sie eine Datei mit dem Namen `FSCharset` und geben Sie `UTF-8` ein;
 
 ...
 
-Restart `pure-ftpd` again and apply the above settings.
+Starten Sie `pure-ftpd` erneut und übernehmen Sie die obigen Einstellungen.
 
 ```bash
-sudo service pure-ftpd restart
+sudo service pure-ftpd neustart
 ```
 
-For more information of Pure-FTPd and documentation, please get on official website of [Pure-FTPd](https://www.pureftpd.org/project/pure-ftpd).
+Weitere Informationen zu Pure-FTPd und Dokumentation finden Sie auf der offiziellen Website von [Pure-FTPd] (https://www.pureftpd.org/project/pure-ftpd).

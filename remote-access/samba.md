@@ -1,107 +1,107 @@
-## Samba/CIFS
+##Samba/CIFS
 
-Samba is a implementation of the SMB/CIFS networking protocol that is used by Windows devices to provide shared access to files, printers, and serial ports etc. There is a comprehensive [Wikipedia page](https://en.wikipedia.org/wiki/Samba_%28software%29) about Samba and its capabilities.
+Samba ist eine Implementierung des SMB/CIFS-Netzwerkprotokolls, das von Windows-Geräten verwendet wird, um gemeinsamen Zugriff auf Dateien, Drucker und serielle Ports usw. bereitzustellen. Es gibt eine umfassende [Wikipedia-Seite](https://en.wikipedia.org/ wiki/Samba_%28software%29) über Samba und seine Fähigkeiten.
 
-This page will explain how to use a subset of the Samba system to 'mount' a shared folder on a Windows device so it appears on your Raspberry Pi, or to share a folder on your Raspberry Pi so it can be accessed by a Windows client.
+Auf dieser Seite wird erklärt, wie Sie eine Teilmenge des Samba-Systems verwenden, um einen freigegebenen Ordner auf einem Windows-Gerät zu "mounten", damit er auf Ihrem Raspberry Pi angezeigt wird, oder um einen Ordner auf Ihrem Raspberry Pi freizugeben, damit ein Windows-Client darauf zugreifen kann .
 
-### Installing CIFS/Samba support
+### CIFS/Samba-Unterstützung installieren
 
-By default, Raspberry Pi OS does not include CIFS/Samba support, but this can easily be added. The following commmands will install all the required components for using Samba as a server or a client.
+Das Betriebssystem Raspberry Pi bietet standardmäßig keine CIFS/Samba-Unterstützung, die jedoch problemlos hinzugefügt werden kann. Die folgenden Befehle installieren alle erforderlichen Komponenten, um Samba als Server oder Client zu verwenden.
 
 ```bash
-sudo apt update
+sudo apt-Update
 sudo apt install samba samba-common-bin smbclient cifs-utils
 ```
 
-### Using a shared Windows folder
+### Verwenden eines freigegebenen Windows-Ordners
 
-First, you need to share a folder on your Windows device. This is quite a convoluted process!
+Zuerst müssen Sie einen Ordner auf Ihrem Windows-Gerät freigeben. Das ist ein ziemlich komplizierter Prozess!
 
-#### Turn on sharing
+#### Freigabe aktivieren
 
-1. Open the Networking and Sharing Centre by right-clicking on the system tray and selecting it
-1. Click on **Change advanced sharing settings**
-1. Select **Turn on network discovery**
-1. Select **Turn on file and printer sharing**
-1. Save changes
+1. Öffnen Sie das Netzwerk- und Freigabecenter, indem Sie mit der rechten Maustaste auf die Taskleiste klicken und sie auswählen
+1. Klicken Sie auf **Erweiterte Freigabeeinstellungen ändern**
+1. Wählen Sie **Netzwerkerkennung aktivieren**
+1. Wählen Sie **Datei- und Druckerfreigabe aktivieren**.
+1. Änderungen speichern
 
-#### Share the folder
+#### Den Ordner teilen
 
-You can share any folder you want, but for this example, simply create a folder called `share`. 
+Sie können jeden beliebigen Ordner freigeben, aber für dieses Beispiel erstellen Sie einfach einen Ordner namens `share`.
 
-1. Create the folder `share` on your desktop.
-1. Right-click on the new folder, and select **Properties**.
-1. Click on the **Sharing** tab, and then the **Advanced Sharing** button
-1. Select **Share this folder**; by default, the share name is the name of the folder
-1. Click on the **Permissions** button
-1. For this example, select **Everyone** and **Full Control** (you can limit access to specific users if required); click **OK** when done, then **OK** again to leave the **Advanced Sharing** page
-1. Click on the **Security** tab, as we now need to configure the same permissions
-1. Select the same settings as the **Permissions** tab, adding the chosen user if necessary
-1. Click **OK**
+1. Erstellen Sie auf Ihrem Desktop den Ordner `share`.
+1. Klicken Sie mit der rechten Maustaste auf den neuen Ordner und wählen Sie **Eigenschaften**.
+1. Klicken Sie auf die Registerkarte **Freigabe** und dann auf die Schaltfläche **Erweiterte Freigabe**
+1. Wählen Sie **Diesen Ordner freigeben**; Standardmäßig ist der Freigabename der Name des Ordners
+1. Klicken Sie auf die Schaltfläche **Berechtigungen**
+1. Wählen Sie für dieses Beispiel **Alle** und **Vollzugriff** (Sie können den Zugriff bei Bedarf auf bestimmte Benutzer beschränken); Klicken Sie auf **OK**, wenn Sie fertig sind, und dann erneut auf **OK**, um die Seite **Erweiterte Freigabe** zu verlassen
+1. Klicken Sie auf die Registerkarte **Sicherheit**, da wir jetzt dieselben Berechtigungen konfigurieren müssen
+1. Wählen Sie die gleichen Einstellungen wie auf der Registerkarte **Berechtigungen** und fügen Sie bei Bedarf den ausgewählten Benutzer hinzu
+1. Klicken Sie auf **OK**
 
-The folder should now be shared.
+Der Ordner sollte jetzt freigegeben werden.
 
-#### Windows 10 Sharing Wizard
+#### Freigabeassistent für Windows 10
 
-On Windows 10 there is a Sharing Wizard that helps with some of these steps.
+Unter Windows 10 gibt es einen Freigabeassistenten, der bei einigen dieser Schritte hilft.
 
-1. Run the Computer Management application from the Start Bar
-1. Select **Shared Folders**, then **Shares**
-1. Right-click and select **New Share**, which will start up the Sharing Wizard; click **Next**
-1. Select the folder you wish to share, and click **Next**
-1. Click **Next** to use all the sharing defaults
-1. Select **Custom** and set the required permissions, and click **OK**, then **Finish**
+1. Führen Sie die Computerverwaltungsanwendung über die Startleiste aus
+1. Wählen Sie **Freigegebene Ordner** und dann **Freigaben**
+1. Klicken Sie mit der rechten Maustaste und wählen Sie **Neue Freigabe**, wodurch der Freigabeassistent gestartet wird; Weiter klicken**
+1. Wählen Sie den Ordner aus, den Sie freigeben möchten, und klicken Sie auf **Weiter**
+1. Klicken Sie auf **Weiter**, um alle Freigabeeinstellungen zu verwenden
+1. Wählen Sie **Benutzerdefiniert** und legen Sie die erforderlichen Berechtigungen fest. Klicken Sie auf **OK** und dann auf **Fertig stellen**
 
-#### Mount the folder on the Raspberry Pi
+#### Mounten Sie den Ordner auf dem Raspberry Pi
 
-**Mounting** in Linux is the process of attaching a folder to a location, so firstly we need that location.
+**Mounting** in Linux ist der Vorgang des Anhängens eines Ordners an einen Speicherort, daher benötigen wir zuerst diesen Speicherort.
 
 ```bash
-mkdir windowshare
+mkdir Fensterfreigabe
 ```
 
-Now, we need to mount the remote folder to that location. The remote folder is the host name or IP address of the Windows PC, and the share name used when sharing it. We also need to provide the Windows username that will be used to access the remote machine.
+Jetzt müssen wir den Remote-Ordner an diesem Ort mounten. Der Remote-Ordner ist der Hostname oder die IP-Adresse des Windows-PCs und der bei der Freigabe verwendete Freigabename. Wir müssen auch den Windows-Benutzernamen angeben, der für den Zugriff auf den Remote-Computer verwendet wird.
 
 ```bash
-sudo mount.cifs //<hostname or IP address>/share /home/pi/windowshare -o user=<name>
+sudo mount.cifs //<Hostname oder IP-Adresse>/share /home/pi/windowshare -o user=<name>
 ```
 
-You should now be able to view the content of the Windows share on your Raspberry Pi.
+Sie sollten jetzt den Inhalt der Windows-Freigabe auf Ihrem Raspberry Pi anzeigen können.
 
 ```bash
-cd windowshare
+CD-Fensterfreigabe
 ls
 ```
 
-### Sharing a folder for use by Windows
+### Einen Ordner zur Verwendung durch Windows freigeben
 
-Firstly, create a folder to share. This example creates a folder called `shared` in the `home` folder of the current user, and  assumes the current user is `pi`.
+Erstellen Sie zunächst einen Ordner zum Freigeben. Dieses Beispiel erstellt einen Ordner namens `shared` im `home`-Ordner des aktuellen Benutzers und geht davon aus, dass der aktuelle Benutzer `pi` ist.
 
 ```bash
 cd ~
-mkdir shared
+mkdir hat geteilt
 ```
 
-Now we need to tell Samba to share this folder, using the Samba configuration file.
+Jetzt müssen wir Samba anweisen, diesen Ordner zu teilen, indem wir die Samba-Konfigurationsdatei verwenden.
 
 ```bash
 sudo nano /etc/samba/smb.conf
 ```
 
-At the end of the file, add the following to share the folder, giving the remote user read/write permissions:
+Fügen Sie am Ende der Datei Folgendes hinzu, um den Ordner freizugeben, und geben Sie dem Remote-Benutzer Lese-/Schreibberechtigungen:
 
 ```
-[share]
-    path = /home/pi/shared
-    read only = no
-    public = yes
-    writable = yes
+[Teilen]
+    Pfad = /home/pi/shared
+    nur lesen = nein
+    öffentlich = ja
+    beschreibbar = ja
 ```
 
-In the same file, find the `workgroup` line, and if necessary, change it to the name of the workgroup of your local Windows network.
+Suchen Sie in derselben Datei die Zeile `workgroup` und ändern Sie sie gegebenenfalls in den Namen der Arbeitsgruppe Ihres lokalen Windows-Netzwerks.
 
 ```bash
-workgroup = <your workgroup name here>
+Arbeitsgruppe = <Ihr Arbeitsgruppenname hier>
 ```
 
-That should be enough to share the folder. On your Windows device, when you browse the network, the folder should appear and you should be able to connect to it.
+Das sollte ausreichen, um den Ordner freizugeben. Wenn Sie auf Ihrem Windows-Gerät im Netzwerk surfen, sollte der Ordner angezeigt werden und Sie sollten sich damit verbinden können.

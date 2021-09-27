@@ -1,37 +1,37 @@
-# Usage
+# Verwendungszweck
 
-Basic examples to help you get started with some of the software available in Raspberry Pi OS
+Grundlegende Beispiele, die Ihnen den Einstieg in einige der in Raspberry Pi OS verfügbaren Software erleichtern
 
-## Contents
+## Inhalt
 
 - [Scratch](scratch/README.md)
-    - Scratch is a visual programming tool allowing the user to create animations and games with a drag-and-drop interface
+    - Scratch ist ein visuelles Programmierwerkzeug, mit dem der Benutzer Animationen und Spiele mit einer Drag-and-Drop-Oberfläche erstellen kann
 - [Python](python/README.md)
-    - Python is a general purpose programming language that is easy to pick up and also very powerful
+    - Python ist eine universelle Programmiersprache, die leicht zu erlernen und auch sehr mächtig ist
 - [Sonic Pi](sonic-pi/README.md)
-    - Write code to make music with Sonic Pi
+    - Schreiben Sie Code, um mit Sonic Pi . Musik zu machen
 - [Terminal](terminal/README.md)
-    - The Linux terminal is a powerful tool for getting around the filesystem and issuing commands
+    - Das Linux-Terminal ist ein mächtiges Werkzeug, um das Dateisystem zu umgehen und Befehle auszugeben
 - [GPIO](gpio/README.md)
-    - The General Purpose Input/Output pins allow you to control and interact with the real world
+    - Die Universal Input/Output-Pins ermöglichen es Ihnen, die reale Welt zu steuern und mit ihr zu interagieren
 - [Minecraft](minecraft/README.md)
-    - A free version of Minecraft is available for the Pi, and this is the only edition that has a programming interface, meaning you can control Minecraft with Python code - and even interact with the real world through GPIO
-- [Python Games](python-games/README.md)
-    - Raspberry Pi OS ships with some ready made Python games for you to play on your Raspberry Pi - and why not browse the code, hack the games and learn to make your own?
+    - Für den Pi ist eine kostenlose Version von Minecraft verfügbar, und dies ist die einzige Edition, die über eine Programmierschnittstelle verfügt, dh Sie können Minecraft mit Python-Code steuern - und sogar über GPIO mit der realen Welt interagieren
+- [Python-Spiele](python-games/README.md)
+    - Raspberry Pi OS wird mit einigen vorgefertigten Python-Spielen geliefert, die Sie auf Ihrem Raspberry Pi spielen können - und warum nicht den Code durchsuchen, die Spiele hacken und lernen, Ihre eigenen zu erstellen?
 - [WordPress](wordpress/README.md)
-    - Set up a web server on your Raspberry Pi and install Wordpress, a content management and blogging system
+    - Richten Sie einen Webserver auf Ihrem Raspberry Pi ein und installieren Sie Wordpress, ein Content-Management- und Blogging-System
 - [Mathematica](mathematica/README.md)
-    - Mathematica is an industry leading computational platform - available for free on Raspberry Pi
-- [Camera Module](camera/README.md)
-    - The Raspberry Pi camera module is capable of taking full HD 1080p photo and video and can be controlled programmatically
-    - Applications and libraries are available for:
-        - [Linux command line](camera/raspicam/README.md)
-        - [Python](camera/python/README.md)
-- [Webcams](webcams/README.md)
-    - Using a standard USB webcam instead of the Raspberry Pi camera module
+    - Mathematica ist eine branchenführende Computerplattform - kostenlos verfügbar auf Raspberry Pi
+- [Kameramodul](camera/README.md)
+    - Das Raspberry Pi Kameramodul kann Full HD 1080p Fotos und Videos aufnehmen und kann programmgesteuert gesteuert werden
+    - Anwendungen und Bibliotheken sind verfügbar für:
+        - [Linux-Befehlszeile](camera/raspicam/README.md)
+        - [Python](Kamera/Python/README.md)
+- [Webcams](Webcams/README.md)
+    - Verwendung einer Standard-USB-Webcam anstelle des Raspberry Pi-Kameramoduls
 - [Kodi](kodi/README.md)
-    - Installing media centre software on your Raspberry Pi
-- [Playing audio](audio/README.md)
-    - Playing audio on your Raspberry Pi
-- [Playing video](video/README.md)
-    - Playing video on your Raspberry Pi
+    - Installieren der Media Center-Software auf Ihrem Raspberry Pi
+- [Audio abspielen](audio/README.md)
+    - Abspielen von Audio auf Ihrem Raspberry Pi
+- [Video abspielen](video/README.md)
+    - Abspielen von Videos auf Ihrem Raspberry Pi

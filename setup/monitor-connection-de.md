@@ -1,33 +1,33 @@
-# Monitor connection
+# Monitorverbindung
 
-For regular use, you'll want to plug the Raspberry Pi in to a visual display: a monitor or a TV.
+Für den regelmäßigen Gebrauch möchten Sie den Raspberry Pi an eine visuelle Anzeige anschließen: einen Monitor oder einen Fernseher.
 
-## HDMI port
+## HDMI-Anschluss
 
-The Raspberry Pi has an HDMI port which you can connect directly to a monitor or TV with an HDMI cable. This is the easiest solution; some modern monitors and TVs have HDMI ports, some do not, but there are other options.
+Der Raspberry Pi verfügt über einen HDMI-Anschluss, den Sie mit einem HDMI-Kabel direkt an einen Monitor oder Fernseher anschließen können. Dies ist die einfachste Lösung; einige moderne Monitore und Fernseher haben HDMI-Anschlüsse, andere nicht, aber es gibt andere Optionen.
 
-![HDMI cable](images/hdmi_connector.png)
+![HDMI-Kabel](images/hdmi_connector.png)
 
-Note that the Raspberry Pi 4 has two micro HDMI connectors, which require a good-quality micro HDMI cable, especially when using 4K monitors/TVs. Raspberry Pi sell a suitable cable; for more details see [here](https://www.raspberrypi.org/products/micro-hdmi-to-standard-hdmi-a-cable/).
+Beachten Sie, dass der Raspberry Pi 4 über zwei Micro-HDMI-Anschlüsse verfügt, die ein hochwertiges Micro-HDMI-Kabel erfordern, insbesondere bei Verwendung von 4K-Monitoren/Fernsehern. Raspberry Pi verkauft ein geeignetes Kabel; Weitere Details finden Sie [hier](https://www.raspberrypi.org/products/micro-hdmi-to-standard-hdmi-a-cable/).
 
 ![HDMI_micro](images/hdmi_micro.png)
 
 ### DVI
 
-For monitors with a DVI port, you can use an HDMI-to-DVI cable, or an HDMI cable with a DVI adapter. Note that the DVI standard does not support audio.
+Bei Monitoren mit DVI-Anschluss können Sie ein HDMI-zu-DVI-Kabel oder ein HDMI-Kabel mit einem DVI-Adapter verwenden. Beachten Sie, dass der DVI-Standard kein Audio unterstützt.
 
-![DVI-HDMI cable](images/dvi_hdmi_cable.png)   
+![DVI-HDMI-Kabel](images/dvi_hdmi_cable.png)
 
-### VGA
+###VGA
 
-For monitors with VGA only, you can use an HDMI-to-VGA adapter. Note that VGA does not support audio.
+Für Monitore nur mit VGA können Sie einen HDMI-zu-VGA-Adapter verwenden. Beachten Sie, dass VGA kein Audio unterstützt.
 
-![VGA-HDMI adapter](images/hdmi-vga.jpeg)   
+![VGA-HDMI-Adapter](images/hdmi-vga.jpeg)
 
-## Composite Port
+## Composite-Port
 
-All models of Raspberry Pi have a composite out port for connecting to analog devices, but the type of connector varies depending on the model. The original Raspberry Pi used an RCA connector, and a standard RCA composite video lead will work. Others models (Raspberry Pi B+ and later) combine the audio out and composite out on to the same 3.5mm jackplug. This requires a particular type of lead, with audio left on the tip, audio right on ring 1, ground on ring 2, and video on the sleeve. This is the same as leads used on the Zune, and on Apple devices.
+Alle Raspberry Pi-Modelle verfügen über einen Composite-Ausgang zum Anschluss an analoge Geräte, aber die Art des Anschlusses variiert je nach Modell. Der ursprüngliche Raspberry Pi verwendet einen Cinch-Anschluss, und ein Standard-Cinch-Composite-Videokabel funktioniert. Andere Modelle (Raspberry Pi B+ und höher) kombinieren den Audioausgang und den Composite-Ausgang auf demselben 3,5-mm-Klinkenstecker. Dies erfordert einen bestimmten Kabeltyp, mit Audio links an der Spitze, Audio rechts an Ring 1, Masse an Ring 2 und Video an der Hülse. Dies entspricht den auf Zune und Apple-Geräten verwendeten Leitungen.
 
-![RCA cable](images/rca_connector.png)   
+![RCA-Kabel](images/rca_connector.png)
 
-More information on connecting to a monitor can be found in our [learning resources section](https://www.raspberrypi.org/learning/hardware-guide/equipment/).
+Weitere Informationen zum Verbinden mit einem Monitor finden Sie in unserem [Lernressourcen-Bereich](https://www.raspberrypi.org/learning/hardware-guide/equipment/).

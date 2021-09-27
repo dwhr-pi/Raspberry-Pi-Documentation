@@ -1,52 +1,52 @@
 # Linux
 
-Explanation of some fundamental Linux usage, and commands for getting around the Pi and managing its file system and users.
+Erklärung einiger grundlegender Linux-Nutzung und Befehle, um den Pi zu umgehen und sein Dateisystem und seine Benutzer zu verwalten.
 
-## Contents
+## Inhalt
 
-- [Filesystem](filesystem/README.md)
-    - [Home](filesystem/home.md)
-        - Your user's home folder on the Pi, where you keep your files
-    - [Whole File system](filesystem/whole-filesystem.md)
-        - The rest of the Linux file system
-    - [Backup](filesystem/backup.md)
-        - Backing up your files and your operating system image
-- [Usage](usage/README.md)
-    - [Commands](usage/commands.md)
-        - Some basic and more advanced Linux commands
-    - [Text editors](usage/text-editors.md)
-        - A selection of text editors available on the Pi
-    - [Users](usage/users.md)
-        - Setting up multiple Linux users on your Pi system
+- [Dateisystem](Dateisystem/README.md)
+    - [Home](Dateisystem/home.md)
+        - Der Home-Ordner Ihres Benutzers auf dem Pi, in dem Sie Ihre Dateien aufbewahren
+    - [Ganzes Dateisystem](Dateisystem/ganzes-Dateisystem.md)
+        - Der Rest des Linux-Dateisystems
+    - [Backup](Dateisystem/backup.md)
+        - Sichern Sie Ihre Dateien und Ihr Betriebssystem-Image
+- [Verwendung](Verwendung/README.md)
+    - [Befehle](usage/commands.md)
+        - Einige grundlegende und fortgeschrittenere Linux-Befehle
+    - [Texteditoren](usage/text-editors.md)
+        - Eine Auswahl an Texteditoren, die auf dem Pi . verfügbar sind
+    - [Benutzer](usage/users.md)
+        - Einrichten mehrerer Linux-Benutzer auf Ihrem Pi-System
     - [Root](usage/root.md)
-        - The `root` user and the `sudo` prefix
+        - Der `root`-Benutzer und das `sudo`-Präfix
     - [Scripting](usage/scripting.md)
-        - Combining commands to produce more complex actions
+        - Kombinieren von Befehlen, um komplexere Aktionen zu erzeugen
     - [Cron / Crontab](usage/cron.md)
-        - Setting up scheduled tasks
-    - [.bashrc and .bash_aliases](usage/bashrc.md)
-        - Your shell configuration and aliases
+        - Geplante Aufgaben einrichten
+    - [.bashrc und .bash_aliases](usage/bashrc.md)
+        - Ihre Shell-Konfiguration und Aliase
     - [systemd](usage/systemd.md)
-        - Configuration of systemd services to start scripts at booting
+        - Konfiguration von systemd-Diensten zum Starten von Skripten beim Booten
     - [rc.local](usage/rc-local.md)
-        - Configuration of initialisation
+        - Konfiguration der Initialisierung
 - [Software](software/README.md)
     - [libcamera](software/libcamera/README.md)
-        - Installing and using the libcamera software
+        - Installation und Verwendung der libcamera-Software
     - [APT](software/apt.md)
-        - Installing software with APT
+        - Software mit APT . installieren
     - [Python](software/python.md)
-        - Installing software using a Python package manager such as `pip`
+        - Installieren von Software mit einem Python-Paketmanager wie `pip`
     - [Ruby](software/ruby.md)
-        - Installing software with Ruby's package manager `ruby gems`
+        - Installation von Software mit Rubys Paketmanager `ruby gems`
 - [Kernel](kernel/README.md)
-    - [Updating](kernel/updating.md)
-        - Updating your Linux kernel on Raspberry Pi
-    - [Building](kernel/building.md)
-        - Building the Linux kernel on Raspberry Pi
-    - [Configuring](kernel/configuring.md)
-        - Configuring the Linux kernel on Raspberry Pi
+    - [Aktualisierung](kernel/update.md)
+        - Aktualisieren Sie Ihren Linux-Kernel auf Raspberry Pi
+    - [Gebäude](kernel/building.md)
+        - Aufbau des Linux-Kernels auf Raspberry Pi
+    - [Konfigurieren](kernel/configuring.md)
+        - Konfiguration des Linux-Kernels auf Raspberry Pi
     - [Patching](kernel/patching.md)
-        - Applying patches to the Linux kernel on Raspberry Pi
-    - [Headers](kernel/headers.md)
-        - Getting the kernel headers
+        - Anwenden von Patches auf den Linux-Kernel auf Raspberry Pi
+    - [Header](kernel/headers.md)
+        - Abrufen der Kernel-Header

@@ -1,15 +1,15 @@
-# Raspberry Pi Hardware
+# Raspberry Pi-Hardware
 
-Technical information about Raspberry Pi hardware, including official add-ons and the Pi itself.
+Technische Informationen zur Raspberry Pi-Hardware, einschließlich offizieller Add-Ons und des Pi selbst.
 
-## Contents
+## Inhalt
 
 - [Raspberry Pi](raspberrypi/README.md)
-- [Camera Module](camera/README.md)
-- [Compute Module](computemodule/README.md)
-- [General HAT information](https://github.com/raspberrypi/hats/blob/master/README.md) (Links to our HAT github repository)
-- [Sense HAT](sense-hat/README.md)
-- [TV HAT](tv-hat/README.md)
-- [Touch Display](display/README.md)
-- [Mouse and Keyboard](keyboard_mouse/README.md)
-- [Industrial use](industrial/README.md)
+- [Kameramodul](camera/README.md)
+- [Rechenmodul](computemodule/README.md)
+- [Allgemeine HAT-Informationen](https://github.com/raspberrypi/hats/blob/master/README.md) (Links zu unserem HAT-Github-Repository)
+- [Sense-HAT](Sense-Hut/README.md)
+- [TV-HUT](tv-Hut/README.md)
+- [Touch-Display](display/README.md)
+- [Maus und Tastatur](keyboard_mouse/README.md)
+- [Industrielle Verwendung](industriell/README.md)

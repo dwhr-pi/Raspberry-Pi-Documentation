@@ -1,11 +1,11 @@
 # Installation
 
-Some simple guides to setting up the software on your Raspberry Pi.
+Einige einfache Anleitungen zum Einrichten der Software auf Ihrem Raspberry Pi.
 
-Beginners should start with [NOOBS](noobs.md), which gives the user a choice of operating system from the standard distributions. The recommended distribution for normal use is Raspberry Pi OS. Alternatives are available, such as LibreELEC (Kodi media centre) or Arch Linux.
+Anfänger sollten mit [NOOBS](noobs.md) beginnen, was dem Benutzer eine Auswahl des Betriebssystems aus den Standarddistributionen gibt. Die empfohlene Distribution für den normalen Gebrauch ist Raspberry Pi OS. Alternativen sind verfügbar, wie LibreELEC (Kodi Media Center) oder Arch Linux.
 
-## Contents
+## Inhalt
 
 - [NOOBS](noobs.md)
-- [Installing images](installing-images/README.md)
-- [SD Cards](sd-cards.md)
+- [Images installieren](installing-images/README.md)
+- [SD-Karten] (sd-cards.md)

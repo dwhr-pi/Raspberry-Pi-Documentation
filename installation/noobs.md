@@ -1,50 +1,50 @@
-# NOOBS
+# ANFÄNGER
 
-**New Out Of Box Software (NOOBS)** is an easy operating system installation manager for the Raspberry Pi.
+**New Out Of Box Software (NOOBS)** ist ein einfacher Betriebssystem-Installationsmanager für den Raspberry Pi.
 
-![NOOBS OS selection](images/noobs.png)
+![NOOBS OS Auswahl](images/noobs.png)
 
-## How to get NOOBS
+## Wie bekomme ich NOOBS
 
-### Buy a pre-installed SD card
+### Kaufen Sie eine vorinstallierte SD-Karte
 
-SD cards with NOOBS preinstalled are available from many of our distributors and independent retailers, including [Pimoroni](https://shop.pimoroni.com/products/noobs-8gb-sd-card), [Adafruit](https://www.adafruit.com/products/1583), and [Pi Hut](http://thepihut.com/collections/raspberry-pi-sd-cards-and-adapters/products/noobs-preinstalled-sd-card).
+SD-Karten mit vorinstalliertem NOOBS sind bei vielen unserer Distributoren und unabhängigen Einzelhändlern erhältlich, darunter [Pimoroni](https://shop.pimoroni.com/products/noobs-8gb-sd-card), [Adafruit](https:// www.adafruit.com/products/1583) und [Pi Hut](http://thepihut.com/collections/raspberry-pi-sd-cards-and-adapters/products/noobs-preinstalled-sd-card).
 
-### Download
+### Herunterladen
 
-Alternatively, NOOBS is available for download on the Raspberry Pi website: [raspberrypi.org/downloads](https://www.raspberrypi.org/downloads/)
+Alternativ steht NOOBS zum Download auf der Raspberry Pi-Website zur Verfügung: [raspberrypi.org/downloads](https://www.raspberrypi.org/downloads/)
 
-#### How to install NOOBS on an SD card
+#### So installieren Sie NOOBS auf einer SD-Karte
 
-Once you've downloaded the NOOBS zip file, you'll need to copy the contents to a formatted SD card on your computer.
+Nachdem Sie die NOOBS-Zip-Datei heruntergeladen haben, müssen Sie den Inhalt auf eine formatierte SD-Karte auf Ihrem Computer kopieren.
 
-To set up a blank SD card with NOOBS:
+So richten Sie eine leere SD-Karte mit NOOBS ein:
 
-- Format an SD card as FAT. See the instructions given below.
-  - Your SD card will need to be at least 16GB for Full Raspberry Pi OS, or at least 8GB for all other installs. 
-- Download and extract the files from the NOOBS zip file.
-- Copy the extracted files onto the SD card that you just formatted, so that these files are at the root directory of the SD card. Please note that in some cases it may extract the files into a folder; if this is the case, then please copy across the files from inside the folder rather than the folder itself.
-- On first boot, the "RECOVERY" FAT partition will be automatically resized to a minimum, and a list of OSes that are available to install will be displayed.
+- Formatieren Sie eine SD-Karte als FAT. Siehe die Anweisungen unten.
+  - Ihre SD-Karte muss mindestens 16 GB für das vollständige Raspberry Pi-Betriebssystem oder mindestens 8 GB für alle anderen Installationen haben.
+- Laden Sie die Dateien aus der NOOBS-Zip-Datei herunter und extrahieren Sie sie.
+- Kopieren Sie die extrahierten Dateien auf die gerade formatierte SD-Karte, sodass sich diese Dateien im Stammverzeichnis der SD-Karte befinden. Bitte beachten Sie, dass die Dateien in einigen Fällen in einen Ordner extrahiert werden können; Wenn dies der Fall ist, kopieren Sie bitte die Dateien aus dem Ordner und nicht aus dem Ordner selbst.
+- Beim ersten Booten wird die FAT-Partition "RECOVERY" automatisch auf ein Minimum reduziert und eine Liste der zur Installation verfügbaren Betriebssysteme wird angezeigt.
 
-#### How to format an SD card as FAT
+#### So formatieren Sie eine SD-Karte als FAT
 
-**Note:** If you're formatting an SD (or micro SD) card that has a capacity over 32GB (i.e. 64GB and above), then see the separate [SDXC formatting](sdxc_formatting.md) instructions.
+**Hinweis:** Wenn Sie eine SD- (oder Micro-SD-)Karte mit einer Kapazität von mehr als 32 GB (d. h. 64 GB und mehr) formatieren, lesen Sie die separate Anleitung [SDXC-Formatierung](sdxc_formatting.md).
 
 ##### Windows
 
-If you are a Windows user, we recommend formatting your SD card using the SD Association's Formatting Tool, which can be downloaded from [sdcard.org](https://www.sdcard.org/downloads/formatter_4/). Instructions for using the tool are available on the same site.
+Wenn Sie ein Windows-Benutzer sind, empfehlen wir Ihnen, Ihre SD-Karte mit dem Formatting Tool der SD Association zu formatieren, das von [sdcard.org](https://www.sdcard.org/downloads/formatter_4/) heruntergeladen werden kann. Anweisungen zur Verwendung des Tools finden Sie auf derselben Website.
 
 ##### Mac OS
 
-The [SD Association's Formatting Tool](https://www.sdcard.org/downloads/formatter_4/) is also available for Mac users, although the default OS X Disk Utility is also capable of formatting the entire disk. To do this, select the SD card volume and choose `Erase` with `MS-DOS` format.
+Das [Formatting Tool der SD Association](https://www.sdcard.org/downloads/formatter_4/) ist auch für Mac-Benutzer verfügbar, obwohl das standardmäßige Festplatten-Dienstprogramm von OS X auch in der Lage ist, die gesamte Festplatte zu formatieren. Wählen Sie dazu das SD-Karten-Volume aus und wählen Sie `Erase` im `MS-DOS`-Format.
 
 ##### Linux
 
-For Linux users we recommend `gparted` (or the command line version `parted`). Norman Dunbar has written up [instructions](http://qdosmsq.dunbar-it.co.uk/blog/2013/06/noobs-for-raspberry-pi/) for Linux users.
+Für Linux-Benutzer empfehlen wir `gparted` (oder die Kommandozeilen-Version `parted`). Norman Dunbar hat [instructions](http://qdosmsq.dunbar-it.co.uk/blog/2013/06/noobs-for-raspberry-pi/) für Linux-Benutzer geschrieben.
 
-## What's included in NOOBS
+## Was ist in NOOBS enthalten?
 
-The following operating systems are currently included in NOOBS:
+Die folgenden Betriebssysteme sind derzeit in NOOBS enthalten:
 
 - [Raspberry Pi OS](https://www.raspberrypi.org)
 - [LibreELEC](https://libreelec.tv/)
@@ -56,28 +56,28 @@ The following operating systems are currently included in NOOBS:
 - [Windows 10 IoT Core](https://developer.microsoft.com/en-us/windows/iot)
 - [TLXOS](https://thinlinx.com/)
 
-As of NOOBS v1.3.10 (September 2014), only Raspberry Pi OS is installed by default in NOOBS. The others can be installed with a network connection.
+Ab NOOBS v1.3.10 (September 2014) ist in NOOBS standardmäßig nur noch Raspberry Pi OS installiert. Die anderen können mit einer Netzwerkverbindung installiert werden.
 
-## NOOBS and NOOBS Lite
+##NOOBS und NOOBS Lite
 
-NOOBS is available in two forms: offline and network install, or network install only.
+NOOBS ist in zwei Formen verfügbar: Offline- und Netzwerkinstallation oder nur Netzwerkinstallation.
 
-The full version has Raspberry Pi OS included, so it can be installed from the SD card while offline, whereas using NOOBS Lite or installing any other operating system requires an internet connection.
+Die Vollversion enthält Raspberry Pi OS, sodass es offline von der SD-Karte installiert werden kann, während die Verwendung von NOOBS Lite oder die Installation eines anderen Betriebssystems eine Internetverbindung erfordert.
 
-Note that the operating system image on the full version can be outdated if a new version of the OS is released, but if connected to the internet you will be shown the option of downloading the latest version if there is a newer one available.
+Beachten Sie, dass das Betriebssystem-Image der Vollversion veraltet sein kann, wenn eine neue Version des Betriebssystems veröffentlicht wird. Wenn Sie jedoch mit dem Internet verbunden sind, wird Ihnen die Möglichkeit angezeigt, die neueste Version herunterzuladen, wenn eine neuere verfügbar ist.
 
-## NOOBS development
+## NOOBS-Entwicklung
 
-### Latest NOOBS release
+### Neueste NOOBS-Version
 
-The latest NOOBS release is **v3.5.0**, released on **15th September 2020**.
+Die neueste NOOBS-Version ist **v3.5.0**, veröffentlicht am **15. September 2020**.
 
-(From NOOBS v1.4.0 onwards, NOOBS Lite only shares the first two digits of the version number, i.e. v1.4)
+(Ab NOOBS v1.4.0 teilt NOOBS Lite nur die ersten beiden Ziffern der Versionsnummer, also v1.4)
 
-### NOOBS documentation
+### NOOBS-Dokumentation
 
-More comprehensive documentation, including more advanced configuration of NOOBS, is available on [GitHub](https://github.com/raspberrypi/noobs/blob/master/README.md).
+Eine umfassendere Dokumentation, einschließlich einer erweiterten Konfiguration von NOOBS, ist auf [GitHub](https://github.com/raspberrypi/noobs/blob/master/README.md) verfügbar.
 
-### NOOBS source code
+### NOOBS-Quellcode
 
-See the NOOBS source code on [GitHub](https://github.com/raspberrypi/noobs).
+Siehe den NOOBS-Quellcode auf [GitHub](https://github.com/raspberrypi/noobs).

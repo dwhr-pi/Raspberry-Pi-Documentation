@@ -1,92 +1,92 @@
-# IP Address
+# IP Adresse
 
-Any device connected to a Local Area Network is assigned an IP address.
+Jedem mit einem lokalen Netzwerk verbundenen Gerät wird eine IP-Adresse zugewiesen.
 
-In order to connect to your Raspberry Pi from another machine using [SSH](ssh/README.md) or [VNC](vnc/README.md), you need to know the Pi's IP address. This is easy if you have a display connected, and there are a number of methods for finding it remotely from another machine on the network.
+Um sich von einem anderen Computer mit [SSH](ssh/README.md) oder [VNC](vnc/README.md) mit Ihrem Raspberry Pi zu verbinden, müssen Sie die IP-Adresse des Pi kennen. Dies ist einfach, wenn Sie ein Display angeschlossen haben, und es gibt eine Reihe von Methoden, um es von einem anderen Computer im Netzwerk aus zu finden.
 
-## Using the Pi with a display
+## Verwenden des Pi mit einem Display
 
-If you boot to the command line instead of the desktop, your IP address should be shown in the last few messages before the login prompt.
+Wenn Sie statt des Desktops über die Befehlszeile booten, sollte Ihre IP-Adresse in den letzten Nachrichten vor der Anmeldeaufforderung angezeigt werden.
 
-Using the terminal (boot to the command line or open a Terminal window from the desktop), simply type `hostname -I` which will reveal your Pi's IP address.
+Verwenden Sie das Terminal (booten Sie über die Befehlszeile oder öffnen Sie ein Terminalfenster vom Desktop aus), geben Sie einfach "hostname -I" ein, wodurch die IP-Adresse Ihres Pi angezeigt wird.
 
-## Using the Pi headless (without a display)
+## Verwenden des Pi Headless (ohne Display)
 
-It is possible to find the IP address of your Pi without connecting to a screen using one of the following methods:
+Es ist möglich, die IP-Adresse Ihres Pi zu finden, ohne mit einer der folgenden Methoden eine Verbindung zu einem Bildschirm herzustellen:
 
-### Router devices list
+### Liste der Router-Geräte
 
-In a web browser navigate to your router's IP address e.g. `http://192.168.1.1`, which is usually printed on a label on your router; this will take you to a control panel. Then log in using your credentials, which is usually also printed on the router or sent to you in the accompanying paperwork. Browse to the list of connected devices or similar (all routers are different), and you should see some devices you recognise. Some devices are detected as PCs, tablets, phones, printers, etc. so you should recognise some and rule them out to figure out which is your Raspberry Pi. Also note the connection type; if your Pi is connected with a wire there should be fewer devices to choose from.
+Navigieren Sie in einem Webbrowser zur IP-Adresse Ihres Routers, z. `http://192.168.1.1`, das normalerweise auf einem Etikett auf Ihrem Router aufgedruckt ist; Dies führt Sie zu einem Kontrollfeld. Melden Sie sich anschließend mit Ihren Zugangsdaten an, die in der Regel auch auf dem Router ausgedruckt oder Ihnen in den Begleitpapieren zugesandt werden. Navigieren Sie zur Liste der verbundenen Geräte oder ähnlichem (alle Router sind unterschiedlich), und Sie sollten einige Geräte sehen, die Sie kennen. Einige Geräte werden als PCs, Tablets, Telefone, Drucker usw. erkannt. Sie sollten also einige erkennen und ausschließen, um herauszufinden, welches Ihr Raspberry Pi ist. Beachten Sie auch die Verbindungsart; Wenn Ihr Pi mit einem Kabel verbunden ist, sollten weniger Geräte zur Auswahl stehen.
 
-### Resolving `raspberrypi.local` with mDNS
+### `raspberrypi.local` mit mDNS auflösen
 
-On Raspberry Pi OS, [multicast DNS](https://en.wikipedia.org/wiki/Multicast_DNS) is supported out-of-the-box by the [Avahi](https://en.wikipedia.org/wiki/Avahi_%28software%29) service.
+Auf Raspberry Pi OS wird [Multicast DNS](https://en.wikipedia.org/wiki/Multicast_DNS) standardmäßig von [Avahi](https://en.wikipedia.org/wiki /Avahi_%28software%29) Dienst.
 
-If your device supports mDNS, you can reach your Raspberry Pi by using its hostname and the `.local` suffix.
-The default hostname on a fresh Raspberry Pi OS install is `raspberrypi`, so by default any Raspberry Pi running Raspberry Pi OS responds to:
+Wenn Ihr Gerät mDNS unterstützt, können Sie Ihren Raspberry Pi über seinen Hostnamen und die Endung „.local“ erreichen.
+Der Standard-Hostname bei einer frischen Raspberry Pi OS-Installation ist "raspberrypi", daher antwortet standardmäßig jeder Raspberry Pi, auf dem Raspberry Pi OS ausgeführt wird, auf:
 
 ```bash
 ping raspberrypi.local
 ```
 
-If the Raspberry Pi is reachable, `ping` will show its IP address:
+Wenn der Raspberry Pi erreichbar ist, zeigt 'ping' seine IP-Adresse an:
 
 ```
-PING raspberrypi.local (192.168.1.131): 56 data bytes
-64 bytes from 192.168.1.131: icmp_seq=0 ttl=255 time=2.618 ms
+PING raspberrypi.local (192.168.1.131): 56 Datenbytes
+64 Byte von 192.168.1.131: icmp_seq=0 ttl=255 Zeit=2.618 ms
 ```
 
-If you change the system hostname of the Raspberry Pi (e.g., by editing `/etc/hostname`), Avahi will also change the `.local` mDNS address.
+Wenn Sie den System-Hostnamen des Raspberry Pi ändern (z. B. durch Bearbeiten von `/etc/hostname`), ändert Avahi auch die mDNS-Adresse `.local`.
 
-If you don't remember the hostname of the Raspberry Pi, but have a system with Avahi installed, you can browse all the hosts and services on the LAN with the [`avahi-browse`](https://linux.die.net/man/1/avahi-browse) command.
+Wenn Sie sich nicht an den Hostnamen des Raspberry Pi erinnern, aber ein System mit installiertem Avahi haben, können Sie mit dem [`avahi-browse`](https://linux.die. net/man/1/avahi-browse) Befehl.
 
-### nmap command
+### nmap-Befehl
 
-The `nmap` command (Network Mapper) is a free and open-source tool for network discovery, available for Linux, macOS, and Windows.
+Der Befehl 'nmap' (Network Mapper) ist ein kostenloses Open-Source-Tool zur Netzwerkerkennung, das für Linux, macOS und Windows verfügbar ist.
 
-- To install on **Linux**, install the `nmap` package e.g. `apt install nmap`.
+- Um auf **Linux** zu installieren, installieren Sie das `nmap`-Paket z.B. `apt install nmap`.
 
-- To install on **macOS** or **Windows**, see the [nmap.org download page](http://nmap.org/download.html).
+- Informationen zur Installation auf **macOS** oder **Windows** finden Sie auf der [nmap.org-Downloadseite](http://nmap.org/download.html).
 
-To use `nmap` to scan the devices on your network, you need to know the subnet you are connected to. First find your own IP address, in other words the one of the computer you're using to find your Pi's IP address:
+Um `nmap` zum Scannen der Geräte in Ihrem Netzwerk zu verwenden, müssen Sie das Subnetz kennen, mit dem Sie verbunden sind. Finden Sie zuerst Ihre eigene IP-Adresse, mit anderen Worten die des Computers, den Sie verwenden, um die IP-Adresse Ihres Pi zu finden:
 
-- On **Linux**, type `hostname -I` into a terminal window
-- On **macOS**, go to `System Preferences` then `Network` and select your active network connection to view the IP address
-- On **Windows**, go to the Control Panel, then under `Network and Sharing Center`, click `View network connections`, select your active network connection and click `View status of this connection` to view the IP address
+- Unter **Linux** geben Sie `hostname -I` in ein Terminalfenster ein
+- Unter **macOS** gehen Sie zu "Systemeinstellungen" und dann zu "Netzwerk" und wählen Sie Ihre aktive Netzwerkverbindung aus, um die IP-Adresse anzuzeigen
+- Unter **Windows** gehen Sie zur Systemsteuerung, klicken Sie dann unter "Netzwerk- und Freigabecenter" auf "Netzwerkverbindungen anzeigen", wählen Sie Ihre aktive Netzwerkverbindung aus und klicken Sie auf "Status dieser Verbindung anzeigen", um die IP-Adresse anzuzeigen
 
-Now you have the IP address of your computer, you will scan the whole subnet for other devices. For example, if your IP address is `192.168.1.5`, other devices will be at addresses like `192.168.1.2`, `192.168.1.3`, `192.168.1.4`, etc. The notation of this subnet range is `192.168.1.0/24` (this covers `192.168.1.0` to `192.168.1.255`).
+Jetzt haben Sie die IP-Adresse Ihres Computers und scannen das gesamte Subnetz nach anderen Geräten. Wenn Ihre IP-Adresse beispielsweise „192.168.1.5“ lautet, befinden sich andere Geräte an Adressen wie „192.168.1.2“, „192.168.1.3“, „192.168.1.4“ usw. Die Notation dieses Subnetzbereichs lautet „192.168“. .1.0/24` (dies umfasst `192.168.1.0` bis `192.168.1.255`).
 
-Now use the `nmap` command with the `-sn` flag (ping scan) on the whole subnet range. This may take a few seconds:
+Verwenden Sie nun den `nmap`-Befehl mit dem `-sn`-Flag (Ping-Scan) im gesamten Subnetzbereich. Dies kann einige Sekunden dauern:
 
 ```bash
 nmap -sn 192.168.1.0/24
 ```
 
-Ping scan just pings all the IP addresses to see if they respond. For each device that responds to the ping, the output shows the hostname and IP address like so:
+Der Ping-Scan pingt nur alle IP-Adressen, um zu sehen, ob sie antworten. Für jedes Gerät, das auf den Ping antwortet, zeigt die Ausgabe den Hostnamen und die IP-Adresse wie folgt an:
 
 ```
-Starting Nmap 6.40 ( http://nmap.org ) at 2014-03-10 12:46 GMT
-Nmap scan report for hpprinter (192.168.1.2)
-Host is up (0.00044s latency).
-Nmap scan report for Gordons-MBP (192.168.1.4)
-Host is up (0.0010s latency).
-Nmap scan report for ubuntu (192.168.1.5)
-Host is up (0.0010s latency).
-Nmap scan report for raspberrypi (192.168.1.8)
-Host is up (0.0030s latency).
-Nmap done: 256 IP addresses (4 hosts up) scanned in 2.41 seconds
+Start von Nmap 6.40 ( http://nmap.org ) um 2014-03-10 12:46 GMT
+Nmap-Scanbericht für hpprinter (192.168.1.2)
+Host ist aktiv (0,00044s Latenz).
+Nmap-Scanbericht für Gordons-MBP (192.168.1.4)
+Host ist aktiv (0,0010s Latenz).
+Nmap-Scanbericht für Ubuntu (192.168.1.5)
+Host ist aktiv (0,0010s Latenz).
+Nmap-Scan-Bericht für Raspberrypi (192.168.1.8)
+Host ist aktiv (0,0030s Latenz).
+Nmap fertig: 256 IP-Adressen (4 Hosts up) in 2,41 Sekunden gescannt
 ```
 
-Here you can see a device with hostname `raspberrypi` has IP address `192.168.1.8`. Note, to see the hostnames, you must run nmap as root by prepending `sudo` to the command.
+Hier sehen Sie, dass ein Gerät mit dem Hostnamen `raspberrypi` die IP-Adresse `192.168.1.8` hat. Beachten Sie, dass Sie nmap als root ausführen müssen, um die Hostnamen anzuzeigen, indem Sie dem Befehl `sudo` voranstellen.
 
-### Getting the IP address of a Pi using your smartphone
+### Abrufen der IP-Adresse eines Pi mit Ihrem Smartphone
 
-The Fing app is a free network scanner for smartphones. It is available for [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8).
+Die Fing App ist ein kostenloser Netzwerkscanner für Smartphones. Es ist verfügbar für [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing) und [iOS](https://itunes.apple.com/gb /app/fing-network-scanner/id430921107?mt=8).
 
-Your phone and your Raspberry Pi have to be on the same network, so connect your phone to the correct wireless network.
+Ihr Telefon und Ihr Raspberry Pi müssen sich im selben Netzwerk befinden, also verbinden Sie Ihr Telefon mit dem richtigen drahtlosen Netzwerk.
 
-When you open the Fing app, touch the refresh button in the upper right-hand corner of the screen. After a few seconds you will get a list with all the devices connected to your network. Scroll down to the entry with the manufacturer "Raspberry Pi". You will see the IP address in the bottom left-hand corner, and the MAC address in the bottom right-hand corner of the entry.
+Wenn Sie die Fing-App öffnen, tippen Sie auf die Schaltfläche zum Aktualisieren in der oberen rechten Ecke des Bildschirms. Nach wenigen Sekunden erhalten Sie eine Liste mit allen Geräten, die mit Ihrem Netzwerk verbunden sind. Scrollen Sie nach unten zum Eintrag mit dem Hersteller "Raspberry Pi". Sie sehen die IP-Adresse in der unteren linken Ecke und die MAC-Adresse in der unteren rechten Ecke des Eintrags.
 
-### More tools
+### Mehr Werkzeuge
 
-Also see [lsleases](https://github.com/j-keck/lsleases)
+Siehe auch [lsleases](https://github.com/j-keck/lsleases)

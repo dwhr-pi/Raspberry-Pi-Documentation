@@ -1,24 +1,24 @@
-# Raspberry Pi OS
+# Raspberry Pi-Betriebssystem
 
-Raspberry Pi OS is the recommended operating system for normal use on a Raspberry Pi.
+Raspberry Pi OS ist das empfohlene Betriebssystem für den normalen Gebrauch auf einem Raspberry Pi.
 
-Raspberry Pi OS is a free operating system based on Debian, optimised for the Raspberry Pi hardware. Raspberry Pi OS comes with over 35,000 packages: precompiled software bundled in a nice format for easy installation on your Raspberry Pi.
+Raspberry Pi OS ist ein kostenloses Betriebssystem basierend auf Debian, optimiert für die Raspberry Pi Hardware. Raspberry Pi OS wird mit über 35.000 Paketen geliefert: vorkompilierte Software in einem schönen Format zur einfachen Installation auf Ihrem Raspberry Pi.
 
-Raspberry Pi OS is a community project under active development, with an emphasis on improving the stability and performance of as many Debian packages as possible.
+Raspberry Pi OS ist ein Community-Projekt in aktiver Entwicklung, bei dem der Schwerpunkt auf der Verbesserung der Stabilität und Leistung so vieler Debian-Pakete wie möglich liegt.
 
-## Contents
+## Inhalt
 
-- [Installing Raspberry Pi OS](../installation/installing-images/README.md)
-- [Installing software in Raspberry Pi OS](../linux/software/apt.md)
-- [Updating/Upgrading Raspberry Pi OS](updating.md)
-- Configuring Raspberry Pi OS
+- [Installieren von Raspberry Pi OS](../installation/installing-images/README.md)
+- [Software im Raspberry Pi OS installieren](../linux/software/apt.md)
+- [Aktualisieren/Aktualisieren des Raspberry Pi-Betriebssystems](update.md)
+- Raspberry Pi OS konfigurieren
     - [raspi-config](../configuration/raspi-config.md)
     - [config.txt](../configuration/config-txt/README.md)
-    - [Screensaver / screen blanking](../configuration/screensaver.md)
-- [Applications](applications/README.md)
-    - [Camera](applications/camera.md)
+    - [Bildschirmschoner / Bildschirmausblendung](../configuration/screensaver.md)
+- [Anwendungen](Anwendungen/README.md)
+    - [Kamera](Anwendungen/Kamera.md)
     - [OMXPlayer](applications/omxplayer.md)
-    - [vcgencmd](applications/vcgencmd.md)
-    - [vcdbg](applications/vcdbg.md)
+    - [vcgencmd](Anwendungen/vcgencmd.md)
+    - [vcdbg](Anwendungen/vcdbg.md)
     - [tvservice](applications/tvservice.md)
-    - [rpi-update](applications/rpi-update.md)
+    - [rpi-update](Anwendungen/rpi-update.md)

@@ -1,133 +1,133 @@
 # FAQs
 
-## Table of contents
+## Inhaltsverzeichnis
 
-### [What is a Raspberry Pi?](#introduction)
+### [Was ist ein Raspberry Pi?](#Einleitung)
 
-### [Buying your first Raspberry Pi](#buying)
+### [Ihren ersten Raspberry Pi kaufen](#buying)
 
-- [Where can I buy a Raspberry Pi, and how much does it cost?](#buying-where)
-- [What do I get when I buy one?](#buying-what)
-- [I'm worried I have a fake Raspberry Pi!](#buying-fake)
+- [Wo kann ich einen Raspberry Pi kaufen und wie viel kostet er?](#buying-where)
+- [Was bekomme ich, wenn ich eins kaufe?](#kaufen-was)
+- [Ich mache mir Sorgen, dass ich einen gefälschten Raspberry Pi habe!](#buying-fake)
 
-### [Commercial and industry applications, resale](#commercial)
-- [I want to be a Raspberry Pi reseller.](#commercial-resell)
-- [What manufacturing standards etc. does the Raspberry Pi comply with?](#commercial-compliance)
-- [Can I use a Raspberry Pi in a commercial product?](#commercial-integrate)
-- [Is a Raspberry Pi suitable for industrial applications?](#commercial-suitable)
+### [Gewerbliche und industrielle Anwendungen, Weiterverkauf](#kommerziell)
+- [Ich möchte Reseller von Raspberry Pi werden.](#commercial-resell)
+- [Welche Fertigungsstandards etc. erfüllt der Raspberry Pi?](#commercial-compliance)
+- [Kann ich einen Raspberry Pi in einem kommerziellen Produkt verwenden?](#commercial-integrate)
+- [Ist ein Raspberry Pi für industrielle Anwendungen geeignet?](#commercial-suitable)
 
-### [The computer hardware](#hardware)
+### [Die Computerhardware](#hardware)
 
-- [What are the differences between Raspberry Pi models?](#hardware-compare)
-- [What hardware documentation is available?](#hardware-doc)
-- [What hardware interfaces does it have?](#hardware-interfaces)
-- [Can I use a Raspberry Pi for audio or video input?](#hardware-inputs)
-- [Where is the on/off switch?](#hardware-onoff)
-- [What are the dimensions of the Raspberry Pi?](#hardware-footprint)
+- [Was sind die Unterschiede zwischen Raspberry Pi-Modellen?](#hardware-compare)
+- [Welche Hardware-Dokumentation ist verfügbar?](#hardware-doc)
+- [Welche Hardwareschnittstellen hat es?](#hardware-interfaces)
+- [Kann ich einen Raspberry Pi für die Audio- oder Videoeingabe verwenden?](#hardware-inputs)
+- [Wo ist der Ein-/Ausschalter?](#hardware-onoff)
+- [Wie sind die Abmessungen des Raspberry Pi?](#hardware-footprint)
 
-### [Performance](#pi-performance)
+### [Leistung](#pi-Leistung)
 
-- [How powerful is it?](#pi-performance-perf)
-- [Can I use my Raspberry Pi as a desktop replacement?](#pi-performance-desktop)
-- [Can I add extra RAM?](#pi-performance-addram)
-- [Can I connect multiple Raspberry Pis together to make a faster computer?](#pi-performance-cluster)
-- [Why does my Raspberry Pi run at a slower clock speed than advertised?](#pi-performance-underclock)
-- [Does it overclock?](#pi-performance-overclock)
-- [What is its operating temperature? Does it need a heatsink?](#pi-performance-temps)
+- [Wie mächtig ist es?](#pi-performance-perf)
+- [Kann ich meinen Raspberry Pi als Desktop-Ersatz verwenden?](#pi-performance-desktop)
+- [Kann ich zusätzlichen RAM hinzufügen?](#pi-performance-addram)
+- [Kann ich mehrere Raspberry Pis miteinander verbinden, um einen schnelleren Computer zu machen?](#pi-performance-cluster)
+- [Warum läuft mein Raspberry Pi langsamer als angegeben?](#pi-performance-underclock)
+- [Übertaktet es?](#pi-performance-overclock)
+- [Wie ist seine Betriebstemperatur? Braucht es einen Kühlkörper?](#pi-performance-temps)
 
 ### [Software](#pi-software)
 
-- [What operating system (OS) does it use?](#pi-software-os)
-- [Can I run Windows 10 on the Raspberry Pi?](#pi-software-win)
-- [Updates? Upgrades? What do I do?](#pi-software-update)
-- [I heard about something called `rpi-update`. When should I use that?](#pi-software-rpiupdate)
-- [The processors on the latest Raspberry Pi models are 64-bit, but I cannot find an official 64-bit OS.](#pi-software-64)
-- [Can I run PC software on the Raspberry Pi?](#pi-software-intelcompat)
-- [Will it run Android or Android Things?](#pi-software-androidcompat)
-- [Will it run old software?](#pi-software-oldcompat)
-- [My `.exe` file won't run!](#pi-software-exefail)
-- [Can I share files from my Raspberry Pi with my Windows machines?](#pi-software-fileshare)
-- [Why does `cpuinfo` report I have a bcm2835?](#pi-software-cpuinfo)
-- [How do I run a program at startup?](#pi-software-autostart)
-- [How do I run a program at a specific time?](#pi-software-timedstart)
+- [Welches Betriebssystem (OS) verwendet es?](#pi-software-os)
+- [Kann ich Windows 10 auf dem Raspberry Pi ausführen?](#pi-software-win)
+- [Aktualisierung? Upgrades? Was soll ich tun?](#pi-software-update)
+- [Ich habe von etwas namens `rpi-update` gehört. Wann sollte ich das verwenden?](#pi-software-rpiupdate)
+- [Die Prozessoren der neuesten Raspberry Pi-Modelle sind 64-Bit, aber ich kann kein offizielles 64-Bit-Betriebssystem finden.](#pi-software-64)
+- [Kann ich PC-Software auf dem Raspberry Pi ausführen?](#pi-software-intelcompat)
+- [Wird es Android oder Android Things ausführen?](#pi-software-androidcompat)
+- [Wird es alte Software ausführen?](#pi-software-oldcompat)
+- [Meine `.exe`-Datei wird nicht ausgeführt!](#pi-software-exefail)
+- [Kann ich Dateien von meinem Raspberry Pi mit meinen Windows-Rechnern teilen?](#pi-software-fileshare)
+- [Warum meldet `cpuinfo`, dass ich ein bcm2835 habe?](#pi-software-cpuinfo)
+- [Wie führe ich ein Programm beim Start aus?](#pi-software-autostart)
+- [Wie führe ich ein Programm zu einem bestimmten Zeitpunkt aus?](#pi-software-timedstart)
 
 ### [Video](#pi-video)
 
-- [What displays can I use?](#pi-video-displays)
-- [Does the HDMI port support CEC?](#pi-video-hdmicec)
-- [Why is there no VGA support?](#pi-video-vga)
-- [Can I add a touchscreen?](#pi-video-touch)
-- [What codecs can it play?](#pi-video-codecs)
+- [Welche Displays kann ich verwenden?](#pi-video-displays)
+- [Unterstützt der HDMI-Port CEC?](#pi-video-hdmicec)
+- [Warum gibt es keine VGA-Unterstützung?](#pi-video-vga)
+- [Kann ich einen Touchscreen hinzufügen?](#pi-video-touch)
+- [Welche Codecs kann es abspielen?](#pi-video-codecs)
 
 ### [Audio](#pi-audio)
 
-- [Is sound over HDMI supported?](#pi-audio-hdmi)
-- [What about standard audio in and out?](#pi-audio-analog)
+- [Wird Ton über HDMI unterstützt?](#pi-audio-hdmi)
+- [Was ist mit Standard-Audio-Ein- und -Ausgang?](#pi-audio-analog)
 
-### [Power](#pi-power)
+### [Leistung](#pi-Leistung)
 
-- [Is it safe to just pull the power?](#pi-power-kill)
-- [What about unplanned power interruptions?](#pi-power-events)
-- [What are the power requirements?](#pi-power-specs)
-- [Can I power the Raspberry Pi from a USB hub?](#pi-power-usbhub)
-- [Can I power the Raspberry Pi from batteries as well as from a wall socket?](#pi-power-battbackup)
-- [Is Power over Ethernet (PoE) possible?](#pi-power-ethernet)
-- [What voltage devices can I attach to the GPIO pins, and how much current can I pull?](#pi-power-gpioout)
+- [Ist es sicher, einfach den Strom zu ziehen?](#pi-power-kill)
+- [Was ist mit ungeplanten Stromunterbrechungen?](#pi-power-events)
+- [Wie sind die Stromanforderungen?](#pi-power-specs)
+- [Kann ich den Raspberry Pi über einen USB-Hub mit Strom versorgen?](#pi-power-usbhub)
+- [Kann ich den Raspberry Pi sowohl über Batterien als auch über eine Steckdose mit Strom versorgen?](#pi-power-battbackup)
+- [Ist Power over Ethernet (PoE) möglich?](#pi-power-ethernet)
+- [Welche Spannungsgeräte kann ich an die GPIO-Pins anschließen und wie viel Strom kann ich ziehen?](#pi-power-gpioout)
 
-### [SD cards and storage](#sd-cards)
+### [SD-Karten und Speicher](#sd-cards)
 
-- [What size of SD card do I need?](#sd-cards-need)
-- [What size of SD card can it support?](#sd-cards-want)
-- [Can I boot a Raspberry Pi from a USB-attached hard drive instead of the SD card?](#sd-cards-usbboot)
-- [What happens if I brick the device?](#sd-cards-recovery)
+- [Welche SD-Kartengröße benötige ich?](#sd-cards-need)
+- [Welche SD-Kartengröße kann sie unterstützen?](#sd-cards-want)
+- [Kann ich einen Raspberry Pi von einer USB-angeschlossenen Festplatte statt von der SD-Karte booten?](#sd-cards-usbboot)
+- [Was passiert, wenn ich das Gerät blockiere?](#sd-cards-recovery)
 
-### [Networking and wireless connectivity](#networking)
+### [Netzwerk und drahtlose Konnektivität](#networking)
 
-- [Does the device support networking?](#networking-support)
-- [Is there built-in wireless networking?](#networking-builtinwifi)
-- [Is there built-in Bluetooth?](#networking-builtinbt)
-- [I don't seem to get full-speed gigabit networking on my Raspberry Pi 3B+.](#networking-gigaperf)
-- [Does the device have support for any form of netbooting or PXE?](#networking-netboot)
+- [Unterstützt das Gerät Netzwerke?](#networking-support)
+- [Gibt es ein integriertes drahtloses Netzwerk?](#networking-builtinwifi)
+- [Gibt es integriertes Bluetooth?](#networking-builtinbt)
+- [Ich scheine kein Full-Speed-Gigabit-Netzwerk auf meinem Raspberry Pi 3B+ zu bekommen.](#networking-gigaperf)
+- [Unterstützt das Gerät jede Form von Netbooting oder PXE?](#networking-netboot)
 
-### [Camera Module](#cameramodule)
+### [Kameramodul](#kameramodul)
 
-- [What is the Camera Module?](#cameramodule-what)
-- [What model of camera does the Camera Module use?](#cameramodule-model)
-- [What resolutions are supported?](#cameramodule-res)
-- [What picture formats are supported?](#cameramodule-format)
-- [How do I use the Camera Module?](#cameramodule-how)
-- [Can I extend the ribbon cable?](#cameramodule-cable)
-- [How much power does the Camera Module use?](#cameramodule-power)
+- [Was ist das Kameramodul?](#cameramodule-was)
+- [Welches Kameramodell verwendet das Kameramodul?](#cameramodule-model)
+- [Welche Auflösungen werden unterstützt?](#cameramodule-res)
+- [Welche Bildformate werden unterstützt?](#cameramodule-format)
+- [Wie verwende ich das Kameramodul?](#cameramodule-how)
+- [Kann ich das Flachbandkabel verlängern?](#cameramodule-cable)
+- [Wie viel Strom verbraucht das Kameramodul?](#cameramodule-power)
 
-### [Troubleshooting](#troubleshoot)
+### [Fehlerbehebung](#Fehlerbehebung)
 
-- [What is the username and password for the Raspberry Pi?](#troubleshoot-defpasswd)
-- [Why does nothing happen when I type in my password?](#troubleshoot-inputpasswd)
-- [Why does my Raspberry Pi not start up/boot?](#troubleshoot-boot)
-- [Why is my Raspberry Pi hot?](#troubleshoot-temp)
-- [I keep getting a lightning bolt symbol and messages about power...](#troubleshoot-power)
-- [My SD card seems to have stopped working.](#troubleshoot-sd)
-- [I've imaged an SD card with Raspberry Pi OS/NOOBS, but when I look at it with my Windows PC, it's not all there!](#troubleshoot-fs)
+- [Wie lautet der Benutzername und das Passwort für den Raspberry Pi?](#troubleshoot-defpasswd)
+- [Warum passiert nichts, wenn ich mein Passwort eingebe?](#troubleshoot-inputpasswd)
+- [Warum startet/bootet mein Raspberry Pi nicht?](#troubleshoot-boot)
+- [Warum ist mein Raspberry Pi heiß?](#troubleshoot-temp)
+- [Ich erhalte immer wieder ein Blitzsymbol und Nachrichten über Energie...](#troubleshoot-power)
+- [Meine SD-Karte scheint nicht mehr zu funktionieren.](#troubleshoot-sd)
+- [Ich habe eine SD-Karte mit Raspberry Pi OS/NOOBS erstellt, aber wenn ich sie mit meinem Windows-PC betrachte, ist nicht alles da!](#troubleshoot-fs)
 
 ---
 
 <a name="introduction"></a>
-## What is a Raspberry Pi?
+## Was ist ein Raspberry Pi?
 
-Raspberry Pi is the third best-selling computer brand in the world. The Raspberry Pi is a credit card–sized computer that plugs into your TV or display, and a keyboard and mouse. You can use it to learn coding and to build electronics projects, and for many of the things that your desktop PC does, like spreadsheets, word processing, browsing the internet, and playing games. It also plays high-definition video. The Raspberry Pi is being used by adults and children all over the world to learn programming and digital making. You can learn how to set up and use your Raspberry Pi [here](https://www.raspberrypi.org/help/).
+Raspberry Pi ist die drittgrößte Computermarke der Welt. Der Raspberry Pi ist ein kreditkartengroßer Computer, der an Ihren Fernseher oder Bildschirm angeschlossen wird, sowie eine Tastatur und eine Maus. Sie können es verwenden, um Programmieren zu lernen und Elektronikprojekte zu erstellen, und für viele der Dinge, die Ihr Desktop-PC tut, wie Tabellenkalkulationen, Textverarbeitung, Surfen im Internet und Spielen. Es spielt auch High-Definition-Videos ab. Der Raspberry Pi wird von Erwachsenen und Kindern auf der ganzen Welt verwendet, um Programmieren und digitales Machen zu lernen. Wie Sie Ihren Raspberry Pi einrichten und verwenden, erfahren Sie [hier](https://www.raspberrypi.org/help/).
 
 <a name="buying"></a>
-## Buying your first Raspberry Pi
+## Kaufe deinen ersten Raspberry Pi
 
-<a name="buying-where"></a>
-### Where can I buy a Raspberry Pi, and how much does it cost?
+<a name="kaufen-wo"></a>
+### Wo kann ich einen Raspberry Pi kaufen und wie viel kostet er?
 
-Go to our [products page](https://www.raspberrypi.org/products/) and choose the product(s) you want to buy. Then select your country from the drop-down menu. You will be presented with our approved resellers for your country.
+Gehen Sie zu unserer [Produktseite](https://www.raspberrypi.org/products/) und wählen Sie die Produkte aus, die Sie kaufen möchten. Wählen Sie dann Ihr Land aus dem Dropdown-Menü aus. Ihnen werden unsere zugelassenen Wiederverkäufer für Ihr Land vorgestellt.
 
-The following prices are in US dollars, and exclusive of any local taxes and shipping/handling fees.
+Die folgenden Preise sind in US-Dollar und exklusive lokaler Steuern und Versand-/Bearbeitungsgebühren.
 
-|Product|Price|
-|-------|-----|
+|Produkt|Preis|
+|------|-----|
 | [Raspberry Pi Model A+](https://www.raspberrypi.org/products/raspberry-pi-1-model-a-plus)| $20 |
 | [Raspberry Pi Model B+](https://www.raspberrypi.org/products/raspberry-pi-1-model-b-plus) |$25 |
 | [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b)| $35 |
@@ -135,522 +135,525 @@ The following prices are in US dollars, and exclusive of any local taxes and shi
 | [Raspberry Pi 3 Model A+](https://www.raspberrypi.org/products/raspberry-pi-3-model-a-plus) | $25 |
 | [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus) | $35 |
 | [Raspberry Pi 4 Model B 2/4/8GB](https://www.raspberrypi.org/products/raspberry-pi-4-model-b) | $35/$55/$75 |
-| [Raspberry Pi 4 Model B official kits 2/4/8GB](https://www.raspberrypi.org/products/raspberry-pi-4-desktop-kit)  | $100/$120/$140 |
+| [Raspberry Pi 4 Model B offizielle Kits 2/4/8GB](https://www.raspberrypi.org/products/raspberry-pi-4-desktop-kit) | $100/$120/$140 |
 | [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero) | $5 |
 | [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w) |$10 |
 | [Raspberry Pi Zero WH](https://www.raspberrypi.org/products/raspberry-pi-zero-w) |$15 |
 | [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400-unit) |$70 |
-| [Raspberry Pi 400 offical kit](https://www.raspberrypi.org/products/raspberry-pi-400) |$100 |
+| [Raspberry Pi 400 offizielles Kit](https://www.raspberrypi.org/products/raspberry-pi-400) |$100 |
 
-<a name="buying-what"></a>
-### What do I get when I buy one?
+<a name="kaufen-was"></a>
+### Was bekomme ich, wenn ich einen kaufe?
 
-Raspberry Pi computers are available separately, or as complete kits which contain everything you need to get started including a mouse, HDMI cable, SD card, power supply, as well as our official Beginners Guide book. The Raspberry Pi 400 is a computer enclosed in a keyboard: other kits come with a separate case and keyboard.
+Raspberry Pi-Computer sind einzeln oder als komplette Kits erhältlich, die alles enthalten, was Sie für den Einstieg benötigen, einschließlich Maus, HDMI-Kabel, SD-Karte, Netzteil sowie unserem offiziellen Einsteigerhandbuch. Der Raspberry Pi 400 ist ein Computer in einer Tastatur: Andere Kits werden mit einem separaten Gehäuse und einer separaten Tastatur geliefert.
 
-Raspberry Pi also sell all the equipment you need to get your Raspberry Pi up and running separately. We recommend using an official Raspberry Pi Power Supply. For the Pi Zero, 1, 2 and 3 use the [Raspberry Pi 1, 2 and 3 Power Supply](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/), for the Pi 4B and Pi 400 use the [Raspberry Pi USB-C Power Supply](https://www.raspberrypi.org/products/type-c-power-supply/).
+Raspberry Pi verkauft auch alle Geräte, die Sie benötigen, um Ihren Raspberry Pi separat zum Laufen zu bringen. Wir empfehlen die Verwendung eines offiziellen Raspberry Pi Netzteils. Verwenden Sie für den Pi Zero, 1, 2 und 3 das [Raspberry Pi 1, 2 und 3 Netzteil](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/), für die Pi 4B und Pi 400 verwenden das [Raspberry Pi USB-C Netzteil] (https://www.raspberrypi.org/products/type-c-power-supply/).
 
-Official cases for the Raspberry Pi range are available separately [from our distributors](https://www.raspberrypi.org/products/). Community members have designed loads of awesome [3D-printable cases](https://www.raspberrypi.org/blog/3d-printed-raspberry-pi-cases/) 
+Offizielle Hüllen für die Raspberry Pi-Reihe sind separat erhältlich [von unseren Distributoren](https://www.raspberrypi.org/products/). Community-Mitglieder haben viele tolle [3D-druckbare Hüllen] entworfen (https://www.raspberrypi.org/blog/3d-printed-raspberry-pi-cases/)
 
-For full details of all of our products, see our [Product page](https://www.raspberrypi.org/products/).
+Ausführliche Informationen zu all unseren Produkten finden Sie auf unserer [Produktseite](https://www.raspberrypi.org/products/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 
 <a name="buying-fake"></a>
-### I'm worried I have a fake Raspberry Pi!
+### Ich mache mir Sorgen, dass ich einen gefälschten Raspberry Pi habe!
 
-Don't worry, as far as we know, there are no fake Raspberry Pis. The processors used on the Raspberry Pi range are only available from one supplier, and only in quantities of several million at a time, which, together with the low price of the Raspberry Pi means it's not cost-effective for clones to be made. There are a number of competitor products that use similar names, but no actual clones or fakes.
+Keine Sorge, soweit wir wissen, gibt es keine gefälschten Raspberry Pis. Die in der Raspberry-Pi-Reihe verwendeten Prozessoren sind nur von einem Anbieter und nur in Stückzahlen von mehreren Millionen erhältlich, was zusammen mit dem niedrigen Preis des Raspberry Pi die Herstellung von Klonen nicht wirtschaftlich macht. Es gibt eine Reihe von Konkurrenzprodukten, die ähnliche Namen verwenden, aber keine tatsächlichen Klone oder Fälschungen.
 
 <a name="commercial"></a>
-## Commercial and industry applications, resale
+## Kommerzielle und industrielle Anwendungen, Weiterverkauf
 
 <a name="commercial-resell"></a>
-### I want to be a Raspberry Pi reseller.
+### Ich möchte Reseller von Raspberry Pi werden.
 
-We have an exclusive manufacturing and distribution arrangement with [RS](http://uk.rs-online.com/web/generalDisplay.html?id=raspberrypi) and [Farnell](https://www.element14.com/community/community/raspberry-pi). Resellers buy the Raspberry Pi in bulk from them (which reduces shipping costs to nearly nothing) and sell on. You do not need any special licence to resell, and the distributors are very happy to sell on to resellers. If you are interested in joining our [Approved Reseller](https://www.raspberrypi.org/blog/approved-reseller/) programme, contact us by emailing info@raspberrypi.com.
+Wir haben eine exklusive Herstellungs- und Vertriebsvereinbarung mit [RS](http://uk.rs-online.com/web/generalDisplay.html?id=raspberrypi) und [Farnell](https://www.element14.com/ Community/Community/Himbeer-Pi). Wiederverkäufer kaufen den Raspberry Pi in großen Mengen bei ihnen (was die Versandkosten auf fast nichts reduziert) und verkaufen sie weiter. Für den Weiterverkauf benötigen Sie keine spezielle Lizenz, und die Distributoren verkaufen sehr gerne an Wiederverkäufer. Wenn Sie daran interessiert sind, an unserem [Approved Reseller](https://www.raspberrypi.org/blog/approved-reseller/)-Programm teilzunehmen, kontaktieren Sie uns per E-Mail an info@raspberrypi.com.
 
 <a name="commercial-compliance"></a>
-### What manufacturing standards etc. does the Raspberry Pi comply with?
+### Welche Fertigungsstandards etc. erfüllt der Raspberry Pi?
 
-We have put the Raspberry Pi models through extensive compliance testing, for Europe, the USA, and other countries around the world. You can find many of the reports [here](../hardware/raspberrypi/conformity.md).
+Wir haben die Raspberry Pi-Modelle umfangreichen Konformitätstests für Europa, die USA und andere Länder auf der ganzen Welt unterzogen. Viele der Berichte finden Sie [hier](../hardware/raspberrypi/conformity.md).
 
 <a name="commercial-integrate"></a>
-### Can I use a Raspberry Pi in a commercial product?
+### Kann ich einen Raspberry Pi in einem kommerziellen Produkt verwenden?
 
-This is a very common question, and the answer is yes! Once you have bought a Raspberry Pi, it's yours to do with as you wish. Note, however, that a lot of the software in the Raspberry Pi OS distribution is GPL-licenced, which comes with certain requirements, most significantly that you must provide access to the source code if requested. This is usually pretty easy to do.
+Dies ist eine sehr häufige Frage, und die Antwort ist ja! Sobald Sie einen Raspberry Pi gekauft haben, können Sie ihn nach Belieben verwenden. Beachten Sie jedoch, dass ein Großteil der Software in der Raspberry Pi OS-Distribution GPL-lizenziert ist, was bestimmte Anforderungen mit sich bringt, vor allem, dass Sie auf Anfrage Zugriff auf den Quellcode gewähren müssen. Dies ist normalerweise ziemlich einfach zu tun.
 
-<a name="commercial-suitable"></a>
-### Is a Raspberry Pi suitable for industrial applications?
+<a name="kommerziell-geeignet"></a>
+### Ist ein Raspberry Pi für industrielle Anwendungen geeignet?
 
-Yes — it depends on your use case. Raspberry Pis have been used successfully in industrial environments, but the final decision must be in the hands of the end user as to whether the device is suitable for the task at hand. See our [Compute Module documentation](../hardware/computemodule/README.md) for more details on our Raspberry Pi model specifically designed for use in commercial and industrial products.
+Ja – es hängt von Ihrem Anwendungsfall ab. Im industriellen Umfeld werden Raspberry Pis erfolgreich eingesetzt, aber die endgültige Entscheidung, ob das Gerät für die gestellte Aufgabe geeignet ist, muss beim Endanwender liegen. Weitere Informationen zu unserem Raspberry Pi-Modell, das speziell für den Einsatz in kommerziellen und industriellen Produkten entwickelt wurde, finden Sie in unserer [Compute Module-Dokumentation](../hardware/computemodule/README.md).
 
 <a name="hardware"></a>
-## The computer hardware
+## Die Computerhardware
 
 <a name="hardware-compare"></a>
-### What are the differences between Raspberry Pi models?
+### Was sind die Unterschiede zwischen Raspberry Pi-Modellen?
 
-These are the [models of the Raspberry Pi](https://www.raspberrypi.org/products/) which are currently available: the Pi 3 Model B, the Pi 2 Model B, the Pi Zero, the Pi Zero W and the Pi 1 Model B+ and A+.
+Dies sind die derzeit verfügbaren [Modelle des Raspberry Pi](https://www.raspberrypi.org/products/): das Pi 3 Model B, das Pi 2 Model B, das Pi Zero, das Pi Zero W und das Pi 1 Modell B+ und A+.
 
-| Product | SoC | Speed | RAM | USB Ports | Ethernet | Wireless | Bluetooth |
-|---------|-----|-------|-----|:--------:|:--------:|:--------:|:---------:|
-| Raspberry Pi Model A+ | BCM2835 | 700MHz | 512MB | 1 | No | No | No |
-| Raspberry Pi Model B+ | BCM2835 | 700MHz | 512MB | 4 |100Base-T | No | No |
-| Raspberry Pi 2 Model B | BCM2836/7 | 900MHz | 1GB | 4 |100Base-T| No | No |
-| Raspberry Pi 3 Model B | BCM2837A0/B0 | 1200MHz | 1GB | 4 |100Base-T| 802.11n| 4.1 |
-| Raspberry Pi 3 Model A+ | BCM2837B0 | 1400MHz | 512MB | 1 | No | 802.11ac/n | 4.2 |
-| Raspberry Pi 3 Model B+ | BCM2837B0 | 1400MHz | 1GB | 4 |1000Base-T | 802.11ac/n | 4.2 |
-| Raspberry Pi 4 Model B | BCM2711 | 1500MHz | 2GB | 2xUSB2, 2xUSB3 |1000Base-T | 802.11ac/n | 5.0 |
-| Raspberry Pi 4 Model B | BCM2711 | 1500MHz | 4GB | 2xUSB2, 2xUSB3 |1000Base-T | 802.11ac/n | 5.0 |
-| Raspberry Pi 4 Model B | BCM2711 | 1500MHz | 8GB | 2xUSB2, 2xUSB3 |1000Base-T | 802.11ac/n | 5.0 |
-| Raspberry Pi Zero | BCM2835 | 1000MHz | 512MB | 1 | No | No | No |
-| Raspberry Pi Zero W | BCM2835 | 1000MHz | 512MB | 1 | No | 802.11n | 4.1 |
-| Raspberry Pi Zero WH | BCM2835 | 1000MHz | 512MB | 1 | No | 802.11n | 4.1 |
+| Produkt | SoC | Geschwindigkeit | RAM | USB-Anschlüsse | Ethernet | Drahtlos | Bluetooth |
+|---------|-----|-------|-----|:--------:|:--------- -:|:--------:|:---------:|
+| Raspberry Pi Modell A+ | BCM2835 | 700MHz | 512 MB | 1 | Nein | Nein | Nein |
+| Raspberry Pi Modell B+ | BCM2835 | 700MHz | 512 MB | 4 |100Base-T | Nein | Nein |
+| Raspberry Pi 2 Modell B | BCM2836/7 | 900MHz | 1GB | 4 |100Base-T| Nein | Nein |
+| Raspberry Pi 3 Modell B | BCM2837A0/B0 | 1200MHz | 1GB | 4 |100Base-T| 802.11n| 4.1 |
+| Raspberry Pi 3 Modell A+ | BCM2837B0 | 1400MHz | 512 MB | 1 | Nein | 802.11ac/n | 4.2 |
+| Raspberry Pi 3 Modell B+ | BCM2837B0 | 1400MHz | 1GB | 4 |1000Base-T | 802.11ac/n | 4.2 |
+| Raspberry Pi 4 Modell B | BCM2711 | 1500MHz | 2GB | 2xUSB2, 2xUSB3 |1000Base-T | 802.11ac/n | 5.0 |
+| Raspberry Pi 4 Modell B | BCM2711 | 1500MHz | 4GB | 2xUSB2, 2xUSB3 |1000Base-T | 802.11ac/n | 5.0 |
+| Raspberry Pi 4 Modell B | BCM2711 | 1500MHz | 8GB | 2xUSB2, 2xUSB3 |1000Base-T | 802.11ac/n | 5.0 |
+| Raspberry Pi Zero | BCM2835 | 1000MHz | 512 MB | 1 | Nein | Nein | Nein |
+| Raspberry Pi Zero W | BCM2835 | 1000MHz | 512 MB | 1 | Nein | 802.11n | 4.1 |
+| Raspberry Pi Zero WH | BCM2835 | 1000MHz | 512 MB | 1 | Nein | 802.11n | 4.1 |
 | Raspberry Pi 400 | BCM2711 | 1800MHz | 4GB | 1xUSB2, 2xUSB3 |1000Base-T | 802.11ac/n | 5.0 |
 
-The Model A+ is the low-cost variant of the Raspberry Pi. It has 512MB RAM (as of August 2016: earlier models have 256MB), one USB port, 40 GPIO pins, and no Ethernet port.
+Das Model A+ ist die kostengünstige Variante des Raspberry Pi. Es verfügt über 512 MB RAM (Stand August 2016: frühere Modelle haben 256 MB), einen USB-Port, 40 GPIO-Pins und keinen Ethernet-Port.
 
-The Model B+ is the final revision of the original Raspberry Pi. It has 512MB RAM, four USB ports, 40 GPIO pins, and an Ethernet port.
+Das Model B+ ist die letzte Überarbeitung des ursprünglichen Raspberry Pi. Es verfügt über 512 MB RAM, vier USB-Ports, 40 GPIO-Pins und einen Ethernet-Port.
 
-In February 2015, it was superseded by the Raspberry Pi 2 Model B, the second generation of the Raspberry Pi. The Raspberry Pi 2 shares many specs with the Raspberry Pi 1 B+, and originally used a 900MHz quad-core Arm Cortex-A7 CPU and has 1GB RAM. Some recent version of the Raspberry Pi 2 (v1.2) now use a 900MHz Arm Cortex-A53 CPU.
+Im Februar 2015 wurde es vom Raspberry Pi 2 Model B, der zweiten Generation des Raspberry Pi, abgelöst. Der Raspberry Pi 2 teilt viele Spezifikationen mit dem Raspberry Pi 1 B+ und verwendet ursprünglich eine 900-MHz-Quad-Core-Arm-Cortex-A7-CPU und verfügt über 1 GB RAM. Einige neuere Versionen des Raspberry Pi 2 (v1.2) verwenden jetzt eine 900-MHz-Arm-Cortex-A53-CPU.
 
-The Raspberry Pi 3 Model B was launched in February 2016. It uses a 1.2GHz 64-bit quad-core Arm Cortex-A53 CPU, has 1GB RAM, integrated 802.11n wireless LAN, and Bluetooth 4.1.
+Das Raspberry Pi 3 Model B wurde im Februar 2016 auf den Markt gebracht. Es verwendet eine 1,2-GHz-64-Bit-Quad-Core-Arm-Cortex-A53-CPU, verfügt über 1 GB RAM, integriertes 802.11n-WLAN und Bluetooth 4.1.
 
-The Raspberry Pi 3 Model B+ was launched in March 2018. It uses a 1.4GHz 64-bit quad-core Arm Cortex-A53 CPU, has 1GB RAM, gigabit Ethernet, integrated 802.11ac/n wireless LAN, and Bluetooth 4.2.
+Das Raspberry Pi 3 Model B+ wurde im März 2018 auf den Markt gebracht. Es verwendet eine 1,4 GHz 64-Bit-Quad-Core-Arm-Cortex-A53-CPU, verfügt über 1 GB RAM, Gigabit-Ethernet, integriertes 802.11ac/n-WLAN und Bluetooth 4.2.
 
-The Raspberry Pi 4 Model B was launched in June 2019. It uses a 1.5GHz 64-bit quad-core Arm Cortex-A72 CPU, has three RAM options (2GB, 4GB, 8GB), gigabit Ethernet, integrated 802.11ac/n wireless LAN, and Bluetooth 5.0. Originally launched with a 1GB option, this has been superceded by the 2GB at the original 1GB price. The 1GB device is still available as a special order.
+Das Raspberry Pi 4 Model B wurde im Juni 2019 auf den Markt gebracht. Es verwendet eine 1,5 GHz 64-Bit-Quad-Core-Arm-Cortex-A72-CPU, verfügt über drei RAM-Optionen (2 GB, 4 GB, 8 GB), Gigabit-Ethernet, integriertes 802.11ac/n-Wireless LAN und Bluetooth 5.0. Ursprünglich mit einer 1-GB-Option auf den Markt gebracht, wurde dies durch die 2 GB zum ursprünglichen 1-GB-Preis ersetzt. Das 1-GB-Gerät ist weiterhin als Sonderbestellung erhältlich.
 
-The Raspberry Pi 400 was launched in November 2020. It uses a 1.8GHz 64-bit quad-core Arm Cortex-A72 CPU, with 4GB of RAM, gigabit Ethernet, integrated 802.11ac/n wireless LAN, and Bluetooth 5.0. The Raspberry Pi 400 is the first Raspberry Pi built into a compact keyboard.
+Der Raspberry Pi 400 wurde im November 2020 auf den Markt gebracht. Er verwendet eine 1,8 GHz 64-Bit-Quad-Core-Arm-Cortex-A72-CPU mit 4 GB RAM, Gigabit-Ethernet, integriertem 802.11ac/n-WLAN und Bluetooth 5.0. Der Raspberry Pi 400 ist der erste Raspberry Pi, der in eine kompakte Tastatur integriert ist.
 
-The Raspberry Pi Zero and Raspberry Pi Zero W/WH are half the size of a Model A+, with a 1GHz single-core CPU and 512MB RAM, and mini-HDMI and USB On-The-Go ports and a camera connector. The Raspberry Pi Zero W also has integrated 802.11n wireless LAN and Bluetooth 4.1. The Raspberry Pi Zero WH is identical to the Zero W, but comes with a pre-soldered header.
+Der Raspberry Pi Zero und Raspberry Pi Zero W/WH sind halb so groß wie ein Model A+, mit einer 1 GHz Single-Core-CPU und 512 MB RAM, Mini-HDMI- und USB-On-The-Go-Anschlüssen und einem Kameraanschluss. Der Raspberry Pi Zero W hat außerdem 802.11n Wireless LAN und Bluetooth 4.1 integriert. Der Raspberry Pi Zero WH ist identisch mit dem Zero W, kommt aber mit einem vorgelöteten Header.
 
-The Model A/A+ has one USB port, the Model B has two ports, and the Model B+, Raspberry Pi 2 Model B, and Raspberry Pi 3 Model B have four ports. These can be used to connect most USB 2.0 devices. Additional USB devices such as mice, keyboards, network adapters, and external storage can be connected via a USB hub. The Raspberry Pi Zero and Raspberry Pi Zero W have a single micro USB port, this requires a USB OTG cable to connect devices such as keyboards or hubs.
+Das Model A/A+ hat einen USB-Port, das Model B hat zwei Ports und das Model B+, Raspberry Pi 2 Model B und Raspberry Pi 3 Model B haben vier Ports. Diese können verwendet werden, um die meisten USB 2.0-Geräte anzuschließen. Über einen USB-Hub können weitere USB-Geräte wie Mäuse, Tastaturen, Netzwerkadapter und externe Speicher angeschlossen werden. Der Raspberry Pi Zero und Raspberry Pi Zero W verfügen über einen einzigen Micro-USB-Anschluss, dies erfordert ein USB-OTG-Kabel, um Geräte wie Tastaturen oder Hubs anzuschließen.
 
-The final model (not described in the table above) is the [Compute Module](https://www.raspberrypi.org/products/compute-module-3/), which is intended for industrial applications. It is a small form factor device that connects to a carrier board, for example a circuit board inside an industrial product, and gives manufacturers an easy way to use the Raspberry Pi ecosystem in their own devices.
+Das endgültige Modell (in der obigen Tabelle nicht beschrieben) ist das [Compute Module](https://www.raspberrypi.org/products/compute-module-3/), das für industrielle Anwendungen gedacht ist. Es handelt sich um ein Gerät mit kleinem Formfaktor, das mit einer Trägerplatine verbunden wird, beispielsweise einer Leiterplatte in einem Industrieprodukt, und Herstellern eine einfache Möglichkeit bietet, das Raspberry Pi-Ökosystem in ihren eigenen Geräten zu verwenden.
 
-You can check our [products](https://www.raspberrypi.org/products/) pages for more details on current boards. There are also some models of Raspberry Pi which are no longer in production, but which may be available second-hand or from resellers. The Model A was the initial low-cost variant of the Raspberry Pi. It was replaced by the smaller, neater Model A+ in November 2014; it shares the same specs as the A+, but has only 26 GPIO pins and 128MB of RAM. The Model B was the previous incarnation of the B+; again, it shares most of the same specs, but has only two USB ports and 26 GPIO pins. The original version of the Raspberry Pi Zero did not come with a camera connector, but all current versions have the connector as standard.
+Weitere Informationen zu aktuellen Boards finden Sie auf unseren [products](https://www.raspberrypi.org/products/)-Seiten. Es gibt auch einige Raspberry-Pi-Modelle, die nicht mehr produziert werden, aber möglicherweise gebraucht oder bei Wiederverkäufern erhältlich sind. Das Model A war die erste kostengünstige Variante des Raspberry Pi. Es wurde im November 2014 durch das kleinere, sauberere Model A+ ersetzt; es hat die gleichen Spezifikationen wie das A+, hat aber nur 26 GPIO-Pins und 128 MB RAM. Das Modell B war die vorherige Inkarnation des B+; Auch hier hat es die meisten der gleichen Spezifikationen, hat aber nur zwei USB-Anschlüsse und 26 GPIO-Pins. Die ursprüngliche Version des Raspberry Pi Zero hatte keinen Kameraanschluss, aber alle aktuellen Versionen haben den Anschluss standardmäßig.
 
 <a name="hardware-doc"></a>
-### What hardware documentation is available?
+### Welche Hardware-Dokumentation ist verfügbar?
 
-All available documentation is in our [documentation repository](./README.md).
+Die gesamte verfügbare Dokumentation befindet sich in unserem [Dokumentations-Repository](./README.md).
 
 <a name="hardware-interfaces"></a>
-### What hardware interfaces does it have?
+### Welche Hardwareschnittstellen hat es?
 
-Depending on the model, the Raspberry Pi has either 40 or 26 dedicated interface pins. In all cases, these include a UART, an I2C bus, a SPI bus with two chip selects, I2S audio, 3V3, 5V, and ground. The maximum number of GPIOs can theoretically be indefinitely expanded by making use of the I2C or SPI bus.
+Je nach Modell verfügt der Raspberry Pi über 40 oder 26 dedizierte Schnittstellenpins. Dazu gehören in allen Fällen ein UART, ein I2C-Bus, ein SPI-Bus mit zwei Chip-Selects, I2S-Audio, 3V3, 5V und Masse. Die maximale Anzahl von GPIOs kann theoretisch durch die Nutzung des I2C- oder SPI-Busses unbegrenzt erweitert werden.
 
-There is also a dedicated CSI-2 camera port for the [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/), and a DSI display port for the [Raspberry Pi LCD touchscreen display](https://www.raspberrypi.org/products/raspberry-pi-touch-display/).
+Es gibt auch einen dedizierten CSI-2-Kamera-Port für das [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/) und einen DSI-Display-Port für das [Raspberry Pi LCD-Touchscreen-Display](https: //www.raspberrypi.org/products/raspberry-pi-touch-display/).
 
 <a name="hardware-inputs"></a>
-### Can I use a Raspberry Pi for audio or video input?
+### Kann ich einen Raspberry Pi für die Audio- oder Videoeingabe verwenden?
 
-Not by itself: there is no audio or video (HDMI/composite) IN capability on the Raspberry Pi. You can add third-party boards to add this sort of functionality. The Raspberry Pi has a camera interface that can record video from the [Raspberry Pi Camera Module](https://www.raspberrypi.org/products/) — you can find the the [Camera Module FAQ section here](#cameramodule).
+Nicht an sich: Es gibt keine Audio- oder Video-(HDMI/Composite)-IN-Fähigkeit auf dem Raspberry Pi. Sie können Boards von Drittanbietern hinzufügen, um diese Art von Funktionalität hinzuzufügen. Der Raspberry Pi verfügt über eine Kameraschnittstelle, die Videos vom [Raspberry Pi Camera Module] (https://www.raspberrypi.org/products/) aufnehmen kann – Sie finden den Abschnitt [FAQ zum Kameramodul hier](#cameramodule) .
 
 <a name="hardware-onoff"></a>
-### Where is the on/off switch?
+### Wo ist der Ein-/Ausschalter?
 
-There is no on/off switch! To switch on, just plug it in. To switch off, if you are using the Raspberry Pi Desktop, simply select the `Logout` option from the main menu, then `Shutdown`. If you are not using the desktop, and are at the console, you can shut down the Raspberry Pi by entering `sudo halt -h`. Wait until all the LEDs except the power LED are off, then wait an additional second to make sure the SD card can finish its wear-levelling tasks and write actions. You can now safely unplug the Raspberry Pi. Failure to shut the Raspberry Pi down properly may corrupt your SD card, which would mean you would have to re-image it.
+Es gibt keinen Ein-/Ausschalter! Zum Einschalten einfach einstecken. Zum Ausschalten, wenn Sie den Raspberry Pi Desktop verwenden, wählen Sie einfach die Option `Logout` aus dem Hauptmenü und dann `Shutdown`. Wenn Sie nicht den Desktop verwenden und sich an der Konsole befinden, können Sie den Raspberry Pi mit der Eingabe von `sudo halt -h` herunterfahren. Warten Sie, bis alle LEDs außer der Power-LED aus sind, und warten Sie dann eine weitere Sekunde, um sicherzustellen, dass die SD-Karte ihre Wear-Leveling-Aufgaben und Schreibaktionen beenden kann. Sie können den Raspberry Pi jetzt sicher vom Strom trennen. Wenn Sie den Raspberry Pi nicht ordnungsgemäß herunterfahren, kann Ihre SD-Karte beschädigt werden, was bedeuten würde, dass Sie sie neu abbilden müssen.
 
 <a name="hardware-footprint"></a>
-### What are the dimensions of the Raspberry Pi?
+### Welche Abmessungen hat der Raspberry Pi?
 
-The Raspberry Pi Model B versions measure 85.60mm x 56mm x 21mm (or roughly 3.37″ x 2.21″ x 0.83″), with a little overlap for the SD card and connectors which project over the edges. They weigh 45g. The Raspberry Pi Zero and Raspberry Pi Zero W measure 65mm x 30mm x 5.4mm (or roughly 2.56″ x 1.18″ x 0.20″) and weigh 9g. For the mechanical outlines, please see the documentation [here](../hardware/raspberrypi/mechanical/README.md)
+Die Raspberry Pi Model B-Versionen messen 85,60 mm x 56 mm x 21 mm (oder ungefähr 3,37 "x 2,21" x 0,83"), mit einer kleinen Überlappung für die SD-Karte und die Anschlüsse, die über die Kanten hinausragen. Sie wiegen 45g. Der Raspberry Pi Zero und Raspberry Pi Zero W messen 65 mm x 30 mm x 5,4 mm (oder etwa 2,56 x 1,18 x 0,20 Zoll) und wiegen 9 g. Die mechanischen Umrisse finden Sie in der Dokumentation [hier](../hardware/raspberrypi/mechanical/README.md)
 
 <a name="pi-performance"></a>
 
-## Performance
+## Leistung
 
 <a name="pi-performance-perf"></a>
-### How powerful is it?
+### Wie stark ist es?
 
-All Raspberry Pi models up to the Raspberry Pi 3 have a GPU that provides OpenGL ES 2.0, hardware-accelerated OpenVG, and 1080p30 H.264 high-profile encode and decode. The GPU is capable of 1Gpixel/s, 1.5Gtexel/s, or 24 GFLOPs of general-purpose compute, and it features a range of texture filtering and DMA infrastructure. This means that graphics capabilities are roughly equivalent to the original Xbox's level of performance. Overall real-world performance for Raspberry Pi 1 Model A, A+, B, B+, Raspberry Pi Zero/Zero W, and CM1 is similar to that of a 300MHz Pentium 2, but with much better graphics. The Raspberry Pi 2 Model B is approximately equivalent to an Athlon Thunderbird running at 1.1GHz; again, it has the much higher-quality graphics, which come from using the same GPU as previous models. The Raspberry Pi 3 Model B is around twice as fast as the Raspberry Pi 2 Model B, depending on the benchmarks chosen.
+Alle Raspberry Pi-Modelle bis hin zum Raspberry Pi 3 verfügen über eine GPU, die OpenGL ES 2.0, hardwarebeschleunigtes OpenVG und 1080p30 H.264 High-Profile-Encodieren und -Decodieren bietet. Die GPU ist in der Lage, 1 Gpixel/s, 1,5 Gtexel/s oder 24 GFLOPs für Allzweck-Computing zu leisten und verfügt über eine Reihe von Texturfiltern und DMA-Infrastruktur. Dies bedeutet, dass die Grafikfähigkeiten ungefähr dem Leistungsniveau der ursprünglichen Xbox entsprechen. Die reale Gesamtleistung für Raspberry Pi 1 Model A, A+, B, B+, Raspberry Pi Zero/Zero W und CM1 ähnelt der eines 300MHz Pentium 2, jedoch mit viel besserer Grafik. Das Raspberry Pi 2 Model B entspricht ungefähr einem Athlon Thunderbird mit 1,1 GHz; Auch hier hat es die viel hochwertigere Grafik, die aus der Verwendung der gleichen GPU wie bei früheren Modellen stammt. Der Raspberry Pi 3 Model B ist, abhängig von den gewählten Benchmarks, etwa doppelt so schnell wie der Raspberry Pi 2 Model B.
 
-The Raspberry Pi 4 and Raspberry Pi 400 use an improved GPU — the VideoCore VI. This is around four times faster than the VideoCore IV used for previous models. The new ARM A72 cores on the BCM2711 chip give much better performance than the previous models, and a new PCIe bus gives faster USB 2.0 and new USB 3.0 functionality. Raspberry Pi 4's native Ethernet capability allows full 1Gbit I/O. These features, combined with the optional extra RAM (the Raspberry Pi 4 can be purchased with 2GB, 4GB or 8GB RAM), mean that the Raspberry Pi 4 can now provide a great desktop computing experience!
+Der Raspberry Pi 4 und Raspberry Pi 400 verwenden eine verbesserte GPU – den VideoCore VI. Dies ist etwa viermal schneller als der VideoCore IV, der für frühere Modelle verwendet wurde. Die neuen ARM-A72-Kerne auf dem BCM2711-Chip bieten eine viel bessere Leistung als die Vorgängermodelle, und ein neuer PCIe-Bus bietet schnellere USB 2.0- und neue USB 3.0-Funktionen. Die native Ethernet-Fähigkeit des Raspberry Pi 4 ermöglicht volle 1-Gbit-I/O. Diese Funktionen, kombiniert mit dem optionalen zusätzlichen RAM (der Raspberry Pi 4 kann mit 2 GB, 4 GB oder 8 GB RAM erworben werden), bedeuten, dass der Raspberry Pi 4 jetzt ein großartiges Desktop-Computing-Erlebnis bietet!
 
 <a name="pi-performance-desktop"></a>
-### Can I use my Raspberry Pi as a desktop replacement?
+### Kann ich meinen Raspberry Pi als Desktop-Ersatz verwenden?
 
-It depends on the model you have! For many daily tasks the Raspberry Pi 3 is quite suitable, but because modern internet browsers require a lot of memory, browsing can be a bit slow if you open too many browser tabs. Although 1GB of RAM seems like a lot, modern browsers are real memory hogs!
+Es hängt von Ihrem Modell ab! Für viele alltägliche Aufgaben ist der Raspberry Pi 3 durchaus geeignet, da moderne Internetbrowser jedoch viel Speicher benötigen, kann das Surfen etwas langsam sein, wenn Sie zu viele Browser-Tabs öffnen. Obwohl 1 GB RAM viel zu sein scheint, sind moderne Browser echte Speicherfresser!
 
-The Raspberry Pi 4 — with its faster cores, extra memory, and much improved I/O — is a very good desktop replacement. 
+Der Raspberry Pi 4 – mit seinen schnelleren Kernen, zusätzlichem Speicher und stark verbesserter I/O – ist ein sehr guter Desktop-Ersatz.
 
-The best option for desktop use is the Pi 400. This is the equivalent of a Raspberry Pi 4 in a compact keyboard.
+Die beste Option für den Desktop-Einsatz ist der Pi 400. Dies entspricht einem Raspberry Pi 4 in einer kompakten Tastatur.
 
 <a name="pi-performance-addram"></a>
-### Can I add extra RAM?
+### Kann ich zusätzlichen RAM hinzufügen?
 
-No. The RAM on the Raspberry Pi 1 Model A, A+, B, B+, and Raspberry Pi Zero/Zero W is a Package on Package (POP) on top of the SoC, which means you cannot remove or swap it. The RAM on the Raspberry Pi 2 and 3 Model B versions is on a separate chip on the bottom of the PCB, but 1GB is the maximum RAM that the SoC used by the Raspberry Pi 2 and 3 Model B can support. The Raspberry Pi 4 supports up to 8GB of RAM, but like previous models, it is not upgradeable after purchase.
+Nein. Der RAM auf dem Raspberry Pi 1 Model A, A+, B, B+ und Raspberry Pi Zero/Zero W ist ein Package on Package (POP) auf dem SoC, was bedeutet, dass Sie es nicht entfernen oder austauschen können. Der RAM der Raspberry Pi 2 und 3 Model B-Versionen befindet sich auf einem separaten Chip auf der Unterseite der Platine, aber 1 GB ist der maximale RAM, den der von den Raspberry Pi 2 und 3 Model B verwendete SoC unterstützen kann. Der Raspberry Pi 4 unterstützt bis zu 8 GB RAM, ist aber wie die Vorgängermodelle nach dem Kauf nicht aufrüstbar.
 
 <a name="pi-performance-cluster"></a>
-### Can I connect multiple Raspberry Pis together to make a faster computer?
+### Kann ich mehrere Raspberry Pis miteinander verbinden, um einen schnelleren Computer zu machen?
 
-Sort of, but not in the way you might want to do it. You cannot simply make a more powerful computer, to play games faster for example, by bolting together smaller ones. You can network computers to create a cluster computer, but you do need to modify your software to work in this distributed fashion. We've put together a tutorial for [how to build a Raspberry Pi cluster](https://projects.raspberrypi.org/en/projects/build-an-octapi), in collaboration with GCHQ.
+Irgendwie, aber nicht so, wie Sie es vielleicht machen möchten. Sie können nicht einfach einen leistungsfähigeren Computer bauen, um beispielsweise Spiele schneller zu spielen, indem Sie kleinere zusammenschrauben. Sie können Computer vernetzen, um einen Cluster-Computer zu erstellen, aber Sie müssen Ihre Software ändern, damit sie auf diese verteilte Weise funktioniert. Wir haben in Zusammenarbeit mit GCHQ ein Tutorial für [How to build a Raspberry Pi cluster](https://projects.raspberrypi.org/en/projects/build-an-octapi) zusammengestellt.
 
 <a name="pi-performance-underclock"></a>
-### Why does my Raspberry Pi run at a slower clock speed than advertised?
+### Warum läuft mein Raspberry Pi langsamer als angegeben?
 
-The Raspberry Pi (all models) idles at a lower speed than advertised. If the workload of the CPU increases, then the clock speed increases until it reaches its maximum value, which varies between models. If the CPU starts to overheat, there are added complexities: depending on the model, when the device reaches a particular temperature, the clock is throttled back to prevent overheating. This is called thermal throttling. If the Raspberry Pi does thermal-throttle, you will see a warning icon in the top right-hand corner of the desktop (see [here](../configuration/warning-icons.md)).
+Der Raspberry Pi (alle Modelle) läuft im Leerlauf mit einer niedrigeren Geschwindigkeit als angegeben. Steigt die Auslastung der CPU, dann erhöht sich die Taktrate, bis sie ihren Maximalwert erreicht, der je nach Modell variiert. Beginnt die CPU zu überhitzen, kommt die Komplexität hinzu: Je nach Modell wird bei Erreichen einer bestimmten Temperatur der Takt gedrosselt, um eine Überhitzung zu vermeiden. Dies wird als thermische Drosselung bezeichnet. Wenn der Raspberry Pi thermisch gedrosselt wird, sehen Sie oben rechts auf dem Desktop ein Warnsymbol (siehe [hier](../configuration/warning-icons.md)).
 
 <a name="pi-performance-overclock"></a>
-### Does it overclock?
+### Übertaktet es?
 
-Overclocking is not officially supported, and in some cases will void your warranty. Having said that, some people do overclock successfully. Due to the way silicon chips are produced, each individual device will differ in how much it can be overclocked. For a fully supported, stable system we recommend that you do not overclock your Raspberry Pi.
+Übertakten wird offiziell nicht unterstützt und führt in einigen Fällen zum Erlöschen der Garantie. Allerdings übertakten manche Leute erfolgreich. Aufgrund der Art und Weise, wie Siliziumchips hergestellt werden, unterscheidet sich jedes einzelne Gerät darin, wie stark es übertaktet werden kann. Für ein vollständig unterstütztes, stabiles System empfehlen wir Ihnen, Ihren Raspberry Pi nicht zu übertakten.
 
 <a name="pi-performance-temps"></a>
-### What is its operating temperature? Does it need a heatsink?
+### Wie hoch ist seine Betriebstemperatur? Braucht es einen Kühlkörper?
 
-The Raspberry Pi is built from commercial chips which are qualified to different temperature ranges; the LAN9514 (LAN9512 on older models with 2 USB ports) is specified by the manufacturers as being qualified from 0°C to 70°C, while the SoC is qualified from -40°C to 85°C. You may well find that the board will work outside those temperatures, but we're not qualifying the board itself to these extremes.
+Der Raspberry Pi besteht aus kommerziellen Chips, die für verschiedene Temperaturbereiche qualifiziert sind; der LAN9514 (LAN9512 bei älteren Modellen mit 2 USB-Ports) wird von den Herstellern als qualifiziert von 0 °C bis 70 °C spezifiziert, während der SoC von -40 °C bis 85 °C qualifiziert ist. Sie werden vielleicht feststellen, dass das Board auch außerhalb dieser Temperaturen funktioniert, aber wir qualifizieren das Board selbst nicht für diese Extreme.
 
-You should not need to use a heatsink, as the chip used in the Raspberry Pi is equivalent to one used in a mobile phone, and should not become hot enough to require any special cooling. However, depending on the case you are using and the overclocking settings, you might find a heatsink to be advantageous. We do recommend the use of a heatsink if you are overclocking the Raspberry Pi 3 Model B. Of course, if you just like the look of one, you will not hurt the Raspberry Pi by placing an appropriately-sized heatsink on it.
+Sie sollten keinen Kühlkörper verwenden, da der im Raspberry Pi verwendete Chip dem eines Mobiltelefons entspricht und nicht heiß genug werden sollte, um eine spezielle Kühlung zu erfordern. Je nach verwendetem Gehäuse und Übertaktungseinstellungen kann ein Kühlkörper jedoch von Vorteil sein. Wir empfehlen die Verwendung eines Kühlkörpers, wenn Sie den Raspberry Pi 3 Model B übertakten. Wenn Ihnen das Aussehen eines solchen gefällt, können Sie dem Raspberry Pi natürlich nicht schaden, wenn Sie einen entsprechend großen Kühlkörper darauf platzieren.
 
-The Raspberry Pi 400 uses a large heat spreader inside the case, and does not need any extra cooling.
+Der Raspberry Pi 400 verwendet einen großen Heatspreader im Gehäuse und benötigt keine zusätzliche Kühlung.
 
 <a name="pi-software"></a>
 
-## Software
+##Software
 
 <a name="pi-software-os"></a>
-### What operating system does it use?
-The recommended distribution (distro) is Raspberry Pi OS, which is specifically designed for the Raspberry Pi and which our engineers are constantly optimising. It is, however, a straightforward process to replace the root partition on the SD card with another Arm Linux distro, so we encourage you to try out several distros to see which one you like the most. There are several other distros available on our [downloads](https://www.raspberrypi.org/downloads) page. The OS is stored on the SD card.
+### Welches Betriebssystem verwendet es?
+Die empfohlene Distribution (Distro) ist Raspberry Pi OS, das speziell für den Raspberry Pi entwickelt wurde und von unseren Ingenieuren ständig optimiert wird. Es ist jedoch ein einfacher Vorgang, die Root-Partition auf der SD-Karte durch eine andere Arm Linux-Distribution zu ersetzen, daher empfehlen wir Ihnen, mehrere Distributionen auszuprobieren, um zu sehen, welche Ihnen am besten gefällt. Auf unserer Seite [Downloads](https://www.raspberrypi.org/downloads) sind mehrere andere Distributionen verfügbar. Das Betriebssystem wird auf der SD-Karte gespeichert.
 
 <a name="pi-software-win"></a>
-### Can I run Windows 10 on the Raspberry Pi?
-You cannot run Windows 10 on the Raspberry Pi. There is however a special "Internet of Things" version of Windows 10 that runs on the Raspberry Pi 3B and 3B+, called Windows 10 IoT. Windows 10 IoT does not have a graphical desktop, and is intended for use in embedded devices.
+### Kann ich Windows 10 auf dem Raspberry Pi ausführen?
+Auf dem Raspberry Pi kann Windows 10 nicht ausgeführt werden. Es gibt jedoch eine spezielle "Internet of Things"-Version von Windows 10, die auf dem Raspberry Pi 3B und 3B+ läuft, genannt Windows 10 IoT. Windows 10 IoT hat keinen grafischen Desktop und ist für die Verwendung in eingebetteten Geräten vorgesehen.
 
-You may see reference to Windows 10 running on the Raspberry Pi online. This is because the community have devised a way to run regular Windows 10 on the Raspberry Pi. Although it will run, it runs extremely slowly so is not of any real use. Rather, it is a proof-of-concept. Microsoft do not sanction running Windows 10 on the Raspberry Pi.
+Möglicherweise sehen Sie online einen Hinweis auf Windows 10, das auf dem Raspberry Pi ausgeführt wird. Dies liegt daran, dass die Community eine Möglichkeit entwickelt hat, normales Windows 10 auf dem Raspberry Pi auszuführen. Obwohl es läuft, läuft es extrem langsam, so dass es keinen wirklichen Nutzen hat. Es ist vielmehr ein Proof-of-Concept. Microsoft sanktioniert nicht die Ausführung von Windows 10 auf dem Raspberry Pi.
 
 <a name="pi-software-update"></a>
-### Updates? Upgrades? What do I do?
+### Aktualisierung? Upgrades? Was mache ich?
 
-It's important to keep your system up to date with the latest security updates, as well as bug fixes for any applications you might be using. You can easily do this by opening a terminal window and running the following two commands:
+Es ist wichtig, Ihr System mit den neuesten Sicherheitsupdates sowie Fehlerbehebungen für alle Anwendungen, die Sie möglicherweise verwenden, auf dem neuesten Stand zu halten. Sie können dies ganz einfach tun, indem Sie ein Terminalfenster öffnen und die folgenden beiden Befehle ausführen:
 
-+ `sudo apt update` will download package information from all configured sources, so the system knows what the latest updates are.
++ `sudo apt update` lädt Paketinformationen von allen konfigurierten Quellen herunter, damit das System die neuesten Updates kennt.
 
-+ `sudo apt full-upgrade` will then download all the updates and install them.
++ `sudo apt full-upgrade` lädt dann alle Updates herunter und installiert sie.
 
-We recommend going through this process once a week or so. 
+Wir empfehlen, diesen Vorgang etwa einmal pro Woche durchzuführen.
 
 <a name="pi-software-rpiupdate"></a>
-### I heard about something called `rpi-update`. When should I use that?
+### Ich habe von etwas namens `rpi-update` gehört. Wann sollte ich das verwenden?
 
-Do not use `rpi-update` unless you have been recommended to do so by a Raspberry Pi engineer. This is because it updates the Linux kernel and Raspberry Pi firmware to the very latest version which is currently under test. It may therefore make your Raspberry Pi unstable, or cause random breakage.
+Verwenden Sie "rpi-update" nicht, es sei denn, Sie wurden von einem Raspberry Pi-Ingenieur dazu empfohlen. Dies liegt daran, dass der Linux-Kernel und die Raspberry Pi-Firmware auf die neueste Version aktualisiert werden, die derzeit getestet wird. Es kann daher Ihren Raspberry Pi instabil machen oder einen zufälligen Bruch verursachen.
 
 <a name="pi-software-64"></a>
-### The processors on the latest Raspberry Pi models are 64-bit, but I cannot find an official 64-bit OS.
+### Die Prozessoren der neuesten Raspberry Pi-Modelle sind 64-Bit, aber ich kann kein offizielles 64-Bit-Betriebssystem finden.
 
-Raspberry Pi do not currently provide an official 64-bit OS, for a number of reasons. Firstly, since we still sell devices that are 32-bit, we would need to support two separate distributions, and at the moment we do not have the support capacity. Secondly, building a full 64-bit OS would require a considerable amount of work to, for example, fix the interfacing to the 32-bit VideoCore GPU. There are third-party 64-bit operating systems available, but they do not have the full support for the GPU that would be a requirement for an official release.
+Raspberry Pi bietet derzeit aus verschiedenen Gründen kein offizielles 64-Bit-Betriebssystem. Erstens, da wir immer noch 32-Bit-Geräte verkaufen, müssten wir zwei separate Distributionen unterstützen, und im Moment haben wir nicht die Unterstützungskapazität. Zweitens würde der Aufbau eines vollständigen 64-Bit-Betriebssystems einen erheblichen Arbeitsaufwand erfordern, um beispielsweise die Schnittstelle zur 32-Bit-VideoCore-GPU zu reparieren. Es gibt 64-Bit-Betriebssysteme von Drittanbietern, die jedoch nicht die volle Unterstützung für die GPU bieten, die für eine offizielle Veröffentlichung erforderlich wäre.
 
 <a name="pi-software-intelcompat"></a>
-### Can I run PC or Mac software on the Raspberry Pi?
+### Kann ich PC- oder Mac-Software auf dem Raspberry Pi ausführen?
 
-It is not possible to run Mac software on the Raspberry Pi.
+Es ist nicht möglich, Mac-Software auf dem Raspberry Pi auszuführen.
 
-You cannot run Windows software *directly* on the Raspberry Pi. It is sometimes possible to use emulation software to run Windows applications on the Raspberry Pi, but the use of emulation makes it run much more slowly. For example, Windows 98 runs reasonably well on the Raspberry Pi using an emulator called QEMU, however more recent Windows software runs too slowly to be useful on the Raspberry Pi.
+Sie können Windows-Software nicht *direkt* auf dem Raspberry Pi ausführen. Es ist manchmal möglich, Emulationssoftware zu verwenden, um Windows-Anwendungen auf dem Raspberry Pi auszuführen, aber die Verwendung der Emulation macht es viel langsamer. Beispielsweise läuft Windows 98 auf dem Raspberry Pi mit einem Emulator namens QEMU recht gut, neuere Windows-Software läuft jedoch zu langsam, um auf dem Raspberry Pi nützlich zu sein.
 
-There is a wealth of Linux software available directly on the Raspberry Pi itself. By default, Raspberry Pi OS comes installed with the most commonly used applications. If you need to install something else, use the "Add / Remove Software" application. You can also use the `apt` command - see [APT](../linux/software/apt.md). Linux software binaries available elsewhere are usually compiled for the x86 and x64 architectures, so cannot be used on the Raspberry Pi since it uses the ARM architecture. However, if the source code is available, you can compile an ARM-specific version yourself.
+Es gibt eine Fülle von Linux-Software, die direkt auf dem Raspberry Pi selbst verfügbar ist. Standardmäßig wird Raspberry Pi OS mit den am häufigsten verwendeten Anwendungen installiert. Wenn Sie etwas anderes installieren müssen, verwenden Sie die Anwendung "Software hinzufügen / entfernen". Sie können auch den Befehl `apt` verwenden - siehe [APT](../linux/software/apt.md). An anderer Stelle verfügbare Linux-Software-Binärdateien werden normalerweise für die x86- und x64-Architekturen kompiliert, können also nicht auf dem Raspberry Pi verwendet werden, da er die ARM-Architektur verwendet. Wenn der Quellcode jedoch verfügbar ist, können Sie selbst eine ARM-spezifische Version kompilieren.
 
 <a name="pi-software-androidcompat"></a>
-### Will it run Android or Android Things?
+### Wird es Android oder Android Things ausführen?
 
-Raspberry Pi themselves do not support the consumer version of Android that you may be familiar with from your mobile phone. There are community efforts to make a version available that can be found online.
+Raspberry Pi selbst unterstützt nicht die Consumer-Version von Android, die Sie möglicherweise von Ihrem Mobiltelefon kennen. Es gibt Bemühungen der Community, eine Version zur Verfügung zu stellen, die online zu finden ist.
 
-Google supports Android Things on the Raspberry Pi 3 as a development platform. Android Things is a variant of the Android platform enabling developers to build software for embedded and Internet of Things (IoT) devices with the Android SDK. To learn more about the platform and how to get started, visit [developer.android.com/things](https://developer.android.com/things/index.html).
+Google unterstützt Android Things auf dem Raspberry Pi 3 als Entwicklungsplattform. Android Things ist eine Variante der Android-Plattform, die es Entwicklern ermöglicht, mit dem Android SDK Software für eingebettete Geräte und Geräte für das Internet der Dinge (IoT) zu erstellen. Um mehr über die Plattform und die ersten Schritte zu erfahren, besuchen Sie [developer.android.com/things](https://developer.android.com/things/index.html).
 
 <a name="pi-software-oldcompat"></a>
-### Will it run old software?
+### Wird alte Software ausgeführt?
 
-In general, you need to look to see whether the program you want can be compiled for the Armv6 (Raspberry Pi 1/Zero/Zero W/CM), Armv7 (Raspberry Pi 2) or Armv8 (Raspberry Pi 3) architecture on Linux. In most cases, the answer will be yes. Specific programs are discussed on [our forums](https://www.raspberrypi.org/forums/), so you might want to look there for an answer. Ultimately, nothing beats grabbing a Raspberry Pi and finding out the answer through direct testing!
+Generell müssen Sie prüfen, ob das gewünschte Programm für die Architektur Armv6 (Raspberry Pi 1/Zero/Zero W/CM), Armv7 (Raspberry Pi 2) oder Armv8 (Raspberry Pi 3) unter Linux kompiliert werden kann. In den meisten Fällen wird die Antwort ja sein. Spezifische Programme werden in [unseren Foren] (https://www.raspberrypi.org/forums/) diskutiert, daher sollten Sie dort nach einer Antwort suchen. Letztendlich gibt es nichts Besseres, als sich einen Raspberry Pi zu schnappen und die Antwort durch direktes Testen herauszufinden!
 
 <a name="pi-software-exefail"></a>
-### My `.exe` file won't run!
+### Meine `.exe`-Datei wird nicht ausgeführt!
 
-Most `.exe` files come from Windows and are compiled for the x86 processor architecture. These will not run on the Raspberry Pi, which uses an ARM processor architecture. A minority of `.exe` files, compiled from C# code or similar, actually use a Byte Code rather than a processor-specific instruction set, and therefore might work on the Raspberry Pi if the correct Mono interpreter software is installed.
+Die meisten `.exe`-Dateien stammen von Windows und sind für die x86-Prozessorarchitektur kompiliert. Diese laufen nicht auf dem Raspberry Pi, der eine ARM-Prozessorarchitektur verwendet. Eine Minderheit von '.exe'-Dateien, die aus C#-Code oder ähnlichem kompiliert wurden, verwenden tatsächlich einen Byte-Code anstelle eines prozessorspezifischen Befehlssatzes und können daher auf dem Raspberry Pi funktionieren, wenn die richtige Mono-Interpreter-Software installiert ist.
 
 <a name="pi-software-fileshare"></a>
-### Can I share files from my Raspberry Pi with my Windows machines?
+### Kann ich Dateien von meinem Raspberry Pi mit meinen Windows-Rechnern teilen?
 
-Yes, there are a number of ways of doing this, and the most common is to use what are called Samba shares. We don't have any specific documentation on Samba shares in our official docs just yet, but [here](https://www.raspberrypi.org/magpi/samba-file-server/) is some from our magazine, [The MagPi](https://www.raspberrypi.org/magpi).
+Ja, es gibt eine Reihe von Möglichkeiten, dies zu tun, und die gebräuchlichste ist die Verwendung sogenannter Samba-Freigaben. Wir haben noch keine spezifische Dokumentation zu Samba-Freigaben in unseren offiziellen Dokumenten, aber [hier] (https://www.raspberrypi.org/magpi/samba-file-server/) finden Sie einige aus unserem Magazin [The MagPi](https://www.raspberrypi.org/magpi).
 
-It's also easy to copy files to and from Windows devices, rather than sharing folders. There is plenty of documentation [here](../remote-access/README.md).
+Es ist auch einfach, Dateien auf und von Windows-Geräten zu kopieren, anstatt Ordner freizugeben. Es gibt reichlich Dokumentation [hier](../remote-access/README.md).
 
 <a name="pi-software-cpuinfo"></a>
-### Why does `cpuinfo` report I have a BCM2835?
+### Warum meldet `cpuinfo`, dass ich einen BCM2835 habe?
 
-The upstream Linux kernel developers had decided that all models of Raspberry Pi return bcm2835 as the SoC name. At Raspberry Pi we like to use as much upstream kernel code as possible, as it makes software maintenance much easier, so we use this code. Unfortunately it means that `cat /proc/cpuinfo` is inaccurate for the Raspberry Pi 2, Raspberry Pi 3 and Raspberry Pi 4, which use the bcm2836/bcm2837, bcm2837 and bcm2711 respectively. You can use `cat /proc/device-tree/model` to get an accurate description of the SoC on your Raspberry Pi model.
+Die Entwickler des Upstream-Linux-Kernel hatten beschlossen, dass alle Modelle des Raspberry Pi bcm2835 als SoC-Namen zurückgeben. Bei Raspberry Pi verwenden wir gerne so viel Upstream-Kernel-Code wie möglich, da dies die Softwarewartung erheblich erleichtert, daher verwenden wir diesen Code. Leider bedeutet dies, dass `cat /proc/cpuinfo` für Raspberry Pi 2, Raspberry Pi 3 und Raspberry Pi 4, die die bcm2836/bcm2837, bcm2837 bzw. bcm2711 verwenden, ungenau ist. Sie können `cat /proc/device-tree/model` verwenden, um eine genaue Beschreibung des SoC auf Ihrem Raspberry Pi-Modell zu erhalten.
 
 <a name="pi-software-autostart"></a>
-### How do I run a program at startup?
+### Wie führe ich ein Programm beim Start aus?
 
-There are a number of ways of doing this — [here's one](../linux/usage/rc-local.md).
+Dafür gibt es mehrere Möglichkeiten — [hier ist einer](../linux/usage/rc-local.md).
 
 <a name="pi-software-timedstart"></a>
-### How do I run a program at a specific time?
+### Wie führe ich ein Programm zu einer bestimmten Zeit aus?
 
-With Cron! [Here's how](../linux/usage/cron.md).
+Mit Cron! [So geht's](../linux/usage/cron.md).
 
 <a name="pi-video"></a>
 ## Video
 
 <a name="pi-video-displays"></a>
-### What displays can I use?
+### Welche Displays kann ich verwenden?
 
-There is composite and HDMI out on the board, so you can hook it up to an old analogue TV through the composite or through a composite to SCART connector, to a digital TV or to a DVI monitor (using a cheap, passive HDMI to DVI cable for the DVI). For the Model B+, Raspberry Pi 2, and Raspberry Pi 3, the RCA composite jack has been replaced with a 3.5mm jack that combines audio and video in one. You'll need a 3.5mm to 3RCA adapter cable to connect it to an older TV. There are many different types of this cable out there, but you want to purchase one that is compatible with the iPod Video (the iPod will have the left and right audio channels reversed, but the version of Raspberry Pi OS included with NOOBS can swap this for you). The Raspberry Pi Zero uses a mini-HDMI port.
+Die Platine verfügt über einen Composite- und HDMI-Ausgang, sodass Sie ihn über den Composite- oder über einen Composite-auf-SCART-Anschluss an einen alten analogen Fernseher, an einen digitalen Fernseher oder an einen DVI-Monitor anschließen können (mit einem billigen, passiven HDMI-auf-DVI Kabel für DVI). Beim Model B+, Raspberry Pi 2 und Raspberry Pi 3 wurde die RCA-Composite-Buchse durch eine 3,5-mm-Buchse ersetzt, die Audio und Video in einem vereint. Sie benötigen ein 3,5-mm-zu-3RCA-Adapterkabel, um es an einen älteren Fernseher anzuschließen. Es gibt viele verschiedene Arten dieses Kabels, aber Sie möchten eines kaufen, das mit dem iPod Video kompatibel ist (der iPod hat die linken und rechten Audiokanäle vertauscht, aber die in NOOBS enthaltene Version von Raspberry Pi OS kann dies austauschen für dich). Der Raspberry Pi Zero verwendet einen Mini-HDMI-Anschluss.
 
-The Raspberry Pi 4 has support for two HDMI monitors, which attach via micro HDMI ports. It is also capable of displaying at full resolution on a 4K monitor or TV. Note that for best HDMI performance at 4K, a good-quality HDMI cable is required. We sell a full set of ancilliary components, including HDMI cables.
+Der Raspberry Pi 4 unterstützt zwei HDMI-Monitore, die über Micro-HDMI-Anschlüsse angeschlossen werden. Es ist auch in der Lage, auf einem 4K-Monitor oder Fernseher in voller Auflösung anzuzeigen. Beachten Sie, dass für die beste HDMI-Leistung bei 4K ein hochwertiges HDMI-Kabel erforderlich ist. Wir verkaufen ein komplettes Set an Zusatzkomponenten, einschließlich HDMI-Kabel.
 
 <a name="pi-video-hdmicec"></a>
-### Does the HDMI port support CEC?
+### Unterstützt der HDMI-Port CEC?
 
-Yes, the HDMI port on the Raspberry Pi supports the CEC Standard. CEC may be called something else by your TV's manufacturer; check [the Wikipedia entry on CEC](http://en.wikipedia.org/wiki/Consumer_Electronics_Control#CEC) for more information.
+Ja, der HDMI-Port des Raspberry Pi unterstützt den CEC-Standard. CEC wird vom Hersteller Ihres Fernsehgeräts möglicherweise anders genannt; Weitere Informationen finden Sie im [Wikipedia-Eintrag zu CEC](http://en.wikipedia.org/wiki/Consumer_Electronics_Control#CEC).
 
 <a name="pi-video-vga"></a>
-### Why is there no VGA support?
+### Warum gibt es keine VGA-Unterstützung?
 
-Whilst there is no native VGA support, active adapters are available. Passive HDMI to VGA cables will not work with the Raspberry Pi. When purchasing an active VGA adapter, make sure it comes with an external power supply. HDMI to VGA adapters without an external power supply often fail to work.
+Es gibt zwar keine native VGA-Unterstützung, aber aktive Adapter sind verfügbar. Passive HDMI-zu-VGA-Kabel funktionieren nicht mit dem Raspberry Pi. Achten Sie beim Kauf eines aktiven VGA-Adapters darauf, dass er mit einem externen Netzteil geliefert wird. HDMI-zu-VGA-Adapter ohne externe Stromversorgung funktionieren oft nicht.
 
 <a name="pi-video-touch"></a>
-### Can I add a touchscreen?
+### Kann ich einen Touchscreen hinzufügen?
 
-The Raspberry Pi Foundation provides a 7" capacitive [touchscreen](https://www.raspberrypi.org/products/raspberry-pi-touch-display) that utilises the Raspberry Pi's DSI port. This is available through the usual distributors. Alternatively, several third-party retailers offer a range of touchscreens for the Raspberry Pi.
+Die Raspberry Pi Foundation stellt einen 7" kapazitiven [Touchscreen](https://www.raspberrypi.org/products/raspberry-pi-touch-display) zur Verfügung, der den DSI-Port des Raspberry Pi nutzt. Dieser ist über die üblichen Distributoren erhältlich. Alternativ , bieten mehrere Drittanbieter eine Reihe von Touchscreens für den Raspberry Pi an.
 
 <a name="pi-video-codecs"></a>
-### What codecs can it play?
+### Welche Codecs kann es abspielen?
 
-The Raspberry Pi can encode (record) and decode (play) H.264 (MP4/MKV) out of the box. There are also two additional codecs you can [purchase through our Swag Store](http://swag.raspberrypi.org/collections/software) that enable you to decode [MPEG-2](http://swag.raspberrypi.org/collections/software/products/mpeg-2-license-key), a very popular and widely used format to encode DVDs, video camera recordings, TV and many others, and [VC-1](http://swag.raspberrypi.org/collections/software/products/vc-1-license-key), a Microsoft format found in Blu-ray discs, Windows Media, Slingbox, and HD-DVDs.
+Der Raspberry Pi kann H.264 (MP4/MKV) out of the box kodieren (aufzeichnen) und dekodieren (wiedergeben). Es gibt auch zwei zusätzliche Codecs, die Sie [über unseren Swag Store kaufen](http://swag.raspberrypi.org/collections/software) können, mit denen Sie [MPEG-2] entschlüsseln können (http://swag.raspberrypi.org .). /collections/software/products/mpeg-2-license-key), ein sehr beliebtes und weit verbreitetes Format zum Kodieren von DVDs, Videokameraaufnahmen, TV und vielen anderen, und [VC-1](http://swag.raspberrypi .org/collections/software/products/vc-1-license-key), ein Microsoft-Format, das auf Blu-ray-Discs, Windows Media, Slingbox und HD-DVDs zu finden ist.
 
-On the Raspberry Pi 4, the extra hardware CODEC support for MPEG-2 and VC-1 is not available: because the Raspberry Pi 4's processors are powerful enough to decode these in software, no CODEC licence is necessary. In addition, the Raspberry Pi 4 also has hardware support for decoding H265/HEVC.
+Auf dem Raspberry Pi 4 ist die zusätzliche Hardware-CODEC-Unterstützung für MPEG-2 und VC-1 nicht verfügbar: Da die Prozessoren des Raspberry Pi 4 leistungsstark genug sind, um diese in Software zu entschlüsseln, ist keine CODEC-Lizenz erforderlich. Darüber hinaus verfügt der Raspberry Pi 4 auch über Hardware-Unterstützung für die Dekodierung von H265/HEVC.
 
 <a name="pi-audio"></a>
 
 ## Audio
 
 <a name="pi-audio-hdmi"></a>
-### Is sound over HDMI supported?
+### Wird Ton über HDMI unterstützt?
 
-Yes.
+Jawohl.
 
 <a name="pi-audio-analog"></a>
-### What about standard audio in and out?
+### Wie sieht es mit Standard-Audio-Ein- und -Ausgang aus?
 
-There is a standard 3.5mm jack for audio out to an amplifier (not on Zero models). You can add any supported USB microphone for audio in or, using the I2S interface, you can add a codec for additional audio I/O.
+Es gibt eine Standard-3,5-mm-Buchse für den Audioausgang an einen Verstärker (nicht bei Zero-Modellen). Sie können jedes unterstützte USB-Mikrofon für den Audioeingang hinzufügen oder über die I2S-Schnittstelle einen Codec für zusätzliche Audio-E/A hinzufügen.
 
 <a name="pi-power"></a>
 
-## Power
+## Leistung
 
 <a name="pi-power-kill"></a>
-### Is it safe to just pull the power?
+### Ist es sicher, einfach den Strom zu ziehen?
 
-No, not really — you may corrupt your SD card if you do that. We recommend issuing the `sudo halt` or `sudo shutdown` command prior to pulling the power. This ensures that any outstanding file transactions are written to the SD card, and that the SD card is no longer 'active'. Pulling the power during a SD card transaction can occasionally corrupt the card.
+Nein, nicht wirklich – Sie können Ihre SD-Karte beschädigen, wenn Sie dies tun. Wir empfehlen, den Befehl `sudo halt` oder `sudo shutdown` auszugeben, bevor Sie den Strom ziehen. Dadurch wird sichergestellt, dass alle ausstehenden Dateitransaktionen auf die SD-Karte geschrieben werden und die SD-Karte nicht mehr „aktiv“ ist. Das Ziehen der Stromversorgung während einer SD-Kartentransaktion kann gelegentlich die Karte beschädigen.
 
 <a name="pi-power-events"></a>
-### What about unplanned power interruptions?
+### Was ist mit ungeplanten Stromunterbrechungen?
 
-Power interruptions can cause problems on all sorts of electronic devices, and the Pi is no different. SD card corruption can be caused if the power is simply turned off without going through a normal shutdown. This is because the system may be writing to the SD card at the point of power failure, leaving the SD card filesystem in an invalid state. So, if you cannot prevent power interruptions, one way of making the system more robust is to limit the amount of writing that is done to the SD card, or even to stop it altogether. You can disable swap, enable logging to RAM, and disable systemd-timesyncd, all of which greatly reduce the number of accesses to the SD card. You can also make the entire Raspberry Pi OS installation read-only, preventing any writing to the card at all. An internet search will provide instructions on how to implement these measures. 
+Stromunterbrechungen können bei allen Arten von elektronischen Geräten zu Problemen führen, und der Pi ist nicht anders. Eine Beschädigung der SD-Karte kann verursacht werden, wenn das Gerät einfach ausgeschaltet wird, ohne dass es normal heruntergefahren wird. Dies liegt daran, dass das System zum Zeitpunkt des Stromausfalls möglicherweise auf die SD-Karte schreibt, wodurch das Dateisystem der SD-Karte in einem ungültigen Zustand verbleibt. Wenn Sie also Stromunterbrechungen nicht verhindern können, besteht eine Möglichkeit, das System robuster zu machen, darin, den Schreibvorgang auf die SD-Karte zu begrenzen oder sogar ganz zu stoppen. Sie können Swap deaktivieren, die Protokollierung im RAM aktivieren und systemd-timesyncd deaktivieren, wodurch die Anzahl der Zugriffe auf die SD-Karte erheblich reduziert wird. Sie können auch die gesamte Raspberry Pi OS-Installation schreibgeschützt machen, um jegliches Schreiben auf die Karte zu verhindern. Eine Internetrecherche gibt Hinweise zur Umsetzung dieser Maßnahmen.
 
 <a name="pi-power-specs"></a>
-### What are the power requirements?
+### Was sind die Stromanforderungen?
 
-The device needs to be powered with a 5V power supply with a USB connector; USB-C for the Raspberry Pi 4, and micro USB for all other models. Exactly how much current (mA) the Raspberry Pi requires is dependent on which model you are using, and what you hook up to it. We recommend our own power supplies, and sell a [2.5A (2500mA)](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/) supply for models up to the Pi 3, and a [3.0A (3000mA) supply](https://www.raspberrypi.org/products/type-c-power-supply/) for the Pi 4. These will provide you with enough power to run your Raspberry Pi for most applications, including use of the 4 USB ports. Very high-demand USB devices may however require the use of a powered hub. The table below outlines the specific power requirements of each model.
+Das Gerät muss mit einem 5V-Netzteil mit USB-Anschluss versorgt werden; USB-C für den Raspberry Pi 4 und Micro-USB für alle anderen Modelle. Wie viel Strom (mA) der Raspberry Pi genau benötigt, hängt davon ab, welches Modell Sie verwenden und was Sie daran anschließen. Wir empfehlen unsere eigenen Netzteile und verkaufen ein [2.5A (2500mA)](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/) Netzteil für Modelle bis Pi 3, und eine [3,0A (3000mA) Versorgung](https://www.raspberrypi.org/products/type-c-power-supply/) für den Pi 4. Diese versorgen Sie mit genügend Strom, um Ihren Raspberry Pi zu betreiben die meisten Anwendungen, einschließlich der Verwendung der 4 USB-Ports. USB-Geräte mit sehr hoher Nachfrage erfordern jedoch möglicherweise die Verwendung eines Hubs mit eigener Stromversorgung. In der folgenden Tabelle sind die spezifischen Leistungsanforderungen jedes Modells aufgeführt.
 
-| Product | Recommended PSU current capacity | Maximum total USB peripheral current draw | Typical bare-board active current consumption |
+| Produkt | Empfohlene Stromkapazität des Netzteils | Maximale Gesamtstromaufnahme von USB-Peripheriegeräten | Typischer aktiver Stromverbrauch des Bare-Boards |
 |-|-|-|-|
-|Raspberry Pi Model A | 700mA | 500mA | 200mA |
-| Raspberry Pi Model B |1.2A | 500mA | 500mA |
-| Raspberry Pi Model A+ | 700mA | 500mA | 180mA
-| Raspberry Pi Model B+ | 1.8A | 1.2A | 330mA |
-| Raspberry Pi 2 Model B | 1.8A | 1.2A | 350mA |
-| Raspberry Pi 3 Model B | 2.5A | 1.2A | 400mA |
-| Raspberry Pi 3 Model A+ | 2.5A | Limited by PSU, board, and connector ratings only. | 350mA |
-| Raspberry Pi 3 Model B+ | 2.5A | 1.2A | 500mA |
-| Raspberry Pi 4 Model B | 3.0A | 1.2A | 600mA |
-| Raspberry Pi Zero W/WH | 1.2A | Limited by PSU, board, and connector ratings only.| 150mA |
-| Raspberry Pi Zero | 1.2A | Limited by PSU, board, and connector ratings only | 100mA |
+|Himbeer-Pi-Modell A | 700mA | 500mA | 200mA |
+| Raspberry Pi-Modell B |1,2A | 500mA | 500mA |
+| Raspberry Pi Modell A+ | 700mA | 500mA | 180mA
+| Raspberry Pi Modell B+ | 1,8A | 1,2A | 330mA |
+| Raspberry Pi 2 Modell B | 1,8A | 1,2A | 350mA |
+| Raspberry Pi 3 Modell B | 2,5A | 1,2A | 400mA |
+| Raspberry Pi 3 Modell A+ | 2,5A | Begrenzt nur durch Netzteil-, Platinen- und Anschlusswerte. | 350mA |
+| Raspberry Pi 3 Modell B+ | 2,5A | 1,2A | 500mA |
+| Raspberry Pi 4 Modell B | 3,0A | 1,2A | 600mA |
+| Raspberry Pi Zero W/WH | 1,2A | Begrenzt nur durch Netzteil-, Platinen- und Anschlusswerte.| 150mA |
+| Raspberry Pi Zero | 1,2A | Begrenzt nur durch Netzteil-, Platinen- und Anschlusswerte | 100mA |
 
-The specific current requirements of each model are dependent on the use case: the PSU recommendations are based on **typical maximum** current consumption, the typical current consumption is for each board in a *desktop computer* configuration. The Raspberry Pi Model A, A+, and B can supply a maximum of 500mA to downstream USB peripherals. If you wish to connect a high-power USB device, it is recommended that you connect a powered USB hub to the Raspberry Pi and connect your peripherals to the USB hub.
+Der spezifische Strombedarf jedes Modells hängt vom Anwendungsfall ab: Die Netzteilempfehlungen basieren auf dem **typischen maximalen** Stromverbrauch, der typische Stromverbrauch gilt für jede Platine in einer *Desktop-Computer*-Konfiguration. Die Raspberry Pi Modelle A, A+ und B können maximal 500 mA an nachgeschaltete USB-Peripheriegeräte liefern. Wenn Sie ein Hochleistungs-USB-Gerät anschließen möchten, wird empfohlen, einen USB-Hub mit eigener Stromversorgung an den Raspberry Pi anzuschließen und Ihre Peripheriegeräte an den USB-Hub anzuschließen.
 
-From the Raspberry Pi B+ onwards, 1.2A is supplied to downstream USB peripherals. This allows the vast majority of USB devices to be connected directly to these models, assuming the upstream power supply has sufficient available current.
+Ab dem Raspberry Pi B+ wird 1,2A an nachgeschaltete USB-Peripheriegeräte geliefert. Damit können die allermeisten USB-Geräte direkt an diese Modelle angeschlossen werden, sofern das vorgeschaltete Netzteil ausreichend Strom zur Verfügung hat.
 
-Very high-current devices, or devices which can draw a surge current such as certain modems and USB hard disks, will still require an external powered USB hub. The power requirements of the Raspberry Pi increase as you make use of the various interfaces on the Raspberry Pi. The GPIO pins can draw 50mA safely (note that that means 50mA distributed across all the pins: an individual GPIO pin can only safely draw 16mA), the HDMI port uses 50mA, the Camera Module requires 250mA, and keyboards and mice can take as little as 100mA or as much as 1000mA! Check the power rating of the devices you plan to connect to the Raspberry Pi and purchase a power supply accordingly. If you're not sure, we would advise you to buy a powered USB hub.
+Geräte mit sehr hoher Stromstärke oder Geräte, die einen Stoßstrom aufnehmen können, wie bestimmte Modems und USB-Festplatten, benötigen dennoch einen externen USB-Hub mit Stromversorgung. Der Strombedarf des Raspberry Pi steigt, wenn Sie die verschiedenen Schnittstellen des Raspberry Pi nutzen. Die GPIO-Pins können sicher 50 mA ziehen (beachten Sie, dass 50 mA auf alle Pins verteilt sind: ein einzelner GPIO-Pin kann nur 16 mA sicher ziehen), der HDMI-Anschluss verwendet 50 mA, das Kameramodul benötigt 250 mA und Tastaturen und Mäuse können so wenig vertragen als 100mA oder so viel wie 1000mA! Überprüfen Sie die Nennleistung der Geräte, die Sie an den Raspberry Pi anschließen möchten, und kaufen Sie ein entsprechendes Netzteil. Wenn Sie sich nicht sicher sind, empfehlen wir Ihnen, einen USB-Hub mit eigener Stromversorgung zu kaufen.
 
-This is the typical amount of power (in ampere) drawn by different Raspberry Pi models during standard processes:
+Dies ist die typische Strommenge (in Ampere), die von verschiedenen Raspberry Pi-Modellen während Standardprozessen verbraucht wird:
 
 | | | Raspberry Pi 1B+ | Raspberry Pi 2B | Raspberry Pi 3B | Raspberry Pi Zero | Raspberry Pi 4B |
-|-|-|----------|-------|-------------|------------|------|
-| Boot | Max |0.26 | 0.40| 0.75| 0.20 | 0.85 |
-| | Avg | 0.22 | 0.22 | 0.35 | 0.15 | 0.7 |
-| Idle |Avg | 0.20 | 0.22 | 0.30 | 0.10 | 0.6 |
-| Video playback (H.264) | Max | 0.30 | 0.36 |0.55 |0.23 | 0.85 | 
-| | Avg | 0.22 | 0.28 | 0.33 | 0.16 | 0.78 |
-| Stress | Max | 0.35 | 0.82 | 1.34 | 0.35 | 1.25 |
-| | Avg | 0.32 | 0.75 | 0.85 | 0.23 | 1.2 |
-| Halt current | | | | 0.10 | 0.055 | 0.023 | 
+|-|-|----------|-------|-------------|------------ |-----|
+| Booten | Max |0,26 | 0,40| 0,75| 0,20 | 0,85 |
+| | Durchschn. | 0,22 | 0,22 | 0,35 | 0,15 | 0,7 |
+| Leerlauf |Durchschn. | 0,20 | 0,22 | 0,30 | 0,10 | 0,6 |
+| Videowiedergabe (H.264) | Max | 0,30 | 0,36 |0,55 |0,23 | 0,85 |
+| | Durchschn. | 0,22 | 0,28 | 0,33 | 0,16 | 0,78 |
+| Stress | Max | 0,35 | 0,82 | 1,34 | 0,35 | 1,25 |
+| | Durchschn. | 0,32 | 0,75 | 0,85 | 0,23 | 1.2 |
+| Strom anhalten | | | | 0,10 | 0,055 | 0,023 |
 
-**Test conditions:** We used a standard Raspberry Pi OS image (current as of 26 Feb 2016, or June 2019 for the Raspberry Pi 4), at room temperature, with the Raspberry Pi connected to a HDMI monitor, USB keyboard, and USB mouse. The Raspberry Pi 3 Model B was connected to a wireless LAN access point, the Raspberry Pi 4 was connected to Ethernet. All these power measurements are approximate and do not take into account power consumption from additional USB devices; power consumption can easily exceed these measurements if multiple additional USB devices or a HAT are connected to the Raspberry Pi.
+**Testbedingungen:** Wir haben ein standardmäßiges Raspberry Pi OS-Image (Stand 26. Februar 2016 oder Juni 2019 für den Raspberry Pi 4) bei Raumtemperatur verwendet, wobei der Raspberry Pi an einen HDMI-Monitor, eine USB-Tastatur, und USB-Maus. Der Raspberry Pi 3 Model B wurde mit einem Wireless LAN Access Point verbunden, der Raspberry Pi 4 wurde mit Ethernet verbunden. Alle diese Leistungsmessungen sind ungefähre Angaben und berücksichtigen nicht den Stromverbrauch von zusätzlichen USB-Geräten; Der Stromverbrauch kann diese Werte leicht überschreiten, wenn mehrere zusätzliche USB-Geräte oder ein HAT an den Raspberry Pi angeschlossen werden.
 
 <a name="pi-power-usbhub"></a>
-### Can I power the Raspberry Pi from a USB hub?
-
-It depends on the hub. Some hubs comply with the USB 2.0 Standard and only provide 500mA per port, which may not be enough to power your Raspberry Pi. Other hubs view the USB standards more like guidelines, and will provide as much power as you want from each port. Please also be aware that some hubs have been known to *backfeed* the Raspberry Pi. This means that the hubs will power the Raspberry Pi through its USB input cable, without the need for a separate micro-USB power cable, and bypass the voltage protection. If you are using a hub that *backfeeds* to the Raspberry Pi and the hub experiences a power surge, your Raspberry Pi could potentially be damaged.
+### Kann ich den Raspberry Pi über einen USB-Hub mit Strom versorgen?
+XXXXXXXXXXXXXX
+Es hängt von dem Hub ab. Einige Hubs entsprechen dem USB 2.0-Standard und bieten nur 500 mA pro Port, was möglicherweise nicht ausreicht, um Ihren Raspberry Pi mit Strom zu versorgen. Andere Hubs betrachten die USB-Standards eher als Richtlinien und liefern von jedem Port so viel Strom, wie Sie möchten. Bitte beachten Sie auch, dass einige Hubs dafür bekannt sind, den Raspberry Pi *zurückzuspeisen*. Dies bedeutet, dass die Hubs den Raspberry Pi über sein USB-Eingangskabel mit Strom versorgen, ohne dass ein separates Micro-USB-Stromkabel erforderlich ist, und den Spannungsschutz umgehen. Wenn Sie einen Hub verwenden, der zum Raspberry Pi *zurückgespeist* wird und der Hub einen Stromstoß erfährt, könnte Ihr Raspberry Pi möglicherweise beschädigt werden.
 
 <a name="pi-power-battbackup"></a>
-### Can I power the Raspberry Pi from batteries as well as from a wall socket?
+### Kann ich den Raspberry Pi sowohl über Batterien als auch über eine Steckdose mit Strom versorgen?
 
-Running the Raspberry Pi directly from batteries requires special care and can result in damaging or destroying your Raspberry Pi. If you consider yourself an advanced user, though, you could have a go. For example, four of the most common AA rechargeable batteries would provide 4.8V on a full charge. 4.8V would technically be just within the range of tolerance for the Raspberry Pi, but the system would quickly become unstable as the batteries lost their full charge. Conversely, using four AA Alkaline (non-rechargeable) batteries will result in 6V. 6V is outside the acceptable tolerance range and would potentially damage or, in the worst-case scenario, destroy your Raspberry Pi. It is possible to provide a steady 5V from batteries by using a buck and/or boost circuit, or by using a charger pack which is specifically designed to output a steady 5V from a couple of batteries; these devices are typically marketed as mobile phone emergency battery chargers.
+Der Betrieb des Raspberry Pi direkt mit Batterien erfordert besondere Sorgfalt und kann zur Beschädigung oder Zerstörung Ihres Raspberry Pi führen. Wenn Sie sich jedoch als fortgeschrittener Benutzer betrachten, können Sie es versuchen. Zum Beispiel würden vier der gängigsten AA-Akkus bei voller Ladung 4,8 V liefern. 4,8 V wären technisch nur im Toleranzbereich des Raspberry Pi, aber das System würde schnell instabil werden, da die Batterien ihre volle Ladung verloren. Umgekehrt führt die Verwendung von vier AA-Alkalibatterien (nicht wiederaufladbar) zu 6 V. 6V liegen außerhalb des akzeptablen Toleranzbereichs und würden Ihren Raspberry Pi möglicherweise beschädigen oder im schlimmsten Fall zerstören. Es ist möglich, konstante 5 V von Batterien bereitzustellen, indem eine Abwärts- und/oder Boost-Schaltung verwendet wird oder indem ein Ladegerät verwendet wird, das speziell entwickelt wurde, um konstante 5 V von einigen Batterien auszugeben; Diese Geräte werden in der Regel als Notladegeräte für Mobiltelefone vermarktet.
 
 <a name="pi-power-ethernet"></a>
-### Is Power over Ethernet possible?
+### Ist Power over Ethernet möglich?
 
-Yes: if you own a 3B+ or 4B, you can use our [official Raspberry Pi PoE HAT](https://www.raspberrypi.org/products/poe-hat/) to power that Raspberry Pi over Ethernet. For other models, there are adapters that split the voltage off the Ethernet line before connecting to the Raspberry Pi. However, we have not tested any third-party PoE solutions, so we cannot recommend any of these. 
+Ja: Wenn Sie ein 3B+ oder 4B besitzen, können Sie unseren [offiziellen Raspberry Pi PoE HAT](https://www.raspberrypi.org/products/poe-hat/) verwenden, um diesen Raspberry Pi über Ethernet mit Strom zu versorgen. Für andere Modelle gibt es Adapter, die die Spannung von der Ethernet-Leitung abtrennen, bevor sie an den Raspberry Pi angeschlossen werden. Wir haben jedoch keine PoE-Lösungen von Drittanbietern getestet, daher können wir keine davon empfehlen.
 
 <a name="pi-power-gpioout"></a>
-### What voltage devices can I attach to the GPIO pins, and how much current can I pull?
+### Welche Spannungsgeräte kann ich an die GPIO-Pins anschließen und wie viel Strom kann ich ziehen?
 
-The GPIO pins are natively 3.3V, so 5V devices **MUST NOT** be attached directly without some sort of voltage conversion. The pins can provide up to 16mA current. See the [GPIO docs page](../hardware/raspberrypi/gpio/README.md) for more information.
+Die GPIO-Pins sind nativ 3,3 V, daher MÜSSEN 5-V-Geräte ** NICHT ** direkt ohne irgendeine Art von Spannungsumwandlung angeschlossen werden. Die Pins können bis zu 16mA Strom liefern. Weitere Informationen finden Sie auf der [GPIO-Dokumentenseite](../hardware/raspberrypi/gpio/README.md).
 
 <a name="sd-cards"></a>
 
-## SD cards and storage
+## SD-Karten und Speicher
 
 <a name="sd-cards-need"></a>
-### What size of SD card do I need?
+### Welche SD-Kartengröße benötige ich?
 
-Whether you want to use the [official Raspberry Pi OS operating system](https://www.raspberrypi.org/downloads/raspbian/) (or the [NOOBS installer for Raspberry Pi OS](https://www.raspberrypi.org/downloads/noobs/) or a different standalone operating system image (see [recommended third-party OS](https://www.raspberrypi.org/downloads/)), **the minimum-size SD card we recommend using is 8GB**. This will give you the free space you need to install additional packages or make programs of your own. The original Raspberry Pi Model A and Model B require full-size SD cards. The newer Raspberry Pi 1 Model A+, Model 1 B+, 2B, 3B, 3B+, 3A+, 4B, Zero, Zero W, and Zero WH require microSD cards.
+Ob Sie das [offizielle Raspberry Pi OS Betriebssystem](https://www.raspberrypi.org/downloads/raspbian/) (oder den [NOOBS Installer für Raspberry Pi OS](https://www.raspberrypi. org/downloads/noobs/) oder ein anderes eigenständiges Betriebssystem-Image (siehe [empfohlenes Betriebssystem von Drittanbietern](https://www.raspberrypi.org/downloads/)), **die von uns empfohlene SD-Karte mit minimaler Größe ist 8 GB**. Dies gibt Ihnen den freien Speicherplatz, den Sie benötigen, um zusätzliche Pakete zu installieren oder eigene Programme zu erstellen. Die ursprünglichen Raspberry Pi Modell A und Modell B erfordern SD-Karten in voller Größe. Das neuere Raspberry Pi 1 Modell A+, Modell 1 B+, 2B, 3B, 3B+, 3A+, 4B, Zero, Zero W und Zero WH erfordern microSD-Karten.
 
 <a name="sd-cards-want"></a>
-### What size of SD card can it support?
+### Welche SD-Kartengröße wird unterstützt?
 
-While the recommended minimum of 8GB should be enough for most people, we have tried cards up to 128GB, and most cards seem to work OK. You can also attach a USB stick or USB hard drive to provide extra storage.
+Während das empfohlene Minimum von 8 GB für die meisten Leute ausreichen sollte, haben wir Karten mit bis zu 128 GB ausprobiert und die meisten Karten scheinen in Ordnung zu sein. Sie können auch einen USB-Stick oder eine USB-Festplatte anschließen, um zusätzlichen Speicherplatz bereitzustellen.
 
 <a name="sd-cards-usbboot"></a>
-### Can I boot a Raspberry Pi from a USB-attached hard drive instead of the SD card?
+### Kann ich einen Raspberry Pi von einer USB-angeschlossenen Festplatte statt von der SD-Karte booten?
 
-USB boot is only possible on the Raspberry Pi 2B v1.2, 3B, 3B+, and 3A+. Booting from a USB-attached drive (either a SSD or actual hard drive) can make the Raspberry Pi boot and work faster. We have extensive instructions on how to do this [here](../hardware/raspberrypi/bootmodes/msd.md).
+USB-Boot ist nur auf dem Raspberry Pi 2B v1.2, 3B, 3B+ und 3A+ möglich. Das Booten von einem USB-angeschlossenen Laufwerk (entweder einer SSD oder einer tatsächlichen Festplatte) kann den Raspberry Pi booten und schneller arbeiten lassen. Eine ausführliche Anleitung dazu haben wir [hier](../hardware/raspberrypi/bootmodes/msd.md).
 
 <a name="sd-cards-recovery"></a>
-### What happens if I brick the device?
+### Was passiert, wenn ich das Gerät blockiere?
 
-If you brick the device, you can restore it by reflashing the SD card.
+Wenn Sie das Gerät blockieren, können Sie es wiederherstellen, indem Sie die SD-Karte neu flashen.
 
 <a name="networking"></a>
 
-## Networking and wireless connectivity
+## Netzwerk und drahtlose Konnektivität
 
 <a name="networking-support"></a>
-### Does the device support networking?
+### Unterstützt das Gerät das Netzwerken?
 
-The Raspberry Pi 1 Model B and B+, Raspberry Pi 2, and Raspberry Pi 3 Model B versions of the device have built in 10/100 wired Ethernet. The Raspberry Pi 3B+ and Raspberry Pi 4 have 1000BaseT wired Ethernet, but on the 3B+, throughput is limited by its USB 2.0 connection to the SoC. There is no Ethernet on the Raspberry Pi 1 Model A and A+, and the Raspberry Pi Zero/Zero W.
+Die Versionen Raspberry Pi 1 Model B und B+, Raspberry Pi 2 und Raspberry Pi 3 Model B des Geräts verfügen über ein integriertes 10/100 verkabeltes Ethernet. Der Raspberry Pi 3B+ und Raspberry Pi 4 verfügen über 1000BaseT verkabeltes Ethernet, aber beim 3B+ ist der Durchsatz durch die USB 2.0-Verbindung zum SoC begrenzt. Beim Raspberry Pi 1 Model A und A+ und beim Raspberry Pi Zero/Zero W gibt es kein Ethernet.
 
+XXXXXXXXXXXXXXXXXXX
 <a name="networking-builtinwifi"></a>
-### Is there built-in wireless networking?
+### Gibt es ein integriertes drahtloses Netzwerk?
 
-The Raspberry Pi 3, 3+, 4, and Raspberry Pi Zero W have built-in wireless LAN connectivity. You can also add a USB wireless LAN dongle to any model of Raspberry Pi.
+Die Raspberry Pi 3, 3+, 4 und Raspberry Pi Zero W verfügen über eine integrierte WLAN-Konnektivität. Sie können jedem Raspberry Pi-Modell auch einen USB-WLAN-Dongle hinzufügen.
 
-The Raspberry Pi Model 3B+ and 4B support 802.11ac, and all earlier models support up to 802.11n.
+Die Raspberry Pi-Modelle 3B+ und 4B unterstützen 802.11ac und alle früheren Modelle unterstützen bis zu 802.11n.
 
 <a name="networking-builtinbt"></a>
-### Is there built-in Bluetooth?
+### Ist Bluetooth integriert?
 
-Yes, the Raspberry Pi 3, Raspberry Pi 4, and Raspberry Pi Zero W have built-in Bluetooth.
+Ja, der Raspberry Pi 3, Raspberry Pi 4 und Raspberry Pi Zero W verfügen über integriertes Bluetooth.
 
 <a name="networking-gigaperf"></a>
-### I don't seem to get full-speed gigabit networking on my Raspberry Pi 3B+.
+### Ich scheine auf meinem Raspberry Pi 3B+ kein Gigabit-Netzwerk mit voller Geschwindigkeit zu erhalten.
 
-Although the Ethernet chip on the Raspberry Pi 3B+ is gigabit-capable, the connection from the chip to the SoC is still via USB 2.0, which limits the total bandwidth available to approximately 220–250Mbits/s in the real world. Although not gigabit, this is a healthy bump over the 100Mbits/s top speed of the 3B model. To get the best performance, you should ensure that Ethernet flow control is turned ON on your router.
+Obwohl der Ethernet-Chip des Raspberry Pi 3B+ Gigabit-fähig ist, erfolgt die Verbindung vom Chip zum SoC weiterhin über USB 2.0, was die verfügbare Gesamtbandbreite in der realen Welt auf ca. 220–250 Mbit/s begrenzt. Obwohl es kein Gigabit ist, ist dies ein gesunder Anstieg über die 100 Mbit/s-Höchstgeschwindigkeit des 3B-Modells. Um die beste Leistung zu erzielen, sollten Sie sicherstellen, dass die Ethernet-Flusssteuerung an Ihrem Router eingeschaltet ist.
 
 <a name="networking-netboot"></a>
-### Does the device have support for any form of netbooting or PXE?
+### Unterstützt das Gerät jede Form von Netbooting oder PXE?
 
-The Raspberry Pi 3 can be set up to network boot without an SD card present; earlier models can PXE/Netboot with an appropriately set up SD card. You can find our netbooting documentation [here](../hardware/raspberrypi/bootmodes/net.md).
+Der Raspberry Pi 3 kann für den Netzwerkstart ohne vorhandene SD-Karte eingerichtet werden; frühere Modelle können PXE/Netboot mit einer entsprechend eingerichteten SD-Karte. Unsere Netbooting-Dokumentation finden Sie [hier](../hardware/raspberrypi/bootmodes/net.md).
 
-The Raspberry Pi 4 does not currently support network booting without an SD card present. A bootloader update to support network boot is planned but not yet available.
+Der Raspberry Pi 4 unterstützt derzeit kein Booten über das Netzwerk ohne eine vorhandene SD-Karte. Ein Bootloader-Update zur Unterstützung des Netzwerkbootens ist geplant, aber noch nicht verfügbar.
 
-We have also developed [PiServer](https://www.raspberrypi.org/blog/piserver/), a piece of software that lets you easily set up a network of client Raspberry Pis connected to a single x86-based server via Ethernet. With PiServer, you don’t need SD cards, you can control all clients via the server, and you can add and configure user accounts — ideal for the classroom, your home, or an industrial setting.
+Wir haben auch [PiServer](https://www.raspberrypi.org/blog/piserver/) entwickelt, eine Software, mit der Sie ganz einfach ein Netzwerk von Client-Raspberry Pis einrichten können, die über Ethernet mit einem einzelnen x86-basierten Server verbunden sind . Mit PiServer benötigen Sie keine SD-Karten, Sie können alle Clients über den Server steuern und Benutzerkonten hinzufügen und konfigurieren – ideal für den Unterricht, Ihr Zuhause oder eine industrielle Umgebung.
 
-Another option is [PiNet](http://pinet.org.uk), which is a free and open-source community-based project initially designed for schools. Each Raspberry Pi boots off a small set of startup files on an SD card and fetches the rest of the data it needs from the PiNet server, thereby allowing you to maintain a single operating system image for all the Raspberry Pis. PiNet also adds network user accounts, shared folders and automated backups.
+Eine weitere Option ist [PiNet](http://pinet.org.uk), ein kostenloses Open-Source-Community-basiertes Projekt, das ursprünglich für Schulen entwickelt wurde. Jeder Raspberry Pi bootet einen kleinen Satz Startup-Dateien auf einer SD-Karte und ruft den Rest der benötigten Daten vom PiNet-Server ab, sodass Sie ein einziges Betriebssystem-Image für alle Raspberry Pis verwalten können. PiNet fügt auch Netzwerkbenutzerkonten, freigegebene Ordner und automatisierte Backups hinzu.
 
 <a name="cameramodule"></a>
 
-## Camera Module
+## Kameramodul
 
 <a name="cameramodule-what"></a>
-### What is the Camera Module?
+### Was ist das Kameramodul?
 
-The Raspberry Pi Camera Modules are small PCB's that connects to the CSI-2 camera port on the Raspberry Pi using a short ribbon cable. They provide connectivity for a camera capable of capturing still images or video recordings. The Camera Modules connect to the Image System Pipeline (ISP) in the Raspberry Pi's SoC, where the incoming camera data is processed and eventually converted to an image or video on the SD card (or other storage). You can [read more about the Camera Modules here](https://www.raspberrypi.org/products/). 
+Die Raspberry Pi Kameramodule sind kleine PCBs, die mit einem kurzen Flachbandkabel an den CSI-2-Kameraanschluss des Raspberry Pi angeschlossen werden. Sie bieten Anschlussmöglichkeiten für eine Kamera, die Standbilder oder Videoaufnahmen aufnehmen kann. Die Kameramodule verbinden sich mit der Image System Pipeline (ISP) im SoC des Raspberry Pi, wo die eingehenden Kameradaten verarbeitet und schließlich in ein Bild oder Video auf der SD-Karte (oder einem anderen Speicher) umgewandelt werden. Sie können [hier mehr über die Kameramodule lesen](https://www.raspberrypi.org/products/).
 
 <a name="cameramodule-model"></a>
-### What model of camera does the Camera Module use?
+### Welches Kameramodell verwendet das Kameramodul?
 
-The original Camera Module is an Omnivision OV5647, the V2 which replaced it is a Sony IMX219. There is now a High quality camera module available, with an interchangeable lens mount, using the Sony IMX447 sensor.  
+Das ursprüngliche Kameramodul ist ein Omnivision OV5647, das V2, das es ersetzt hat, ist ein Sony IMX219. Es ist jetzt ein hochwertiges Kameramodul mit austauschbarem Objektivanschluss erhältlich, das den Sony IMX447-Sensor verwendet.
 
 <a name="cameramodule-res"></a>
-### What resolutions are supported?
+### Welche Auflösungen werden unterstützt?
 
-The original Camera Module is capable of taking photos up to 5 megapixels and can record video at resolutions up to 1080p30. The Camera Module V2 is capable of taking photos up to 8 megapixels (8MP). It supports 1080p30, 720p60 and VGA90 video modes, as well as still capture. The High Quality camera module is 12.3MP, with the same video performance as the other models.
+Das ursprüngliche Kameramodul kann Fotos mit bis zu 5 Megapixeln aufnehmen und Videos mit Auflösungen von bis zu 1080p30 aufnehmen. Das Kameramodul V2 kann Fotos mit bis zu 8 Megapixel (8MP) aufnehmen. Es unterstützt die Videomodi 1080p30, 720p60 und VGA90 sowie Standbildaufnahmen. Das High Quality-Kameramodul hat 12,3 MP und die gleiche Videoleistung wie die anderen Modelle.
 
 <a name="cameramodule-format"></a>
-### What picture formats are supported?
+### Welche Bildformate werden unterstützt?
 
-The Raspberry Pi Camera Modules supports raw capturing (Bayer data direct from the sensor) or encoding as JPEG, PNG, GIF and BMP, uncompressed YUV, and uncompressed RGB photos. They can record video as H.264, baseline, main, and high-profile formats.
+Die Raspberry Pi Kameramodule unterstützen Raw-Capturing (Bayer-Daten direkt vom Sensor) oder Encoding als JPEG, PNG, GIF und BMP, unkomprimiertes YUV und unkomprimierte RGB-Fotos. Sie können Videos als H.264-, Baseline-, Haupt- und High-Profile-Formate aufnehmen.
 
 <a name="cameramodule-how"></a>
-### How do I use the Camera Module?
+### Wie verwende ich das Kameramodul?
 
-We've put together [a how-to](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera) for that!
+Dafür haben wir [eine Anleitung](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera) zusammengestellt!
 
-There are also a number of command line applications provided for stills and video output. These applications provide the typical features you might find on a compact camera, such as set image size, compression quality, exposure mode, and ISO. See the [documentation](https://www.raspberrypi.org/documentation/hardware/camera/README.md) for more details.
+Es gibt auch eine Reihe von Befehlszeilenanwendungen für Standbilder und Videoausgabe. Diese Anwendungen bieten die typischen Funktionen einer Kompaktkamera, wie z. B. die Einstellung von Bildgröße, Komprimierungsqualität, Belichtungsmodus und ISO. Weitere Informationen finden Sie in der [Dokumentation](https://www.raspberrypi.org/documentation/hardware/camera/README.md).
 
 <a name="cameramodule-cable"></a>
-### Can I extend the ribbon cable?
+### Kann ich das Flachbandkabel verlängern?
 
-Yes. We have reports of people using cables up to four metres in length and still receiving acceptable images, though your experience may differ.
+Jawohl. Wir haben Berichte von Leuten, die Kabel mit einer Länge von bis zu vier Metern verwenden und immer noch akzeptable Bilder erhalten, obwohl Ihre Erfahrungen davon abweichen können.
 
 <a name="cameramodule-power"></a>
-### How much power does the Camera Module use?
+### Wie viel Strom verbraucht das Kameramodul?
 
-The Raspberry Pi Camera Modules requires 250mA to operate. Ensure that your power supply can provide enough power for the connected Camera Module, as well as for the Raspberry Pi itself and any peripherals directly attached to it.
+Die Raspberry Pi Kameramodule benötigen zum Betrieb 250 mA. Stellen Sie sicher, dass Ihr Netzteil ausreichend Strom für das angeschlossene Kameramodul sowie für den Raspberry Pi selbst und direkt daran angeschlossene Peripheriegeräte liefern kann.
 
 <a name="troubleshoot"></a>
 
-## Troubleshooting
+## Fehlerbehebung
 
 <a name="troubleshoot-defpasswd"></a>
-### What is the username and password for the Raspberry Pi?
+### Wie lautet der Benutzername und das Passwort für den Raspberry Pi?
 
-The default username for Raspberry Pi OS is `pi` (without any quotation marks) and the default password is `raspberry` (again, do not include the quotation marks). If this does not work, check the information about your specific distro on the [downloads page](https://www.raspberrypi.org/downloads).
+Der Standardbenutzername für Raspberry Pi OS ist `pi` (ohne Anführungszeichen) und das Standardpasswort ist `raspberry` (ohne Anführungszeichen). Wenn dies nicht funktioniert, überprüfen Sie die Informationen zu Ihrer spezifischen Distribution auf der [Downloadseite](https://www.raspberrypi.org/downloads).
 
 <a name="troubleshoot-inputpasswd"></a>
-### Why does nothing happen when I type in my password?
+### Warum passiert nichts, wenn ich mein Passwort eingebe?
 
-To protect your information, Linux does not display anything when you are entering passwords in the Bash prompt or the terminal. As long as you were able to see the username being typed in, your keyboard is working correctly.
+Um Ihre Informationen zu schützen, zeigt Linux nichts an, wenn Sie Passwörter in der Bash-Eingabeaufforderung oder im Terminal eingeben. Solange Sie den eingegebenen Benutzernamen sehen konnten, funktioniert Ihre Tastatur ordnungsgemäß.
 
 <a name="troubleshoot-boot"></a>
-### Why does my Raspberry Pi not start up/boot?
+### Warum startet/bootet mein Raspberry Pi nicht?
 
-Probably the most frequently asked question! We have full instructions for setting up your Raspberry Pi [here](../setup/), but if it still will not boot, you will find advice on what to do in the [troubleshooting post on our forum](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=58151).
+Die wohl am häufigsten gestellte Frage! Wir haben eine vollständige Anleitung zum Einrichten Ihres Raspberry Pi [hier](../setup/), aber wenn er immer noch nicht bootet, finden Sie im [Troubleshooting-Beitrag in unserem Forum](https:/ /www.raspberrypi.org/forums/viewtopic.php?f=28&t=58151).
 
 <a name="troubleshoot-temp"></a>
-### Why is my Raspberry Pi hot?
+### Warum ist mein Raspberry Pi heiß?
 
-All electronics give off heat, and the Raspberry Pi is no exception. The Raspberry Pi 3 Model B+ has heat-spreading technology to use the entire PCB and connectors as a heatsink to dissipate excess energy. This means that except in exceptional conditions, you are unlikely to need a heatsink on the SoC or the Ethernet hub chip.
+Die gesamte Elektronik gibt Wärme ab, und der Raspberry Pi ist keine Ausnahme. Der Raspberry Pi 3 Model B+ verfügt über eine Wärmeverteilungstechnologie, um die gesamte Leiterplatte und die Anschlüsse als Kühlkörper zu verwenden, um überschüssige Energie abzuleiten. Dies bedeutet, dass Sie außer in Ausnahmefällen wahrscheinlich keinen Kühlkörper auf dem SoC oder dem Ethernet-Hub-Chip benötigen.
 
-The Raspberry Pi 4 Model B uses the same heat-spreading technology but due to the much more powerful CPU cores is capable of higher peak power consumption than a Model 3B+. Under a continuously heavy processor workload, the Model 4B is more likely to throttle than a Model 3B+.
+Der Raspberry Pi 4 Model B verwendet die gleiche Heat-Spreading-Technologie, ist aber aufgrund der viel leistungsstärkeren CPU-Kerne in der Lage, einen höheren Spitzenstromverbrauch als ein Model 3B+ zu erzielen. Unter einer kontinuierlich hohen Prozessorauslastung drosselt das Model 4B eher als ein Model 3B+.
 
-You can add a heatsink if you wish, and this may prevent thermal throttling by keeping the chips below the throttling temperature (see the clock speed paragraph in the [Performance](#pi-performance) section).
+Sie können einen Kühlkörper hinzufügen, wenn Sie möchten, und dies kann thermisches Throttling verhindern, indem die Chips unter der Throttling-Temperatur gehalten werden (siehe Abschnitt Taktrate im Abschnitt [Performance](#pi-performance)).
 
 <a name="troubleshoot-power"></a>
-### I keep getting a lightning bolt symbol and messages about power.
+### Ich erhalte immer wieder ein Blitzsymbol und Nachrichten zum Thema Strom.
 
-Most Raspberry Pi models have circuity to detect drops of the incoming power supply voltage below around 4.65V. If such a drop happens, the lightning bolt warning icon (see [here](../configuration/warning-icons.md)) will appear, and a message will be sent to the system log. Below this voltage, there is no guarantee the Raspberry Pi will work correctly; it may result in the device locking up, or bad SD card writes, USB device failure, Ethernet dropping out, etc. We recommend a good-quality 5V power supply, 2.5A for the Raspberry Pi 3B+, with a thick copper supply cable, such as [our official power supply](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/). The cable itself can be very important: often the cheaper cables use very thin copper wire, which can cause a significant voltage drop.
+Die meisten Raspberry Pi-Modelle verfügen über eine Schaltung, um Einbrüche der eingehenden Stromversorgungsspannung unter etwa 4,65 V zu erkennen. In einem solchen Fall erscheint das Blitz-Warnsymbol (siehe [hier](../configuration/warning-icons.md)) und eine Nachricht wird an das Systemprotokoll gesendet. Unterhalb dieser Spannung gibt es keine Garantie, dass der Raspberry Pi richtig funktioniert; Dies kann dazu führen, dass das Gerät blockiert oder die SD-Karte schlecht schreibt, ein USB-Gerät ausfällt, das Ethernet ausfällt usw. Wir empfehlen ein hochwertiges 5V-Netzteil, 2,5A für den Raspberry Pi 3B+, mit einem dicken Kupferkabel. wie [unser offizielles Netzteil](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/). Das Kabel selbst kann sehr wichtig sein: Oft verwenden die billigeren Kabel sehr dünne Kupferdrähte, die einen erheblichen Spannungsabfall verursachen können.
 
 <a name="troubleshoot-sd"></a>
-### My SD card seems to have stopped working.
+### Meine SD-Karte scheint nicht mehr zu funktionieren.
 
-SD cards have a limited lifespan due to the way they work. Under most circumstances, they offer some years of use, but heavy file accessing, or using it as a swap drive, may reduce the SD card's lifespan considerably. Note that there are also fake capacity SD cards being sold that are likely to be unreliable.
+SD-Karten haben aufgrund ihrer Funktionsweise eine begrenzte Lebensdauer. In den meisten Fällen bieten sie eine Nutzungsdauer von einigen Jahren, aber ein starker Dateizugriff oder die Verwendung als Swap-Laufwerk kann die Lebensdauer der SD-Karte erheblich verkürzen. Beachten Sie, dass auch SD-Karten mit gefälschter Kapazität verkauft werden, die wahrscheinlich unzuverlässig sind.
 
 <a name="troubleshoot-fs"></a>
-### I've imaged an SD card with Raspberry Pi OS/NOOBS, but when I look at it with my Windows PC, it's not all there!
+### Ich habe eine SD-Karte mit Raspberry Pi OS/NOOBS erstellt, aber wenn ich sie mit meinem Windows-PC betrachte, ist nicht alles da!
 
-This is to do with the capabilities of Windows to read Linux-formatted partitions. When you image the SD card, it is automatically split into multiple partitions. The first partition uses a format that Windows can read, but the other partitions use a Linux-specific file system, which Windows simply does not recognise. This means when you put an SD card in a Windows machine, it only displays the first partition, and may well say the other partitions are corrupted and need formatting - **do not format them**! Here's some information on what goes in that first [partition](../configuration/boot_folder.md). If you insert the SD card on a machine running Linux, it will display all the partitions correctly.
+Dies hat mit den Fähigkeiten von Windows zu tun, Linux-formatierte Partitionen zu lesen. Wenn Sie die SD-Karte abbilden, wird sie automatisch in mehrere Partitionen aufgeteilt. Die erste Partition verwendet ein Format, das Windows lesen kann, aber die anderen Partitionen verwenden ein Linux-spezifisches Dateisystem, das Windows einfach nicht erkennt. Das bedeutet, wenn Sie eine SD-Karte in einen Windows-Rechner einlegen, wird nur die erste Partition angezeigt, und es kann durchaus sein, dass die anderen Partitionen beschädigt sind und formatiert werden müssen - **nicht formatieren**! Hier sind einige Informationen darüber, was in dieser ersten [Partition] (../configuration/boot_folder.md) enthalten ist. Wenn Sie die SD-Karte in einen Computer mit Linux einlegen, werden alle Partitionen korrekt angezeigt.
 
-## I still have more questions!
+## Ich habe noch weitere Fragen!
 
-Read the sticky subjects in the [Beginners subforum](https://www.raspberrypi.org/forums/viewforum.php?f=91) and check the [Help pages](https://www.raspberrypi.org/help/) for more information. If the answer is not there, ask in [the forums](https://www.raspberrypi.org/forums), where there are lots of helpful Raspberry Pi owners, users, and fans who will be more than happy to help you out.
+Lesen Sie die wichtigen Themen im [Unterforum für Anfänger](https://www.raspberrypi.org/forums/viewforum.php?f=91) und überprüfen Sie die [Hilfeseiten](https://www.raspberrypi.org/help /) für mehr Informationen. Wenn die Antwort nicht dabei ist, frag in [den Foren] (https://www.raspberrypi.org/forums), wo es viele hilfreiche Raspberry Pi-Besitzer, -Benutzer und -Fans gibt, die dir gerne weiterhelfen aus.
+
+
