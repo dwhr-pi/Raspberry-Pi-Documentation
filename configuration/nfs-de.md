@@ -60,7 +60,7 @@ Beachten Sie jedoch, dass der Client unterschiedliche Anforderungen an den Niema
 
 ```bash
 cat /etc/passwd
-Katze /etc/group
+cat /etc/group
 ```
 
 Auf diese Weise müssen Server und Client die Benutzer nicht dieselbe UID/GUID teilen. Für diejenigen, die LDAP-basierte Authentifizierung verwenden, fügen Sie der `idmapd.conf` Ihrer Clients die folgenden Zeilen hinzu:

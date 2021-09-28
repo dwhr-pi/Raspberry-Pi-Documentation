@@ -79,13 +79,13 @@ Die `dt-blob.bin` wird verwendet, um den binären Blob (VideoCore) beim Booten z
    Dieser Abschnitt kann eine beliebige Kombination der folgenden Elemente enthalten:
    
    1. `Polarität`
-      * `aktiv_hoch`
+      * `aktiv_high`
       * `active_low`
    2. `Kündigung`
       * `pull_up`
       * `pull_down`
-      * `kein_ziehen`
-   3. `startup_state`
+      * `no_pulling`
+   3. `Startzustand`
       * `aktiv`
       * `inaktiv`
    4. `Funktion`
@@ -121,8 +121,8 @@ Hier sind einige Beispielkonfigurationen, die Sie verwenden können, um bestimmt
 
 ```
 clock_routing {
-   vco@PLLA { Häufigkeit = <1966080000>; };
-   chan@APER { div = <4>; };
+   vco@PLLA  {    freq = <1966080000>; };
+   chan@APER {    div  = <4>; };
    clock@GPCLK0 { pll = "PLLA"; chan = "APER"; };
 };
 

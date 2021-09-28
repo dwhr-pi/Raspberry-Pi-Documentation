@@ -4,7 +4,7 @@ Wenn ein Pi aus irgendeinem Grund nicht bootet oder herunterfahren muss, blinkt 
 
 | Langes Blinken | Kurzes Blinken | Status |
 |:------------:|:------------:|--------|
-| 0 | 3 | Allgemeiner Fehler beim Booten |
+| 0 | 3 | Allgemeiner Fehler beim Booten* |
 | 0 | 4 | start*.elf nicht gefunden |
 | 0 | 7 | Kernel-Image nicht gefunden |
 | 0 | 8 | SDRAM-Fehler |
@@ -20,3 +20,5 @@ Wenn ein Pi aus irgendeinem Grund nicht bootet oder herunterfahren muss, blinkt 
 | 4 | 5 | Schwerwiegender Firmware-Fehler |
 | 4 | 6 | Stromausfall Typ A |
 | 4 | 7 | Stromausfall Typ B |
+
+*) Dies ist oftmals auf dem Raspberry Pi Zero der Fall, wenn versucht wird ein 64 Bit Betriebssystem zu starten. Der Zero akzeptiert nur 32 Bit. 

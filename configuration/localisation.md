@@ -16,7 +16,7 @@ Alternativ können Sie die Sprache vor dem ersten Booten von NOOBS vorwählen. S
 Wenn Sie Raspberry Pi OS mit NOOBS installiert haben, sollte es automatisch dieselbe Sprache aufnehmen, die Sie in NOOBS verwendet haben. Wenn Sie jedoch eine andere Sprache auswählen möchten oder das Raspberry Pi OS von einem eigenständigen Image installiert haben, verwenden Sie [raspi-config](raspi-config.md#change-locale).
 
 
-## Klaviatur
+## Tastatur
 
 ### ANFÄNGER
 
