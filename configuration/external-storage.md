@@ -1,109 +1,109 @@
-# External storage configuration
-You can connect your external hard disk, SSD, or USB stick to any of the USB ports on the Raspberry Pi, and mount the file system to access the data stored on it.
+# Konfiguration des externen Speichers
+Sie können Ihre externe Festplatte, SSD oder Ihren USB-Stick an einen der USB-Ports des Raspberry Pi anschließen und das Dateisystem mounten, um auf die darauf gespeicherten Daten zuzugreifen.
 
-By default, your Raspberry Pi automatically mounts some of the popular file systems such as FAT, NTFS, and HFS+ at the `/media/pi/<HARD-DRIVE-LABEL>` location.
+Standardmäßig mountet Ihr Raspberry Pi einige der gängigen Dateisysteme wie FAT, NTFS und HFS+ automatisch am Speicherort `/media/pi/<HARD-DRIVE-LABEL>`.
 
-To set up your storage device so that it always mounts to a specific location of your choice, you must mount it manually.
+Um Ihr Speichergerät so einzurichten, dass es immer an einem bestimmten Ort Ihrer Wahl gemountet wird, müssen Sie es manuell mounten.
 
-## Mounting a storage device 
-You can mount your storage device at a specific folder location. It is conventional to do this within the /mnt folder, for example /mnt/mydisk. Note that the folder must be empty.
+## Speichergerät montieren
+Sie können Ihr Speichergerät an einem bestimmten Ordnerspeicherort bereitstellen. Üblicherweise geschieht dies im Ordner /mnt, zum Beispiel /mnt/mydisk. Beachten Sie, dass der Ordner leer sein muss.
 
-1. Plug the storage device into a USB port on the Raspberry Pi. 
-2. List all the disk partitions on the Pi using the following command:
+1. Stecken Sie das Speichergerät in einen USB-Port des Raspberry Pi.
+2. Listen Sie alle Festplattenpartitionen auf dem Pi mit dem folgenden Befehl auf:
 
     ```
     sudo lsblk -o UUID,NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL,MODEL
     ```
-   The Raspberry Pi uses mount points `/` and `/boot`. Your storage device will show up in this list, along with any other connected storage.
-3. Use the SIZE, LABEL, and MODEL columns to identify the name of the disk partition that points to your storage device. For example, `sda1`. 
-4. The FSTYPE column contains the filesystem type. If your storage device uses an exFAT file system, install the exFAT driver:
+   Der Raspberry Pi verwendet die Mountpoints `/` und `/boot`. Ihr Speichergerät wird in dieser Liste zusammen mit allen anderen verbundenen Speichergeräten angezeigt.
+3. Verwenden Sie die Spalten SIZE, LABEL und MODEL, um den Namen der Festplattenpartition zu identifizieren, die auf Ihr Speichergerät verweist. Zum Beispiel `sda1`.
+4. Die Spalte FSTYPE enthält den Dateisystemtyp. Wenn Ihr Speichergerät ein exFAT-Dateisystem verwendet, installieren Sie den exFAT-Treiber:
 
     ```
     sudo apt update
     sudo apt install exfat-fuse
     ```
-5. If your storage device uses an NTFS file system, you will have read-only access to it. If you want to write to the device, you can install the ntfs-3g driver:
+5. Wenn Ihr Speichergerät ein NTFS-Dateisystem verwendet, haben Sie nur Lesezugriff darauf. Wenn Sie auf das Gerät schreiben möchten, können Sie den ntfs-3g-Treiber installieren:
 
     ```
-    sudo apt update
+    sudo apt-Update
     sudo apt install ntfs-3g
     ```
-6. Run the following command to get the location of the disk partition:
+6. Führen Sie den folgenden Befehl aus, um den Speicherort der Festplattenpartition abzurufen:
 
     ```
     sudo blkid
     ```
-    For example, `/dev/sda1`.
-7. Create a target folder to be the mount point of the storage device. 
-   The mount point name used in this case is `mydisk`. You can specify a name of your choice:
+    Zum Beispiel `/dev/sda1`.
+7. Erstellen Sie einen Zielordner als Bereitstellungspunkt des Speichergeräts.
+   Der in diesem Fall verwendete Mount-Point-Name ist `mydisk`. Sie können einen Namen Ihrer Wahl angeben:
 
     ```
     sudo mkdir /mnt/mydisk
     ```
-8. Mount the storage device at the mount point you created:
+8. Mounten Sie das Speichergerät an dem von Ihnen erstellten Mount-Punkt:
 
     ```
     sudo mount /dev/sda1 /mnt/mydisk
     ```
-9. Verify that the storage device is mounted successfully by listing the contents:
+9. Überprüfen Sie, ob das Speichergerät erfolgreich gemountet wurde, indem Sie den Inhalt auflisten:
 
     ```
     ls /mnt/mydisk
     ```
 
-## Setting up automatic mounting
-You can modify the `fstab` file to define the location where the storage device will be automatically mounted when the Raspberry Pi starts up. In the `fstab` file, the disk partition is identified by the universally unique identifier (UUID).
+## Automatische Montage einrichten
+Sie können die Datei `fstab` ändern, um den Speicherort festzulegen, an dem das Speichergerät beim Start des Raspberry Pi automatisch gemountet wird. In der Datei `fstab` wird die Festplattenpartition durch den universell eindeutigen Bezeichner (UUID) identifiziert.
 
-1. Get the UUID of the disk partition:
+1. Rufen Sie die UUID der Festplattenpartition ab:
 
     ```
     sudo blkid
     ```
-2. Find the disk partition from the list and note the UUID. For example, `5C24-1453`.
-3. Open the fstab file using a command line editor such as nano:
+2. Suchen Sie die Festplattenpartition aus der Liste und notieren Sie sich die UUID. Beispiel: "5C24-1453".
+3. Öffnen Sie die fstab-Datei mit einem Befehlszeileneditor wie nano:
 
     ```
     sudo nano /etc/fstab
     ```
-4. Add the following line in the `fstab` file:
+4. Fügen Sie die folgende Zeile in die Datei `fstab` ein:
 
     ```
     UUID=5C24-1453 /mnt/mydisk fstype defaults,auto,users,rw,nofail 0 0
     ```
-   Replace `fstype` with the type of your file system, which you found in step 2 of 'Mounting a storage device' above, for example: `ntfs`.
+   Ersetzen Sie `fstype` durch den Typ Ihres Dateisystems, den Sie in Schritt 2 von 'Speichergerät einbinden' oben gefunden haben, zum Beispiel: `ntfs`.
    
-5. If the filesystem type is FAT or NTFS, add `,umask=000` immediately after `nofail` - this will allow all users full read/write access to every file on the storage device.
+5. Wenn der Dateisystemtyp FAT oder NTFS ist, fügen Sie `,umask=000` unmittelbar nach `nofail` hinzu - dies ermöglicht allen Benutzern vollen Lese-/Schreibzugriff auf jede Datei auf dem Speichergerät.
 
-Now that you have set an entry in `fstab`, you can start up your Raspberry Pi with or without the storage device attached. Before you unplug the device you must either shut down the Pi, or manually unmount it using the steps in 'Unmounting a storage device' below.
+Nachdem Sie nun einen Eintrag in `fstab` gesetzt haben, können Sie Ihren Raspberry Pi mit oder ohne angeschlossenem Speichergerät starten. Bevor Sie das Gerät vom Stromnetz trennen, müssen Sie entweder den Pi herunterfahren oder ihn manuell aushängen, indem Sie die Schritte unter "Speichergerät aushängen" unten ausführen.
 
-**Note:** if you do not have the storage device attached when the Pi starts, the Pi will take an extra 90 seconds to start up. You can shorten this by adding `,x-systemd.device-timeout=30` immediately after `nofail` in step 4. This will change the timeout to 30 seconds, meaning the system will only wait 30 seconds before giving up trying to mount the disk.
+**Hinweis:** Wenn das Speichergerät beim Start des Pi nicht angeschlossen ist, dauert der Start des Pi zusätzliche 90 Sekunden. Sie können dies verkürzen, indem Sie `,x-systemd.device-timeout=30` direkt nach `nofail` in Schritt 4 hinzufügen. Dadurch wird die Zeitüberschreitung auf 30 Sekunden geändert, was bedeutet, dass das System nur 30 Sekunden wartet, bevor es den Mountversuch aufgibt. die Scheibe.
 
-For more information on each Linux command, refer to the specific manual page using the `man` command. For example, `man fstab`.
+Weitere Informationen zu jedem Linux-Befehl finden Sie auf der jeweiligen Handbuchseite mit dem Befehl `man`. Zum Beispiel `man fstab`.
 
-## Unmounting a storage device
+## Ein Speichergerät aushängen
 
-When the Raspberry Pi shuts down, the system takes care of unmounting the storage device so that it is safe to unplug it. If you want to manually unmount a device, you can use the following command:
+Wenn der Raspberry Pi herunterfährt, sorgt das System dafür, dass das Speichergerät ausgehängt wird, damit es sicher entfernt werden kann. Wenn Sie ein Gerät manuell aushängen möchten, können Sie den folgenden Befehl verwenden:
 
 ```
 sudo umount /mnt/mydisk
 ```
-If you receive an error that the 'target is busy', this means that the storage device was not unmounted. If no error was displayed, you can now safely unplug the device.
+Wenn Sie die Fehlermeldung 'Target is busy' erhalten, bedeutet dies, dass das Speichergerät nicht ausgehängt wurde. Wenn kein Fehler angezeigt wurde, können Sie das Gerät jetzt sicher vom Netz trennen.
 
-### Dealing with 'target is busy'
+### Umgang mit 'Ziel ist beschäftigt'
     
-The 'target is busy' message means there are files on the storage device that are in use by a program. To close the files, use the following procedure.
+Die Meldung „Ziel ist beschäftigt“ bedeutet, dass sich Dateien auf dem Speichergerät befinden, die von einem Programm verwendet werden. Um die Dateien zu schließen, gehen Sie wie folgt vor.
 
-1. Close any program which has open files on the storage device.
+1. Schließen Sie alle Programme, die geöffnete Dateien auf dem Speichergerät haben.
 
-2. If you have a terminal open, make sure that you are not in the folder where the storage device is mounted, or in a sub-folder of it.
+2. Wenn ein Terminal geöffnet ist, stellen Sie sicher, dass Sie sich nicht in dem Ordner befinden, in dem das Speichergerät gemountet ist, oder in einem Unterordner davon.
 
-3. If you are still unable to unmount the storage device, you can use the `lsof` tool to check which program has files open on the device. You need to first install `lsof` using `apt`:
+3. Wenn Sie das Speichergerät immer noch nicht aushängen können, können Sie mit dem `lsof`-Tool überprüfen, welches Programm Dateien auf dem Gerät geöffnet hat. Sie müssen zuerst `lsof` mit `apt` installieren:
 
     ```
     sudo apt update
     sudo apt install lsof
     ```
-   To use lsof:
+   So verwenden Sie lsof:
    
     ```
     lsof /mnt/mydisk

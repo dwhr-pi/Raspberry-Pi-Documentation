@@ -413,8 +413,8 @@ Ein Fragment kann vom endgültigen Zusammenführungsprozess ausgeschlossen (deak
 ```
 +<n> // Fragment aktivieren <n>
 -<n> // Fragment deaktivieren <n>
-=<n> // Fragment <n> aktivieren, wenn der zugewiesene Parameterwert wahr ist, andernfalls deaktivieren
-!<n> // Fragment <n> aktivieren, wenn der zugewiesene Parameterwert falsch ist, andernfalls deaktivieren
+=<n> // Fragment <n> aktivieren, wenn der zugewiesene Parameterwert wahr (true) ist, andernfalls deaktivieren
+!<n> // Fragment <n> aktivieren, wenn der zugewiesene Parameterwert falsch (false) ist, andernfalls deaktivieren
 ```
 
 Beispiele:
@@ -454,7 +454,7 @@ Es besteht daher ein Bedarf an einem Verfahren zum Anpassen eines Overlays an me
 
 Die Overlay-Map, die mit der Umstellung auf Linux 5.4 ausgerollt wird, ist eine Datei, die beim Booten von der Firmware geladen wird. Es ist im DTS-Quellformat - `overlay_map.dts` geschrieben, in `overlay_map.dtb` kompiliert und im Overlays-Verzeichnis gespeichert.
 
-Dies ist eine bearbeitete Version der aktuellen Kartendatei (die Vollversion ist [hier] verfügbar (https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/ overlay_map.dts)):
+Dies ist eine bearbeitete Version der aktuellen Kartendatei (die Vollversion ist [hier](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/overlay_map.dts) verfügbar).:
 
 ```
 / {
@@ -569,7 +569,7 @@ Hier sind einige Beispiele für verschiedene Arten von Eigenschaften mit Paramet
 };
 ```
 
-Für weitere Beispiele gibt es eine große Sammlung von Overlay-Quelldateien, die im Raspberry Pi Linux GitHub-Repository [hier] gehostet werden (https://github.com/raspberrypi/linux/tree/rpi-5.4.y/arch/arm/boot/dts/overlays).
+Für weitere Beispiele gibt es eine große Sammlung von Overlay-Quelldateien, die im Raspberry Pi Linux GitHub-Repository [hier](https://github.com/raspberrypi/linux/tree/rpi-5.4.y/arch/arm/boot/dts/overlays) gehostet werden.
 
 <a name="part2.3"></a>
 ### 2.3: Etiketten exportieren

@@ -1,93 +1,93 @@
-## HDMI configuration
+## HDMI-Konfiguration
 
-In the vast majority of cases, simply plugging your HDMI-equipped monitor into the Raspberry Pi using a standard HDMI cable will automatically lead to the Pi using the best resolution the monitor supports. The Raspberry Pi Zero uses a mini HDMI port, so you will need a mini-HDMI-to-full-size-HDMI lead or adapter. On the Raspberry Pi 4 there are two micro HDMI ports, so you will need either one or two micro-HDMI-to-full-size-HDMI leads or adapters, depending on how many displays you wish to attach. You should connect any HDMI leads before turning on the Raspberry Pi.
+In den allermeisten Fällen führt das einfache Anschließen Ihres mit HDMI ausgestatteten Monitors über ein Standard-HDMI-Kabel an den Raspberry Pi automatisch zum Pi mit der besten Auflösung, die der Monitor unterstützt. Der Raspberry Pi Zero verwendet einen Mini-HDMI-Anschluss, daher benötigen Sie ein Mini-HDMI-zu-Full-Size-HDMI-Kabel oder einen Adapter. Auf dem Raspberry Pi 4 gibt es zwei Micro-HDMI-Anschlüsse, sodass Sie entweder ein oder zwei Micro-HDMI-zu-Full-Size-HDMI-Kabel oder Adapter benötigen, je nachdem, wie viele Displays Sie anschließen möchten. Sie sollten alle HDMI-Kabel anschließen, bevor Sie den Raspberry Pi einschalten.
 
-The Raspberry Pi 4 can drive up to two displays, with a resolution up to 1080p at a 60Hz refresh rate. At 4K resolution, if you connect two displays then you are limited to a 30Hz refresh rate. You can also drive a single display at 4K with a 60Hz refresh rate: this requires that the display is attached to the HDMI port adjacent to the USB-C power input (labelled HDMI0). You must also enable 4Kp60 output by setting the `hdmi_enable_4kp60=1` flag in config.txt. This flag can also be set using the 'Raspberry Pi Configuration' tool within the desktop environment.
+Der Raspberry Pi 4 kann bis zu zwei Displays mit einer Auflösung von bis zu 1080p bei einer Bildwiederholfrequenz von 60 Hz ansteuern. Wenn Sie bei 4K-Auflösung zwei Displays anschließen, sind Sie auf eine Bildwiederholfrequenz von 30 Hz beschränkt. Sie können auch ein einzelnes Display mit 4K mit einer Bildwiederholfrequenz von 60 Hz betreiben: Dazu muss das Display an den HDMI-Anschluss neben dem USB-C-Stromeingang (mit der Bezeichnung HDMI0) angeschlossen werden. Sie müssen auch die 4Kp60-Ausgabe aktivieren, indem Sie das Flag `hdmi_enable_4kp60=1` in der config.txt setzen. Dieses Flag kann auch mit dem Tool „Raspberry Pi Configuration“ in der Desktop-Umgebung gesetzt werden.
 
-If you are running the 3D graphics driver (also known as the FKMS driver), then in the Preferences menu you will find a graphical application for setting up standard displays, including multi-display setups. See [instructions for using the tool here](arandr.md).
+Wenn Sie den 3D-Grafiktreiber (auch FKMS-Treiber genannt) verwenden, finden Sie im Menü Einstellungen eine grafische Anwendung zum Einrichten von Standardanzeigen, einschließlich Multi-Display-Setups. Siehe [Anweisungen zur Verwendung des Tools hier](arandr.md).
 
-If you are using legacy graphics drivers, or find yourself in circumstances where the Raspberry Pi may not be able to determine the best mode, or you may specifically wish to set a non-default resolution, the rest of this page may be useful.
+Wenn Sie ältere Grafiktreiber verwenden oder sich in Situationen befinden, in denen der Raspberry Pi möglicherweise nicht den besten Modus ermitteln kann, oder Sie speziell eine nicht standardmäßige Auflösung festlegen möchten, kann der Rest dieser Seite hilfreich sein.
 
-Note that all the commands on this page are documented fully in the config.txt [Video](config-txt/video.md) documentation.
+Beachten Sie, dass alle Befehle auf dieser Seite vollständig in der Dokumentation config.txt [Video](config-txt/video.md) dokumentiert sind.
 
-### HDMI groups and mode 
+### HDMI-Gruppen und -Modus
 
-HDMI has two common groups: CEA (Consumer Electronics Association, the standard typically used by TVs) and DMT (Display Monitor Timings, the standard typically used by monitors). Each group advertises a particular set of modes, where a mode describes the resolution, frame rate, clock rate, and aspect ratio of the output.
+HDMI hat zwei gemeinsame Gruppen: CEA (Consumer Electronics Association, der typischerweise von Fernsehgeräten verwendete Standard) und DMT (Display Monitor Timings, der typischerweise von Monitoren verwendete Standard). Jede Gruppe bietet einen bestimmten Satz von Modi an, wobei ein Modus die Auflösung, Bildrate, Taktrate und das Seitenverhältnis der Ausgabe beschreibt.
 
-### What modes does my device support?
+### Welche Modi unterstützt mein Gerät?
 
-You can use the `tvservice` application on the command line to determine which modes are supported by your device, along with other useful data:
+Sie können die Anwendung `tvservice` in der Befehlszeile verwenden, um festzustellen, welche Modi von Ihrem Gerät unterstützt werden, zusammen mit anderen nützlichen Daten:
 
-+ `tvservice -s` displays the current HDMI status, including mode and resolution
-+ `tvservice -m CEA` lists all supported CEA modes  
-+ `tvservice -m DMT` lists all supported DMT modes  
++ `tvservice -s` zeigt den aktuellen HDMI-Status an, inklusive Modus und Auflösung
++ `tvservice -m CEA` listet alle unterstützten CEA-Modi auf
++ `tvservice -m DMT` listet alle unterstützten DMT-Modi auf
 
-If you are using a Pi 4 with more than one display attached, then `tvservice` needs to be told which device to ask for information. You can get display IDs for all attached devices by using: 
+Wenn Sie einen Pi 4 mit mehr als einem angeschlossenen Display verwenden, muss `tvservice` mitgeteilt werden, welches Gerät nach Informationen fragen soll. Sie können Anzeige-IDs für alle angeschlossenen Geräte abrufen, indem Sie Folgendes verwenden:
 
 `tvservice -l`
 
-You can specify which display `tvservice` uses by adding `-v <display id>` to the `tvservice` command, e.g:
+Sie können angeben, welche Anzeige `tvservice` verwendet, indem Sie `-v <display id>` zum `tvservice`-Befehl hinzufügen, z.B.:
 
-+ `tvservice -v 7 -m CEA`, lists all supported CEA modes for display ID 7
++ `tvservice -v 7 -m CEA`, listet alle unterstützten CEA-Modi für Display-ID 7 auf
 
-### Setting a specific HDMI mode
+### Einstellen eines bestimmten HDMI-Modus
 
-Setting a specific mode is done using the `hdmi_group` and `hdmi_mode` config.txt entries. The group entry selects between CEA or DMT, and the mode selects the resolution and frame rate. You can find tables of modes on the config.txt [Video Configuration](config-txt/video.md) page, but you should use the `tvservice` command described above to find out exactly which modes your device supports.
+Das Einstellen eines bestimmten Modus erfolgt über die config.txt-Einträge `hdmi_group` und `hdmi_mode`. Der Gruppeneintrag wählt zwischen CEA oder DMT und der Modus wählt die Auflösung und Bildrate. Sie finden Moditabellen auf der Seite config.txt [Video Configuration](config-txt/video.md), aber Sie sollten den oben beschriebenen `tvservice`-Befehl verwenden, um genau herauszufinden, welche Modi Ihr Gerät unterstützt.
 
-On the Pi 4, to specify the HDMI port, add an index identifier to the `hdmi_group` or `hdmi_mode` entry in config.txt, e.g. `hdmi_mode:0` or `hdmi_group:1`.
+Auf dem Pi 4 fügen Sie zur Angabe des HDMI-Ports eine Indexkennung zum Eintrag „hdmi_group“ oder „hdmi_mode“ in der config.txt hinzu, z. `hdmi_mode:0` oder `hdmi_group:1`.
 
-### Setting a custom HDMI mode
+### Einstellen eines benutzerdefinierten HDMI-Modus
 
-There are two options for setting a custom mode: `hdmi_cvt` and `hdmi_timings`. 
+Es gibt zwei Optionen zum Einstellen eines benutzerdefinierten Modus: `hdmi_cvt` und `hdmi_timings`.
 
-`hdmi_cvt` sets a custom Coordinated Video Timing entry, which is described fully here: [Video Configuration](config-txt/video.md#Custom%20Mode)
+`hdmi_cvt` setzt einen benutzerdefinierten koordinierten Video-Timing-Eintrag, der hier vollständig beschrieben wird: [Video Configuration](config-txt/video.md#Custom%20Mode)
 
-In certain rare cases it may be necessary to define the exact clock requirements of the HDMI signal. This is a fully custom mode, and it is activated by setting `hdmi_group=2` and `hdmi_mode=87`. You can then use the `hdmi_timings` config.txt command to set the specific parameters for your display. 
-`hdmi_timings` specifies all the timings that an HDMI signal needs to use. These timings are usually found in the datasheet of the display being used.
+In seltenen Fällen kann es erforderlich sein, die genauen Taktanforderungen des HDMI-Signals zu definieren. Dies ist ein vollständig benutzerdefinierter Modus, der durch das Setzen von `hdmi_group=2` und `hdmi_mode=87` aktiviert wird. Sie können dann den config.txt-Befehl `hdmi_timings` verwenden, um die spezifischen Parameter für Ihre Anzeige einzustellen.
+`hdmi_timings` gibt alle Timings an, die ein HDMI-Signal verwenden muss. Diese Timings finden Sie normalerweise im Datenblatt des verwendeten Displays.
 
-`hdmi_timings=<h_active_pixels> <h_sync_polarity> <h_front_porch> <h_sync_pulse> <h_back_porch> <v_active_pixels> <h_sync_polarity> <h_front_porch> <h_sync_pulse> <h_back_porch> <v_active_lines> <v_sync_polarity> v_front_porch> <v_sync_pulse> <v_back_porch> <v_sync_offset_a> <v_sync_offset_b> <pixel_rep> <frame_rate> <interlaced> <pixel_freq> <aspect_ratio>`
+`hdmi_timings=<h_active_pixels> <h_sync_polarity> <h_front_porch> <h_sync_pulse> <h_back_porch> <v_active_pixels> <h_sync_polarity> <h_front_porch> <h_sync_pulse> <h_back_porch> <v_ch_active_porch> <v_ch_active_porch> <v_ch_active_porch> <v_ch_active_porch> <v_ch_active_porch> <v_v_active_porch> <v_sync_offset_b> <pixel_rep> <frame_rate> <interlaced> <pixel_freq> <aspect_ratio>`
 
-| Timing        | Purpose       |
+| Timing | Zweck |
 | ------------- | ------------- |
-| `h_active_pixels`     | The horizontal resolution |
-| `h_sync_polarity`     | 0 or 1 to define the horizontal sync polarity      | 
-| `h_front_porch` | Number of horizontal front porch pixels      |
-| `h_sync_pulse` | Width of horizontal sync pulse    |
-| `h_back_porch` | Number of horizontal back porch pixels    | 
-| `v_active_lines` | The vertical resolution    | 
-| `v_sync_polarity` | 0 or 1 to define the vertical sync polarity      | 
-| `v_front_porch` | Number of vertical front porch pixels     | 
-| `v_sync_pulse` | Width of vertical sync pulse     | 
-| `v_back_porch` | Number of vertical back porch pixels     | 
-| `v_sync_offset_a` | Leave at 0     | 
-| `v_sync_offset_b` | Leave at 0     | 
-| `pixel_rep` | Leave at 0     | 
-| `frame_rate` | Frame rate of mode      |
-| `interlaced` | 0 for non-interlaced, 1 for interlaced    | 
-| `pixel_freq` | The mode pixel frequency     | 
-| `aspect_ratio` | The aspect ratio required      | 
+| `h_active_pixels` | Die horizontale Auflösung |
+| `h_sync_polarity` | 0 oder 1, um die horizontale Sync-Polarität zu definieren |
+| `h_front_portal` | Anzahl der horizontalen Pixel der Veranda |
+| `h_sync_pulse` | Breite des horizontalen Synchronisationsimpulses |
+| `h_back_porch` | Anzahl der horizontalen Pixel der hinteren Veranda |
+| `v_active_lines` | Die vertikale Auflösung |
+| `v_sync_polarity` | 0 oder 1, um die vertikale Sync-Polarität zu definieren |
+| `v_front_portal` | Anzahl der vertikalen Pixel der Veranda |
+| `v_sync_pulse` | Breite des vertikalen Synchronisationsimpulses |
+| `v_back_portal` | Anzahl der vertikalen Pixel der hinteren Veranda |
+| `v_sync_offset_a` | Bei 0 verlassen |
+| `v_sync_offset_b` | Bei 0 verlassen |
+| `pixel_rep` | Bei 0 verlassen |
+| `Bildrate` | Bildrate des Modus |
+| `interlaced` | 0 für non-interlaced, 1 für interlaced |
+| `pixel_freq` | Die Moduspixelfrequenz |
+| `Seitenverhältnis` | Das erforderliche Seitenverhältnis |
 
-`aspect_ratio` should be one of the following:
+`aspect_ratio` sollte einer der folgenden sein:
 
-| Ratio | `aspect_ratio` ID |
-|-------|----|
-| `4:3` | 1  |  
-|`14:9` | 2  |
-|`16:9` | 3  |
-|`5:4`  | 4  |
-|`16:10`| 5  | 
-|`15:9` | 6  |
-|`21:9` | 7  |
-|`64:27`| 8  |
+| Verhältnis | `aspekt_verhältnis` ID |
+|------|----|
+| `4:3` | 1 |
+|`14:9` | 2 |
+|`16:9` | 3 |
+|`5:4` | 4 |
+|`16:10`| 5 |
+|`15:9` | 6 |
+|`21:9` | 7 |
+|`64:27`| 8 |
 
-For the Pi4, to specify the HDMI port, you can add an index identifier to the config.txt. e.g. `hdmi_cvt:0=...` or `hdmi_timings:1=...`. If no port identifier is specified, the settings are applied to port 0.
+Für den Pi4 können Sie zur Angabe des HDMI-Ports eine Indexkennung zur config.txt hinzufügen. z.B. `hdmi_cvt:0=...` oder `hdmi_timings:1=...`. Wenn keine Portkennung angegeben ist, werden die Einstellungen auf Port 0 angewendet.
 
-### Display Rotation
+###Anzeigendrehung
 
-Please see the [Display Rotation Page](./display_rotation.md) for details.
+Weitere Informationen finden Sie auf der [Display-Rotation-Seite](./display_rotation.md).
 
-### HDMI not working properly?
+### HDMI funktioniert nicht richtig?
 
-In some rare cases you may need to increase the HDMI drive strength, for example when there is speckling on the display or when you are using very long cables. There is a config.txt item to do this, `config_hdmi_boost`, which is documented on the [config.txt video page](config-txt/video.md).
+In seltenen Fällen müssen Sie möglicherweise die HDMI-Laufwerksstärke erhöhen, z. B. wenn das Display gesprenkelt ist oder wenn Sie sehr lange Kabel verwenden. Dafür gibt es ein config.txt-Element, `config_hdmi_boost`, das auf der [config.txt-Videoseite](config-txt/video.md) dokumentiert ist.
 
-The Raspberry Pi 4B does not yet support `config_hdmi_boost`, support for this option will be added in a future software update.
+Der Raspberry Pi 4B unterstützt `config_hdmi_boost` noch nicht, die Unterstützung für diese Option wird in einem zukünftigen Software-Update hinzugefügt.
