@@ -1,36 +1,36 @@
-# Audio configuration
+# Audiokonfiguration
 
-The Raspberry Pi has up to three audio output modes: HDMI 1 and 2, if present, and a headphone jack. You can switch between these modes at any time.
+Der Raspberry Pi verfügt über bis zu drei Audioausgabemodi: HDMI 1 und 2, falls vorhanden, und eine Kopfhörerbuchse. Sie können jederzeit zwischen diesen Modi wechseln.
 
-If your HDMI monitor or TV has built-in speakers, the audio can be played over the HDMI cable, but you can switch it to a set of headphones or other speakers plugged into the headphone jack. If your display claims to have speakers, sound is output via HDMI by default; if not, it is output via the headphone jack. This may not be the desired output setup, or the auto-detection is inaccurate, in which case you can manually switch the output.
+Wenn Ihr HDMI-Monitor oder Fernseher über integrierte Lautsprecher verfügt, kann der Ton über das HDMI-Kabel wiedergegeben werden, Sie können ihn jedoch auf einen Kopfhörer oder andere Lautsprecher umschalten, die an die Kopfhörerbuchse angeschlossen sind. Wenn Ihr Display Lautsprecher behauptet, wird der Ton standardmäßig über HDMI ausgegeben; falls nicht, erfolgt die Ausgabe über die Kopfhörerbuchse. Dies ist möglicherweise nicht die gewünschte Ausgangskonfiguration oder die automatische Erkennung ist ungenau. In diesem Fall können Sie den Ausgang manuell umschalten.
 
-## Changing the audio output
+## Audioausgang ändern
 
-There are two ways of setting the audio output.
+Es gibt zwei Möglichkeiten, die Audioausgabe einzustellen.
 
-### Desktop volume control
+### Desktop-Lautstärkeregelung
 
-Right-clicking the volume icon on the desktop taskbar brings up the audio output selector; this allows you to select between the internal audio outputs. It also allows you to select any external audio devices, such as USB sound cards and Bluetooth audio devices. A green tick is shown against the currently selected audio output device — simply left-click the desired output in the pop-up menu to change this. The volume control and mute operate on the currently selected device.
+Wenn Sie mit der rechten Maustaste auf das Lautstärkesymbol in der Desktop-Taskleiste klicken, wird die Audioausgabeauswahl angezeigt. Auf diese Weise können Sie zwischen den internen Audioausgängen wählen. Außerdem können Sie beliebige externe Audiogeräte wie USB-Soundkarten und Bluetooth-Audiogeräte auswählen. Ein grünes Häkchen wird neben dem aktuell ausgewählten Audioausgabegerät angezeigt – klicken Sie einfach mit der linken Maustaste auf die gewünschte Ausgabe im Popup-Menü, um dies zu ändern. Der Lautstärkeregler und die Stummschaltung funktionieren auf dem aktuell ausgewählten Gerät.
 
 ### raspi-config
 
-Open up [raspi-config](raspi-config.md) by entering the following into the command line:
+Öffnen Sie [raspi-config](raspi-config.md), indem Sie Folgendes in die Befehlszeile eingeben:
 
 ```
 sudo raspi-config
 ```
 
-This will open the configuration screen:
+Dies öffnet den Konfigurationsbildschirm:
 
-Select `System Options` (Currently option 1, but yours may be different) and press `Enter`.
+Wählen Sie `System Options` (derzeit Option 1, aber Ihre können anders sein) und drücken Sie `Enter`.
 
-Now select the Option named, `Audio` (Currently option S2, but yours may be different) and press `Enter`:
+Wählen Sie nun die Option mit dem Namen `Audio` (derzeit Option S2, aber Ihre kann anders sein) und drücken Sie `Enter`:
 
-Select your required mode, press `Enter` and press the right arrow key to exit the options list, then select `Finish` to exit the configuration tool.
+Wählen Sie Ihren gewünschten Modus, drücken Sie 'Enter' und drücken Sie die rechte Pfeiltaste, um die Optionsliste zu verlassen, und wählen Sie dann 'Finish', um das Konfigurationstool zu verlassen.
 
-After you have finished modifying your audio settings, you need to restart your Raspberry Pi in order for your changes to take effect.
+Nachdem Sie Ihre Audioeinstellungen geändert haben, müssen Sie Ihren Raspberry Pi neu starten, damit Ihre Änderungen wirksam werden.
 
 
-## If you're still not getting sound via HDMI
+## Wenn Sie immer noch keinen Ton über HDMI erhalten
 
-In some rare cases, it is necessary to edit `config.txt` to force HDMI mode (as opposed to DVI mode, which does not send sound). You can do this by editing `/boot/config.txt` and setting `hdmi_drive=2`, then rebooting for the change to take effect.
+In einigen seltenen Fällen ist es notwendig, `config.txt` zu bearbeiten, um den HDMI-Modus zu erzwingen (im Gegensatz zum DVI-Modus, der keinen Ton sendet). Sie können dies tun, indem Sie `/boot/config.txt` bearbeiten und `hdmi_drive=2` setzen und dann neu starten, damit die Änderung wirksam wird.

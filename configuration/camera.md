@@ -1,40 +1,40 @@
-# Camera configuration
+# Kamerakonfiguration
 
-## Setting up the camera hardware
+## Einrichten der Kamera-Hardware
 
-**Warning**: Cameras are sensitive to static. Earth yourself prior to handling the PCB. A sink tap or similar should suffice if you don’t have an earthing strap.
+**Warnung**: Kameras sind empfindlich gegenüber statischer Aufladung. Erden Sie sich vor dem Umgang mit der Leiterplatte. Ein Spültischhahn oder ähnliches sollte ausreichen, wenn Sie kein Erdungsband haben.
 
-The camera board attaches to the Raspberry Pi via a 15-way ribbon cable. There are only two connections to make: the ribbon cable needs to be attached to the camera PCB, and to the Raspberry Pi itself. You need to get the cable the right way round, or the camera will not work. On the camera PCB, the blue backing on the cable should face away from the PCB, and on the Raspberry Pi it should face towards the Ethernet connection (or where the Ethernet connector would be if you're using a model A).
+Die Kameraplatine wird über ein 15-poliges Flachbandkabel mit dem Raspberry Pi verbunden. Es müssen nur zwei Verbindungen hergestellt werden: Das Flachbandkabel muss an der Kameraplatine und am Raspberry Pi selbst befestigt werden. Sie müssen das Kabel richtig herum verlegen, sonst funktioniert die Kamera nicht. Auf der Kameraplatine sollte die blaue Rückseite des Kabels von der Platine weg zeigen und auf dem Raspberry Pi sollte sie zum Ethernet-Anschluss zeigen (oder dort, wo sich der Ethernet-Anschluss befinden würde, wenn Sie ein Modell A verwenden).
 
-Although the connectors on the PCB and the Pi are different, they work in a similar way. On the Raspberry Pi itself, pull up the tabs on each end of the connector. It should slide up easily, and be able to pivot around slightly. Fully insert the ribbon cable into the slot, ensuring it is set straight, then gently press down the tabs to clip it into place. The camera PCB connector also requires you to pull the tabs away from the board, gently insert the cable, then push the tabs back. The PCB connector can be a little more awkward than the one on the Pi itself.
+Obwohl sich die Anschlüsse auf der Platine und dem Pi unterscheiden, funktionieren sie ähnlich. Ziehen Sie auf dem Raspberry Pi selbst die Laschen an jedem Ende des Steckers nach oben. Es sollte leicht nach oben gleiten und sich leicht drehen können. Führen Sie das Flachbandkabel vollständig in den Schlitz ein und stellen Sie sicher, dass es gerade sitzt, und drücken Sie dann die Laschen vorsichtig nach unten, um es einzurasten. Beim PCB-Anschluss der Kamera müssen Sie außerdem die Laschen von der Platine wegziehen, das Kabel vorsichtig einführen und dann die Laschen zurückdrücken. Der PCB-Anschluss kann etwas umständlicher sein als der am Pi selbst.
 
-## Setting up the camera software
+## Einrichten der Kamerasoftware
 
-Execute the following instructions on the command line to download and install the latest kernel, GPU firmware, and applications. You'll need an internet connection for this to work correctly.
+Führen Sie die folgenden Anweisungen in der Befehlszeile aus, um den neuesten Kernel, die GPU-Firmware und die Anwendungen herunterzuladen und zu installieren. Damit dies korrekt funktioniert, benötigen Sie eine Internetverbindung.
 
 ```bash
-sudo apt update
-sudo apt full-upgrade
+sudo apt-Update
+sudo apt Voll-Upgrade
 ```
 
-Now you need to enable camera support using the `raspi-config` program you will have used when you first set up your Raspberry Pi.
+Jetzt müssen Sie die Kameraunterstützung mit dem Programm `raspi-config` aktivieren, das Sie bei der ersten Einrichtung Ihres Raspberry Pi verwendet haben.
 
 ```bash
 sudo raspi-config
 ```
 
-Use the cursor keys to select and open *Interfacing Options*, and then select *Camera* and follow the prompt to enable the camera. 
+Verwenden Sie die Cursortasten, um *Schnittstellenoptionen* auszuwählen und zu öffnen, und wählen Sie dann *Kamera* und folgen Sie den Anweisungen, um die Kamera zu aktivieren.
 
-Upon exiting `raspi-config`, it will ask to reboot. The enable option will ensure that on reboot the correct GPU firmware will be running with the camera driver and tuning, and the GPU memory split is sufficient to allow the camera to acquire enough memory to run correctly.
+Beim Beenden von `raspi-config` fordert es zum Neustart auf. Die Enable-Option stellt sicher, dass beim Neustart die richtige GPU-Firmware mit dem Kameratreiber und der Einstellung ausgeführt wird und die GPU-Speicheraufteilung ausreicht, damit die Kamera genügend Speicher für eine korrekte Ausführung erhält.
 
-To test that the system is installed and working, try the following command:
+Um zu testen, ob das System installiert ist und funktioniert, versuchen Sie den folgenden Befehl:
 
 ```bash
-raspistill -v -o test.jpg
+Raspistille -v -o test.jpg
 ```
 
-The display should show a five-second preview from the camera and then take a picture, saved to the file `test.jpg`, whilst displaying various informational messages.
+Das Display sollte eine fünfsekündige Vorschau der Kamera anzeigen und dann ein Bild aufnehmen, das in der Datei `test.jpg` gespeichert wird, während verschiedene Informationsmeldungen angezeigt werden.
 
-## More Information
+## Mehr Informationen
 
-See [Camera Software](../raspbian/applications/camera.md).
+Siehe [Kamerasoftware](../raspbian/applications/camera.md).

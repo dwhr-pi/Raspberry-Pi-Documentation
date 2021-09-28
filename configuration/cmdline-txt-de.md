@@ -1,54 +1,53 @@
-# The Kernel Command Line
+# Die Kernel-Befehlszeile
 
-The Linux kernel accepts a command line of parameters during boot. On the Raspberry Pi, this command line is defined in a file in the boot partition, called cmdline.txt. This is a simple text file that can be edited using any text editor, e.g. Nano.
+Der Linux-Kernel akzeptiert während des Bootens eine Befehlszeile mit Parametern. Auf dem Raspberry Pi ist diese Befehlszeile in einer Datei in der Bootpartition namens cmdline.txt definiert. Dies ist eine einfache Textdatei, die mit einem beliebigen Texteditor bearbeitet werden kann, z. Nano.
 ```
 sudo nano /boot/cmdline.txt
 ```
-Note that we have to use `sudo` to edit anything in the boot partition, and that all parameters in `cmdline.txt` must be on the same line (no carriage returns).
+Beachten Sie, dass wir `sudo` verwenden müssen, um alles in der Bootpartition zu bearbeiten, und dass alle Parameter in `cmdline.txt` in derselben Zeile stehen müssen (kein Wagenrücklauf).
 
-The command line that was passed to the kernel at boot time can be displayed using `cat /proc/cmdline`. It will not be exactly the same as that in `cmdline.txt` as the firmware can make changes to it prior to launching the kernel.
+Die beim Booten an den Kernel übergebene Kommandozeile kann mit `cat /proc/cmdline` angezeigt werden. Es wird nicht genau das gleiche sein wie in `cmdline.txt`, da die Firmware Änderungen daran vornehmen kann, bevor der Kernel gestartet wird.
 
-## Command Line Options
+## Befehlszeilenoptionen
 
-There are many kernel command line parameters, some of which are defined by the kernel. Others are defined by code that the kernel may be using, such as the Plymouth splash screen system.
+Es gibt viele Kernel-Befehlszeilenparameter, von denen einige vom Kernel definiert werden. Andere werden durch Code definiert, den der Kernel möglicherweise verwendet, wie beispielsweise das Plymouth-Splash-Screen-System.
 
-#### Standard Entries
+#### Standardeinträge
 
- - console: defines the serial console. There are usually two entries:
-     - `console=serial0,115200`
-     - `console=tty1`
- - root: defines the location of the root filesystem, e.g. `root=/dev/mmcblk0p2` means multimedia card block 0 partition 2.
- - rootfstype: defines what type of filesystem the rootfs uses, e.g. `rootfstype=ext4`
- - elevator: specifies the I/O scheduler to use. `elevator=deadline` means the kernel imposes a deadline on all I/O operations to prevent request starvation.
- - quiet: sets the default kernel log level to `KERN_WARNING`, which suppresses all but very serious log messages during boot.
+ - Konsole: Definiert die serielle Konsole. Normalerweise gibt es zwei Einträge:
+     - `Konsole=Seriell0,115200`
+     - `Konsole=tty1`
+ - root: Definiert den Ort des Root-Dateisystems, z.B. `root=/dev/mmcblk0p2` bedeutet Multimediakartenblock 0 Partition 2.
+ - rootfstype: definiert, welche Art von Dateisystem das rootfs verwendet, z.B. `rootfstype=ext4`
+ - Aufzug: Gibt den zu verwendenden E/A-Scheduler an. `elevator=deadline` bedeutet, dass der Kernel allen I/O-Operationen eine Frist auferlegt, um das Verhungern von Anfragen zu verhindern.
+ - quiet: setzt den Standard-Log-Level des Kernels auf `KERN_WARNING`, der alle bis auf sehr schwerwiegende Log-Meldungen während des Bootens unterdrückt.
 
-#### Display Entries in FKMS and KMS modes
+#### Einträge im FKMS- und KMS-Modus anzeigen
 
-The firmware automatically adds a preferred resolution and overscan settings via an entry such as:
+Die Firmware fügt automatisch eine bevorzugte Auflösung und Overscan-Einstellungen über einen Eintrag hinzu, wie zum Beispiel:
 
 ```video=HDMI-A-1:1920x1080M@60,margin_left=0,margin_right=0,margin_top=0,margin_bottom=0```
 
-This default entry can be modified by duplicating the entry above manually in /boot/cmdline.txt and making required changes to the margin parameters. In addition, it is possible to add rotation and reflect parameters as documented in the standard [Linux framebuffer documentation](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/Documentation/fb/modedb.rst). By default the `margin_*` options are set from the `overscan` entries in config.txt, if present. The firmware can be prevented from making any KMS specific changes to the command line by adding `disable_fw_kms_setup=1` to `config.txt`
+Dieser Standardeintrag kann geändert werden, indem der obige Eintrag manuell in /boot/cmdline.txt dupliziert und die erforderlichen Änderungen an den Randparametern vorgenommen werden. Darüber hinaus ist es möglich, Rotations- und Spiegelungsparameter hinzuzufügen, wie im Standard [Linux-Framebuffer-Dokumentation] (https://github.com/raspberrypi/linux/blob/rpi-5.4.y/Documentation/fb/modedb.rst .) dokumentiert ). Standardmäßig werden die `margin_*`-Optionen aus den `overscan`-Einträgen in der config.txt gesetzt, falls vorhanden. Die Firmware kann daran gehindert werden, KMS-spezifische Änderungen an der Befehlszeile vorzunehmen, indem Sie `disable_fw_kms_setup=1` zu `config.txt` hinzufügen
 
-An example entry may be as follows:
+Ein Beispieleintrag könnte wie folgt lauten:
 
 ```video=HDMI-A-1:1920x1080M@60,margin_left=0,margin_right=0,margin_top=0,margin_bottom=0,rotate=90,reflect_x```
 
-Possible options for the display type, the first part of the `video=` entry,  are as follows:
+Mögliche Optionen für den Anzeigetyp, den ersten Teil des `video=`-Eintrags, sind wie folgt:
 
-| video option  | Display |
+| Videooption | Anzeige |
 |:---:|:---|
-| HDMI-A-1      | HDMI 1 (HDMI 0 on silkscreen of Pi4B, HDMI on single HDMI boards) |
-| HDMI-A-2      | HDMI 2 (HDMI 1 on silkscreen of Pi4B) |
-| DSI-1         | DSI or DPI |
-| Composite-1   | Composite  |
+| HDMI-A-1 | HDMI 1 (HDMI 0 auf Siebdruck von Pi4B, HDMI auf einzelnen HDMI-Boards) |
+| HDMI-A-2 | HDMI 2 (HDMI 1 auf Siebdruck von Pi4B) |
+| DSI-1 | DSI oder DPI |
+| Komposit-1 | Verbund |
 
-#### Other Entries (not exhaustive)
+#### Sonstige Einträge (nicht erschöpfend)
 
- - splash: tells the boot to use a splash screen via the Plymouth module.
- - plymouth.ignore-serial-consoles: normally if the Plymouth module is enabled it will prevent boot messages from appearing on any serial console which may be present. This flag tells Plymouth to ignore all serial consoles, making boot messages visible again, as they would be if Plymouth was not running.
- - dwc_otg.lpm_enable: turns off Link Power Management (LPM) in the dwc_otg driver; the dwc_otg driver is the driver for the USB controller built into the Raspberry Pi.
- - dwc_otg.speed: sets the speed of the USB controller. `dwc_otg.speed=1` will set it to full speed (USB 1.0), which is slower than high speed (USB 2.0). This option should not be set except during troubleshooting of problems with USB devices.
- - smsc95xx.turbo_mode: enables/disables the wired networking driver turbo mode. `smsc95xx.turbo_mode=N` turns turbo mode off.
- - usbhid.mousepoll: specifies the mouse polling interval. If you have problems with a slow or erratic wireless mouse, setting this to 0 might help: `usbhid.mousepoll=0`.
-
+ - splash: weist den Boot über das Plymouth-Modul an, einen Begrüßungsbildschirm zu verwenden.
+ - plymouth.ignore-serial-consoles: Wenn das Plymouth-Modul aktiviert ist, verhindert es normalerweise, dass Boot-Meldungen auf einer eventuell vorhandenen seriellen Konsole angezeigt werden. Dieses Flag weist Plymouth an, alle seriellen Konsolen zu ignorieren, wodurch Boot-Meldungen wieder sichtbar werden, als ob Plymouth nicht ausgeführt würde.
+ - dwc_otg.lpm_enable: deaktiviert Link Power Management (LPM) im dwc_otg-Treiber; Der dwc_otg-Treiber ist der Treiber für den im Raspberry Pi integrierten USB-Controller.
+ - dwc_otg.speed: legt die Geschwindigkeit des USB-Controllers fest. `dwc_otg.speed=1` setzt es auf volle Geschwindigkeit (USB 1.0), was langsamer ist als hohe Geschwindigkeit (USB 2.0). Diese Option sollte nur während der Fehlerbehebung bei Problemen mit USB-Geräten gesetzt werden.
+ - smsc95xx.turbo_mode: aktiviert/deaktiviert den Turbomodus des kabelgebundenen Netzwerktreibers. `smsc95xx.turbo_mode=N` schaltet den Turbo-Modus aus.
+ - usbhid.mousepoll: Gibt das Maus-Polling-Intervall an. Wenn Sie Probleme mit einer langsamen oder unregelmäßigen drahtlosen Maus haben, kann es hilfreich sein, dies auf 0 zu setzen: `usbhid.mousepoll=0`.
