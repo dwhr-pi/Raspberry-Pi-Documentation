@@ -1,7 +1,7 @@
-# Screen Configuration
+# Bildschirmkonfiguration
 
-The Screen Configuration tool (`arandr` on the command line) is a graphical tool for selecting display modes and setting up multiple displays.
+Das Bildschirmkonfigurationstool (`arandr` in der Befehlszeile) ist ein grafisches Werkzeug zum Auswählen von Anzeigemodi und zum Einrichten mehrerer Anzeigen.
 
-You can find this tool in the desktop Preferences menu, but only if the 3D graphics driver is being used, as it is this driver that provides the required mode setting functionality.
+Sie finden dieses Tool im Desktop-Einstellungsmenü, jedoch nur, wenn der 3D-Grafiktreiber verwendet wird, da dieser Treiber die erforderliche Moduseinstellungsfunktionalität bereitstellt.
 
-On the whole, the editor is self-explanatory: use the Configure menu option to select the screen, resolution, and orientation. If you're using a multi-screen setup, drag around the displays to any position you want. When you have the required setup, click the Tick button to apply the settings. 
+Im Großen und Ganzen ist der Editor selbsterklärend: Über den Menüpunkt Konfigurieren können Sie Bildschirm, Auflösung und Ausrichtung auswählen. Wenn Sie ein Multi-Screen-Setup verwenden, ziehen Sie die Displays an eine beliebige Position. Wenn Sie das erforderliche Setup haben, klicken Sie auf die Schaltfläche Häkchen, um die Einstellungen zu übernehmen.
