@@ -96,16 +96,16 @@ Obwohl der Linux-Kernel die UARTs relativ früh im Boot-Prozess startet, dauert 
 Aktivieren Sie Earlycon mit einem Kernel-Befehlszeilenparameter - fügen Sie einen der folgenden Punkte zu `cmdline.txt` hinzu, je nachdem, welcher UART der primäre ist:
 ```
 # Für Pi 4 und Compute Module 4 (BCM2711)
-Earlycon=uart8250,mmio32,0xfe215040
-Earlycon=pl011,mmio32,0xfe2010000
+earlycon=uart8250,mmio32,0xfe215040
+earlycon=pl011,mmio32,0xfe201000
 
 # Für Pi 2, Pi 3 und Compute Module 3 (BCM2836 & BCM2837)
-Earlycon=uart8250,mmio32,0x3f215040
-Earlycon=pl011,mmio32,0x3f2010000
+earlycon=uart8250,mmio32,0x3f215040
+earlycon=pl011,mmio32,0x3f201000
 
 # Für Pi 1, Pi Zero und Compute Module (BCM2835)
-Earlycon=uart8250,mmio32,0x20215040
-Earlycon=pl011,mmio32,0x20201000
+earlycon=uart8250,mmio32,0x20215040
+earlycon=pl011,mmio32,0x20201000
 ```
 Die Baudrate ist auf 115200 eingestellt.
 
