@@ -28,7 +28,7 @@ Die Firmware fügt automatisch eine bevorzugte Auflösung und Overscan-Einstellu
 
 ```video=HDMI-A-1:1920x1080M@60,margin_left=0,margin_right=0,margin_top=0,margin_bottom=0```
 
-Dieser Standardeintrag kann geändert werden, indem der obige Eintrag manuell in /boot/cmdline.txt dupliziert und die erforderlichen Änderungen an den Randparametern vorgenommen werden. Darüber hinaus ist es möglich, Rotations- und Spiegelungsparameter hinzuzufügen, wie im Standard [Linux-Framebuffer-Dokumentation] (https://github.com/raspberrypi/linux/blob/rpi-5.4.y/Documentation/fb/modedb.rst .) dokumentiert ). Standardmäßig werden die `margin_*`-Optionen aus den `overscan`-Einträgen in der config.txt gesetzt, falls vorhanden. Die Firmware kann daran gehindert werden, KMS-spezifische Änderungen an der Befehlszeile vorzunehmen, indem Sie `disable_fw_kms_setup=1` zu `config.txt` hinzufügen
+Dieser Standardeintrag kann geändert werden, indem der obige Eintrag manuell in /boot/cmdline.txt dupliziert und die erforderlichen Änderungen an den Randparametern vorgenommen werden. Darüber hinaus ist es möglich, Rotations- und Spiegelungsparameter hinzuzufügen, wie im Standard [Linux-Framebuffer-Dokumentation](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/Documentation/fb/modedb.rst .) dokumentiert ). Standardmäßig werden die `margin_*`-Optionen aus den `overscan`-Einträgen in der config.txt gesetzt, falls vorhanden. Die Firmware kann daran gehindert werden, KMS-spezifische Änderungen an der Befehlszeile vorzunehmen, indem Sie `disable_fw_kms_setup=1` zu `config.txt` hinzufügen
 
 Ein Beispieleintrag könnte wie folgt lauten:
 

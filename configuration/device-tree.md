@@ -310,9 +310,10 @@ wobei `label`, `property` und `offset` durch geeignete Werte ersetzt werden; der
 Der Gerätebaum codiert boolesche Werte als Eigenschaften der Länge Null; wenn vorhanden, dann ist die Eigenschaft wahr, andernfalls ist sie falsch. Sie sind wie folgt definiert:
 
 ```
+boolean_property; // Setzen die 'boolean_property' auf true (wahr)
+```
 
 Beachten Sie, dass einer Eigenschaft der Wert `false` zugewiesen wird, indem sie nicht definiert wird. Boolesche Parameter werden wie folgt deklariert:
-
 
 ```
 name = <&label>,"property?";
