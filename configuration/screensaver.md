@@ -26,7 +26,7 @@ Raspberry Pi OS leert den grafischen Desktop nach 10 Minuten ohne Benutzereingab
 Es steht auch ein grafischer Bildschirmschoner zur Verfügung, der wie folgt installiert werden kann:
 
 ```
-sudo apt installieren xscreensaver
+sudo apt install xscreensaver
 ```
 
 Das kann ein paar minuten dauern.

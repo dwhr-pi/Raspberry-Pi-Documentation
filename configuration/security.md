@@ -76,7 +76,7 @@ sudo deluser -remove-home pi
 Dieser Befehl führt zu einer Warnung, dass die Gruppe `pi` keine Mitglieder mehr hat. Der Befehl `deluser` entfernt jedoch sowohl den `pi`-Benutzer als auch die `pi`-Gruppe, sodass die Warnung getrost ignoriert werden kann.
 
 
-## Machen Sie `sudo` ein Passwort erforderlich
+## Machen Sie ein erforderliches `sudo` Passwort
 
 Das Platzieren von `sudo` vor einem Befehl führt ihn als Superuser aus und benötigt standardmäßig kein Passwort. Im Allgemeinen ist dies kein Problem. Wenn Ihr Pi jedoch dem Internet ausgesetzt ist und irgendwie ausgenutzt wird (vielleicht zum Beispiel über einen Webseiten-Exploit), kann der Angreifer Dinge ändern, die Superuser-Anmeldeinformationen erfordern, es sei denn, Sie haben "sudo" so eingestellt, dass ein Passwort erforderlich ist.
 
@@ -89,7 +89,7 @@ sudo visudo /etc/sudoers.d/010_pi-nopasswd
 und ändern Sie den `pi`-Eintrag (oder welche Benutzernamen Superuser-Rechte haben) in:
 
 ```bash
-pi ALLE=(ALLE) PASSWD: ALLE
+pi ALL=(ALL) PASSWD: ALL
 ```
 
 Speichern Sie dann die Datei: Sie wird auf Syntaxfehler überprüft. Wenn keine Fehler festgestellt wurden, wird die Datei gespeichert und Sie kehren zum Shell-Prompt zurück. Wenn Fehler festgestellt wurden, werden Sie gefragt, was nun? Drücken Sie die Eingabetaste auf Ihrer Tastatur: Dadurch wird eine Liste mit Optionen angezeigt. Wahrscheinlich möchten Sie 'e' für '(e)dit sudoers file again' verwenden, damit Sie die Datei bearbeiten und das Problem beheben können. **Beachten Sie, dass die Auswahl der Option 'Q' die Datei mit allen noch vorhandenen Syntaxfehlern speichert, was es _jedem_ Benutzern unmöglich macht, den sudo-Befehl zu verwenden.**
@@ -142,7 +142,7 @@ Das Generieren eines Schlüsselpaars unter Linux erfolgt mit dem Befehl `ssh-key
 
 Während der Schlüsselgenerierung werden Sie zur Eingabe einer Passphrase aufgefordert: Dies ist eine zusätzliche Sicherheitsstufe. Lassen Sie dieses Feld vorerst leer.
 
-Der öffentliche Schlüssel muss nun auf den Server verschoben werden: siehe [Kopieren Sie Ihren öffentlichen Schlüssel auf Ihren Raspberry Pi](../remote-access/ssh/passwordless.md#copy-your-public-key-to-your- Himbeer-Pi).
+Der öffentliche Schlüssel muss nun auf den Server verschoben werden: siehe [Kopieren Sie Ihren öffentlichen Schlüssel auf Ihren Raspberry Pi](../remote-access/ssh/passwordless.md#copy-your-public-key-to-your-raspberry-pi).
 
 Schließlich müssen wir die Passwortanmeldungen deaktivieren, damit die gesamte Authentifizierung durch die Schlüsselpaare erfolgt.
 
@@ -153,9 +153,9 @@ sudo nano /etc/ssh/sshd_config
 Es gibt drei Zeilen, die in `no` geändert werden müssen, wenn sie nicht bereits so eingestellt sind:
 
 ```bash
-ChallengeResponseAuthentifizierungsnr
-PasswortAuthentifizierungsnr
-Verwenden SiePAM-Nr
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
 ```
 
 Speichern Sie die Datei und starten Sie das SSH-System entweder mit `sudo service ssh reload` neu oder starten Sie es neu.
@@ -165,7 +165,7 @@ Speichern Sie die Datei und starten Sie das SSH-System entweder mit `sudo servic
 Es gibt viele Firewall-Lösungen für Linux. Die meisten verwenden das zugrunde liegende Projekt [iptables](http://www.netfilter.org/projects/iptables/index.html), um Paketfilterung bereitzustellen. Dieses Projekt sitzt über dem Linux-Netfiltering-System. `iptables` ist auf Raspberry Pi OS standardmäßig installiert, aber nicht eingerichtet. Die Einrichtung kann eine komplizierte Aufgabe sein, und ein Projekt, das eine einfachere Benutzeroberfläche als `iptables` bietet, ist [ufw](https://www.linux.com/learn/introduction-uncomplicated-firewall-ufw), was für steht 'Unkomplizierte Brandmauer'. Dies ist das Standard-Firewall-Tool in Ubuntu und kann einfach auf Ihrem Raspberry Pi installiert werden:
 
 ```bash
-sudo apt installieren ufw
+sudo apt install ufw
 ```
 
 `ufw` ist ein recht unkompliziertes Kommandozeilen-Tool, obwohl es dafür einige GUIs gibt. In diesem Dokument werden einige der grundlegenden Befehlszeilenoptionen beschrieben. Beachten Sie, dass `ufw` mit Superuser-Rechten ausgeführt werden muss, daher wird allen Befehlen `sudo` vorangestellt. Es ist auch möglich, die Option `--dry-run` für beliebige `ufw`-Befehle zu verwenden, die die Ergebnisse des Befehls anzeigt, ohne tatsächlich Änderungen vorzunehmen.
@@ -173,43 +173,43 @@ sudo apt installieren ufw
 Um die Firewall zu aktivieren, die auch dafür sorgt, dass sie beim Booten gestartet wird, verwenden Sie:
 
 ```bash
-sudo ufw aktivieren
+sudo ufw enable
 ```
 
 Um die Firewall zu deaktivieren und den Start beim Booten zu deaktivieren, verwenden Sie:
 
 ```bash
-sudo ufw deaktivieren
+sudo ufw disable
 ```
 
 Erlauben Sie einem bestimmten Port den Zugriff (wir haben in unserem Beispiel Port 22 verwendet):
 
 ```bash
-sudo ufw erlauben 22
+sudo ufw allow 22
 ```
 
 Das Verweigern des Zugriffs auf einen Port ist ebenfalls sehr einfach (wieder haben wir Port 22 als Beispiel verwendet):
 
 ```bash
-sudo ufw verweigern 22
+sudo ufw deny 22
 ```
 
 Sie können auch angeben, welchen Dienst Sie an einem Port zulassen oder verweigern. In diesem Beispiel verweigern wir TCP auf Port 22:
 
 ```bash
-sudo ufw verweigern 22/tcp
+sudo ufw deny 22/tcp
 ```
 
 Sie können den Dienst auch dann angeben, wenn Sie nicht wissen, welchen Port er verwendet. Dieses Beispiel erlaubt dem SSH-Dienst den Zugriff durch die Firewall:
 
 ```bash
-sudo ufw erlauben ssh
+sudo ufw allow ssh
 ```
 
 Der Befehl status listet alle aktuellen Einstellungen für die Firewall auf:
 
 ```bash
-sudo ufw-Status
+sudo ufw status
 ```
 
 Die Regeln können recht kompliziert sein und erlauben das Blockieren bestimmter IP-Adressen, geben an, in welche Richtung Datenverkehr erlaubt ist, oder begrenzen die Anzahl der Verbindungsversuche, um beispielsweise einen Denial-of-Service-Angriff (DoS) abzuwehren. Sie können auch angeben, auf welche Geräteregeln angewendet werden sollen (z. B. eth0, wlan0). Weitere Einzelheiten finden Sie auf der `ufw`-Manpage (`man ufw`), aber hier sind einige Beispiele für komplexere Befehle.
@@ -223,7 +223,7 @@ sudo ufw limit ssh/tcp
 Zugriff auf Port 30 von IP-Adresse 192.168.2.1 verweigern
 
 ```bash
-sudo ufw verweigern von 192.168.2.1 Port 30
+sudo ufw deny from 192.168.2.1 port 30
 ```
 
 ## Installation von fail2ban
@@ -246,11 +246,11 @@ sudo nano /etc/fail2ban/jail.local
 Fügen Sie der Datei `jail.conf` den folgenden Abschnitt hinzu. Bei einigen Versionen von fail2ban ist dieser Abschnitt möglicherweise bereits vorhanden, also aktualisieren Sie diesen bereits vorhandenen Abschnitt, falls er vorhanden ist.
 
 ```
-[sch]
-aktiviert = wahr
-port = ssh
-filter = sshd
-logpath = /var/log/auth.log
+[ssh]
+enabled  = true
+port     = ssh
+filter   = sshd
+logpath  = /var/log/auth.log
 maxretry = 6
 ```
 
@@ -259,8 +259,8 @@ Wie Sie sehen, heißt dieser Abschnitt ssh, ist aktiviert, untersucht den ssh-Po
 ```bash
 # Standard-Sperraktion (z. B. iptables, iptables-new,
 # iptables-multiport, Shorewall, etc) Es wird verwendet, um zu definieren
-# action_*-Variablen. Kann global oder per überschrieben werden
-# Abschnitt in der Datei jail.local
+# action_*-Variablen. Kann global oder per
+# Abschnitt in der Datei jail.local überschrieben werden
 banaction = iptables-multiport
 ```
 
@@ -269,13 +269,13 @@ banaction = iptables-multiport
 Wenn Sie eine IP-Adresse nach drei fehlgeschlagenen Versuchen dauerhaft sperren möchten, können Sie den maxretry-Wert im Abschnitt `[ssh]` ändern und die Bantime auf eine negative Zahl setzen:
 
 ```
-[sch]
-aktiviert = wahr
-port = ssh
-filter = sshd
-logpath = /var/log/auth.log
+[ssh]
+enabled  = true
+port     = ssh
+filter   = sshd
+logpath  = /var/log/auth.log
 maxretry = 3
-Bantime = -1
+bantime = -1
 ```
 
-Es gibt ein gutes Tutorial zu einigen der Interna von Fail2ban [hier](https://www.digitalocean.com/community/tutorials/how-fail2ban-works-to-protect-services-on-a-linux-server) .
+Es gibt ein gutes Tutorial zu einigen der Interna von Fail2ban [hier](https://www.digitalocean.com/community/tutorials/how-fail2ban-works-to-protect-services-on-a-linux-server).

@@ -40,7 +40,7 @@ Einige grundlegende Anleitungen zum Konfigurieren Ihres Raspberry Pi.
     - Beschreibung der Warnsymbole, die angezeigt werden, wenn die Firmware Probleme erkennt
 - [LED-Warnungs-Blinkcodes](led_blink_warnings.md)
     - Beschreibung der LED-Warnblitze, die angezeigt werden, wenn ein Pi nicht bootet oder herunterfahren muss
-- [Sichern Sie Ihren Raspberry Pi] (security.md)
+- [Sichern Sie Ihren Raspberry Pi](security.md)
     - Einige grundlegende Ratschläge, um Ihren Raspberry Pi sicherer zu machen
 - [Bildschirmschoner](screensaver.md)
     - Konfigurieren des Bildschirmschoners und der Bildschirmausblendung

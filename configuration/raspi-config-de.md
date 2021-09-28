@@ -24,21 +24,21 @@ Beachten Sie, dass das angezeigte Menü geringfügig abweichen kann.
 Es stehen die folgenden Top-Level-Optionen zur Verfügung:
 
 ```
-┌───────────────────┤ Raspberry Pi Software-Konfigurationstool (raspi-config) ├────────────────── ──┐
-│ │
-│ 1 Systemoptionen Konfigurieren Sie die Systemeinstellungen │
-│ 2 Anzeigeoptionen Anzeigeeinstellungen konfigurieren │
-│ 3 Schnittstellenoptionen Verbindungen zu Peripheriegeräten konfigurieren │
-│ 4 Leistungsoptionen Konfigurieren Sie die Leistungseinstellungen │
-│ 5 Lokalisierungsoptionen Konfigurieren von Sprach- und Regionaleinstellungen │
-│ 6 Erweiterte Optionen Erweiterte Einstellungen konfigurieren │ │
-│ 8 Update Aktualisieren Sie dieses Tool auf die neueste Version │
-│ 9 Über raspi-config Informationen zu diesem Konfigurationstool │
-│ │
-│ │
-│ <Auswählen> <Fertig stellen> │
-│ │
-└───────────────────────────────────────────────── ─────────────────────────────────────────────────┘
+┌───────────────────┤ Raspberry Pi Software-Konfigurationstool (raspi-config) ├─────────────────────┐
+│                                                                                                   │
+│        1 Systemoptionen               Konfigurieren Sie die Systemeinstellungen                   │
+│        2 Anzeigeoptionen              Anzeigeeinstellungen konfigurieren                          │
+│        3 Schnittstellenoptionen       Verbindungen zu Peripheriegeräten konfigurieren             │
+│        4 Leistungsoptionen            Konfigurieren Sie die Leistungseinstellungen                │
+│        5 Lokalisierungsoptionen       Konfigurieren von Sprach- und Regionaleinstellungen         │
+│        6 Erweiterte Optionen          Erweiterte Einstellungen konfigurieren                      │
+│        8 Update                       Aktualisieren Sie dieses Tool auf die neueste Version       │
+│        9 Über raspi-config            Informationen zu diesem Konfigurationstool                  │
+│                                                                                                   │
+│                                                                                                   │
+│                      <Auswählen>                   <Fertig stellen>                               │
+│                                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 <a name="moving-around-the-menu"></a>
