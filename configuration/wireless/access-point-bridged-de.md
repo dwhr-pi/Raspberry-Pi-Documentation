@@ -2,7 +2,7 @@
 
 Der Raspberry Pi kann als überbrückter drahtloser Zugangspunkt innerhalb eines bestehenden Ethernet-Netzwerks verwendet werden. Dadurch wird das Netzwerk auf drahtlose Computer und Geräte erweitert.
 
-Wenn Sie ein eigenständiges drahtloses Netzwerk erstellen möchten, sollten Sie stattdessen die Einrichtung eines [routed access point] (./access-point-routed.md) in Betracht ziehen.
+Wenn Sie ein eigenständiges drahtloses Netzwerk erstellen möchten, sollten Sie stattdessen die Einrichtung eines [routed access point](./access-point-routed.md) in Betracht ziehen.
 
 ```
                                               +- RPi -----------+
@@ -34,7 +34,7 @@ Diese Dokumentation wurde auf einem Raspberry Pi 3B mit einer Neuinstallation vo
     * Verbinden Sie sich mit Ihrem Raspberry Pi **nach Namen**, z.B. `ssh pi@raspberrypi.local`. Die IP-Adresse Ihres Raspberry Pi im Netzwerk **wird sich wahrscheinlich nach der Installation ändern**.
     * Seien Sie bereit, Bildschirm und Tastatur hinzuzufügen, falls Sie nach der Installation den Kontakt zu Ihrem Raspberry Pi verlieren.
 * Verbinden Sie Ihren Raspberry Pi mit dem Ethernet-Netzwerk und booten Sie das Raspberry Pi OS.
-* Stellen Sie sicher, dass das Raspberry Pi-Betriebssystem auf Ihrem Raspberry Pi [aktuell] ist (../../raspbian/updating.md) und starten Sie neu, wenn dabei Pakete installiert wurden.
+* Stellen Sie sicher, dass das Raspberry Pi-Betriebssystem auf Ihrem Raspberry Pi [aktuell](../../raspbian/updating.md) ist und starten Sie neu, wenn dabei Pakete installiert wurden.
 * Halten Sie einen Wireless-Client (Laptop, Smartphone, ...) bereit, um Ihren neuen Access Point zu testen.
 
 <a name="software-install"></a>
@@ -49,7 +49,7 @@ Aktivieren Sie den Wireless Access Point-Dienst und stellen Sie ihn so ein, dass
 
 ```
 sudo systemctl unmask hostapd
-sudo systemctl aktivieren hostapd
+sudo systemctl enable hostapd
 ```
 
 Die Softwareinstallation ist abgeschlossen. Wir werden die Access Point Software später konfigurieren.
@@ -71,7 +71,7 @@ Dateiinhalt:
 ```
 [NetDev]
 Name=br0
-Art=Brücke
+Kind=bridge
 ```
 
 Um das Ethernet-Netzwerk mit dem drahtlosen Netzwerk zu überbrücken, fügen Sie zuerst die integrierte Ethernet-Schnittstelle (`eth0`) als Bridge-Mitglied hinzu, indem Sie die folgende Datei erstellen:
@@ -86,7 +86,7 @@ Dateiinhalt:
 Name=eth0
 
 [Netzwerk]
-Brücke=br0
+Bridge=br0
 ```
 
 **Hinweis:** Die Access Point-Software fügt der Bridge beim Start des Dienstes die drahtlose Schnittstelle `wlan0` hinzu. Es ist nicht erforderlich, eine Datei für diese Schnittstelle zu erstellen. Diese Situation ist speziell für drahtlose LAN-Schnittstellen.
@@ -115,7 +115,7 @@ Gehen Sie zum Ende der Datei und fügen Sie Folgendes hinzu:
 
 ```
 
-Schnittstelle br0
+interface br0
 ```
 Mit dieser Zeile wird die Schnittstelle `br0` gemäß den Voreinstellungen über DHCP konfiguriert. Speichern Sie die Datei, um die IP-Konfiguration des Geräts abzuschließen.
 
@@ -130,7 +130,7 @@ Im Raspberry Pi-Betriebssystem ist das 5-GHz-Funknetzwerk deaktiviert, bis ein W
 Um sicherzustellen, dass WiFi-Radio auf Ihrem Raspberry Pi nicht blockiert wird, führen Sie den folgenden Befehl aus:
 
 ```
-sudo rfkill wlan entsperren
+sudo rfkill unblock wlan
 ```
 
 Diese Einstellung wird beim Booten automatisch wiederhergestellt. Als nächstes definieren wir einen entsprechenden Ländercode in der Softwarekonfiguration des Access Points.
@@ -144,20 +144,20 @@ Erstellen Sie die Konfigurationsdatei `hostapd`, die sich unter `/etc/hostapd/ho
 sudo nano /etc/hostapd/hostapd.conf
 ```
 
-Fügen Sie die folgenden Informationen zur Konfigurationsdatei hinzu. Diese Konfiguration geht davon aus, dass wir Kanal 7 mit dem Netzwerknamen `NameOfNetwork` und dem Passwort `AardvarkBadgerHedgehog` verwenden. Beachten Sie, dass Name und Passwort **keine** Anführungszeichen enthalten sollten. Die Passphrase sollte zwischen 8 und 64 Zeichen lang sein.
+Fügen Sie die folgenden Informationen zur Konfigurationsdatei hinzu. Diese Konfiguration geht davon aus, dass wir Kanal 7 mit dem Netzwerknamen `NameDesNetzwerks` und dem Passwort `ErdferkelDachsIgel` verwenden. Beachten Sie, dass Name und Passwort **keine** Anführungszeichen enthalten sollten. Die Passphrase sollte zwischen 8 und 64 Zeichen lang sein.
 
 ```
 country_code=GB
-Schnittstelle=wlan0
-Brücke=br0
-ssid=NameOfNetwork
+interface=wlan0
+bridge=br0
+ssid=NameDesNetzwerks
 hw_mode=g
 Kanal=7
 macaddr_acl=0
 auth_algs=1
 ignore_broadcast_ssid=0
 wpa=2
-wpa_passphrase=ErdferkelBadgerIgel
+wpa_passphrase=ErdferkelDachsIgel
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP

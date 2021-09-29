@@ -81,8 +81,8 @@ sudo nano /etc/dhcpcd.conf
 Gehen Sie zum Ende der Datei und fügen Sie Folgendes hinzu:
 
 ```
-Schnittstelle wlan0
-    statische IP-Adresse=192.168.4.1/24
+interface wlan0
+    static ip_address=192.168.4.1/24
     nohook wpa_supplicant
 ```
 
@@ -129,7 +129,7 @@ sudo nano /etc/dnsmasq.conf
 Fügen Sie der Datei Folgendes hinzu und speichern Sie sie:
 
 ```
-interface=wlan0 # Abhörende Schnittstelle
+interface wlan0 # Abhörende Schnittstelle
 dhcp-Bereich=192.168.4.2,192.168.4.20,255.255.255.0,24h
                 # Pool von IP-Adressen, die über DHCP bereitgestellt werden
 domain=wlan # Lokale WLAN-DNS-Domain
@@ -152,7 +152,7 @@ Im Raspberry Pi-Betriebssystem ist das 5-GHz-Funknetzwerk deaktiviert, bis ein W
 Um sicherzustellen, dass WiFi-Radio auf Ihrem Raspberry Pi nicht blockiert wird, führen Sie den folgenden Befehl aus:
 
 ```
-sudo rfkill wlan entsperren
+sudo rfkill unblock wlan
 ```
 
 Diese Einstellung wird beim Booten automatisch wiederhergestellt. Als nächstes definieren wir einen entsprechenden Ländercode in der Softwarekonfiguration des Access Points.
@@ -166,19 +166,19 @@ Erstellen Sie die Konfigurationsdatei `hostapd`, die sich unter `/etc/hostapd/ho
 sudo nano /etc/hostapd/hostapd.conf
 ```
 
-Fügen Sie die folgenden Informationen zur Konfigurationsdatei hinzu. Diese Konfiguration geht davon aus, dass wir Kanal 7 mit dem Netzwerknamen `NameOfNetwork` und dem Passwort `AardvarkBadgerHedgehog` verwenden. Beachten Sie, dass Name und Passwort **keine** Anführungszeichen enthalten sollten. Die Passphrase sollte zwischen 8 und 64 Zeichen lang sein.
+Fügen Sie die folgenden Informationen zur Konfigurationsdatei hinzu. Diese Konfiguration geht davon aus, dass wir Kanal 7 mit dem Netzwerknamen `NameDesNetzwerks` und dem Passwort `ErdferkelDachsIgel` verwenden. Beachten Sie, dass Name und Passwort **keine** Anführungszeichen enthalten sollten. Die Passphrase sollte zwischen 8 und 64 Zeichen lang sein.
 
 ```
 country_code=GB
-Schnittstelle=wlan0
-ssid=NameOfNetwork
+interface=wlan0
+ssid=NameDesNetzwerks
 hw_mode=g
-Kanal=7
+channel=7
 macaddr_acl=0
 auth_algs=1
 ignore_broadcast_ssid=0
 wpa=2
-wpa_passphrase=ErdferkelBadgerIgel
+wpa_passphrase=ErdferkelDachsIgel
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
