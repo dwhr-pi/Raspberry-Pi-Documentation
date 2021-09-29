@@ -16,9 +16,9 @@ Sie können jede vorherige Verwendung von `rpi-update` rückgängig machen und I
 zu einem Netzwerk und läuft:
 
 ```bash
-sudo apt-Update
-sudo apt install --reinstall libaspberrypi0 libaspberrypi-{bin,dev,doc} raspberrypi-bootloader
-sudo neu starten
+sudo apt update
+sudo apt install --reinstall libraspberrypi0 libraspberrypi-{bin,dev,doc} raspberrypi-bootloader
+sudo reboot
 ```
 
 ## Häufige Probleme
@@ -37,8 +37,8 @@ dmesg | grep -i ft5406
 Sie sollten ein paar Zeilen sehen, die wie folgt aussehen:
 
 ```Text
-[ 5.224267] rpi-ft5406 rpi_ft5406: Tastgerät
-[ 5.225960] input: FT5406 speicherbasierter Treiber als /devices/virtual/input/input3
+[ 5.224267] rpi-ft5406 rpi_ft5406: Probing device
+[ 5.225960] input: FT5406 memory based driver as /devices/virtual/input/input3
 ```
 
 Ein erkannter Touchscreen bewirkt auch, dass die Parameter `fbheight` und `fbwidth` in `/proc/cmdline` 480 bzw. 800 (die Auflösung des Bildschirms) entsprechen. Sie können dies überprüfen, indem Sie Folgendes ausführen:
@@ -64,7 +64,7 @@ lcd_rotate=2
 Drücken Sie `STRG+X` und `y` zum Speichern. Und schlussendlich:
 
 ```
-sudo neu starten
+sudo reboot
 ```
 
 ### Meine Anzeige blendet zu seltsamen Mustern aus, wenn ich meinen Pi . herunterfahre/neu starte
@@ -166,7 +166,7 @@ EndSection
 Drücken Sie `STRG+X` und `y` zum Speichern. Dann:
 
 ```bash
-sudo neu starten
+sudo reboot
 ```
 
 Nach der Aktivierung funktioniert der Rechtsklick durch Drücken und Halten des Touchscreens und wird nach einer kurzen Verzögerung aktiviert.
@@ -178,7 +178,7 @@ Nach der Aktivierung funktioniert der Rechtsklick durch Drücken und Halten des 
 Installieren mit:
 
 ```bash
-sudo apt installieren florenz
+sudo apt install florence
 ```
 
 #### Virtuelle Matchbox-Tastatur
