@@ -1,6 +1,6 @@
-## Entfernen des Infrarotfilters (IR) von der Raspberry Pi High Quality Camera
+## Entfernen des Infrarotfilters (IR) von der Raspberry Pi Hohe Qualität Kamera (High Quality Camera)
 
-Die High Quality Camera enthält einen IR-Filter, der verwendet wird, um die Empfindlichkeit der Kamera gegenüber Infrarotlicht zu reduzieren. Dies sorgt dafür, dass Outdoor-Fotos natürlicher aussehen. Einige Naturfotografien können jedoch durch das Entfernen dieses Filters verbessert werden; die Farben des Himmels, der Pflanzen und des Wassers können durch seine Entfernung beeinflusst werden. Die Kamera kann auch ohne Filter für Nachtsicht an einem Ort verwendet werden, der mit Infrarotlicht beleuchtet wird.
+Die Hohe Qualität Kamera enthält einen IR-Filter, der verwendet wird, um die Empfindlichkeit der Kamera gegenüber Infrarotlicht zu reduzieren. Dies sorgt dafür, dass Outdoor-Fotos natürlicher aussehen. Einige Naturfotografien können jedoch durch das Entfernen dieses Filters verbessert werden; die Farben des Himmels, der Pflanzen und des Wassers können durch seine Entfernung beeinflusst werden. Die Kamera kann auch ohne Filter für Nachtsicht an einem Ort verwendet werden, der mit Infrarotlicht beleuchtet wird.
 
 **Dieses Verfahren kann nicht rückgängig gemacht werden:** Der Klebstoff, mit dem der Filter befestigt ist, überlebt das Anheben und Ersetzen nicht, und der IR-Filter kann beim Entfernen reißen. Durch das Entfernen erlischt die Garantie für das Produkt. Dennoch wird es für einige Benutzer wünschenswert sein, den Filter zu entfernen.
 

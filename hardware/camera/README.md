@@ -1,6 +1,6 @@
 # Kameramodul
 
-Die Raspberry Pi Kameramodule sind offizielle Produkte der Raspberry Pi Foundation. Das ursprüngliche 5-Megapixel-Modell wurde 2013 [veröffentlicht](https://www.raspberrypi.org/blog/camera-board-available-for-sale/) und ein 8-Megapixel-[Camera Module v2](https: //www.raspberrypi.org/products/camera-module-v2/) wurde [released](https://www.raspberrypi.org/blog/new-8-megapixel-camera-board-sale-25/) in 2016. Für beide Iterationen gibt es Versionen mit sichtbarem Licht und Infrarot. Eine 12 Megapixel [High Quality Camera](https://www.raspberrypi.org/products/raspberry-pi-high-quality-camera/) wurde [veröffentlicht](https://www.raspberrypi.org/blog/ new-product-raspberry-pi-high-quality-camera-on-sale-now-at-50/) im Jahr 2020. Es gibt keine Infrarot-Version der HQ-Kamera, jedoch der [IR-Filter kann entfernt werden](hqcam_filter_removal. md) bei Bedarf.
+Die Raspberry Pi Kameramodule sind offizielle Produkte der Raspberry Pi Foundation. Das ursprüngliche 5-Megapixel-Modell wurde 2013 [veröffentlicht](https://www.raspberrypi.org/blog/camera-board-available-for-sale/) und ein 8-Megapixel-[Camera Module v2](https://www.raspberrypi.org/products/camera-module-v2/) wurde [released](https://www.raspberrypi.org/blog/new-8-megapixel-camera-board-sale-25/) in 2016. Für beide Iterationen gibt es Versionen mit sichtbarem Licht und Infrarot. Eine 12 Megapixel [Hochwertige Kamera](https://www.raspberrypi.org/products/raspberry-pi-high-quality-camera/) wurde [veröffentlicht](https://www.raspberrypi.org/blog/new-product-raspberry-pi-high-quality-camera-on-sale-now-at-50/) im Jahr 2020. Es gibt keine Infrarot-Version der HQ-Kamera, jedoch der [IR-Filter kann entfernt werden](hqcam_filter_removal.md) bei Bedarf.
 
 ## Hardware-Spezifikation
 
@@ -35,7 +35,7 @@ Die Raspberry Pi Kameramodule sind offizielle Produkte der Raspberry Pi Foundati
 | Verfügbar | Implementiert |
 | --- | --- |
 | Hauptstrahlwinkelkorrektur | Ja |
-| Global und Rolling Shutter | Rollladen |
+| Global und Rolling Shutter | Rolling Shutter |
 | Automatische Belichtungssteuerung (AEC) | Nein - wird stattdessen vom ISP durchgeführt |
 | Automatischer Weißabgleich (AWB) | Nein - wird stattdessen vom ISP durchgeführt |
 | Automatische Schwarzwertkalibrierung (ABLC) | Nein - wird stattdessen vom ISP durchgeführt |
@@ -71,7 +71,7 @@ Die vollständige Dokumentation zur Kamerasoftware finden Sie [hier](../../raspb
 | Messmodi | Durchschnitt, Spot, Hintergrundbeleuchtung, Matrix |
 | Automatischer Weißabgleich | Aus, Auto, Sonne, Wolken, Schatten, Kunstlicht, Leuchtstoffröhren, Glühlampen, Blitz, Horizont |
 | Auslöser | Tastendruck, UNIX-Signal, Zeitüberschreitung |
-| Zusätzliche Modi | Demo, Burst/Timelapse, Ringspeicher, Video mit Bewegungsvektoren, segmentiertes Video, Live-Vorschau auf 3D-Modellen |
+| Zusätzliche Modi | Demo, Explosion/Zeitraffer, Ringspeicher, Video mit Bewegungsvektoren, segmentiertes Video, Live-Vorschau auf 3D-Modellen |
 
 ## Informationen zur Übertragung des HQ-Kamera-IR-Filters
 
