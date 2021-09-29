@@ -63,7 +63,7 @@ overscan_bottom=24
 
 ### hdmi_ignore_edid
 
-Das Setzen von `hdmi_ignore_edid` auf `0xa5000080` ermöglicht das Ignorieren von EDID-/Display-Daten, wenn Ihr Display keine genaue [EDID] hat (https://en.wikipedia.org/wiki/Extended_display_identification_data). Dieser ungewöhnliche Wert ist erforderlich, um sicherzustellen, dass er nicht versehentlich ausgelöst wird.
+Das Setzen von `hdmi_ignore_edid` auf `0xa5000080` ermöglicht das Ignorieren von EDID-/Display-Daten, wenn Ihr Display keine genaue [EDID](https://en.wikipedia.org/wiki/Extended_display_identification_data) hat. Dieser ungewöhnliche Wert ist erforderlich, um sicherzustellen, dass er nicht versehentlich ausgelöst wird.
 
 ### hdmi_edid_file
 
@@ -167,7 +167,7 @@ Der Befehl `hdmi_group` definiert die HDMI-Ausgangsgruppe entweder als CEA (Cons
 
 ### hdmi_mode
 
-Zusammen mit `hdmi_group` definiert `hdmi_mode` das HDMI-Ausgabeformat. Formatmodusnummern werden aus der CTA-Spezifikation abgeleitet, die [hier] gefunden wurde (https://web.archive.org/web/20171201033424/https://standards.cta.tech/kwspub/published_docs/CTA-861-G_FINAL_revised_2017.pdf)
+Zusammen mit `hdmi_group` definiert `hdmi_mode` das HDMI-Ausgabeformat. Formatmodusnummern werden aus der CTA-Spezifikation abgeleitet, die [hier](https://web.archive.org/web/20171201033424/https://standards.cta.tech/kwspub/published_docs/CTA-861-G_FINAL_revised_2017.pdf) gefunden wurde.
 
 Um einen hier nicht aufgeführten benutzerdefinierten Anzeigemodus festzulegen, siehe [diesen Thread](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=24679).
 
@@ -378,7 +378,7 @@ Diese Werte sind gültig, wenn `hdmi_group=2` (DMT):
 | 85 | 1280x720 | 60Hz | 16:9 | 720p |
 | 86 | 1366x768 | 60Hz | 16:9 | reduzierte Ausblendung |
 
-Beachten Sie, dass es ein [Pixeltaktlimit] gibt (https://www.raspberrypi.org/forums/viewtopic.php?f=26&t=20155&p=195443#p195443). Der höchste unterstützte Modus bei Modellen vor dem Raspberry Pi 4 ist 1920x1200 bei 60Hz mit reduziertem Blanking, während der Raspberry Pi 4 bis zu 4096x2160 (bekannt als 4k) bei 60Hz unterstützt. Beachten Sie auch, dass Sie, wenn Sie beide HDMI-Anschlüsse des Raspberry Pi 4 für die 4k-Ausgabe verwenden, auf beiden auf 30 Hz begrenzt sind.
+Beachten Sie, dass es ein [Pixeltaktlimit](https://www.raspberrypi.org/forums/viewtopic.php?f=26&t=20155&p=195443#p195443) gibt. Der höchste unterstützte Modus bei Modellen vor dem Raspberry Pi 4 ist 1920x1200 bei 60Hz mit reduziertem Blanking, während der Raspberry Pi 4 bis zu 4096x2160 (bekannt als 4k) bei 60Hz unterstützt. Beachten Sie auch, dass Sie, wenn Sie beide HDMI-Anschlüsse des Raspberry Pi 4 für die 4k-Ausgabe verwenden, auf beiden auf 30 Hz begrenzt sind.
 
 ### hdmi_timings
 
@@ -698,4 +698,4 @@ Standardmäßig analysiert die Firmware die EDID jedes über HDMI angeschlossene
 
 Erzwingt die Offline-Komposition von dispmanx in zwei Offscreen-Framebuffern. Dadurch können mehr Dispmanx-Elemente zusammengesetzt werden, ist jedoch langsamer und kann die Bildschirm-Framerate auf typischerweise 30 fps begrenzen.
 
-*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPiconfig](http://elinux.org/RPiconfig), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses .) geteilt wird /bis-sa/3.0/)*
+*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPiconfig](http://elinux.org/RPiconfig), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/bis-sa/3.0/) geteilt wird.*

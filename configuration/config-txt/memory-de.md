@@ -48,4 +48,4 @@ Dieser Wert wird zwischen einem Minimum von 128 MB und einem Maximum des gesamte
 
 Das Setzen auf `1` deaktiviert den Zugriff der CPU auf den L2-Cache der GPU und erfordert einen entsprechenden deaktivierten L2-Kernel. Der Standardwert beim BCM2835 ist '0'. Bei BCM2836, BCM2837 und BCM2711 haben die ARMs ihren eigenen L2-Cache und daher ist der Standardwert "1". Die standardmäßigen Pi-Builds kernel.img und kernel7.img spiegeln diesen Unterschied in den Cache-Einstellungen wider.
 
-*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPiconfig](http://elinux.org/RPiconfig), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses .) geteilt wird /bis-sa/3.0/)*
+*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPiconfig](http://elinux.org/RPiconfig), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/bis-sa/3.0/) geteilt wird.*

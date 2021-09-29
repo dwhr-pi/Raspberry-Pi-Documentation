@@ -148,4 +148,4 @@ Wenn `upstream_kernel=1` verwendet wird, setzt die Firmware [`os_prefix`](#os_pr
 
 Die Firmware wird auch Upstream-Linux-Namen für DTBs bevorzugen (zB `bcm2837-rpi-3-b.dtb` statt `bcm2710-rpi-3-b.dtb`). Wenn die Upstream-Datei nicht gefunden wird, lädt die Firmware stattdessen die Downstream-Variante und wendet automatisch das "Upstream"-Overlay an, um einige Anpassungen vorzunehmen. Beachten Sie, dass dieser Vorgang _nach_dem `os_prefix` abgeschlossen wurde.
 
-*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPiconfig](http://elinux.org/RPiconfig), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses .) geteilt wird /bis-sa/3.0/)*
+*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPiconfig](http://elinux.org/RPiconfig), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/bis-sa/3.0/) geteilt wird.*

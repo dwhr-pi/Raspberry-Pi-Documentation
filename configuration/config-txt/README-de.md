@@ -46,11 +46,11 @@ Mithilfe der Datei config.txt kann eine Reihe von Optionen angegeben werden. Die
 - [Boot](boot.md)
 - [Ports und Gerätebaum](../device-tree.md#part4.6)
 - [GPIOs](gpio.md)
-- [Übertaktung] (overclocking.md)
+- [Übertaktung](overclocking.md)
 - [Bedingte Filter](conditional.md)
 - [Sonstiges](Misc.md)
 
 
 
 
-*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPiconfig](http://elinux.org/RPiconfig), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses .) geteilt wird /bis-sa/3.0/)*
+*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPiconfig](http://elinux.org/RPiconfig), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/bis-sa/3.0/) geteilt wird.*
