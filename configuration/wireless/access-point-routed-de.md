@@ -29,7 +29,7 @@ Diese Dokumentation wurde auf einem Raspberry Pi 3B mit einer Neuinstallation vo
 
 * Stellen Sie sicher, dass Sie über Administratorzugriff auf Ihren Raspberry Pi verfügen. Das Netzwerk-Setup wird im Rahmen der Installation angepasst: Ein lokaler Zugriff mit Bildschirm und Tastatur, die mit Ihrem Raspberry Pi verbunden sind, wird empfohlen.
 * Verbinden Sie Ihren Raspberry Pi mit dem Ethernet-Netzwerk und booten Sie das Raspberry Pi OS.
-* Stellen Sie sicher, dass das Raspberry Pi-Betriebssystem auf Ihrem Raspberry Pi [aktuell] ist (../../raspbian/updating.md) und starten Sie neu, wenn dabei Pakete installiert wurden.
+* Stellen Sie sicher, dass das Raspberry Pi-Betriebssystem auf Ihrem Raspberry Pi [aktuell](../../raspbian/updating.md) ist und starten Sie neu, wenn dabei Pakete installiert wurden.
 * Beachten Sie die IP-Konfiguration des Ethernet-Netzwerks, mit dem der Raspberry Pi verbunden ist:
     * In diesem Dokument gehen wir davon aus, dass das IP-Netzwerk „10.10.0.0/24“ im Ethernet-LAN ​​konfiguriert ist und der Raspberry Pi das IP-Netzwerk „192.168.4.0/24“ für drahtlose Clients verwaltet.
     * Bitte wählen Sie ein anderes IP-Netzwerk für WLAN, z.B. `192.168.10.0/24`, wenn das IP-Netzwerk `192.168.4.0/24` bereits von Ihrem Ethernet-LAN ​​verwendet wird.
