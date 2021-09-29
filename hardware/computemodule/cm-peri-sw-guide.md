@@ -158,7 +158,7 @@ Für jedes der Beispiele gehen wir von einem CM+CMIO- oder CM3+CMIO3-Board mit e
 
 Die Beispiele hier erfordern eine Internetverbindung, daher wird ein USB-Hub plus Tastatur plus WLAN- oder Ethernet-Dongle empfohlen, der an den CMIO-USB-Port angeschlossen ist.
 
-Bitte poste alle Probleme, Bugs oder Fragen im Raspberry Pi [Device Tree Subforum] (https://www.raspberrypi.org/forums/viewforum.php?f=107).
+Bitte poste alle Probleme, Bugs oder Fragen im Raspberry Pi [Device Tree Subforum](https://www.raspberrypi.org/forums/viewforum.php?f=107).
 
 ## Beispiel 1 - Anschließen einer I2C-RTC an BANK1-Pins
 

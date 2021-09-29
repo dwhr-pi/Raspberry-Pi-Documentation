@@ -2,7 +2,7 @@
 
 ##Hinweise vor dem Start
 
-Diese Anweisungen sind für erfahrene Benutzer gedacht. Bei Unklarheiten verwenden Sie bitte die [Raspberry Pi Camera-Foren] (https://www.raspberrypi.org/forums/viewforum.php?f=43) für technische Hilfe.
+Diese Anweisungen sind für erfahrene Benutzer gedacht. Bei Unklarheiten verwenden Sie bitte die [Raspberry Pi Camera-Foren](https://www.raspberrypi.org/forums/viewforum.php?f=43) für technische Hilfe.
 
 Sofern nicht ausdrücklich anders angegeben, funktionieren diese Anweisungen sowohl auf dem Rechenmodul als auch auf dem Rechenmodul 3, die an eine Rechenmodul-E/A-Platine angeschlossen sind, identisch.
 
@@ -15,8 +15,8 @@ Das Compute Module verfügt über zwei CSI-2-Kameraschnittstellen. CAM0 ist eine
 Die Kamerasoftware wird ständig weiterentwickelt. Bitte stellen Sie sicher, dass Ihr System auf dem neuesten Stand ist, bevor Sie diese Anleitung verwenden.
 
 ```
-sudo apt-Update
-sudp apt Voll-Upgrade
+sudo apt update
+sudp apt full-upgrade
 ```
 
 ###Kryptochip
@@ -82,19 +82,19 @@ Einige [Beispiel-Gerätebaum-Quelldateien](#Beispiel-Gerätebaum-Quelldateien) f
 Der Abschnitt "pin_config" im Abschnitt "pins_cm { }" (Rechenmodul) oder "pins_cm3 { }" (Rechenmodul3) der Quelle dts benötigt die LED- und Power-Enable-Pins der Kamera auf Ausgänge:
 
 ```
-pin@p2 { Funktion = "Ausgabe"; Termination = "no_pulling"; };
-pin@p3 { Funktion = "Ausgabe"; Termination = "no_pulling"; };
+pin@p2  { function = "output"; termination = "no_pulling"; };
+pin@p3  { function = "output"; termination = "no_pulling"; };
 ```
 
 Um der Firmware mitzuteilen, welche Pins verwendet und nach wie vielen Kameras gesucht werden soll, fügen Sie dem Abschnitt `pin_defines` Folgendes hinzu:
 
 ```
-pin_define@CAMERA_0_LED { type = "intern"; Zahl = <2>; };
-pin_define@CAMERA_0_SHUTDOWN { type = "intern"; Zahl = <3>; };
-pin_define@CAMERA_0_UNICAM_PORT { type = "intern"; Zahl = <1>; };
-pin_define@CAMERA_0_I2C_PORT { type = "intern"; Zahl = <0>; };
-pin_define@CAMERA_0_SDA_PIN { type = "intern"; Zahl = <0>; };
-pin_define@CAMERA_0_SCL_PIN { type = "intern"; Zahl = <1>; };
+pin_define@CAMERA_0_LED { type = "internal"; number = <2>; };
+pin_define@CAMERA_0_SHUTDOWN { type = "internal"; number = <3>; };
+pin_define@CAMERA_0_UNICAM_PORT { type = "internal"; number = <1>; };
+pin_define@CAMERA_0_I2C_PORT { type = "internal"; number = <0>; };
+pin_define@CAMERA_0_SDA_PIN { type = "internal"; number = <0>; };
+pin_define@CAMERA_0_SCL_PIN { type = "internal"; number = <1>; };
 ```
 
 ### So befestigen Sie zwei Kameras
@@ -111,19 +111,19 @@ Schließen Sie die I2C- und GPIO-Leitungen an.
 Im Abschnitt **pin_config** des Compute-Moduls müssen die LED- und Power-Enable-Pins der zweiten Kamera konfiguriert sein:
 
 ```
-pin@p30 { Funktion = "Ausgabe"; Termination = "no_pulling"; };
-pin@p31 { Funktion = "Ausgabe"; Termination = "no_pulling"; };
+pin@p30 { function = "output"; termination = "no_pulling"; };
+pin@p31 { function = "output"; termination = "no_pulling"; };
 ```
 
 Ändern Sie im Abschnitt **pin_defines** des Compute-Moduls der dts-Datei den Parameter **NUM_CAMERAS** auf 2 und fügen Sie Folgendes hinzu:
 
 ```
-pin_define@CAMERA_1_LED { type = "intern"; Zahl = <30>; };
-pin_define@CAMERA_1_SHUTDOWN { type = "intern"; Zahl = <31>; };
-pin_define@CAMERA_1_UNICAM_PORT { type = "intern"; Zahl = <0>; };
-pin_define@CAMERA_1_I2C_PORT { type = "intern"; Zahl = <0>; };
-pin_define@CAMERA_1_SDA_PIN { type = "intern"; Zahl = <28>; };
-pin_define@CAMERA_1_SCL_PIN { type = "intern"; Zahl = <29>; };
+pin_define@CAMERA_1_LED { type = "internal"; number = <30>; };
+pin_define@CAMERA_1_SHUTDOWN { type = "internal"; number = <31>; };
+pin_define@CAMERA_1_UNICAM_PORT { type = "internal"; number = <0>; };
+pin_define@CAMERA_1_I2C_PORT { type = "internal"; number = <0>; };
+pin_define@CAMERA_1_SDA_PIN { type = "internal"; number = <28>; };
+pin_define@CAMERA_1_SCL_PIN { type = "internal"; number = <29>; };
 ```
 
 <a name="sample-device-tree-source-files"></a>

@@ -20,7 +20,7 @@ Für diejenigen, die das Compute Module eMMC nur als Massenspeichergerät unter 
 
 Bitte stellen Sie sicher, dass Sie nicht auf USB-Geräte schreiben, während das Installationsprogramm ausgeführt wird.
 
-1. Laden Sie das [Windows-Installationsprogramm] (https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) herunter und führen Sie es aus, um die Treiber und das Boot-Tool zu installieren.
+1. Laden Sie das [Windows-Installationsprogramm](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) herunter und führen Sie es aus, um die Treiber und das Boot-Tool zu installieren.
 1. Stecken Sie den USB-Anschluss Ihres Host-PCs in den CMIO USB SLAVE-Anschluss und stellen Sie sicher, dass J4 auf die Position EN eingestellt ist.
 1. Schalten Sie die CMIO-Platine ein; Windows sollte nun die Hardware finden und den Treiber installieren.
 1. Führen Sie nach Abschluss der Treiberinstallation das zuvor installierte Tool „RPiBoot.exe“ aus.
@@ -133,7 +133,7 @@ Die SHA256-Prüfsummendatei muss mit dem Image `pieeprom.bin` übereinstimmen. Z
 sha256sum pieeprom.bin | awk '{print $2}' > pieeprom.sig
 ````
 
-Das Bootloader-Image im Verzeichnis `recovery` ist das neueste Hersteller-Image mit Standardeinstellungen. Es ist für die Verwendung auf einem (https://www.raspberrypi.org/products/compute-module-4-io-board)[Compute Module 4 IO Board] mit Raspberry Pi OS, das von SD/EMMC als Compute Module bootet, vorgesehen 4 Entwicklungsplattform.
+Das Bootloader-Image im Verzeichnis `recovery` ist das neueste Hersteller-Image mit Standardeinstellungen. Es ist für die Verwendung auf einem [Compute Module 4 IO Board](https://www.raspberrypi.org/products/compute-module-4-io-board) mit Raspberry Pi OS, das von SD/EMMC als Compute Module bootet, vorgesehen 4 Entwicklungsplattform.
 
 
 ## Fehlerbehebung
