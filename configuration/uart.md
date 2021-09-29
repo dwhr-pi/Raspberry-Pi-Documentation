@@ -96,16 +96,16 @@ Obwohl der Linux-Kernel die UARTs relativ früh im Boot-Prozess startet, dauert 
 Aktivieren Sie Earlycon mit einem Kernel-Befehlszeilenparameter - fügen Sie einen der folgenden Punkte zu `cmdline.txt` hinzu, je nachdem, welcher UART der primäre ist:
 ```
 # Für Pi 4 und Compute Module 4 (BCM2711)
-Earlycon=uart8250,mmio32,0xfe215040
-Earlycon=pl011,mmio32,0xfe2010000
+earlycon=uart8250,mmio32,0xfe215040
+earlycon=pl011,mmio32,0xfe201000
 
 # Für Pi 2, Pi 3 und Compute Module 3 (BCM2836 & BCM2837)
-Earlycon=uart8250,mmio32,0x3f215040
-Earlycon=pl011,mmio32,0x3f2010000
+earlycon=uart8250,mmio32,0x3f215040
+earlycon=pl011,mmio32,0x3f201000
 
 # Für Pi 1, Pi Zero und Compute Module (BCM2835)
-Earlycon=uart8250,mmio32,0x20215040
-Earlycon=pl011,mmio32,0x20201000
+earlycon=uart8250,mmio32,0x20215040
+earlycon=pl011,mmio32,0x20201000
 ```
 Die Baudrate ist auf 115200 eingestellt.
 
@@ -113,7 +113,7 @@ Hinweis Die Auswahl der falschen frühen Konsole kann das Booten des Pi verhinde
 
 ## UARTs und Gerätebaum
 
-Verschiedene UART-Gerätebaum-Overlay-Definitionen finden Sie im [Kernel-GitHub-Baum](https://github.com/raspberrypi/linux). Die zwei nützlichsten Overlays sind [`disable-bt`](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/disable-bt-overlay. dts) und [`miniuart-bt`](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/miniuart-bt-overlay.dts).
+Verschiedene UART-Gerätebaum-Overlay-Definitionen finden Sie im [Kernel-GitHub-Baum](https://github.com/raspberrypi/linux). Die zwei nützlichsten Overlays sind [`disable-bt`](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/disable-bt-overlay.dts) und [`miniuart-bt`](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/miniuart-bt-overlay.dts).
 
 `disable-bt` deaktiviert das Bluetooth-Gerät und macht den ersten PL011 (UART0) zum primären UART. Sie müssen auch den Systemdienst deaktivieren, der das Modem initialisiert, damit es keine Verbindung zum UART herstellt, indem Sie `sudo systemctl disable hciuart` verwenden.
 

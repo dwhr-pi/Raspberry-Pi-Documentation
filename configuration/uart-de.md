@@ -113,7 +113,7 @@ Hinweis Die Auswahl der falschen frühen Konsole kann das Booten des Pi verhinde
 
 ## UARTs und Gerätebaum
 
-Verschiedene UART-Gerätebaum-Overlay-Definitionen finden Sie im [Kernel-GitHub-Baum](https://github.com/raspberrypi/linux). Die zwei nützlichsten Overlays sind [`disable-bt`](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/disable-bt-overlay. dts) und [`miniuart-bt`](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/miniuart-bt-overlay.dts).
+Verschiedene UART-Gerätebaum-Overlay-Definitionen finden Sie im [Kernel-GitHub-Baum](https://github.com/raspberrypi/linux). Die zwei nützlichsten Overlays sind [`disable-bt`](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/disable-bt-overlay.dts) und [`miniuart-bt`](https://github.com/raspberrypi/linux/blob/rpi-5.4.y/arch/arm/boot/dts/overlays/miniuart-bt-overlay.dts).
 
 `disable-bt` deaktiviert das Bluetooth-Gerät und macht den ersten PL011 (UART0) zum primären UART. Sie müssen auch den Systemdienst deaktivieren, der das Modem initialisiert, damit es keine Verbindung zum UART herstellt, indem Sie `sudo systemctl disable hciuart` verwenden.
 
