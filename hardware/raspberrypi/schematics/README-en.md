@@ -1,32 +1,32 @@
-# Schema
+# Schematics
 
-Schaltpläne für die verschiedenen Raspberry-Pi-Board-Versionen:
+Schematics for the various Raspberry Pi board versions:
 
-## Raspberry Pi 4 Modell B
+## Raspberry Pi 4 Model B
 
 - [Revision 4.0](rpi_SCH_4b_4p0_reduced.pdf)
 
-## Raspberry Pi 3 Modell B+
+## Raspberry Pi 3 Model B+
 
 - [Revision 1.0](rpi_SCH_3bplus_1p0_reduced.pdf)
 
-## Raspberry Pi 3 Modell B
+## Raspberry Pi 3 Model B
 
 - [Revision 1.2](rpi_SCH_3b_1p2_reduced.pdf)
 
-## Raspberry Pi 2 Modell B
+## Raspberry Pi 2 Model B
 
 - [Revision 1.2](rpi_SCH_2b_1p2_reduced.pdf)
 
-## Raspberry Pi Modell B+
+## Raspberry Pi Model B+
 
 - [Revision 1.2](rpi_SCH_1bplus_1p2_reduced.pdf)
 
-## Raspberry Pi 3 Modell A+
+## Raspberry Pi 3 Model A+
 
 - [Revision 1.0](rpi_SCH_3aplus_1p0_reduced.pdf)
 
-## Raspberry Pi Modell A+
+## Raspberry Pi Model A+
 
 - [Revision 1.1](rpi_SCH_1aplus_1p1_reduced.pdf)
 
@@ -38,6 +38,6 @@ Schaltpläne für die verschiedenen Raspberry-Pi-Board-Versionen:
 
 - [Revision 1.1](rpi_SCH_ZeroW_1p1_reduced.pdf)
 
-## Rechenmodul
+## Compute Module
 
-- Siehe [Compute Module section](../../computemodule/schematics.md)
+- See the [Compute Module section](../../computemodule/schematics.md)
