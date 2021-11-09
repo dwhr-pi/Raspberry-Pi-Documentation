@@ -44,7 +44,7 @@ Gilt auch für A+.
 
 - [Vorstand](rpi_MECH_PoEHAT.pdf)
 
-## Raspberry Pi TV-HAT
+## Raspberry Pi TV HAT
 
 - [Vorstand](rpi_MECH_TVHAT_1p0.PNG)
 
