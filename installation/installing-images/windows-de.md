@@ -30,4 +30,4 @@
 
 ---
 
-*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPi_Easy_SD_Card_Setup](http://elinux.org/RPi_Easy_SD_Card_Setup), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses .) geteilt wird /bis-sa/3.0/)*
+*Dieser Artikel verwendet Inhalte der eLinux-Wiki-Seite [RPi_Easy_SD_Card_Setup](http://elinux.org/RPi_Easy_SD_Card_Setup), die unter der [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/by-sa/3.0/) geteilt wird.*
