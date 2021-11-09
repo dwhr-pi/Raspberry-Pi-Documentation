@@ -44,15 +44,15 @@ Gilt auch für A+.
 
 - [Vorstand](rpi_MECH_PoEHAT.pdf)
 
-## Raspberry Pi TV-HUT
+## Raspberry Pi TV-HAT
 
 - [Vorstand](rpi_MECH_TVHAT_1p0.PNG)
 
-## Rechenmodul 4
+## Compute Module 4
 
 Die folgenden Datenblätter enthalten mechanische Zeichnungen und Schaltpläne:
 
-- [Datenblatt für Rechenmodul 4](http://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
+- [Datenblatt für Compute Module 4](http://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 - [Datenblatt für Compute Module 4 IO Board](http://datasheets.raspberrypi.org/cm4io/cm4io-datasheet.pdf)
 
 Darüber hinaus liefern wir auch STEP-Dateien der Compute Modules für 3D-Modellierer und KiCAD-Dateien des IO-Boards für diejenigen, die ihre eigenen Leiterplatten erstellen möchten:
