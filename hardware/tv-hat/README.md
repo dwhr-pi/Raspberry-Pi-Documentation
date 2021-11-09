@@ -20,14 +20,14 @@ Sie greifen nicht aus der Ferne auf den Pi zu)
   * Platzieren Sie die Abstandshalter an zwei oder drei Ecken des HAT und ziehen Sie die Schrauben durch die Halterung fest
 Löcher, um sie an Ort und Stelle zu halten.
 * Verbinden Sie den Antennenadapter des TV HAT mit dem Kabel Ihrer TV-Antenne.
-* Richten Sie den Raspberry Pi mit der neuesten Version des Betriebssystems Raspberry Pi OS ein, die Sie von unserer [Download-Seite] (https://www.raspberrypi.org/downloads/raspbian/) herunterladen können.
+* Richten Sie den Raspberry Pi mit der neuesten Version des Betriebssystems Raspberry Pi OS ein, die Sie von unserer [Download-Seite](https://www.raspberrypi.org/downloads/raspbian/) herunterladen können.
  * Wenn Sie nicht wissen, wie das geht, folgen Sie unserer Anleitung [hier](https://projects.raspberrypi.org/en/pathways/getting-started-with-raspberry-pi)
 * Starten Sie Ihren Pi, öffnen Sie ein Terminalfenster und führen Sie die folgenden zwei Befehle aus, um die `tvheadend`-Software zu installieren:
 ```
-sudo apt-Update
-sudo apt installieren tvheadend
+sudo apt update
+sudo apt install tvheadend
 ```
-  * Wenn Sie nicht wissen, wie das geht, folgen Sie unserer Anleitung [hier] (https://projects.raspberrypi.org/en/projects/raspberry-pi-using/9)
+  * Wenn Sie nicht wissen, wie das geht, folgen Sie unserer Anleitung [hier](https://projects.raspberrypi.org/en/projects/raspberry-pi-using/9)
 * Während der Installation von `tvheadend` werden Sie aufgefordert, einen Administratorkontonamen und ein Passwort zu wählen. Sie werden diese später brauchen, also stellen Sie sicher, dass Sie etwas auswählen, an das Sie sich erinnern können.
 
 **In einem Webbrowser auf einem anderen Computer:**
