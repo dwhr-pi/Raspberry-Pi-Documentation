@@ -6,7 +6,7 @@ Manchmal müssen Sie auf einen Raspberry Pi zugreifen, ohne ihn an einen Monitor
 
 - [IP-Adresse](ip-address.md)
     - So finden Sie die IP-Adresse Ihres Raspberry Pi, um sich damit zu verbinden
-- [Zugang über das Internet](Zugang über das Internet/README.md)
+- [Zugang über das Internet](access-over-Internet//README.md)
     - Fernzugriff auf den Pi über das Internet durch Konfigurieren der Portweiterleitung oder Verwenden eines Drittanbieterdienstes
 - [VNC](vnc/README.md)
     - Fernzugriff auf die grafische Benutzeroberfläche des Pi, angezeigt in einem Fenster auf einem anderen Computer
