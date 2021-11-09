@@ -24,7 +24,7 @@ Die Pads sind konfigurierbare CMOS-Push-Pull-Ausgangstreiber/Eingangspuffer. Reg
 - Ausgabe [Antriebsstärke](gpio_pads_control.md)
 - Eingangs-Schmitt-Trigger-Filterung
 
-###Einschaltzustände
+### Einschaltzustände
 
 Alle GPIO-Pins kehren beim Zurücksetzen beim Einschalten zu Allzweckeingängen zurück. Es werden auch die Standard-Pull-Zustände angewendet, die in der Tabelle der alternativen Funktionen im ARM-Peripheriedatenblatt aufgeführt sind. Bei den meisten GPIOs wird ein Standard-Pull angewendet.
 
@@ -49,7 +49,7 @@ Fast alle GPIO-Pins haben alternative Funktionen. BCM2835-interne Peripherieblö
 Die folgende Tabelle enthält die verschiedenen Spannungsspezifikationen für die GPIO-Pins, sie wurde dem Datenblatt des Compute Module [hier] entnommen (../../computemodule/datasheet.md).
 
 | Symbol | Parameter | Bedingungen &emsp;| Min | Typisch | Max | Einheit |
-|--------|-----------|------------|------|-------- -|------|------|
+|--------|-----------|------------|------|---------|------|------|
 |V<sub>IL</sub>|Eingangsniederspannung | VDD IO = 1,8V | - | - |0,6 | V |
 | | | VDD IO = 2,7V | - | - | 0,8 | V |
 | | | VDD-E/A = 3,3 V | - | - | 0,9 | V |
@@ -73,6 +73,6 @@ Die folgende Tabelle enthält die verschiedenen Spannungsspezifikationen für di
 | R<sub>PU</sub> | Pullup-Widerstand | - | 50 | - | 65 | kΩ |
 | R<sub>PD</sub> | Pulldown-Widerstand | - | 50 | - |65 | kΩ |
 
-<sup>a</sup> Hysterese aktiviert
-<sup>b</sup> Standard-Laufwerksstärke (8 mA)
+<sup>a</sup> Hysterese aktiviert  
+<sup>b</sup> Standard-Laufwerksstärke (8 mA)  
 <sup>c</sup> Maximale Antriebsstärke (16 mA)
