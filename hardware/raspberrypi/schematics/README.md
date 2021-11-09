@@ -38,6 +38,6 @@ Schaltpläne für die verschiedenen Raspberry-Pi-Board-Versionen:
 
 - [Revision 1.1](rpi_SCH_ZeroW_1p1_reduced.pdf)
 
-## Rechenmodul
+## Compute Module
 
 - Siehe [Compute Module section](../../computemodule/schematics.md)
