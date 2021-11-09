@@ -211,7 +211,7 @@ Es gibt ein Loopback-Testprogramm in der Linux-Dokumentation, das als Ausgangspu
 
 #### spidev von Python verwenden.
 
-Es gibt mehrere Python-Bibliotheken, die Zugriff auf spidev bieten, darunter die fantasievoll benannten `spidev` (`pip install spidev` - siehe https://pypi.org/project/spidev/) und `SPI-Py` (https:// github.com/lthiery/SPI-Py).
+Es gibt mehrere Python-Bibliotheken, die Zugriff auf spidev bieten, darunter die fantasievoll benannten `spidev` (`pip install spidev` - siehe https://pypi.org/project/spidev/) und `SPI-Py` (https://github.com/lthiery/SPI-Py).
 
 #### Verwenden von Spidev aus einer Shell wie bash
 
