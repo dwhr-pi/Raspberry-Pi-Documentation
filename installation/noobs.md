@@ -1,4 +1,4 @@
-# ANFÄNGER
+# NOOBS
 
 **New Out Of Box Software (NOOBS)** ist ein einfacher Betriebssystem-Installationsmanager für den Raspberry Pi.
 
@@ -8,7 +8,7 @@
 
 ### Kaufen Sie eine vorinstallierte SD-Karte
 
-SD-Karten mit vorinstalliertem NOOBS sind bei vielen unserer Distributoren und unabhängigen Einzelhändlern erhältlich, darunter [Pimoroni](https://shop.pimoroni.com/products/noobs-8gb-sd-card), [Adafruit](https:// www.adafruit.com/products/1583) und [Pi Hut](http://thepihut.com/collections/raspberry-pi-sd-cards-and-adapters/products/noobs-preinstalled-sd-card).
+SD-Karten mit vorinstalliertem NOOBS sind bei vielen unserer Distributoren und unabhängigen Einzelhändlern erhältlich, darunter [Pimoroni](https://shop.pimoroni.com/products/noobs-8gb-sd-card), [Adafruit](https://www.adafruit.com/products/1583) und [Pi Hut](http://thepihut.com/collections/raspberry-pi-sd-cards-and-adapters/products/noobs-preinstalled-sd-card).
 
 ### Herunterladen
 
@@ -40,7 +40,7 @@ Das [Formatting Tool der SD Association](https://www.sdcard.org/downloads/format
 
 ##### Linux
 
-Für Linux-Benutzer empfehlen wir `gparted` (oder die Kommandozeilen-Version `parted`). Norman Dunbar hat [instructions](http://qdosmsq.dunbar-it.co.uk/blog/2013/06/noobs-for-raspberry-pi/) für Linux-Benutzer geschrieben.
+Für Linux-Benutzer empfehlen wir `gparted` (oder die Kommandozeilen-Version `parted`). Norman Dunbar hat [Anleitungen](http://qdosmsq.dunbar-it.co.uk/blog/2013/06/noobs-for-raspberry-pi/) für Linux-Benutzer geschrieben.
 
 ## Was ist in NOOBS enthalten?
 
@@ -58,7 +58,7 @@ Die folgenden Betriebssysteme sind derzeit in NOOBS enthalten:
 
 Ab NOOBS v1.3.10 (September 2014) ist in NOOBS standardmäßig nur noch Raspberry Pi OS installiert. Die anderen können mit einer Netzwerkverbindung installiert werden.
 
-##NOOBS und NOOBS Lite
+## NOOBS und NOOBS Lite
 
 NOOBS ist in zwei Formen verfügbar: Offline- und Netzwerkinstallation oder nur Netzwerkinstallation.
 

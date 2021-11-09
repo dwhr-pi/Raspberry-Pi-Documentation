@@ -1,4 +1,4 @@
-# ANFÄNGER
+# NOOBS
 
 **New Out Of Box Software (NOOBS)** ist ein einfacher Betriebssystem-Installationsmanager für den Raspberry Pi.
 
