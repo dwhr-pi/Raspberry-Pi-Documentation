@@ -64,7 +64,7 @@ Wir brauchen die Zahl `xxx`, das ist die Blockanzahl. Wir können die `yyy`-Zahl
     ```
 `if` ist die Eingabedatei (dh das SD-Kartengerät), `of` ist die Ausgabedatei, in die der Inhalt der SD-Karte kopiert werden soll (in diesem Beispiel `from-sd-card.img` genannt) und ` xxx` ist die Anzahl der Blöcke, die von der ursprünglichen `dd`-Operation geschrieben wurden.
 
-- Falls das Image der SD-Karte immer noch größer als das Originalbild ist, kürzen Sie das neue Image mit dem folgenden Befehl auf die Größe des Originalbilds (ersetzen Sie das `reference'-Argument der Eingabedatei durch den Originalbildnamen):
+- Falls das Image der SD-Karte immer noch größer als das Originalbild ist, kürzen Sie das neue Image mit dem folgenden Befehl auf die Größe des Originalbilds (ersetzen Sie das `reference`-Argument der Eingabedatei durch den Originalimagenamen):
     ```bash
     truncate --reference 2020-08-20-raspios-buster-armhf.img from-sd-card.img
     ```
@@ -72,6 +72,6 @@ Wir brauchen die Zahl `xxx`, das ist die Blockanzahl. Wir können die `yyy`-Zahl
     ```bash
     diff -s from-sd-card.img 2020-08-20-raspios-buster-armhf.img
     ```
-- Führen Sie "sync" aus. Dadurch wird sichergestellt, dass der Schreibcache geleert wird und Sie Ihre SD-Karte sicher aushängen können.
+- Führen Sie `sync` aus. Dadurch wird sichergestellt, dass der Schreibcache geleert wird und Sie Ihre SD-Karte sicher aushängen können.
 
 - Entfernen Sie die SD-Karte aus dem Kartenleser.
