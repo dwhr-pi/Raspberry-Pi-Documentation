@@ -1,51 +1,51 @@
-# Raspberry Pi boot modes
+# Raspberry Pi Boot-Modi
 
-## Introduction
+## Einführung
 
-The Raspberry Pi has a number of different stages of booting. This document explains how the boot modes work, and which ones are supported for Linux booting.
+Der Raspberry Pi hat eine Reihe von verschiedenen Phasen des Bootens. In diesem Dokument wird erläutert, wie die Bootmodi funktionieren und welche für das Booten von Linux unterstützt werden.
 
-[Boot Sequence](bootflow.md)
+[Boot-Sequenz](bootflow.md)
 
-[SD card boot](sdcard.md)
+[SD-Kartenstart](sdcard.md)
 
-[USB boot](usb.md) comprises the following two modes:
-* [Device boot](device.md): booting as a mass storage device
-* [Host boot](host.md): booting as a USB host using one of the following:
-  * [Mass storage boot](msd.md): boot from mass storage device
-  * [Network boot](net.md): boot via Ethernet
+[USB boot](usb.md) umfasst die folgenden zwei Modi:
+* [Gerätestart](device.md): Booten als Massenspeichergerät
+* [Host boot](host.md): Booten als USB-Host mit einer der folgenden Möglichkeiten:
+  * [Massenspeicherboot](msd.md): Booten vom Massenspeichergerät
+  * [Netzwerkboot](net.md): Booten über Ethernet
   
-[GPIO boot mode](gpio.md)
+[GPIO-Boot-Modus](gpio.md)
   
-## Special bootcode.bin-only boot mode
-USB host and Ethernet boot can be performed by BCM2837-based Raspberry Pis - that is, Pi 2B version 1.2, Pi 3B, and Pi 3B+ (Raspberry Pi 3A+ cannot net boot since it does not have a built-in Ethernet interface). In addition, all Raspberry Pi models **except Pi 4B** can use a new bootcode.bin-only method to enable USB host boot.
+## Spezieller bootcode.bin-only Boot-Modus
+USB-Host- und Ethernet-Boot können von BCM2837-basierten Raspberry Pis ausgeführt werden, d. Darüber hinaus können alle Raspberry Pi-Modelle **außer Pi 4B** eine neue bootcode.bin-only-Methode verwenden, um den USB-Host-Boot zu aktivieren.
 
-**Note:** The Raspberry Pi 4B does not use the bootcode.bin file - instead the bootloader is located in an on-board EEPROM chip. The Pi 4B bootloader currently only supports booting from an SD card. Support for USB host mode boot and Ethernet boot will be added by a future software update. See [Pi4 Bootflow](./bootflow_2711.md) and  [SPI Boot EEPROM](../booteeprom.md).
+**Hinweis:** Der Raspberry Pi 4B verwendet nicht die Datei bootcode.bin - stattdessen befindet sich der Bootloader in einem On-Board-EEPROM-Chip. Der Pi 4B Bootloader unterstützt derzeit nur das Booten von einer SD-Karte. Die Unterstützung für USB-Host-Modus-Boot und Ethernet-Boot wird durch ein zukünftiges Software-Update hinzugefügt. Siehe [Pi4 Bootflow](./bootflow_2711.md) und [SPI Boot EEPROM](../booteeprom.md).
 
-Format an SD card as FAT32 and copy on the latest [bootcode.bin](https://github.com/raspberrypi/firmware/raw/master/boot/bootcode.bin). The SD card must be present in the Pi for it to boot. Once bootcode.bin is loaded from the SD card, the Pi continues booting using USB host mode.
+Formatieren Sie eine SD-Karte als FAT32 und kopieren Sie sie auf die neueste [bootcode.bin](https://github.com/raspberrypi/firmware/raw/master/boot/bootcode.bin). Die SD-Karte muss im Pi vorhanden sein, damit er booten kann. Sobald bootcode.bin von der SD-Karte geladen wurde, fährt der Pi mit dem Booten im USB-Host-Modus fort.
 
-This is useful for the Raspberry Pi 1, 2, and Zero models, which are based on the BCM2835 and BCM2836 chips, and in situations where a Pi 3 fails to boot (the latest bootcode.bin includes additional bugfixes for the Pi 3B, compared to the boot code burned into the BCM2837A0).
+Dies ist nützlich für die Raspberry Pi 1, 2 und Zero-Modelle, die auf den BCM2835- und BCM2836-Chips basieren, und in Situationen, in denen ein Pi 3 nicht booten kann (die neueste bootcode.bin enthält zusätzliche Bugfixes für den Pi 3B, im Vergleich auf den in den BCM2837A eingebrannten Bootcode.
 
-If you have a problem with a mass storage device still not working, even with this bootcode.bin, then please add a new file 'timeout' to the SD card. This will extend to six seconds the time for which it waits for the mass storage device to initialise.
+Wenn Sie ein Problem mit einem Massenspeichergerät haben, das trotz dieser bootcode.bin immer noch nicht funktioniert, dann fügen Sie bitte eine neue Datei 'timeout' auf der SD-Karte hinzu. Dadurch wird die Zeit, die auf die Initialisierung des Massenspeichergeräts gewartet wird, auf sechs Sekunden verlängert.
 
-## bootcode.bin UART enable (Pre Raspberry Pi 4B)
+## bootcode.bin UART aktivieren (Pre Raspberry Pi 4B)
 
-For information on enabling the UART on the Pi4 bootloader, please see [this page](../bcm2711_bootloader_config.md).
+Informationen zum Aktivieren des UART auf dem Pi4-Bootloader finden Sie auf [dieser Seite](../bcm2711_bootloader_config.md).
 
-It is possible to enable an early stage UART to debug booting issues (useful with the above bootcode.bin only boot mode).  To do this, make sure you've got a recent version of the firmware (including bootcode.bin).  To check if UART is supported in your current firmware:
+Es ist möglich, einen UART in einem frühen Stadium zu aktivieren, um Bootprobleme zu beheben (nützlich mit dem obigen Bootmodus bootcode.bin only). Stellen Sie dazu sicher, dass Sie über eine aktuelle Version der Firmware (einschließlich bootcode.bin) verfügen. So überprüfen Sie, ob UART in Ihrer aktuellen Firmware unterstützt wird:
 
 ```
 $ strings bootcode.bin | grep BOOT_UART
 BOOT_UART=0
 ```
 
-To enable UART from bootcode.bin use:
+Um UART aus bootcode.bin zu aktivieren, verwenden Sie:
 
 ```
 sed -i -e "s/BOOT_UART=0/BOOT_UART=1/" bootcode.bin
 ```
 
-Next, connect a suitable USB serial cable to your host computer (a Raspberry Pi will work, although I find the easiest path is to use a USB serial cable since it'll work out the box without any pesky config.txt settings).  Use the standard pins 6, 8 and 10 (GND, GPIO14, GPIO15) on a Pi or CM board.
+Als nächstes schließen Sie ein geeignetes serielles USB-Kabel an Ihren Host-Computer an (ein Raspberry Pi funktioniert, obwohl ich finde, dass der einfachste Weg darin besteht, ein serielles USB-Kabel zu verwenden, da es ohne lästige config.txt-Einstellungen funktioniert). Verwenden Sie die Standard-Pins 6, 8 und 10 (GND, GPIO14, GPIO15) auf einem Pi- oder CM-Board.
 
-Then use `screen` on linux or a Mac or `putty` on windows to connect to the serial.
+Verwenden Sie dann "screen" unter Linux oder einem Mac oder "putty" unter Windows, um eine Verbindung zur seriellen Schnittstelle herzustellen.
 
-Setup your serial to receive at 115200-8-N-1, and then boot your Pi / Compute module.  You should get an immediate serial output from the device as bootcode.bin runs.
+Richten Sie Ihre Seriennummer so ein, dass sie bei 115200-8-N-1 empfängt, und starten Sie dann Ihr Pi / Compute-Modul. Sie sollten sofort eine serielle Ausgabe vom Gerät erhalten, wenn bootcode.bin ausgeführt wird.

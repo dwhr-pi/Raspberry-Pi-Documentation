@@ -1,6 +1,6 @@
 # Startvorgang
 
-**Die folgende Bootsequenz gilt nur für die BCM2837- und BCM2837B0-basierten Modelle des Raspberry Pi. Bei früheren Modellen versucht der Pi [SD-Kartenstart](sdcard.md), gefolgt von [USB-Gerätemodusstart](device.md). Die Startsequenz des Raspberry Pi4 finden Sie auf der Seite [this](bootflow_2711.md)**
+**Die folgende Bootsequenz gilt nur für die BCM2837- und BCM2837B0-basierten Modelle des Raspberry Pi. Bei früheren Modellen versucht der Pi [SD-Kartenstart](sdcard.md), gefolgt von [USB-Gerätemodusstart](device.md). Die Startsequenz des Raspberry Pi4 finden Sie auf [dieser](bootflow_2711.md) Seite**
 
 Die USB-Boot-Standardeinstellungen auf dem Raspberry Pi 3 hängen davon ab, welche Version verwendet wird. Auf dieser [Seite](./msd.md) finden Sie Informationen zum Aktivieren von USB-Startmodi, wenn diese nicht standardmäßig aktiviert sind.
 
@@ -8,15 +8,15 @@ Beim Booten des BCM2837 verwendet er zwei verschiedene Quellen, um zu bestimmen,
 
 Als nächstes überprüft das Boot-ROM jede der Boot-Quellen auf eine Datei namens bootcode.bin; wenn es erfolgreich ist, lädt es den Code in den lokalen 128K-Cache und springt dorthin. Der gesamte Boot-Modus-Prozess ist wie folgt:
 
-* BCM2837 Stiefel
+* BCM2837 boots
 * OTP lesen, um zu bestimmen, welche Boot-Modi aktiviert werden sollen
 * Wenn der GPIO-Boot-Modus aktiviert ist, verwenden Sie den GPIO-Boot-Modus, um die Liste der aktivierten Boot-Modi zu verfeinern
 * Wenn aktiviert: Überprüfen Sie die primäre SD auf bootcode.bin auf GPIO 48-53
-    * Erfolg - Booten
-    * Fail - Timeout (fünf Sekunden)
+    * Success - Boot
+    * Fail - timeout (fünf Sekunden)
 * Wenn aktiviert: Überprüfen Sie die sekundäre SD
-    * Erfolg - Booten
-    * Fail - Timeout (fünf Sekunden)
+    * Success - Boot
+    * Fail - timeout (fünf Sekunden)
 * Wenn aktiviert: Überprüfen Sie NAND
 * Falls aktiviert: SPI prüfen
 * Falls aktiviert: USB prüfen

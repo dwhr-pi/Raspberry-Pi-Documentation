@@ -14,7 +14,7 @@ Der Bootflow für den Pi4 ist wie folgt:
 
 
 ## SD-Kartenstart
-Der Bootloader lädt die Dateien im [Bootordner](../../../configuration/boot_folder.md) entsprechend den [Bootoptionen](../../../configuration/config-txt/ boot.md) in config.txt
+Der Bootloader lädt die Dateien im [Bootordner](../../../configuration/boot_folder.md) entsprechend den [Bootoptionen](../../../configuration/config-txt/boot.md) in config.txt
 
 ## Netzwerkstart
 

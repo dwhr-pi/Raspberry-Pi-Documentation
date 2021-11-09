@@ -43,7 +43,7 @@ USB in der obigen Tabelle wählt sowohl den USB-Geräte-Boot-Modus als auch den 
 
 Die verschiedenen Boot-Modi werden in der numerischen Reihenfolge der GPIO-Zeilen versucht, d. h. SD0, dann SD1, dann NAND und so weiter.
 
-## Startablauf
+## Startvorgang
 
 SD0 ist die Broadcom SD-Karte / MMC-Schnittstelle. Wenn das Boot-ROM im SoC ausgeführt wird, verbindet es SD0 immer mit dem integrierten microSD-Kartensteckplatz. Bei Rechenmodulen mit einem eMMC-Gerät ist SD0 daran angeschlossen; auf dem Compute Module Lite SD0 ist am Edge Connector verfügbar und wird an den microSD-Kartensteckplatz im CMIO-Trägerboard angeschlossen. SD1 ist die Arasan SD-Karte / MMC-Schnittstelle, die auch SDIO-fähig ist. Alle Raspberry Pi-Modelle mit integriertem WLAN verwenden SD1, um sich über SDIO mit dem WLAN-Chip zu verbinden.
 

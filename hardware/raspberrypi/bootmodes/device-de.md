@@ -4,8 +4,8 @@ Die folgenden Geräte können im USB-Gerätestartmodus booten:
 
 * Pi-Rechenmodul
 * Pi-Rechenmodul 3
-* Pi Null
-* Pi Null W
+* Pi Zero
+* Pi Zero W
 * Pi A
 * Pi A+
 * Pi 3A+
@@ -14,5 +14,5 @@ Wenn dieser Bootmodus aktiviert ist (normalerweise nach einem fehlgeschlagenen B
 
 Der Host sendet zuerst eine Struktur an den Geräte-Down-Control-Endpunkt 0. Diese enthält die Größe und Signatur für den Bootvorgang (Sicherheit ist nicht aktiviert, daher ist keine Signatur erforderlich). Zweitens wird der Code an Endpunkt 1 (bootcode.bin) übertragen. Schließlich antwortet das Gerät mit einem Erfolgscode von:
 
-* 0 - Erfolg
-* 0x80 - Fehlgeschlagen
+* 0 - Success
+* 0x80 - Failed
