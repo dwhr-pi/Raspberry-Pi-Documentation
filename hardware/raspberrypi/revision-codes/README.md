@@ -18,7 +18,7 @@ Serial      : 00000000765fc593
 
 ## Revisionscodes im alten Stil
 
-Der erste Satz von Raspberry Pi-Modellen erhielt sequentielle Hex-Revisionscodes von „0002“ bis „0015“:
+Der erste Satz von Raspberry Pi-Modellen erhielt sequentielle Hex-Revisionscodes von `0002` bis `0015`:
 
 | Code | Modell | Revision | RAM            | Manufacturer |
 | ---- | ------ | -------- | -------------- | ------------ |
