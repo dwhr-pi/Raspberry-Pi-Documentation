@@ -15,7 +15,7 @@ Installieren Sie Raspberry Pi OS Lite (oder Raspberry Pi OS mit Raspberry Pi Des
 Richten Sie anschließend den USB-Boot-Modus ein, indem Sie das Verzeichnis `/boot` mit den neuesten Boot-Dateien vorbereiten:
 
 ```bash
-Sudo apt-Update && Sudo apt-Voll-Upgrade
+sudo apt update && sudo apt full-upgrade
 ```
 
 Aktivieren Sie nun den USB-Boot-Modus mit dem folgenden Befehl:
@@ -54,17 +54,17 @@ cd /nfs/client1
 sudo mount --bind /dev dev
 sudo mount --bind /sys sys
 sudo mount --bind /proc proc
-sudo chroot.
+sudo chroot .
 rm /etc/ssh/ssh_host_*
 dpkg-reconfigure openssh-server
-Ausfahrt
+exit
 sudo umount dev sys proc
 ```
 
 Suchen Sie die Einstellungen Ihres lokalen Netzwerks. Sie müssen die Adresse Ihres Routers (oder Gateways) finden, dies geht mit:
 
 ```bash
-IP-Route | awk '/default/ {print $3}'
+ip route | awk '/default/ {print $3}'
 ```
 
 Dann renne:
@@ -76,7 +76,7 @@ ip -4 addr show dev eth0 | grep inet
 was eine Ausgabe ergeben sollte wie:
 
 ```
-inet 10.42.0.211/24 brd 10.42.0.255 Geltungsbereich global eth0
+inet 10.42.0.211/24 brd 10.42.0.255 scope global eth0
 ```
 
 Die erste Adresse ist die IP-Adresse Ihres Servers Raspberry Pi im Netzwerk, und der Teil nach dem Schrägstrich ist die Netzwerkgröße. Es ist sehr wahrscheinlich, dass Ihre eine `/24` ist. Beachten Sie auch die `brd` (Broadcast) Adresse des Netzwerks. Notieren Sie sich die Ausgabe des vorherigen Befehls, die die IP-Adresse des Raspberry Pi und die Broadcast-Adresse des Netzwerks enthält.
@@ -98,11 +98,11 @@ sudo nano /etc/systemd/network/10-eth0.netdev
 Fügen Sie die folgenden Zeilen hinzu:
 
 ```
-[Spiel]
+[Match]
 Name=eth0
 
-[Netzwerk]
-DHCP=Nein
+[Network]
+DHCP=no
 ```
 
 Erstellen Sie dann eine Netzwerkdatei:
@@ -114,11 +114,11 @@ sudo nano /etc/systemd/network/11-eth0.network
 Fügen Sie die folgenden Inhalte hinzu:
 
 ```
-[Spiel]
+[Match]
 Name=eth0
 
-[Netzwerk]
-Adresse=10.42.0.211/24
+[Network]
+Address=10.42.0.211/24
 DNS=10.42.0.1
 
 [Route]
@@ -134,7 +134,7 @@ sudo nano /etc/systemd/resolved.conf
 Entkommentieren Sie die DNS-Zeile und fügen Sie dort die DNS-IP-Adresse hinzu. Wenn Sie über einen Fallback-DNS-Server verfügen, fügen Sie ihn außerdem dort hinzu.
 
 ```bash
-[Beschließen]
+[Resolve]
 DNS=10.42.0.1
 #FallbackDNS=
 ```
@@ -143,27 +143,27 @@ Aktivieren Sie `systemd-networkd` und starten Sie dann neu, damit die Änderunge
 
 ```bash
 sudo systemctl enable systemd-networkd
-sudo neu starten
+sudo reboot
 ```
 
 Starten Sie nun `tcpdump`, damit Sie nach DHCP-Paketen vom Client Raspberry Pi suchen können:
 
 ```bash
 sudo apt install tcpdump dnsmasq
-sudo systemctl aktivieren dnsmasq
+sudo systemctl enable dnsmasq
 sudo tcpdump -i eth0 port bootpc
 ```
 
 Verbinden Sie den Client Raspberry Pi mit Ihrem Netzwerk und schalten Sie ihn ein. Prüfen Sie, ob die LEDs am Client nach ca. 10 Sekunden leuchten, dann sollten Sie vom Client ein Paket "DHCP/BOOTP, Request from ..." bekommen.
 
 ```
-IP 0.0.0.0.bootpc > 255.255.255.255.bootps: BOOTP/DHCP, Anfrage von b8:27:eb...
+IP 0.0.0.0.bootpc > 255.255.255.255.bootps: BOOTP/DHCP, Request from b8:27:eb...
 ```
 
 Jetzt müssen Sie die `dnsmasq`-Konfiguration ändern, damit DHCP dem Gerät antworten kann. Drücken Sie <kbd>STRG + C</kbd>, um das Programm `tcpdump` zu beenden, und geben Sie dann Folgendes ein:
 
 ```bash
-Echo | sudo tee /etc/dnsmasq.conf
+echo | sudo tee /etc/dnsmasq.conf
 sudo nano /etc/dnsmasq.conf
 ```
 
@@ -171,7 +171,7 @@ Ersetzen Sie dann den Inhalt von `dnsmasq.conf` durch:
 
 ```
 port=0
-dhcp-Bereich=10.42.0.255,Proxy
+dhcp-range=10.42.0.255,proxy
 log-dhcp
 enable-tftp
 tftp-root=/tftpboot
@@ -185,8 +185,8 @@ Erstellen Sie nun ein `/tftpboot`-Verzeichnis:
 ```bash
 sudo mkdir /tftpboot
 sudo chmod 777 /tftpboot
-sudo systemctl aktivieren dnsmasq.service
-sudo systemctl Neustart dnsmasq.service
+sudo systemctl enable dnsmasq.service
+sudo systemctl restart dnsmasq.service
 ```
 
 Überwachen Sie nun das `dnsmasq`-Protokoll:
@@ -198,7 +198,7 @@ tail -F /var/log/daemon.log
 Sie sollten so etwas sehen:
 
 ```
-raspberrypi dnsmasq-tftp[1903]: Datei /tftpboot/bootcode.bin nicht gefunden
+raspberrypi dnsmasq-tftp[1903]: file /tftpboot/bootcode.bin not found
 ```
 
 Als nächstes müssen Sie den Inhalt des Boot-Ordners in das Verzeichnis `/tftpboot` kopieren.
@@ -212,7 +212,7 @@ cp -r /boot/* /tftpboot
 Da sich der TFTP-Speicherort geändert hat, starten Sie `dnsmasq` neu:
 
 ```bash
-sudo systemctl Neustart dnsmasq
+sudo systemctl restart dnsmasq
 ```
 
 ### NFS-Root einrichten
@@ -222,7 +222,7 @@ Dies sollte Ihrem Raspberry Pi-Client jetzt ermöglichen, zu versuchen, durchzus
 Exportieren Sie an dieser Stelle das zuvor erstellte Dateisystem `/nfs/client1` und den TFTP-Boot-Ordner.
 
 ```bash
-sudo apt installieren nfs-kernel-server
+sudo apt install nfs-kernel-server
 echo "/nfs/client1 *(rw,sync,no_subtree_check,no_root_squash)" | sudo tee -a /etc/exports
 echo "/tftpboot *(rw,sync,no_subtree_check,no_root_squash)" | sudo tee -a /etc/exports
 ```
@@ -230,16 +230,16 @@ echo "/tftpboot *(rw,sync,no_subtree_check,no_root_squash)" | sudo tee -a /etc/e
 Starten Sie RPC-Bind und den NFS-Server neu, damit sie die neuen Dateien erkennen.
 
 ```bash
-sudo systemctl aktivieren rpcbind
-sudo systemctl Neustart rpcbind
-sudo systemctl aktivieren nfs-kernel-server
-sudo systemctl Neustart nfs-kernel-server
+sudo systemctl enable rpcbind
+sudo systemctl restart rpcbind
+sudo systemctl enable nfs-kernel-server
+sudo systemctl restart nfs-kernel-server
 ```
 
 Bearbeiten Sie `/tftpboot/cmdline.txt` und ab `root=` und ersetzen Sie es durch:
 
 ```
-root=/dev/nfs nfsroot=10.42.0.211:/nfs/client1,vers=4.1,proto=tcp rw ip=dhcp rootwait Aufzug=Deadline
+root=/dev/nfs nfsroot=10.42.0.211:/nfs/client1,vers=4.1,proto=tcp rw ip=dhcp rootwait elevator=deadline
 ```
 
 Hier sollten Sie die IP-Adresse durch die notierte IP-Adresse ersetzen. Entfernen Sie auch alle Teile der Befehlszeile, die mit init= beginnen.
