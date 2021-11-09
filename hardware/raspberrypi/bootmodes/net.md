@@ -1,6 +1,6 @@
 # Netzwerk-Booten
 
-In diesem Abschnitt wird beschrieben, wie das Booten über das Netzwerk auf dem Raspberry Pi 3B, 3B+ und 2B v1.2 funktioniert. Auf dem Raspberry Pi 4 ist das Booten über das Netzwerk im Bootloader der zweiten Stufe im EEPROM implementiert. Weitere Informationen finden Sie auf der Seite [Pi 4 Bootloader Configuration] (../bcm2711_bootloader_config.md).
+In diesem Abschnitt wird beschrieben, wie das Booten über das Netzwerk auf dem Raspberry Pi 3B, 3B+ und 2B v1.2 funktioniert. Auf dem Raspberry Pi 4 ist das Booten über das Netzwerk im Bootloader der zweiten Stufe im EEPROM implementiert. Weitere Informationen finden Sie auf der Seite [Pi 4 Bootloader Configuration](../bcm2711_bootloader_config.md).
 Wir haben auch ein [Tutorial zum Einrichten eines Netzwerk-Boot-Systems](net_tutorial.md). Das Booten über das Netzwerk funktioniert nur für den kabelgebundenen Adapter, der in die oben genannten Modelle von Raspberry Pi eingebaut ist. Das Booten über WLAN wird nicht unterstützt, ebensowenig das Booten von einem anderen kabelgebundenen Netzwerkgerät.
 
 Um über das Netzwerk zu booten, führt das Boot-ROM Folgendes aus:
@@ -48,39 +48,39 @@ Dadurch wird alles von eth0 in eine Datei dump.pcap geschrieben, die Sie dann na
 Sie sollten mindestens eine DHCP-Anfrage und -Antwort sehen, die wie folgt aussieht:
 
 ```
-6:44:38.717115 IP (tos 0x0, ttl 128, id 0, offset 0, Flags [keine], proto UDP (17), Länge 348)
+6:44:38.717115 IP (tos 0x0, ttl 128, id 0, offset 0, flags [none], proto UDP (17), length 348)
     0.0.0.0.68 > 255.255.255.255.67: [no cksum] BOOTP/DHCP, Request from b8:27:eb:28:f6:6d, length 320, xid 0x26f30339, Flags [none] (0x0000)
-Client-Ethernet-Adresse b8:27:eb:28:f6:6d
-Vendor-rfc1048-Erweiterungen
-Magischer Keks 0x63825363
-DHCP-Message Option 53, Länge 1: Discover
-Parameter-Request Option 55, Länge 12:
-Anbieter-Option, Anbieter-Klasse, BF, Option 128
-Option 129, Option 130, Option 131, Option 132
-Option 133, Option 134, Option 135, TFTP
-ARCH Option 93, Länge 2: 0
-NDI Option 94, Länge 3: 1.2.1
-GUID Option 97, Länge 17: 0.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68
-Vendor-Class Option 60, Länge 32: "PXEClient:Arch:00000:UNDI:002001"
-END Option 255, Länge 0
-16:44:41.224619 IP (tos 0x0, ttl 64, id 57713, Offset 0, Flags [keine], proto UDP (17), Länge 372)
-    192.168.1.1.67 > 192.168.1.139.68: [udp sum ok] BOOTP/DHCP, Antwort, Länge 344, xid 0x26f30339, Flags [keine] (0x0000)
-Ihre-IP 192.168.1.139
-Server-IP 192.168.1.1
-Client-Ethernet-Adresse b8:27:eb:28:f6:6d
-Vendor-rfc1048-Erweiterungen
-Magischer Keks 0x63825363
-DHCP-Message Option 53, Länge 1: Angebot
-Server-ID Option 54, Länge 4: 192.168.1.1
-Lease-Time-Option 51, Länge 4: 43200
-RN Option 58, Länge 4: 21600
-RB Option 59, Länge 4: 37800
-Subnetz-Maske Option 1, Länge 4: 255.255.255.0
-BR Option 28, Länge 4: 192.168.1.255
-Vendor-Class Option 60, Länge 9: "PXEClient"
-GUID Option 97, Länge 17: 0.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68
-Vendor-Option Option 43, Länge 32: 6.1.3.10.4.0.80.88.69.9.20.0.0.17.82.97.115.112.98.101.114.114.121.32.80.105.32.66.111.111.116.255
-END Option 255, Länge 0
+	  Client-Ethernet-Address b8:27:eb:28:f6:6d
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Discover
+	    Parameter-Request Option 55, length 12: 
+	      Vendor-Option, Vendor-Class, BF, Option 128
+	      Option 129, Option 130, Option 131, Option 132
+	      Option 133, Option 134, Option 135, TFTP
+	    ARCH Option 93, length 2: 0
+	    NDI Option 94, length 3: 1.2.1
+	    GUID Option 97, length 17: 0.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68
+	    Vendor-Class Option 60, length 32: "PXEClient:Arch:00000:UNDI:002001"
+	    END Option 255, length 0
+16:44:41.224619 IP (tos 0x0, ttl 64, id 57713, offset 0, flags [none], proto UDP (17), length 372)
+    192.168.1.1.67 > 192.168.1.139.68: [udp sum ok] BOOTP/DHCP, Reply, length 344, xid 0x26f30339, Flags [none] (0x0000)
+	  Your-IP 192.168.1.139
+	  Server-IP 192.168.1.1
+	  Client-Ethernet-Address b8:27:eb:28:f6:6d
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Offer
+	    Server-ID Option 54, length 4: 192.168.1.1
+	    Lease-Time Option 51, length 4: 43200
+	    RN Option 58, length 4: 21600
+	    RB Option 59, length 4: 37800
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    BR Option 28, length 4: 192.168.1.255
+	    Vendor-Class Option 60, length 9: "PXEClient"
+	    GUID Option 97, length 17: 0.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68.68
+	    Vendor-Option Option 43, length 32: 6.1.3.10.4.0.80.88.69.9.20.0.0.17.82.97.115.112.98.101.114.114.121.32.80.105.32.66.111.111.116.255
+	    END Option 255, length 0
 ```
 
 Der wichtige Teil der Antwort ist die Vendor-Option Option 43. Diese muss den String "Raspberry Pi Boot" enthalten, obwohl aufgrund
@@ -91,12 +91,12 @@ zu einem Fehler im Boot-ROM müssen Sie möglicherweise drei Leerzeichen am Ende
 Sie wissen, ob die Vendor-Option richtig angegeben ist: Wenn ja, wird ein nachfolgendes TFTP-RRQ-Paket gesendet. RRQs können entweder durch den ersten Datenblock oder eine Fehlermeldung, die besagt, dass die Datei nicht gefunden wurde, beantwortet werden. In einigen Fällen erhalten sie sogar das erste Paket und dann wird die Übertragung vom Pi abgebrochen (dies passiert bei der Überprüfung, ob eine Datei existiert). Das folgende Beispiel besteht aus nur drei Paketen: die ursprüngliche Leseanforderung, der erste Datenblock (der immer 516 Byte groß ist und einen Header und 512 Byte Daten enthält, obwohl der letzte Block immer weniger als 512 Byte hat und eine Länge von Null haben kann) und das dritte Paket (das ACK, das eine Rahmennummer enthält, die mit der Rahmennummer im Datenblock übereinstimmt).
 
 ```
-16:44:41.224964 IP (tos 0x0, ttl 128, id 0, offset 0, Flags [keine], proto UDP (17), Länge 49)
-    192.168.1.139.49152 > 192.168.1.1.69: [keine cksum] 21 RRQ "bootcode.bin" Oktett
-16:44:41.227223 IP (tos 0x0, ttl 64, id 57714, Offset 0, Flags [keine], proto UDP (17), Länge 544)
-    192.168.1.1.55985 > 192.168.1.139.49152: [udp sum ok] UDP, Länge 516
-16:44:41.227418 IP (tos 0x0, ttl 128, id 0, offset 0, Flags [keine], proto UDP (17), Länge 32)
-    192.168.1.139.49152 > 192.168.1.1.55985: [keine cksum] UDP, Länge 4
+16:44:41.224964 IP (tos 0x0, ttl 128, id 0, offset 0, flags [none], proto UDP (17), length 49)
+    192.168.1.139.49152 > 192.168.1.1.69: [no cksum]  21 RRQ "bootcode.bin" octet 
+16:44:41.227223 IP (tos 0x0, ttl 64, id 57714, offset 0, flags [none], proto UDP (17), length 544)
+    192.168.1.1.55985 > 192.168.1.139.49152: [udp sum ok] UDP, length 516
+16:44:41.227418 IP (tos 0x0, ttl 128, id 0, offset 0, flags [none], proto UDP (17), length 32)
+    192.168.1.139.49152 > 192.168.1.1.55985: [no cksum] UDP, length 4
 ```
 
 ## Bekannte Probleme
