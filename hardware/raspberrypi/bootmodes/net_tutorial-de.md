@@ -10,7 +10,7 @@ Dieser Abschnitt gilt nur für den **original** Raspberry Pi 3B; Wenn Sie 3B+ ve
 
 Bevor ein Raspberry Pi über das Netzwerk booten kann, muss er von einer SD-Karte mit einer Konfigurationsoption gebootet werden, um den USB-Boot-Modus zu aktivieren. Dadurch wird ein Bit im OTP-Speicher (One Time Programmable) im Raspberry Pi SoC gesetzt, das das Booten über das Netzwerk ermöglicht. Danach wird die SD-Karte nicht mehr benötigt.
 
-Installieren Sie Raspberry Pi OS Lite (oder Raspberry Pi OS mit Raspberry Pi Desktop) auf der SD-Karte wie gewohnt (../../../installation/installing-images/README.md).
+Installieren Sie Raspberry Pi OS Lite (oder Raspberry Pi OS mit Raspberry Pi Desktop) auf der SD-Karte [wie gewohnt](../../../installation/installing-images/README.md).
 
 Richten Sie anschließend den USB-Boot-Modus ein, indem Sie das Verzeichnis `/boot` mit den neuesten Boot-Dateien vorbereiten:
 
