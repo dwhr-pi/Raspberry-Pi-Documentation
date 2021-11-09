@@ -14,7 +14,7 @@
 Die Gerätefamilie Raspberry Pi ist mit einer Reihe von [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) Bussen ausgestattet. SPI kann verwendet werden, um eine Vielzahl von Peripheriegeräten anzuschließen - Displays, Netzwerkcontroller (Ethernet, CAN-Bus), UARTs usw. Diese Geräte werden am besten von Kernel-Gerätetreibern unterstützt, aber die `spidev`-API ermöglicht das Schreiben von Userspace-Treibern eine breite Palette von Sprachen.
 
 <a name="Hardware"></a>
-##Hardware
+## Hardware
 
 Der für alle Raspberry Pi-Geräte gemeinsame BCM2835-Kern verfügt über 3 SPI-Controller:
 * SPI0 mit zwei Hardware-Chip-Selects ist im Header aller Pis verfügbar (obwohl es eine alternative Zuordnung gibt, die nur auf einem Compute-Modul verwendet werden kann.
@@ -55,7 +55,7 @@ Kapitel 10 im Datenblatt [BCM2835 ARM Peripherals](../bcm2835/BCM2835-ARM-Periph
 | CE1 | 11 | GPIO17 | SPI1_CE1_N |
 | CE2 | 36 | GPIO16 | SPI1_CE2_N |
 
-#### SPI2 (nur auf Rechenmodulen verfügbar)
+#### SPI2 (nur auf Compute Modulen verfügbar)
 | SPI-Funktion | Broadcom-Pin-Name | Broadcom-Pin-Funktion |
 |---|---|---|
 | MOSI | GPIO41 | SPI2_MOSI |
@@ -145,7 +145,7 @@ Wenn CDIV auf 0 gesetzt ist, ist der Divisor 65536. Der Divisor muss ein Vielfac
 
 Weitere Informationen finden Sie im Abschnitt [Linux-Treiber](#Treiber).
 
-###Chipauswahl
+### Chipauswahl
 
 Die Setup- und Hold-Zeiten in Bezug auf die automatische Aktivierung und Deaktivierung der CS-Leitungen beim Betrieb im **DMA**-Modus sind wie folgt:
 
@@ -153,14 +153,14 @@ Die Setup- und Hold-Zeiten in Bezug auf die automatische Aktivierung und Deaktiv
 - Die CS-Leitung wird frühestens 1 Kerntaktzyklus nach der abfallenden Flanke des letzten Taktimpulses deaktiviert.
 
 <a name="Software"></a>
-##Software
+## Software
 
 <a name="Treiber"></a>
 ### Linux-Treiber
 
 Der Standard-Linux-Treiber ist jetzt der Standard spi-bcm2835.
 
-SPI0 ist standardmäßig deaktiviert. Um es zu aktivieren, verwenden Sie [raspi-config](../../../configuration/raspi-config.md) oder stellen Sie sicher, dass die Zeile `dtparam=spi=on` in `/boot/ nicht auskommentiert ist. config.txt`. Standardmäßig verwendet es 2 Chip-Select-Leitungen, dies kann jedoch mit `dtoverlay=spi0-1cs` auf 1 reduziert werden. `dtoverlay=spi0-2cs` existiert auch und ist ohne Parameter äquivalent zu `dtparam=spi=on`.
+SPI0 ist standardmäßig deaktiviert. Um es zu aktivieren, verwenden Sie [raspi-config](../../../configuration/raspi-config.md) oder stellen Sie sicher, dass die Zeile `dtparam=spi=on` in `/boot/config.txt` nicht auskommentiert ist. Standardmäßig verwendet es 2 Chip-Select-Leitungen, dies kann jedoch mit `dtoverlay=spi0-1cs` auf 1 reduziert werden. `dtoverlay=spi0-2cs` existiert auch und ist ohne Parameter äquivalent zu `dtparam=spi=on`.
 
 Um SPI1 zu aktivieren, können Sie 1, 2 oder 3 Chipauswahlleitungen verwenden und in jedem Fall hinzufügen:
 <pre>
@@ -201,15 +201,15 @@ Der Interrupt-Modus wird auf allen SPI-Bussen unterstützt. SPI0 und SPI3-6 unte
 
 Dieser [Thread](https://www.raspberrypi.org/forums/viewtopic.php?f=44&t=19489) diskutiert Latenzprobleme.
 
-###spidev
+### spidev
 
 spidev präsentiert eine ioctl-basierte Userspace-Schnittstelle zu einzelnen SPI CS-Linien. Der Gerätebaum wird verwendet, um anzuzeigen, ob eine CS-Leitung von einem Kernel-Treibermodul gesteuert oder von spidev im Namen des Benutzers verwaltet wird; es ist nicht möglich, beides gleichzeitig zu tun. Beachten Sie, dass die eigenen Kernel von Raspberry Pi bei der Verwendung von Device Tree zur Aktivierung von Spidev entspannter sind - die Upstream-Kernel geben Warnungen über eine solche Verwendung aus und können sie letztendlich ganz verhindern.
 
-#### Spidev von C . verwenden
+#### spidev von C verwenden.
 
 Es gibt ein Loopback-Testprogramm in der Linux-Dokumentation, das als Ausgangspunkt verwendet werden kann. Siehe den Abschnitt [Fehlerbehebung](#Fehlerbehebung).
 
-#### Spidev von Python verwenden
+#### spidev von Python verwenden.
 
 Es gibt mehrere Python-Bibliotheken, die Zugriff auf spidev bieten, darunter die fantasievoll benannten `spidev` (`pip install spidev` - siehe https://pypi.org/project/spidev/) und `SPI-Py` (https:// github.com/lthiery/SPI-Py).
 
@@ -248,4 +248,4 @@ DE AD BE EF BA AD
 F0 0D
 ```
 
-Einige der obigen Inhalte wurden von [https://elinux.org/RPi_SPI] (der elinux-SPI-Seite) kopiert, die ebenfalls von hier entlehnt sind. Beide sind durch die CC-SA-Lizenz abgedeckt.
+Einige der obigen Inhalte wurden von (der elinux-SPI-Seite)[https://elinux.org/RPi_SPI] kopiert, die ebenfalls von hier entlehnt sind. Beide sind durch die CC-SA-Lizenz abgedeckt.
