@@ -100,32 +100,32 @@ Als Beispiel mit einem USB-Stick:
 
 ```bash
 pi@raspberrypi ~ $ lsusb
-Bus 001 Gerät 002: ID 0424:9512 Standard Microsystems Corp.
-Bus 001 Gerät 001: ID 1d6b:0002 Linux Foundation 2.0 Root Hub
-Bus 001 Gerät 003: ID 0424:ec00 Standard Microsystems Corp.
-Bus 001 Gerät 005: ID 05dc:a781 Lexar Media, Inc.
+Bus 001 Device 002: ID 0424:9512 Standard Microsystems Corp.
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 003: ID 0424:ec00 Standard Microsystems Corp.
+Bus 001 Device 005: ID 05dc:a781 Lexar Media, Inc.
 pi@raspberrypi ~ $ dmesg
-... Sachen, die vorher passiert sind ...
-[ 8904.228539] usb 1-1.3: neues Highspeed-USB-Gerät Nummer 5 mit dwc_otg
-[ 8904.332308] usb 1-1.3: Neues USB-Gerät gefunden, idVendor=05dc, idProduct=a781
-[ 8904.332347] usb 1-1.3: Neue USB-Gerätestrings: Mfr=1, Product=2, SerialNumber=3
-[ 8904.332368] usb 1-1.3: Produkt: JD Firefly
-[ 8904.332386] usb 1-1.3: Hersteller: Lexar
-[ 8904.332403] usb 1-1.3: Seriennummer: AACU6B4JZVH31337
-[ 8904.336583] usb-storage 1-1.3:1.0: USB-Massenspeichergerät erkannt
-[ 8904.337483] scsi1 : USB-Speicher 1-1.3:1.0
-[ 8908.114261] scsi 1:0:0:0: Direktzugriff Lexar JD Firefly 0100 PQ: 0 ANSI: 0 CCS
-[ 8908.185048] sd 1:0:0:0: [sda] 4048896 512 Byte logische Blöcke: (2,07 GB/1,93 GiB)
-[ 8908.186152] sd 1:0:0:0: [sda] Schreibschutz ist aus
-[ 8908.186194] sd 1:0:0:0: [sda] Moduserkennung: 43 00 00 00
-[ 8908.187274] sd 1:0:0:0: [sda] Keine Caching-Modus-Seite vorhanden
-[ 8908.187312] sd 1:0:0:0: [sda] Angenommen Laufwerk-Cache: Durchschreiben
-[ 8908.205534] sd 1:0:0:0: [sda] Keine Caching-Modus-Seite vorhanden
-[ 8908.205577] sd 1:0:0:0: [sda] Angenommen Laufwerk-Cache: Durchschreiben
-[ 8908.207226] sda: sda1
-[ 8908.213652] sd 1:0:0:0: [sda] Keine Caching-Modus-Seite vorhanden
-[ 8908.213697] sd 1:0:0:0: [sda] Angenommen Laufwerk-Cache: Durchschreiben
-[ 8908.213724] sd 1:0:0:0: [sda] Angeschlossener SCSI-Wechseldatenträger
+... Stuff that happened before ...
+[ 8904.228539] usb 1-1.3: new high-speed USB device number 5 using dwc_otg
+[ 8904.332308] usb 1-1.3: New USB device found, idVendor=05dc, idProduct=a781
+[ 8904.332347] usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 8904.332368] usb 1-1.3: Product: JD Firefly
+[ 8904.332386] usb 1-1.3: Manufacturer: Lexar
+[ 8904.332403] usb 1-1.3: SerialNumber: AACU6B4JZVH31337
+[ 8904.336583] usb-storage 1-1.3:1.0: USB Mass Storage device detected
+[ 8904.337483] scsi1 : usb-storage 1-1.3:1.0
+[ 8908.114261] scsi 1:0:0:0: Direct-Access     Lexar    JD Firefly       0100 PQ: 0 ANSI: 0 CCS
+[ 8908.185048] sd 1:0:0:0: [sda] 4048896 512-byte logical blocks: (2.07 GB/1.93 GiB)
+[ 8908.186152] sd 1:0:0:0: [sda] Write Protect is off
+[ 8908.186194] sd 1:0:0:0: [sda] Mode Sense: 43 00 00 00
+[ 8908.187274] sd 1:0:0:0: [sda] No Caching mode page present
+[ 8908.187312] sd 1:0:0:0: [sda] Assuming drive cache: write through
+[ 8908.205534] sd 1:0:0:0: [sda] No Caching mode page present
+[ 8908.205577] sd 1:0:0:0: [sda] Assuming drive cache: write through
+[ 8908.207226]  sda: sda1
+[ 8908.213652] sd 1:0:0:0: [sda] No Caching mode page present
+[ 8908.213697] sd 1:0:0:0: [sda] Assuming drive cache: write through
+[ 8908.213724] sd 1:0:0:0: [sda] Attached SCSI removable disk
 ```
 
 In diesem Fall gibt es keine Fehlermeldungen in `dmesg` und der USB-Stick wird vom USB-Speichertreiber erkannt. Wenn für Ihr Gerät kein Treiber verfügbar war, erscheinen normalerweise nur die ersten 6 neuen Zeilen im dmesg-Ausdruck.
