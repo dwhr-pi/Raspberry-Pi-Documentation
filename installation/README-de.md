@@ -8,4 +8,4 @@ Anfänger sollten mit [NOOBS](noobs.md) beginnen, was dem Benutzer eine Auswahl 
 
 - [NOOBS](noobs.md)
 - [Images installieren](installing-images/README.md)
-- [SD-Karten] (sd-cards.md)
+- [SD-Karten](sd-cards.md)
