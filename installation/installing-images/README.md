@@ -8,7 +8,7 @@ Bevor Sie beginnen, vergessen Sie nicht, [die SD-Kartenanforderungen](../sd-card
 
 Raspberry Pi hat ein grafisches Tool zum Schreiben von SD-Karten entwickelt, das unter Mac OS, Ubuntu 18.04 und Windows funktioniert und für die meisten Benutzer die einfachste Option ist, da es das Image herunterlädt und automatisch auf der SD-Karte installiert.
 
-- Laden Sie die neueste Version von [Raspberry Pi Imager] (https://www.raspberrypi.org/downloads/) herunter und installieren Sie sie.
+- Laden Sie die neueste Version von [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) herunter und installieren Sie sie.
   - Wenn Sie Raspberry Pi Imager auf dem Raspberry Pi selbst verwenden möchten, können Sie es von einem Terminal aus mit `sudo apt install rpi-imager` installieren.
 - Verbinden Sie einen SD-Kartenleser mit der darin befindlichen SD-Karte.
 - Öffnen Sie Raspberry Pi Imager und wählen Sie das erforderliche Betriebssystem aus der angezeigten Liste aus.
@@ -32,8 +32,8 @@ Möglicherweise müssen Sie `.zip`-Downloads entpacken, um die Bilddatei (`.img`
 **Hinweis**: Das im ZIP-Archiv enthaltene Raspberry Pi OS mit Desktop-Image ist über 4 GB groß und verwendet das [ZIP64](https://en.wikipedia.org/wiki/Zip_%28file_format%29#ZIP64) Format. Zum Entpacken des Archivs ist ein Entpack-Tool erforderlich, das ZIP64 unterstützt. Die folgenden Zip-Tools unterstützen ZIP64:
 
 - [7-Zip](http://www.7-zip.org/) (Windows)
-- [Der Unarchiver](http://unarchiver.c3.cx/unarchiver) (Mac)
-- [Entpacken](https://linux.die.net/man/1/unzip) (Linux)
+- [The Unarchiver](http://unarchiver.c3.cx/unarchiver) (Mac)
+- [Unzip](https://linux.die.net/man/1/unzip) (Linux)
 
 ### Das Image schreiben
 
@@ -49,6 +49,6 @@ Wie Sie das Image auf die SD-Karte schreiben, hängt vom verwendeten Betriebssys
 
 Sie können nun die SD-Karte in den Raspberry Pi einlegen und ihn einschalten.
 
-Wenn Sie sich für das offizielle Raspberry Pi-Betriebssystem manuell anmelden müssen, ist der Standardbenutzername "pi" mit dem Passwort "raspberry". Denken Sie daran, dass das Standard-Tastaturlayout auf UK eingestellt ist.
+Wenn Sie sich für das offizielle Raspberry Pi-Betriebssystem manuell anmelden müssen, ist der Standardbenutzername `pi` mit dem Passwort `raspberry`. Denken Sie daran, dass das Standard-Tastaturlayout auf UK eingestellt ist.
 
 Sie sollten das Standardpasswort sofort ändern, um sicherzustellen, dass Ihr Raspberry Pi [sicher](../../configuration/security.md) ist.
