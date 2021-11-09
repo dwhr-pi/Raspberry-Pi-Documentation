@@ -46,6 +46,6 @@ sed -i -e "s/BOOT_UART=0/BOOT_UART=1/" bootcode.bin
 
 Als nächstes schließen Sie ein geeignetes serielles USB-Kabel an Ihren Host-Computer an (ein Raspberry Pi funktioniert, obwohl ich finde, dass der einfachste Weg darin besteht, ein serielles USB-Kabel zu verwenden, da es ohne lästige config.txt-Einstellungen funktioniert). Verwenden Sie die Standard-Pins 6, 8 und 10 (GND, GPIO14, GPIO15) auf einem Pi- oder CM-Board.
 
-Verwenden Sie dann "screen" unter Linux oder einem Mac oder "putty" unter Windows, um eine Verbindung zur seriellen Schnittstelle herzustellen.
+Verwenden Sie dann `screen` unter Linux oder einem Mac oder `putty` unter Windows, um eine Verbindung zur seriellen Schnittstelle herzustellen.
 
 Richten Sie Ihre Seriennummer so ein, dass sie bei 115200-8-N-1 empfängt, und starten Sie dann Ihr Pi / Compute-Modul. Sie sollten sofort eine serielle Ausgabe vom Gerät erhalten, wenn bootcode.bin ausgeführt wird.
