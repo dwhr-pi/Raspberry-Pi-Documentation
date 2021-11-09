@@ -87,7 +87,7 @@ If you specify the wrong device in the instructions, you could overwrite your pr
 
 ## Eject
 
-After the `dd` command finishes, eject the card:
+After the `dd` command finishes, remove the SD card with:
 
 ```bash
 sudo diskutil eject /dev/rdiskN

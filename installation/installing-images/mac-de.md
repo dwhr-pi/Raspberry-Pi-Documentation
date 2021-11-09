@@ -36,7 +36,7 @@
         2:                       Linux                        15.7 GB    disk2s2
     ```
 
-###Grafik-/Festplatten-Dienstprogramm
+### Grafik-/Festplatten-Dienstprogramm
 
 - Wählen Sie im Apple-Menü 'System Report' und klicken Sie dann auf 'More info...'.
 - Klicken Sie auf „USB“ (oder „Kartenleser“, wenn Sie einen integrierten SD-Kartenleser verwenden) und suchen Sie dann oben rechts im Fenster nach Ihrer SD-Karte. Klicken Sie darauf und suchen Sie dann im unteren rechten Bereich nach dem BSD-Namen.
@@ -87,7 +87,7 @@ Wenn Sie in der Anleitung das falsche Gerät angeben, können Sie Ihre primäre 
 
 ## Auswerfen
 
-Nachdem der Befehl `dd` beendet ist, werfen Sie die Karte aus:
+Nachdem der Befehl `dd` beendet ist, entfernen Sie die SD Karte mit:
 
 ```bash
 sudo diskutil eject /dev/rdiskN
