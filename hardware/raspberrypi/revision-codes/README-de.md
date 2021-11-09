@@ -60,8 +60,8 @@ NOQuuuWuFMMMCCCCPPPPTTTTTTTTRRRR
 | W | Garantie-Bit | 0: Garantie ist intakt |
 | | | 1: Garantie wurde ungültig durch [overclocking](../../../configuration/config-txt/overclocking.md) |
 | du | Unbenutzt | Unbenutzt |
-| F | Neue Flagge | 1: Überarbeitung im neuen Stil |
-| | | 0: Überarbeitung im alten Stil |
+| F | Neue Flagge | 1: Revision im neuen Stil |
+| | | 0: Revision im alten Stil |
 | MMM | Speichergröße | 0: 256 MB |
 | | | 1: 512 MB |
 | | | 2: 1GB |
