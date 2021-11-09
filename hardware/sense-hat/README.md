@@ -54,7 +54,7 @@ Die LED-Matrix ist ein RGB565 [framebuffer](https://www.kernel.org/doc/Documenta
 
 #### Joystick
 
-Der Joystick erscheint als Eingabeereignisgerät namens "Raspberry Pi Sense HAT Joystick", das den Pfeiltasten und `Enter` zugeordnet ist. Es sollte von jeder Bibliothek unterstützt werden, die Eingaben verarbeiten kann, oder direkt über die [evdev-Schnittstelle] (https://www.kernel.org/doc/Documentation/input/input.txt). Geeignete Bibliotheken sind SDL, [pygame](http://www.pygame.org/docs/) und [python-evdev](https://python-evdev.readthedocs.org/en/latest/). Das mitgelieferte 'Schlange'-Beispiel zeigt, wie Sie direkt auf den Joystick zugreifen.
+Der Joystick erscheint als Eingabeereignisgerät namens "Raspberry Pi Sense HAT Joystick", das den Pfeiltasten und `Enter` zugeordnet ist. Es sollte von jeder Bibliothek unterstützt werden, die Eingaben verarbeiten kann, oder direkt über die [evdev interface](https://www.kernel.org/doc/Documentation/input/input.txt). Geeignete Bibliotheken sind SDL, [pygame](http://www.pygame.org/docs/) und [python-evdev](https://python-evdev.readthedocs.org/en/latest/). Das mitgelieferte 'snake'-Beispiel zeigt, wie Sie direkt auf den Joystick zugreifen.
 
 ## Kalibrierung
 
@@ -113,10 +113,10 @@ Drücken Sie nun Kleinbuchstaben `s` und dann Kleinbuchstaben `x`, um das Progra
 Zusätzlich zu diesen Schritten können Sie auch die Ellipsoidanpassung durchführen, indem Sie die obigen Schritte ausführen, aber 'e' anstelle von 'm' drücken.
 
 Wenn Sie fertig sind, kopieren Sie die resultierende `RTIMULib.ini` nach /etc/ und entfernen Sie die lokale Kopie in `~/.config/sense_hat/`:
-    ````
+
     rm ~/.config/sense_hat/RTIMULib.ini
     sudo cp RTIMULib.ini /etc
-    ````
+
 Sie sind jetzt fertig.
 
 ## Aktualisieren der AVR-Firmware
