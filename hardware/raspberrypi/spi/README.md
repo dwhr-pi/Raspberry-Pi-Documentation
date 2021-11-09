@@ -9,7 +9,7 @@
 - [Fehlerbehebung](#Fehlerbehebung)
 
 <a name="Übersicht"></a>
-## Überblick
+## Übersicht
 
 Die Gerätefamilie Raspberry Pi ist mit einer Reihe von [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) Bussen ausgestattet. SPI kann verwendet werden, um eine Vielzahl von Peripheriegeräten anzuschließen - Displays, Netzwerkcontroller (Ethernet, CAN-Bus), UARTs usw. Diese Geräte werden am besten von Kernel-Gerätetreibern unterstützt, aber die `spidev`-API ermöglicht das Schreiben von Userspace-Treibern eine breite Palette von Sprachen.
 
