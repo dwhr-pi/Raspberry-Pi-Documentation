@@ -9,7 +9,7 @@ Die Kreuzkompilierung des Raspberry Pi-Kernels ist aus zwei Gründen nützlich:
 
 Die folgenden Anweisungen sind in native Builds und Cross-Compilierung unterteilt. Wählen Sie den Abschnitt aus, der für Ihre Situation geeignet ist - obwohl es viele gemeinsame Schritte zwischen den beiden gibt, gibt es auch einige wichtige Unterschiede.
 
-## Lokales Gebäude
+## Local building
 
 Installieren Sie auf einem Raspberry Pi zuerst die neueste Version von [Raspberry Pi OS] (https://www.raspberrypi.org/downloads/). Starten Sie dann Ihren Pi, schließen Sie Ethernet an, um Zugriff auf die Quellen zu erhalten, und melden Sie sich an.
 
