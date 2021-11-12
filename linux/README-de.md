@@ -42,7 +42,7 @@ Erklärung einiger grundlegender Linux-Nutzung und Befehle, um den Pi zu umgehen
 - [Kernel](kernel/README.md)
     - [Aktualisierung](kernel/updating.md)
         - Aktualisieren Sie Ihren Linux-Kernel auf Raspberry Pi
-    - [Gebäude](kernel/building.md)
+    - [Building](kernel/building.md)
         - Aufbau des Linux-Kernels auf Raspberry Pi
     - [Konfigurieren](kernel/configuring.md)
         - Konfiguration des Linux-Kernels auf Raspberry Pi
