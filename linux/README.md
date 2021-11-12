@@ -4,14 +4,14 @@ Erklärung einiger grundlegender Linux-Nutzung und Befehle, um den Pi zu umgehen
 
 ## Inhalt
 
-- [Dateisystem](Dateisystem/README.md)
-    - [Home](Dateisystem/home.md)
+- [Dateisystem](filesystem/README.md)
+    - [Home](filesystem/home.md)
         - Der Home-Ordner Ihres Benutzers auf dem Pi, in dem Sie Ihre Dateien aufbewahren
-    - [Ganzes Dateisystem](Dateisystem/ganzes-Dateisystem.md)
+    - [Ganzes Dateisystem](filesystem/whole-filesystem.md)
         - Der Rest des Linux-Dateisystems
-    - [Backup](Dateisystem/backup.md)
+    - [Backup](filesystem/backup.md)
         - Sichern Sie Ihre Dateien und Ihr Betriebssystem-Image
-- [Verwendung](Verwendung/README.md)
+- [Verwendung](usage/README.md)
     - [Befehle](usage/commands.md)
         - Einige grundlegende und fortgeschrittenere Linux-Befehle
     - [Texteditoren](usage/text-editors.md)
@@ -40,7 +40,7 @@ Erklärung einiger grundlegender Linux-Nutzung und Befehle, um den Pi zu umgehen
     - [Ruby](software/ruby.md)
         - Installation von Software mit Rubys Paketmanager `ruby gems`
 - [Kernel](kernel/README.md)
-    - [Aktualisierung](kernel/update.md)
+    - [Aktualisierung](kernel/updating.md)
         - Aktualisieren Sie Ihren Linux-Kernel auf Raspberry Pi
     - [Gebäude](kernel/building.md)
         - Aufbau des Linux-Kernels auf Raspberry Pi
