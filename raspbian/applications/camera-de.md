@@ -421,7 +421,7 @@ Ruft die aktuellen Kameraeinstellungen ab und schreibt sie auf stdout.
 Qualität 100 ist fast vollständig unkomprimiert. 75 ist ein guter Allround-Wert.
 
 ```
-	--raw,	    -r		Rohe Bayer-Daten zu JPEG-Metadaten hinzufügen
+	--raw,        -r      Rohe Bayer-Daten zu JPEG-Metadaten hinzufügen
 ```
 
 Diese Option fügt die Bayer-Rohdaten von der Kamera in die JPEG-Metadaten ein.
