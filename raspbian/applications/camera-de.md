@@ -493,7 +493,7 @@ Ermöglicht die Angabe des Miniaturbilds, das in die JPEG-Datei eingefügt wird.
 Wenn `--thumb none` angegeben ist, werden keine Thumbnail-Informationen in die Datei eingefügt. Dadurch wird die Dateigröße etwas reduziert.
 
 ```
-	--demo,	-d		Führe einen Demo-Modus aus <Millisekunden>
+	--demo,		-d		Führe einen Demo-Modus aus <Millisekunden>
 ```
 
 Diese Option durchläuft den Bereich der Kameraoptionen. Es wird keine Erfassung durchgeführt und die Demo endet am Ende des Timeout-Zeitraums, unabhängig davon, ob alle Optionen durchlaufen wurden. Die Zeit zwischen den Zyklen sollte als Millisekundenwert angegeben werden.
