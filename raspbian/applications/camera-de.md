@@ -910,7 +910,7 @@ Lassen Sie die Kamera für immer laufen und machen Sie ein Bild, wenn die Eingab
 raspistill -t 0 -k -o my_pics%02d.jpg
 ```
 
-###Videoaufnahmen
+### Videoaufnahmen
 
 Die Einstellungen für Bildgröße und Vorschau sind dieselben wie bei der Aufnahme von Standbildern. Die Standardgröße für Videoaufnahmen ist 1080p (1920x1080).
 
