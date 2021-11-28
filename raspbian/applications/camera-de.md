@@ -658,7 +658,7 @@ Diese Option durchläuft den Bereich der Kameraoptionen. Es erfolgt keine Aufnah
 Derzeit beträgt die zulässige Mindestbildrate 2 fps und die maximale 30 fps. Dies wird sich voraussichtlich in Zukunft ändern.
 
 ```
-	--penc,	-e		Vorschaubild nach der Kodierung anzeigen
+	--penc,		-e		Vorschaubild nach der Kodierung anzeigen
 ```
 Schalten Sie eine Option ein, um die Vorschau nach der Komprimierung anzuzeigen. Dadurch werden alle Komprimierungsartefakte im Vorschaufenster angezeigt. Im Normalbetrieb zeigt die Vorschau die Kameraausgabe vor der Komprimierung. Es kann nicht garantiert werden, dass diese Option in zukünftigen Versionen funktioniert.
 
