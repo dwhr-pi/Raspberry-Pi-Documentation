@@ -668,7 +668,7 @@ Schalten Sie eine Option ein, um die Vorschau nach der Komprimierung anzuzeigen.
 Legt die Intra-Refresh-Periode (GoP)-Rate für das aufgezeichnete Video fest. H264-Video verwendet in jeder Intra-Refresh-Periode einen vollständigen Frame (I-Frame), auf dem nachfolgende Frames basieren. Diese Option gibt die Anzahl der Frames zwischen jedem I-Frame an. Größere Zahlen hier verringern die Größe des resultierenden Videos, und kleinere Zahlen machen den Stream weniger fehleranfällig.
 
 ```
-	--qp,	-qp		Quantisierungsparameter einstellen
+	--qp,		-qp		Quantisierungsparameter einstellen
 ```
 
 Legt den anfänglichen Quantisierungsparameter für den Stream fest. Variiert von ca. 10 bis 40 und beeinflusst die Qualität der Aufnahme stark. Höhere Werte verringern die Qualität und verringern die Dateigröße. Kombinieren Sie diese Einstellung mit einer Bitrate von 0, um eine vollständig variable Bitrate einzustellen.
