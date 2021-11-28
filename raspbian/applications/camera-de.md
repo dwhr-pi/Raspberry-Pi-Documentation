@@ -800,7 +800,7 @@ erzeugt Dateinamen, die wie folgt formatiert sind: `video_Fri 20 Jul 16:23:48 20
 Es stehen viele verschiedene Formatierungsoptionen zur Verfügung – siehe [hier](http://man7.org/linux/man-pages/man3/strftime.3.html) für eine vollständige Liste. Beachten Sie, dass die Optionen `%d` und `%u` nicht verfügbar sind, da sie für die Formatierung von Segmentnummern verwendet werden und dass einige Kombinationen ungültige Dateinamen erzeugen können.
 
 ```
-	--wrap,	-wr		Setzt den Maximalwert für die Segmentnummer
+	--wrap,		-wr		Setzt den Maximalwert für die Segmentnummer
 ```
 Bei der Ausgabe von Segmenten ist dies das Maximum, das die Segmentnummer erreichen kann, bevor sie auf 1 zurückgesetzt wird. Dadurch können Segmente aufgezeichnet, jedoch die ältesten überschrieben werden. Wenn also im obigen Segmentbeispiel auf 4 gesetzt, sind die erzeugten Dateien `video0001.h264`, `video0002.h264`, `video0003.h264` und `video0004.h264`. Sobald `video0004.h264` aufgezeichnet wurde, wird der Zähler auf 1 zurückgesetzt und `video0001.h264` wird überschrieben.
 
@@ -810,7 +810,7 @@ Bei der Ausgabe von Segmenten ist dies das Maximum, das die Segmentnummer erreic
 Bei der Ausgabe von Segmenten ist dies die anfängliche Segmentnummer, mit der eine vorherige Aufnahme von einem bestimmten Segment fortgesetzt werden kann. Der Standardwert ist 1.
 
 ```
-	--raw,	-r
+	--raw,		-r
 ```
 Geben Sie den Ausgabedateinamen für alle angeforderten Rohdatendateien an.
 
