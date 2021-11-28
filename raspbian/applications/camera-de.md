@@ -647,7 +647,7 @@ Gibt während des Programmlaufs Debug-/Informationsmeldungen aus.
 Die Gesamtdauer, für die das Programm ausgeführt wird. Wenn nicht angegeben, ist der Standardwert 5000 ms (5 Sekunden). Wenn auf 0 gesetzt, wird die Anwendung auf unbestimmte Zeit ausgeführt, bis sie mit Strg-C gestoppt wird.
 
 ```
-	--demo,	-d		Führe einen Demo-Modus aus <Millisekunden>
+	--demo,		-d		Führe einen Demo-Modus aus <Millisekunden>
 ```
 
 Diese Option durchläuft den Bereich der Kameraoptionen. Es erfolgt keine Aufnahme und die Demo endet am Ende des Timeout-Zeitraums, unabhängig davon, ob alle Optionen durchlaufen wurden. Die Zeit zwischen den Zyklen sollte als Millisekundenwert angegeben werden.
