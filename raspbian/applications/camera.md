@@ -99,7 +99,7 @@ Stellt die Helligkeit des Bildes ein. 50 ist die Standardeinstellung. 0 ist schw
 Legt die Farbsättigung des Bildes fest. 0 ist die Standardeinstellung.
 
 ```
-	--ISO,	-ISO		Aufnahme-ISO einstellen (100 - 800)
+	--ISO,	-ISO		    Aufnahme-ISO einstellen (100 - 800)
 ```
 
 Legt die für Aufnahmen zu verwendende ISO fest.
@@ -111,7 +111,7 @@ Legt die für Aufnahmen zu verwendende ISO fest.
 Nur im Videomodus: Aktiviert die Videostabilisierung.
 
 ```
-	--ev,	-ev		EV-Korrektur einstellen (-10 - 10)
+	--ev,	-ev		        EV-Korrektur einstellen (-10 - 10)
 ```
 
 Stellt die EV-Korrektur des Bildes ein. Standard ist 0.
@@ -138,7 +138,7 @@ Mögliche Optionen sind:
 Beachten Sie, dass je nach Kameraeinstellung möglicherweise nicht alle diese Einstellungen implementiert werden.
 
 ```
-	--flicker, -fli		Flimmervermeidungsmodus einstellen
+	--flicker, -fli		   Flimmervermeidungsmodus einstellen
 ```
 Stellen Sie einen Modus ein, um Lichtflimmern bei der Netzfrequenz zu kompensieren, das als dunkles horizontales Band über einem Bild zu sehen ist. Die Flicker-Vermeidung sperrt die Belichtungszeit auf ein Vielfaches der Netzflimmerfrequenz (8,33 ms für 60 Hz oder 10 ms für 50 Hz). Dies bedeutet, dass Bilder stärker verrauscht sein können, da der Steueralgorithmus die Verstärkung anstelle der Belichtungszeit erhöhen muss, wenn er einen Zwischenbelichtungswert wünscht. `auto` kann durch externe Faktoren verwechselt werden, daher ist es vorzuziehen, diese Einstellung deaktiviert zu lassen, es sei denn, sie wird tatsächlich benötigt.
 
@@ -150,7 +150,7 @@ Mögliche Optionen sind:
 - 60Hz: Vermeidung auf 60Hz einstellen
 
 ```
-	--awb,	-awb		Automatischen Weißabgleich (AWB)-Modus einstellen
+	--awb,	-awb		   Automatischen Weißabgleich (AWB)-Modus einstellen
 ```
 Modi, für die Farbtemperaturbereiche (K) verfügbar sind, haben diese Einstellungen in Klammern.
 
@@ -236,7 +236,7 @@ Spiegelt die Vorschau und das gespeicherte Bild horizontal.
 Spiegelt die Vorschau und das gespeicherte Bild vertikal.
 
 ```
-	--roi,	-roi		Sensorregion von Interesse einstellen
+	--roi,	-roi		       Sensorregion von Interesse einstellen
 ```
 
 Ermöglicht die Angabe des Bereichs des Sensors, der als Quelle für die Vorschau und Aufnahme verwendet werden soll. Dies ist als XY für die obere linke Ecke und eine Breite und Höhe mit allen Werten in normalisierten Koordinaten (0,0 - 1,0) definiert. Um also einen ROI auf halber Höhe des Sensors und eine Breite und Höhe von einem Viertel des Sensors festzulegen, verwenden Sie:
@@ -260,7 +260,7 @@ Setzt die Verschlusszeit auf den angegebenen Wert (in Mikrosekunden). Die Versch
 Die Verwendung von Werten über diesen Maximalwerten führt zu undefiniertem Verhalten.
 
 ```
-	--drc,	-drc		Enable/disable - Dynamische Bereichskomprimierung aktivieren/deaktivieren
+	--drc,	-drc		     Enable/disable - Dynamische Bereichskomprimierung aktivieren/deaktivieren
 ```
 
 DRC ändert die Bilder, indem es den Bereich der dunklen Bereiche vergrößert und die helleren Bereiche verringert. Dies kann das Bild in Bereichen mit schwachem Licht verbessern.
@@ -421,7 +421,7 @@ Ruft die aktuellen Kameraeinstellungen ab und schreibt sie auf stdout.
 Qualität 100 ist fast vollständig unkomprimiert. 75 ist ein guter Allround-Wert.
 
 ```
-	--raw,	-r		Rohe Bayer-Daten zu JPEG-Metadaten hinzufügen
+	--raw,      -r      Rohe Bayer-Daten zu JPEG-Metadaten hinzufügen
 ```
 
 Diese Option fügt die Bayer-Rohdaten von der Kamera in die JPEG-Metadaten ein.
@@ -493,7 +493,7 @@ Ermöglicht die Angabe des Miniaturbilds, das in die JPEG-Datei eingefügt wird.
 Wenn `--thumb none` angegeben ist, werden keine Thumbnail-Informationen in die Datei eingefügt. Dadurch wird die Dateigröße etwas reduziert.
 
 ```
-	--demo,	-d		Führe einen Demo-Modus aus <Millisekunden>
+	--demo,		-d		Führe einen Demo-Modus aus <Millisekunden>
 ```
 
 Diese Option durchläuft den Bereich der Kameraoptionen. Es wird keine Erfassung durchgeführt und die Demo endet am Ende des Timeout-Zeitraums, unabhängig davon, ob alle Optionen durchlaufen wurden. Die Zeit zwischen den Zyklen sollte als Millisekundenwert angegeben werden.
@@ -647,7 +647,7 @@ Gibt während des Programmlaufs Debug-/Informationsmeldungen aus.
 Die Gesamtdauer, für die das Programm ausgeführt wird. Wenn nicht angegeben, ist der Standardwert 5000 ms (5 Sekunden). Wenn auf 0 gesetzt, wird die Anwendung auf unbestimmte Zeit ausgeführt, bis sie mit Strg-C gestoppt wird.
 
 ```
-	--demo,	-d		Führe einen Demo-Modus aus <Millisekunden>
+	--demo,		-d			Führe einen Demo-Modus aus <Millisekunden>
 ```
 
 Diese Option durchläuft den Bereich der Kameraoptionen. Es erfolgt keine Aufnahme und die Demo endet am Ende des Timeout-Zeitraums, unabhängig davon, ob alle Optionen durchlaufen wurden. Die Zeit zwischen den Zyklen sollte als Millisekundenwert angegeben werden.
@@ -658,7 +658,7 @@ Diese Option durchläuft den Bereich der Kameraoptionen. Es erfolgt keine Aufnah
 Derzeit beträgt die zulässige Mindestbildrate 2 fps und die maximale 30 fps. Dies wird sich voraussichtlich in Zukunft ändern.
 
 ```
-	--penc,	-e		Vorschaubild nach der Kodierung anzeigen
+	--penc,		-e		Vorschaubild nach der Kodierung anzeigen
 ```
 Schalten Sie eine Option ein, um die Vorschau nach der Komprimierung anzuzeigen. Dadurch werden alle Komprimierungsartefakte im Vorschaufenster angezeigt. Im Normalbetrieb zeigt die Vorschau die Kameraausgabe vor der Komprimierung. Es kann nicht garantiert werden, dass diese Option in zukünftigen Versionen funktioniert.
 
@@ -668,7 +668,7 @@ Schalten Sie eine Option ein, um die Vorschau nach der Komprimierung anzuzeigen.
 Legt die Intra-Refresh-Periode (GoP)-Rate für das aufgezeichnete Video fest. H264-Video verwendet in jeder Intra-Refresh-Periode einen vollständigen Frame (I-Frame), auf dem nachfolgende Frames basieren. Diese Option gibt die Anzahl der Frames zwischen jedem I-Frame an. Größere Zahlen hier verringern die Größe des resultierenden Videos, und kleinere Zahlen machen den Stream weniger fehleranfällig.
 
 ```
-	--qp,	-qp		Quantisierungsparameter einstellen
+	--qp,		-qp			Quantisierungsparameter einstellen
 ```
 
 Legt den anfänglichen Quantisierungsparameter für den Stream fest. Variiert von ca. 10 bis 40 und beeinflusst die Qualität der Aufnahme stark. Höhere Werte verringern die Qualität und verringern die Dateigröße. Kombinieren Sie diese Einstellung mit einer Bitrate von 0, um eine vollständig variable Bitrate einzustellen.
@@ -800,7 +800,7 @@ erzeugt Dateinamen, die wie folgt formatiert sind: `video_Fri 20 Jul 16:23:48 20
 Es stehen viele verschiedene Formatierungsoptionen zur Verfügung – siehe [hier](http://man7.org/linux/man-pages/man3/strftime.3.html) für eine vollständige Liste. Beachten Sie, dass die Optionen `%d` und `%u` nicht verfügbar sind, da sie für die Formatierung von Segmentnummern verwendet werden und dass einige Kombinationen ungültige Dateinamen erzeugen können.
 
 ```
-	--wrap,	-wr		Setzt den Maximalwert für die Segmentnummer
+	--wrap,		-wr		Setzt den Maximalwert für die Segmentnummer
 ```
 Bei der Ausgabe von Segmenten ist dies das Maximum, das die Segmentnummer erreichen kann, bevor sie auf 1 zurückgesetzt wird. Dadurch können Segmente aufgezeichnet, jedoch die ältesten überschrieben werden. Wenn also im obigen Segmentbeispiel auf 4 gesetzt, sind die erzeugten Dateien `video0001.h264`, `video0002.h264`, `video0003.h264` und `video0004.h264`. Sobald `video0004.h264` aufgezeichnet wurde, wird der Zähler auf 1 zurückgesetzt und `video0001.h264` wird überschrieben.
 
@@ -810,7 +810,7 @@ Bei der Ausgabe von Segmenten ist dies das Maximum, das die Segmentnummer erreic
 Bei der Ausgabe von Segmenten ist dies die anfängliche Segmentnummer, mit der eine vorherige Aufnahme von einem bestimmten Segment fortgesetzt werden kann. Der Standardwert ist 1.
 
 ```
-	--raw,	-r
+	--raw,		-r
 ```
 Geben Sie den Ausgabedateinamen für alle angeforderten Rohdatendateien an.
 
@@ -910,7 +910,7 @@ Lassen Sie die Kamera für immer laufen und machen Sie ein Bild, wenn die Eingab
 raspistill -t 0 -k -o my_pics%02d.jpg
 ```
 
-###Videoaufnahmen
+### Videoaufnahmen
 
 Die Einstellungen für Bildgröße und Vorschau sind dieselben wie bei der Aufnahme von Standbildern. Die Standardgröße für Videoaufnahmen ist 1080p (1920x1080).
 
