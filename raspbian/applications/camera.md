@@ -99,7 +99,7 @@ Stellt die Helligkeit des Bildes ein. 50 ist die Standardeinstellung. 0 ist schw
 Legt die Farbsättigung des Bildes fest. 0 ist die Standardeinstellung.
 
 ```
-	--ISO,	-ISO		    Aufnahme-ISO einstellen (100 - 800)
+	--ISO,	-ISO			Aufnahme-ISO einstellen (100 - 800)
 ```
 
 Legt die für Aufnahmen zu verwendende ISO fest.
@@ -138,7 +138,7 @@ Mögliche Optionen sind:
 Beachten Sie, dass je nach Kameraeinstellung möglicherweise nicht alle diese Einstellungen implementiert werden.
 
 ```
-	--flicker, -fli		   Flimmervermeidungsmodus einstellen
+	--flicker, -fli			Flimmervermeidungsmodus einstellen
 ```
 Stellen Sie einen Modus ein, um Lichtflimmern bei der Netzfrequenz zu kompensieren, das als dunkles horizontales Band über einem Bild zu sehen ist. Die Flicker-Vermeidung sperrt die Belichtungszeit auf ein Vielfaches der Netzflimmerfrequenz (8,33 ms für 60 Hz oder 10 ms für 50 Hz). Dies bedeutet, dass Bilder stärker verrauscht sein können, da der Steueralgorithmus die Verstärkung anstelle der Belichtungszeit erhöhen muss, wenn er einen Zwischenbelichtungswert wünscht. `auto` kann durch externe Faktoren verwechselt werden, daher ist es vorzuziehen, diese Einstellung deaktiviert zu lassen, es sei denn, sie wird tatsächlich benötigt.
 
@@ -260,7 +260,7 @@ Setzt die Verschlusszeit auf den angegebenen Wert (in Mikrosekunden). Die Versch
 Die Verwendung von Werten über diesen Maximalwerten führt zu undefiniertem Verhalten.
 
 ```
-	--drc,	-drc		     Enable/disable - Dynamische Bereichskomprimierung aktivieren/deaktivieren
+	--drc,	-drc			Enable/disable - Dynamische Bereichskomprimierung aktivieren/deaktivieren
 ```
 
 DRC ändert die Bilder, indem es den Bereich der dunklen Bereiche vergrößert und die helleren Bereiche verringert. Dies kann das Bild in Bereichen mit schwachem Licht verbessern.
@@ -273,7 +273,7 @@ DRC ändert die Bilder, indem es den Bereich der dunklen Bereiche vergrößert u
 DRC ist standardmäßig deaktiviert.
 
 ```
-	--stats,	-st		Standbildaufnahmerahmen für Bildstatistiken verwenden
+	--stats,	-st			Standbildaufnahmerahmen für Bildstatistiken verwenden
 ```
 
 Erzwingen Sie die Neuberechnung von Statistiken für Standbilder-Erfassungsdurchgänge. Digitale Verstärkung und AWB werden auf der Grundlage der tatsächlichen Erfassungsbildstatistik neu berechnet und nicht auf dem vorhergehenden Vorschaubild.
@@ -421,7 +421,7 @@ Ruft die aktuellen Kameraeinstellungen ab und schreibt sie auf stdout.
 Qualität 100 ist fast vollständig unkomprimiert. 75 ist ein guter Allround-Wert.
 
 ```
-	--raw,      -r      Rohe Bayer-Daten zu JPEG-Metadaten hinzufügen
+	--raw,      -r			Rohe Bayer-Daten zu JPEG-Metadaten hinzufügen
 ```
 
 Diese Option fügt die Bayer-Rohdaten von der Kamera in die JPEG-Metadaten ein.
@@ -511,7 +511,7 @@ Gültige Optionen sind `jpg`, `bmp`, `gif` und `png`. Beachten Sie, dass das Spe
 Setzt das JPEG-Neustartmarkierungsintervall auf einen bestimmten Wert. Kann für verlustbehaftete Transportströme nützlich sein, da eine beschädigte JPEG-Datei immer noch teilweise angezeigt werden kann.
 
 ```
-	--exif,	-x		EXIF-Tag zum Anwenden auf Captures (Format als 'key=value')
+	--exif,	-x			EXIF-Tag zum Anwenden auf Captures (Format als 'key=value')
 ```
 
 Ermöglicht das Einfügen bestimmter EXIF-Tags in das JPEG-Bild. Sie können bis zu 32 EXIF-Tag-Einträge haben. Dies ist nützlich für Aufgaben wie das Hinzufügen von GPS-Metadaten. So stellen Sie beispielsweise den Längengrad ein:
@@ -585,7 +585,7 @@ Nicht unterstützte Optionen:
 Zusätzliche Optionen:
 
 ```
-	--rgb,	-rgb		Unkomprimierte Daten als RGB888 speichern
+	--rgb,	-rgb			Unkomprimierte Daten als RGB888 speichern
 ```
 Diese Option erzwingt, dass das Bild als RGB-Daten mit 8 Bit pro Kanal gespeichert wird, anstatt als YUV420.
 
@@ -637,23 +637,23 @@ Um einen TCP-Port (IPv4) abzuhören und auf eine eingehende Verbindung zu warten
 Wenn eine Netzwerkverbindung als Datensenke verwendet wird, lässt diese Option das System auf eine Verbindung vom Remote-System warten, bevor Daten gesendet werden.
 
 ```
-	--verbose,	-v		Ausführliche Informationen während der Ausführung ausgeben
+	--verbose,	-v			Ausführliche Informationen während der Ausführung ausgeben
 ```
 Gibt während des Programmlaufs Debug-/Informationsmeldungen aus.
 
 ```
-	--timeout,	-t		Zeit, bevor die Kamera ein Bild aufnimmt und herunterfährt
+	--timeout,	-t			Zeit, bevor die Kamera ein Bild aufnimmt und herunterfährt
 ```
 Die Gesamtdauer, für die das Programm ausgeführt wird. Wenn nicht angegeben, ist der Standardwert 5000 ms (5 Sekunden). Wenn auf 0 gesetzt, wird die Anwendung auf unbestimmte Zeit ausgeführt, bis sie mit Strg-C gestoppt wird.
 
 ```
-	--demo,		-d			Führe einen Demo-Modus aus <Millisekunden>
+	--demo,		-d		Führe einen Demo-Modus aus <Millisekunden>
 ```
 
 Diese Option durchläuft den Bereich der Kameraoptionen. Es erfolgt keine Aufnahme und die Demo endet am Ende des Timeout-Zeitraums, unabhängig davon, ob alle Optionen durchlaufen wurden. Die Zeit zwischen den Zyklen sollte als Millisekundenwert angegeben werden.
 
 ```
-	--framerate,	-fps		Geben Sie die Bilder pro Sekunde an, die aufgezeichnet werden sollen
+	--framerate,	-fps			Geben Sie die Bilder pro Sekunde an, die aufgezeichnet werden sollen
 ```
 Derzeit beträgt die zulässige Mindestbildrate 2 fps und die maximale 30 fps. Dies wird sich voraussichtlich in Zukunft ändern.
 
@@ -668,7 +668,7 @@ Schalten Sie eine Option ein, um die Vorschau nach der Komprimierung anzuzeigen.
 Legt die Intra-Refresh-Periode (GoP)-Rate für das aufgezeichnete Video fest. H264-Video verwendet in jeder Intra-Refresh-Periode einen vollständigen Frame (I-Frame), auf dem nachfolgende Frames basieren. Diese Option gibt die Anzahl der Frames zwischen jedem I-Frame an. Größere Zahlen hier verringern die Größe des resultierenden Videos, und kleinere Zahlen machen den Stream weniger fehleranfällig.
 
 ```
-	--qp,		-qp			Quantisierungsparameter einstellen
+	--qp,		-qp		Quantisierungsparameter einstellen
 ```
 
 Legt den anfänglichen Quantisierungsparameter für den Stream fest. Variiert von ca. 10 bis 40 und beeinflusst die Qualität der Aufnahme stark. Höhere Werte verringern die Qualität und verringern die Dateigröße. Kombinieren Sie diese Einstellung mit einer Bitrate von 0, um eine vollständig variable Bitrate einzustellen.
