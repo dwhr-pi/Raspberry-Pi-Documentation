@@ -150,7 +150,7 @@ Mögliche Optionen sind:
 - 60Hz: Vermeidung auf 60Hz einstellen
 
 ```
-	--awb,	-awb		   Automatischen Weißabgleich (AWB)-Modus einstellen
+	--awb,	-awb		   	Automatischen Weißabgleich (AWB)-Modus einstellen
 ```
 Modi, für die Farbtemperaturbereiche (K) verfügbar sind, haben diese Einstellungen in Klammern.
 
@@ -273,7 +273,7 @@ DRC ändert die Bilder, indem es den Bereich der dunklen Bereiche vergrößert u
 DRC ist standardmäßig deaktiviert.
 
 ```
-	--stats,	-st			Standbildaufnahmerahmen für Bildstatistiken verwenden
+	--stats,	-st		Standbildaufnahmerahmen für Bildstatistiken verwenden
 ```
 
 Erzwingen Sie die Neuberechnung von Statistiken für Standbilder-Erfassungsdurchgänge. Digitale Verstärkung und AWB werden auf der Grundlage der tatsächlichen Erfassungsbildstatistik neu berechnet und nicht auf dem vorhergehenden Vorschaubild.
@@ -353,7 +353,7 @@ Fügt dem Bild Text und/oder Metadaten hinzu.
 
 Metadaten werden mit einer Bitmasken-Notation angezeigt, fügen Sie sie also zusammen, um mehrere Parameter anzuzeigen. 12 zeigt beispielsweise time(4) und date(8) an, da 4+8=12.
 
-Text kann Platzhalter für Datum/Uhrzeit enthalten, indem das Zeichen '%' verwendet wird, wie es von <a title="strftime man page" href="http://man7.org/linux/man-pages/man3/strftime.3 verwendet wird. html">strftime</a>.
+Text kann Platzhalter für Datum/Uhrzeit enthalten, indem das Zeichen '%' verwendet wird, wie es von <a title="strftime man page" href="http://man7.org/linux/man-pages/man3/strftime.3.html">strftime</a> verwendet wird.
 
 |Wert| Bedeutung | Beispielausgabe |
 |----|-----------|-----------------|
@@ -368,8 +368,8 @@ Text kann Platzhalter für Datum/Uhrzeit enthalten, indem das Zeichen '%' verwen
 |-a 512|Rahmennummer| |
 |-a 1024|Schwarzer Hintergrund| |
 |-a "ABC %Y-%m-%d %X"|Text anzeigen|ABC %Y-%m-%d %X|
-|-a 4 -a "ABC %Y-%m-%d %X"|Benutzerdefinierte <a title="strftime man-Seite" href="http://man7.org/linux/man-pages/man3/ anzeigen strftime.3.html">formatiertes</a> Datum/Uhrzeit|ABC 2015-10-28 20:09:33|
-|-a 8 -a "ABC %Y-%m-%d %X"|Benutzerdefinierte <a title="strftime man-Seite" href="http://man7.org/linux/man-pages/man3/ anzeigen strftime.3.html">formatiertes</a> Datum/Uhrzeit|ABC 2015-10-28 20:09:33|
+|-a 4 -a "ABC %Y-%m-%d %X"|Benutzerdefinierte <a title="strftime man-Seite" href="http://man7.org/linux/man-pages/man3/strftime.3.html">formatiertes</a> Datum/Uhrzeit|ABC 2015-10-28 20:09:33|
+|-a 8 -a "ABC %Y-%m-%d %X"|Benutzerdefinierte <a title="strftime man-Seite" href="http://man7.org/linux/man-pages/man3/strftime.3.html">formatiertes</a> Datum/Uhrzeit|ABC 2015-10-28 20:09:33|
 
 ```
 	--annotateex,	-ae		Setzt zusätzliche Anmerkungsparameter
@@ -439,13 +439,13 @@ Gibt den Ausgabedateinamen an. Wenn nicht angegeben, wird keine Datei gespeicher
 Erstellt eine Dateisystemverknüpfung unter diesem Namen zum neuesten Frame.
 
 ```
-	--verbose,	-v		Ausführliche Informationen während der Ausführung ausgeben
+	--verbose,	-v	Ausführliche Informationen während der Ausführung ausgeben
 ```
 
 Gibt während des Programmlaufs Debug-/Informationsmeldungen aus.
 
 ```
-	--timeout,	-t		Zeit, bevor die Kamera ein Bild aufnimmt und herunterfährt
+	--timeout,	-t	Zeit, bevor die Kamera ein Bild aufnimmt und herunterfährt
 ```
 
 Das Programm wird für die angegebene Dauer in Millisekunden ausgeführt. Es nimmt dann die Aufnahme und speichert sie, wenn eine Ausgabe angegeben wird. Wenn kein Timeout-Wert angegeben ist, wird er auf 5 Sekunden (-t 5000) gesetzt. Beachten Sie, dass niedrige Werte (weniger als 500 ms, obwohl dies von anderen Einstellungen abhängen kann) der Kamera möglicherweise nicht genügend Zeit zum Starten geben und nicht genügend Frames für die automatischen Algorithmen wie AWB und AGC bereitstellen, um genaue Ergebnisse zu liefern.
