@@ -201,13 +201,13 @@ Legen Sie einen Effekt fest, der auf das Bild angewendet werden soll:
 Beachten Sie, dass nicht alle diese Einstellungen unter allen Umständen verfügbar sind.
 
 ```
-	--colfx,	-cfx		Farbeffekt setzen <U:V>
+	--colfx,	-cfx	Farbeffekt setzen <U:V>
 ```
 
 Die gelieferten U- und V-Parameter (Bereich 0 - 255) werden auf die U- und Y-Kanäle des Bildes angewendet. Beispielsweise sollte --colfx 128:128 ein monochromes Bild ergeben.
 
 ```
-	--metering,	-mm		Messmodus einstellen
+	--metering,	-mm	Messmodus einstellen
 ```
 
 Geben Sie den Messmodus für die Vorschau und Aufnahme an:
@@ -218,25 +218,25 @@ Geben Sie den Messmodus für die Vorschau und Aufnahme an:
 - matrix: Matrixmessung
 
 ```
-	--rotation,	-rot		Bilddrehung einstellen (0 - 359)
+	--rotation,	-rot	Bilddrehung einstellen (0 - 359)
 ```
 
 Legt die Drehung des Bildes im Sucher und des resultierenden Bildes fest. Dies kann jeden Wert von 0 aufwärts annehmen, aber aufgrund von Hardwarebeschränkungen werden nur Drehungen von 0, 90, 180 und 270 Grad unterstützt.
 
 ```
-	--hflip,	-hf		Setzt horizontalen Flip
+	--hflip,	-hf	Setzt horizontalen Flip
 ```
 
 Spiegelt die Vorschau und das gespeicherte Bild horizontal.
 
 ```
-	--vflip,	-vf		Vertikales Spiegeln einstellen
+	--vflip,	-vf	Vertikales Spiegeln einstellen
 ```
 
 Spiegelt die Vorschau und das gespeicherte Bild vertikal.
 
 ```
-	--roi,	-roi		       Sensorregion von Interesse einstellen
+	--roi,	-roi	Sensorregion von Interesse einstellen
 ```
 
 Ermöglicht die Angabe des Bereichs des Sensors, der als Quelle für die Vorschau und Aufnahme verwendet werden soll. Dies ist als XY für die obere linke Ecke und eine Breite und Höhe mit allen Werten in normalisierten Koordinaten (0,0 - 1,0) definiert. Um also einen ROI auf halber Höhe des Sensors und eine Breite und Höhe von einem Viertel des Sensors festzulegen, verwenden Sie:
@@ -246,7 +246,7 @@ Ermöglicht die Angabe des Bereichs des Sensors, der als Quelle für die Vorscha
 ```
 
 ```
-	--shutter,	-ss		Einstellen der Verschlusszeit/-zeit
+	--shutter,	-ss	Einstellen der Verschlusszeit/-zeit
 ```
 
 Setzt die Verschlusszeit auf den angegebenen Wert (in Mikrosekunden). Die Verschlusszeitbegrenzungen sind wie folgt:
@@ -260,7 +260,7 @@ Setzt die Verschlusszeit auf den angegebenen Wert (in Mikrosekunden). Die Versch
 Die Verwendung von Werten über diesen Maximalwerten führt zu undefiniertem Verhalten.
 
 ```
-	--drc,	-drc			Enable/disable - Dynamische Bereichskomprimierung aktivieren/deaktivieren
+	--drc,	-drc		Enable/disable - Dynamische Bereichskomprimierung aktivieren/deaktivieren
 ```
 
 DRC ändert die Bilder, indem es den Bereich der dunklen Bereiche vergrößert und die helleren Bereiche verringert. Dies kann das Bild in Bereichen mit schwachem Licht verbessern.
@@ -273,7 +273,7 @@ DRC ändert die Bilder, indem es den Bereich der dunklen Bereiche vergrößert u
 DRC ist standardmäßig deaktiviert.
 
 ```
-	--stats,	-st		Standbildaufnahmerahmen für Bildstatistiken verwenden
+	--stats,	-st	Standbildaufnahmerahmen für Bildstatistiken verwenden
 ```
 
 Erzwingen Sie die Neuberechnung von Statistiken für Standbilder-Erfassungsdurchgänge. Digitale Verstärkung und AWB werden auf der Grundlage der tatsächlichen Erfassungsbildstatistik neu berechnet und nicht auf dem vorhergehenden Vorschaubild.
@@ -347,7 +347,7 @@ Wählt aus, welche Kamera in einem Multikamerasystem verwendet werden soll. Verw
 
 
 ```
-	--annotate,	-a		Enable/set annotate flags or text
+	--annotate,	-a	Enable/set - Aktivieren/Setzen von Anmerkungs-Flags oder -Text
 ```
 Fügt dem Bild Text und/oder Metadaten hinzu.
 
