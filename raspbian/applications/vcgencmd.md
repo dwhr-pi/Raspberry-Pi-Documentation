@@ -70,20 +70,20 @@ Gibt die vom integrierten Temperatursensor gemessene Temperatur des SoC zurück.
 
 Dies gibt die aktuelle Frequenz des angegebenen Takts zurück. Die Optionen sind:
 
-| Uhr | Beschreibung |
-|:---:|--------------|
-| Arm | ARM-Kerne |
-| Kern | VC4-Skaliererkerne |
-| H264 | H264-Block |
-| isp | Bildsignalprozessor |
-| v3d | 3D-Block |
-| uart | UART |
-| pwm | PWM-Block (analoger Audioausgang) |
-| emmc | SD-Kartenschnittstelle |
-| Pixel | Pixelventil |
-| vec | Analoger Video-Encoder |
-| hdmi | HDMI |
-| dpi | Peripherieschnittstelle anzeigen |
+| Uhr   | Beschreibung |
+|:-----:|--------------|
+| arm   | ARM-Kerne |
+| core  | VC4-Skaliererkerne |
+| H264  | H264-Block |
+| isp   | Bildsignalprozessor |
+| v3d   | 3D-Block |
+| uart  | UART |
+| pwm   | PWM-Block (analoger Audioausgang) |
+| emmc  | SD-Kartenschnittstelle |
+| pixel | Pixelwert |
+| vec   | Analoger Video-Encoder |
+| hdmi  | HDMI |
+| dpi   | Peripherieschnittstelle anzeigen |
 
 z.B. `vcgencmd measure_clock arm`
 
@@ -91,9 +91,9 @@ z.B. `vcgencmd measure_clock arm`
 
 Zeigt die aktuellen Spannungen an, die vom spezifischen Block verwendet werden.
 
-| Block | Beschreibung |
-|:-----:|--------------|
-| Kern | VC4-Kernspannung |
+| Block   | Beschreibung |
+|:-------:|--------------|
+| core    | VC4-Kernspannung |
 | sdram_c | SDRAM-Kernspannung |
 | sdram_i | SDRAM-E/A-Spannung |
 | sdram_p | SDRAM Phy-Spannung|
@@ -153,7 +153,7 @@ Beachten Sie, dass dies beim 7" Raspberry Pi Touch Display einfach die Hintergru
 |Haupt-LCD | 0 |
 |Sekundär-LCD | 1 |
 |HDMI 0 | 2 |
-|Verbundwerkstoff | 3 |
+|Composite | 3 |
 |HDMI 1 | 7 |
 
 Um festzustellen, ob eine bestimmte Display-ID ein- oder ausgeschaltet ist, verwenden Sie -1 als ersten Parameter.

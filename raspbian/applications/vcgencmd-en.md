@@ -81,9 +81,9 @@ This returns the current frequency of the specified clock. The options are:
 | pwm   | PWM block (analogue audio output) | 
 | emmc  | SD card interface |
 | pixel | Pixel valve |
-| vec | Analogue video encoder |
-| hdmi | HDMI |
-| dpi | Display Peripheral Interface |
+| vec   | Analogue video encoder |
+| hdmi  | HDMI |
+| dpi   | Display Peripheral Interface |
 
 e.g. `vcgencmd measure_clock arm`
 
@@ -91,9 +91,9 @@ e.g. `vcgencmd measure_clock arm`
 
 Displays the current voltages used by the specific block.
 
-| block | Description |
-|:-----:|-------------|
-| core | VC4 core voltage |
+| block   | Description |
+|:-------:|-------------|
+| core    | VC4 core voltage |
 | sdram_c | SDRAM Core Voltage |
 | sdram_i | SDRAM I/O voltage |
 | sdram_p | SDRAM Phy Voltage|
