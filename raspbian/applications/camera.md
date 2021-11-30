@@ -347,7 +347,7 @@ Wählt aus, welche Kamera in einem Multikamerasystem verwendet werden soll. Verw
 
 
 ```
-	--annotate,	-a	Enable/set - Aktivieren/Setzen von Anmerkungs-Flags oder -Text
+	--annotate,	-a		Aktivieren/Setzen von Anmerkungs-Flags oder -Text
 ```
 Fügt dem Bild Text und/oder Metadaten hinzu.
 
@@ -439,13 +439,13 @@ Gibt den Ausgabedateinamen an. Wenn nicht angegeben, wird keine Datei gespeicher
 Erstellt eine Dateisystemverknüpfung unter diesem Namen zum neuesten Frame.
 
 ```
-	--verbose,	-v	Ausführliche Informationen während der Ausführung ausgeben
+	--verbose,	-v		Ausführliche Informationen während der Ausführung ausgeben
 ```
 
 Gibt während des Programmlaufs Debug-/Informationsmeldungen aus.
 
 ```
-	--timeout,	-t	Zeit, bevor die Kamera ein Bild aufnimmt und herunterfährt
+	--timeout,	-t		Zeit, bevor die Kamera ein Bild aufnimmt und herunterfährt
 ```
 
 Das Programm wird für die angegebene Dauer in Millisekunden ausgeführt. Es nimmt dann die Aufnahme und speichert sie, wenn eine Ausgabe angegeben wird. Wenn kein Timeout-Wert angegeben ist, wird er auf 5 Sekunden (-t 5000) gesetzt. Beachten Sie, dass niedrige Werte (weniger als 500 ms, obwohl dies von anderen Einstellungen abhängen kann) der Kamera möglicherweise nicht genügend Zeit zum Starten geben und nicht genügend Frames für die automatischen Algorithmen wie AWB und AGC bereitstellen, um genaue Ergebnisse zu liefern.
@@ -637,12 +637,12 @@ Um einen TCP-Port (IPv4) abzuhören und auf eine eingehende Verbindung zu warten
 Wenn eine Netzwerkverbindung als Datensenke verwendet wird, lässt diese Option das System auf eine Verbindung vom Remote-System warten, bevor Daten gesendet werden.
 
 ```
-	--verbose,	-v			Ausführliche Informationen während der Ausführung ausgeben
+	--verbose,	-v		Ausführliche Informationen während der Ausführung ausgeben
 ```
 Gibt während des Programmlaufs Debug-/Informationsmeldungen aus.
 
 ```
-	--timeout,	-t			Zeit, bevor die Kamera ein Bild aufnimmt und herunterfährt
+	--timeout,	-t		Zeit, bevor die Kamera ein Bild aufnimmt und herunterfährt
 ```
 Die Gesamtdauer, für die das Programm ausgeführt wird. Wenn nicht angegeben, ist der Standardwert 5000 ms (5 Sekunden). Wenn auf 0 gesetzt, wird die Anwendung auf unbestimmte Zeit ausgeführt, bis sie mit Strg-C gestoppt wird.
 
@@ -653,7 +653,7 @@ Die Gesamtdauer, für die das Programm ausgeführt wird. Wenn nicht angegeben, i
 Diese Option durchläuft den Bereich der Kameraoptionen. Es erfolgt keine Aufnahme und die Demo endet am Ende des Timeout-Zeitraums, unabhängig davon, ob alle Optionen durchlaufen wurden. Die Zeit zwischen den Zyklen sollte als Millisekundenwert angegeben werden.
 
 ```
-	--framerate,	-fps			Geben Sie die Bilder pro Sekunde an, die aufgezeichnet werden sollen
+	--framerate,	-fps		Geben Sie die Bilder pro Sekunde an, die aufgezeichnet werden sollen
 ```
 Derzeit beträgt die zulässige Mindestbildrate 2 fps und die maximale 30 fps. Dies wird sich voraussichtlich in Zukunft ändern.
 
