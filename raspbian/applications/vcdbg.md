@@ -8,11 +8,11 @@ Hier wurden nur Nutzungsmöglichkeiten für Endverbraucher beschrieben.
 
 ### Befehle
 
-#### Ausführung
+#### version
 
 Zeigt verschiedene Versionsinformationen des VideoCore an.
 
-#### Protokoll
+#### log
 
 Speichert Protokolle aus dem angegebenen Subsystem. Mögliche Optionen sind:
 
