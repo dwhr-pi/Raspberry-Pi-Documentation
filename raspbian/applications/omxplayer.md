@@ -41,30 +41,30 @@ omxplayer --display n /opt/vc/src/hello_pi/hello_video/test.h264
 Während der Wiedergabe stehen eine Reihe von Optionen zur Verfügung, die durch Drücken der entsprechenden Taste ausgeführt werden. Nicht alle Optionen sind für alle Dateien verfügbar. Die Liste der Tastenbelegungen kann mit `omxplayer --keys` angezeigt werden:
 
 ```
-    1                 decrease speed - Geschwindigkeit verringern
-    2                 increase speed - Geschwindigkeit erhöhen
-    <                 rewind - zurückspulen
-    >                 fast forward - schneller Vorlauf
-    z                 show info - Infos anzeigen
-    j                 previous audio stream - vorheriger Audiostream
-    k                 next audio stream - nächster Audiostream
-    i                 previous chapter - vorheriges Kapitel
-    o                 next chapter - nächstes Kapitel
-    n                 previous subtitle stream - vorheriger Untertitelstream
-    m                 next subtitle stream - nächster Untertitelstream
-    s                 toggle subtitles - Untertitel umschalten
-    w                 show subtitles - Untertitel anzeigen
-    x                 hide subtitles - Untertitel ausblenden
-    d                 decrease subtitle delay (- 250 ms) - Untertitelverzögerung verringern (- 250 ms)
-    f                 increase subtitle delay (+ 250 ms) - Untertitelverzögerung erhöhen (+ 250 ms)
-    q                 exit omxplayer - omxplayer beenden
-    p / Leertaste     pause/resume - Pause/Fortsetzen
-    -                 decrease volume - Lautstärke verringern
-    + / =             increase volume - Lautstärke erhöhen
-    Pfeil nach links  seek -30 seconds - suchen -30 Sekunden
-    Pfeil nach rechts seek +30 seconds - suchen +30 Sekunden
-    Pfeil nach unten  seek -600 seconds - suchen -600 Sekunden
-    Pfeil nach oben   seek +600 seconds - suchen +600 Sekunden
+    1                    decrease speed - Geschwindigkeit verringern
+    2                    increase speed - Geschwindigkeit erhöhen
+    <                    rewind - zurückspulen
+    >                    fast forward - schneller Vorlauf
+    z                    show info - Infos anzeigen
+    j                    previous audio stream - vorheriger Audiostream
+    k                    next audio stream - nächster Audiostream
+    i                    previous chapter - vorheriges Kapitel
+    o                    next chapter - nächstes Kapitel
+    n                    previous subtitle stream - vorheriger Untertitelstream
+    m                    next subtitle stream - nächster Untertitelstream
+    s                    toggle subtitles - Untertitel umschalten
+    w                    show subtitles - Untertitel anzeigen
+    x                    hide subtitles - Untertitel ausblenden
+    d                    decrease subtitle delay (- 250 ms) - Untertitelverzögerung verringern (- 250 ms)
+    f                    increase subtitle delay (+ 250 ms) - Untertitelverzögerung erhöhen (+ 250 ms)
+    q                    exit omxplayer - omxplayer beenden
+    p / Leertaste        pause/resume - Pause/Fortsetzen
+    -                    decrease volume - Lautstärke verringern
+    + / =                increase volume - Lautstärke erhöhen
+    Pfeil nach links     suchen -30 Sekunden
+    Pfeil nach rechts    suchen +30 Sekunden
+    Pfeil nach unten     suchen -600 Sekunden
+    Pfeil nach oben      suchen +600 Sekunden
 
 ```
 
