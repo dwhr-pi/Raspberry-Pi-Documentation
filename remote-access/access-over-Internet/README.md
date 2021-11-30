@@ -8,4 +8,4 @@ Eine Methode besteht darin, die Portweiterleitung auf Ihrem Router einzurichten.
 
 ## Alternativen
 
-Anstatt die Portweiterleitung auf Ihrem lokalen Router zu verwenden, stehen eine Reihe von Online-Portweiterleitungsdiensten von Drittanbietern zur Verfügung. Diese bieten unterschiedliche Funktionalitäten – siehe ihre Websites für weitere Details.
+Anstatt die Portweiterleitung auf Ihrem lokalen Router zu verwenden, stehen eine Reihe von Online-Portweiterleitungsdiensten von Drittanbietern zur Verfügung. Diese bieten unterschiedliche Funktionalitäten – siehe deren Websites für weitere Details.
