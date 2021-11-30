@@ -16,14 +16,14 @@ Zeigt verschiedene Versionsinformationen des VideoCore an.
 
 Speichert Protokolle aus dem angegebenen Subsystem. Mögliche Optionen sind:
 
-| log | Beschreibung |
-|-----|--------------|
-| Nachricht | Druckt das Nachrichtenprotokoll aus |
-| behaupten | Druckt das Assertionsprotokoll aus |
-| ex | Druckt das Ausnahmeprotokoll aus |
-| info | Druckt Informationen aus den Logging-Headern aus |
-| Ebene | Legt die VCOS-Protokollierungsebene für die angegebene Kategorie fest, n\|e\|w\|i\|t |
-| Liste | Auflisten der VCOS-Protokollierungsstufen |
+| log    | Beschreibung |
+|--------|--------------|
+| msg    | Druckt das Nachrichtenprotokoll aus |
+| assert | Druckt das Assertionsprotokoll aus |
+| ex     | Druckt das Ausnahmeprotokoll aus |
+| info   | Druckt Informationen aus den Logging-Headern aus |
+| level  | Legt die VCOS-Protokollierungsebene für die angegebene Kategorie fest, n\|e\|w\|i\|t |
+| list   | Auflisten der VCOS-Protokollierungsstufen |
 
 z.B. So drucken Sie den aktuellen Inhalt des Meldungsprotokolls aus:
 
