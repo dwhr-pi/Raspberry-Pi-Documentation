@@ -6,7 +6,7 @@ Wenn Sie `tvservice` allein eingeben, wird eine Liste der verfügbaren Befehlsze
 
 ### Optionen
 
-#### -p, --bevorzugt
+#### -p, --preferred
 
 Schalten Sie den HDMI-Ausgang mit den bevorzugten Einstellungen ein.
 
