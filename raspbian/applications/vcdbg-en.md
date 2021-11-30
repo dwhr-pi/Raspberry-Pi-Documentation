@@ -27,7 +27,9 @@ Dumps logs from the specified subsystem. Possible options are:
 
 e.g. To print out the current contents of the message log:
 
-`vcdbg log msg`
+```
+vcdbg log msg
+```
 
 #### malloc
 
