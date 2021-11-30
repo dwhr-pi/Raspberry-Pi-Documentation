@@ -27,7 +27,7 @@ Speichert Protokolle aus dem angegebenen Subsystem. Mögliche Optionen sind:
 
 z.B. So drucken Sie den aktuellen Inhalt des Meldungsprotokolls aus:
 
-`vcdbg log msg`
+```vcdbg log msg```
 
 #### malloc
 
