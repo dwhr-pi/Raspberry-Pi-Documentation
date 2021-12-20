@@ -6,7 +6,7 @@ Wenn Sie dies noch nicht getan haben, gehen Sie zu Einstellungen > Apps > Apps &
 
 Sie müssen die IP-Adresse Ihres Raspberry Pi kennen, um eine Verbindung herzustellen. Um dies zu finden, geben Sie `hostname -I` von Ihrem Raspberry Pi-Terminal ein.
 
-Wenn Sie den Pi ohne Bildschirm (headless) betreiben, können Sie auch die Geräteliste Ihres Routers einsehen oder ein Tool wie `nmap` verwenden, das in unserer [IP-Adresse](../ip- Adresse.md) Dokument.
+Wenn Sie den Pi ohne Bildschirm (headless) betreiben, können Sie auch die Geräteliste Ihres Routers einsehen oder ein Tool wie `nmap` verwenden, das in unserer [IP-Adresse](../ip-address.md) Dokument.
 
 Um von einem anderen Computer aus eine Verbindung zu Ihrem Pi herzustellen, kopieren Sie den folgenden Befehl und fügen Sie ihn in das Terminalfenster ein, ersetzen Sie jedoch `<IP>` durch die IP-Adresse des Raspberry Pi. Verwenden Sie `Strg + Umschalt + V`, um das Terminal einzufügen.
 
