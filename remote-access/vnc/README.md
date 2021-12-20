@@ -61,7 +61,7 @@ Direkte Verbindungen sind schnell und einfach, vorausgesetzt, Sie sind mit demse
 
 - Verwenden Sie auf Ihrem Raspberry Pi (über ein Terminalfenster oder über SSH) [diese Anleitung](../ip-address.md) oder führen Sie `ifconfig` aus, um Ihre private IP-Adresse zu ermitteln.
 
-- Laden Sie auf dem Gerät, mit dem Sie die Kontrolle übernehmen, VNC Viewer herunter. Für beste Ergebnisse verwenden Sie die [kompatible App] (https://www.realvnc.com/download/viewer/) von RealVNC.
+- Laden Sie auf dem Gerät, mit dem Sie die Kontrolle übernehmen, VNC Viewer herunter. Für beste Ergebnisse verwenden Sie die [kompatible App](https://www.realvnc.com/download/viewer/) von RealVNC.
 
 - Geben Sie die private IP-Adresse Ihres Raspberry Pi in den VNC Viewer ein:
 
