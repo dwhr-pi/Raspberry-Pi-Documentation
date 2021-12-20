@@ -57,7 +57,7 @@ cd /etc/nginx
 sudo nano sites-enabled/default
 ```
 
-finde die linie
+finde die Zeile
 
 ```
 index index.html index.htm;
