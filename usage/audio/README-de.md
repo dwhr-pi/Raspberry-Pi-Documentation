@@ -1,6 +1,6 @@
 # Audiowiedergabe auf dem Raspberry Pi
 
-Die einfachste Art, Audio abzuspielen, ist die Anwendung OMXPlayer, die [hier] genauer beschrieben wird (../../raspbian/applications/omxplayer.md).
+Die einfachste Art, Audio abzuspielen, ist die Anwendung OMXPlayer, die [hier](../../raspbian/applications/omxplayer.md) genauer beschrieben wird.
 
 Um eine MP3-Datei abzuspielen, navigieren Sie mit „cd“ zum Speicherort der `.mp3`-Datei im Terminal und geben Sie den folgenden Befehl ein:
 
