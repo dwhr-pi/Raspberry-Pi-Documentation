@@ -1,6 +1,6 @@
 # SSH unter Windows
 
-Abhängig von der von Ihnen verwendeten Windows-Version und der bereits installierten Software müssen Sie möglicherweise einen SSH-Client herunterladen. Der am häufigsten verwendete Client heißt PuTTY und kann von [greenend.org.uk] (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) heruntergeladen werden.
+Abhängig von der von Ihnen verwendeten Windows-Version und der bereits installierten Software müssen Sie möglicherweise einen SSH-Client herunterladen. Der am häufigsten verwendete Client heißt PuTTY und kann von [greenend.org.uk](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) heruntergeladen werden.
 
 Suchen Sie nach „putty.exe“ unter der Überschrift „Für Windows auf Intel x86“.
 
