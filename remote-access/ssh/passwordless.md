@@ -80,7 +80,7 @@ Wenn die Meldung "Agent hat Fehler beim Signieren mit dem Schlüssel zugestanden
 ssh-add
 ```
 
-Wenn dies nicht funktioniert, können Sie in den [Raspberry Pi-Foren] (https://www.raspberrypi.org/forums/) Hilfe erhalten.
+Wenn dies nicht funktioniert, können Sie in den [Raspberry Pi-Foren](https://www.raspberrypi.org/forums/) Hilfe erhalten.
 
 **Hinweis:** Sie können Dateien auch über SSH mit dem Befehl `scp` senden (sichere Kopie). Weitere Informationen finden Sie im [SCP-Leitfaden](scp.md).
 
