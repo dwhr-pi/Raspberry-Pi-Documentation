@@ -18,7 +18,7 @@ Bei Monitoren mit DVI-Anschluss können Sie ein HDMI-zu-DVI-Kabel oder ein HDMI-
 
 ![DVI-HDMI-Kabel](images/dvi_hdmi_cable.png)
 
-###VGA
+### VGA
 
 Für Monitore nur mit VGA können Sie einen HDMI-zu-VGA-Adapter verwenden. Beachten Sie, dass VGA kein Audio unterstützt.
 

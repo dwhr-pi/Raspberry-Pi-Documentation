@@ -32,4 +32,4 @@ Eine Anleitung zum Einrichten Ihres Raspberry Pi
 
 ## Fehlerbehebung
 
-Suchen Sie bei Problemen während der Einrichtung [die Foren] (https://www.raspberrypi.org/forums/) nach einer Lösung. Wenn Sie keinen finden können, posten Sie bitte Ihr Problem und geben Sie so viele Details wie möglich an.
+Suchen Sie bei Problemen während der Einrichtung [die Foren](https://www.raspberrypi.org/forums/) nach einer Lösung. Wenn Sie keinen finden können, posten Sie bitte Ihr Problem und geben Sie so viele Details wie möglich an.
