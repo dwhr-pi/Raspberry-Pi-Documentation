@@ -23,4 +23,4 @@ Einige allgemeine Hilfe zur Linux-Nutzung.
 - [rc.local](rc-local.md)
     - Konfiguration der Initialisierung
 - [NPM](NPM/README.md)
-    - NPM Hilfe zu vielen Problemem mit NPMs
+    - NPM Hilfe zu vielen Problemen mit NPMs

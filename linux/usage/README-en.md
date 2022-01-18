@@ -22,3 +22,5 @@ Some general help with Linux usage.
     - Configuration of systemd services to start scripts at booting
 - [rc.local](rc-local.md)
     - Configuration of initialisation
+- [NPM](NPM/README.md)
+    - NPM help for many problems with NPMs
