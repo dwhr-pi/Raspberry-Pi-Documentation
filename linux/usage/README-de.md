@@ -22,5 +22,5 @@ Einige allgemeine Hilfe zur Linux-Nutzung.
     - Konfiguration von systemd-Diensten zum Starten von Skripten beim Booten
 - [rc.local](rc-local.md)
     - Konfiguration der Initialisierung
-	
 - [NPM](NPM/README.md)
+    - NPM Hilfe zu vielen Problemem mit NPMs
