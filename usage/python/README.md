@@ -99,7 +99,7 @@ Dieses Mal habe ich Kommentare neben dem Increment-Befehl verwendet.
 
 Kommentare werden im Programm ignoriert, sind aber für Sie da, um Notizen zu hinterlassen, und sind mit dem Hash-Symbol "#" gekennzeichnet. Mehrzeilige Kommentare verwenden dreifache Anführungszeichen wie folgt:
 
-„Python
+```python
 """
 Dies ist ein sehr einfaches Python-Programm, das "Hallo" ausgibt.
 Das ist alles, was es tut.
@@ -336,5 +336,5 @@ piwheels ist ein Dienst, der vorkompilierte Pakete (genannt *Python-Räder*) ber
 ## Mehr
 
 - [GPIO mit Python](../gpio/python/README.md)
-- [Offizielle Python-Website] (https://www.python.org/)
-- [Offizielle Python-Dokumentation] (https://www.python.org/doc/)
+- [Offizielle Python-Website](https://www.python.org/)
+- [Offizielle Python-Dokumentation](https://www.python.org/doc/)
