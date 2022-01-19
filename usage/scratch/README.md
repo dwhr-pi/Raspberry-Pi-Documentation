@@ -4,4 +4,4 @@ Scratch ist ein visuelles Programmiertool, mit dem der Benutzer Animationen und 
 
 - Anweisungen zur Verwendung von Scratch finden Sie in der Lernressource [Erste Schritte mit Scratch](https://www.raspberrypi.org/learning/getting-started-with-scratch/).
 - Siehe [Scratch 1.4 GPIO-Nutzungsanleitung](../gpio/scratch1/README.md)
-- Siehe [Scratch 2 GPIO-Nutzungsanleitung] (../gpio/scratch2/README.md)
+- Siehe [Scratch 2 GPIO-Nutzungsanleitung](../gpio/scratch2/README.md)

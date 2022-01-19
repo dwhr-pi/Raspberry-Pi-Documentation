@@ -1,6 +1,6 @@
 # Video auf dem Raspberry Pi abspielen
 
-Auf dem Pi 3 und früheren Modellen ist die einfachste Art, Videos abzuspielen, die Verwendung der OMXPlayer-Anwendung, die ausführlicher [in diesem Dokumentationsabschnitt] (../../raspbian/applications/omxplayer.md) beschrieben wird.
+Auf dem Pi 3 und früheren Modellen ist die einfachste Art, Videos abzuspielen, die Verwendung der OMXPlayer-Anwendung, die ausführlicher [in diesem Dokumentationsabschnitt](../../raspbian/applications/omxplayer.md) beschrieben wird.
 
 Um ein Video abzuspielen, navigieren Sie mit „cd“ zum Speicherort Ihrer Videodatei im Terminal und geben Sie dann den folgenden Befehl ein:
 
