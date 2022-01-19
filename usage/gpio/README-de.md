@@ -1,4 +1,4 @@
-#GPIO
+# GPIO
 
 Ein leistungsstarkes Merkmal des Raspberry Pi ist die Reihe von GPIO-Pins (General Purpose Input/Output) entlang der Oberkante der Platine. Ein 40-poliger GPIO-Header ist auf allen aktuellen Raspberry Pi-Boards zu finden (auf Pi Zero und Pi Zero W unbestückt). Vor dem Pi 1 Model B+ (2014) bestanden Boards aus einem kürzeren 26-Pin-Header.
 
@@ -48,7 +48,7 @@ Auf dem Raspberry Pi kann auf eine praktische Referenz zugegriffen werden, indem
 
 ![](images/gpiozero-pinout.png)
 
-Weitere Einzelheiten zu den erweiterten Fähigkeiten der GPIO-Pins finden Sie im [interaktiven Pinout-Diagramm] von Gadgetoid (http://pinout.xyz/).
+Weitere Einzelheiten zu den erweiterten Fähigkeiten der GPIO-Pins finden Sie im [interaktiven Pinout-Diagramm](http://pinout.xyz/) von Gadgetoid.
 
 ## Programmierung mit GPIO
 
@@ -61,7 +61,7 @@ Es ist möglich, GPIO-Pins mit einer Reihe von Programmiersprachen und Tools zu 
 - [GPIO mit C/C++ unter Verwendung der Fremdbibliothek Pigpio](http://abyz.me.uk/rpi/pigpio/)
 - [GPIO mit Processing3](https://processing.org/reference/libraries/io/GPIO.html)
 
-**Warnung: Während das Anschließen einfacher Komponenten an die GPIO-Pins absolut sicher ist, ist es wichtig, bei der Verkabelung vorsichtig zu sein. LEDs sollten Widerstände haben, um den durch sie fließenden Strom zu begrenzen. Verwenden Sie keine 5 V für 3V3-Komponenten. Schließen Sie Motoren nicht direkt an die GPIO-Pins an, sondern verwenden Sie stattdessen eine [H-Brückenschaltung oder eine Motorsteuerplatine] (https://projects.raspberrypi.org/en/projects/physical-computing/16).**
+**Warnung: Während das Anschließen einfacher Komponenten an die GPIO-Pins absolut sicher ist, ist es wichtig, bei der Verkabelung vorsichtig zu sein. LEDs sollten Widerstände haben, um den durch sie fließenden Strom zu begrenzen. Verwenden Sie keine 5 V für 3V3-Komponenten. Schließen Sie Motoren nicht direkt an die GPIO-Pins an, sondern verwenden Sie stattdessen eine [H-Brückenschaltung oder eine Motorsteuerplatine](https://projects.raspberrypi.org/en/projects/physical-computing/16).**
 
 ## Berechtigungen
 
