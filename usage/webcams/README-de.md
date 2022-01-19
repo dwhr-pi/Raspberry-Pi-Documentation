@@ -133,7 +133,7 @@ Mit einer USB-Webcam können Bilder in schlechter Qualität auftreten, wie z. B.
 
 ![Schlechtes Webcam-Bild](images/jack.jpg)
 
-Einige Webcams sind zuverlässiger als andere, aber diese Art von Problem kann bei Webcams mit schlechter Qualität auftreten. Wenn das Problem weiterhin besteht, stellen Sie sicher, dass Ihr System [auf dem neuesten Stand] ist (../../raspbian/updating.md). Probieren Sie auch andere Webcams aus, aber die beste Leistung erzielen Sie mit dem Raspberry Pi [Kameramodul] (https://www.raspberrypi.org/help/camera-module-setup/).
+Einige Webcams sind zuverlässiger als andere, aber diese Art von Problem kann bei Webcams mit schlechter Qualität auftreten. Wenn das Problem weiterhin besteht, stellen Sie sicher, dass Ihr System [auf dem neuesten Stand](../../raspbian/updating.md) ist. Probieren Sie auch andere Webcams aus, aber die beste Leistung erzielen Sie mit dem Raspberry Pi [Kameramodul](https://www.raspberrypi.org/help/camera-module-setup/).
 
 ## Bash-Skript
 
