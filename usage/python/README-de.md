@@ -1,4 +1,4 @@
-#Python
+# Python
 
 Python ist eine wunderbare und leistungsstarke Programmiersprache, die einfach zu verwenden ist (leicht zu lesen ** und ** zu schreiben) und mit Raspberry Pi Ihr Projekt mit der realen Welt verbinden kann.
 
