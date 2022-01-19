@@ -122,7 +122,7 @@ For example
 would make the sensor variables  
 
 `Rain in Rio de Janeiro`  
-`Temp in Rio de Janeir0`  
+`Temp in Rio de Janeiro`  
 
 ...and so on. The commas between the city name and country code and your key are vital to let the GPIO server know where to split things. Some cities have simple names like 'Ee' or 'Manchester' whilst others get a bit more involved like 'Sault Ste Marie' or 'Llanfair­pwllgwyngyll­gogery­chwyrn­drobwll­llan­tysilio­gogo­goch'. Note that the OpenWeatherMaps server doesn't know every city in every country, nor does it have every kind of weather data for all those it does know, so sometimes you will get no useful information.
 
