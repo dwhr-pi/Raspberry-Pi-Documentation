@@ -1,4 +1,4 @@
- GPIO in Python
+# GPIO in Python
 
 Die Verwendung der Bibliothek [GPIO Zero](https://gpiozero.readthedocs.io/) erleichtert den Einstieg in die Steuerung von GPIO-Geräten mit Python.
 
