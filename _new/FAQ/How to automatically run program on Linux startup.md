@@ -20,7 +20,9 @@ On the other hand, server-based Linux distributions will not load the desktop en
     * Run on new Bash session  
 
 ## Automatically run program on Linux startup via systemd
-systemd is the standard system and service manager in modern Linux. It is responsible for executing and managing programs during Linux startup, among many other things. Compatible programs will provide service unit files used by systemd to manage the program's execution.  
+systemd is the standard system and service manager in modern Linux. 
+It is responsible for executing and managing programs during Linux startup, among many other things. 
+Compatible programs will provide service unit files used by systemd to manage the program's execution.  
 You can configure systemd to run programs automatically during Linux startup following these steps:  
 
     1. Check if service unit for your program exists (optional).

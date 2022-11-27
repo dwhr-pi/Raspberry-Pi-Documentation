@@ -21,7 +21,9 @@ Auf der anderen Seite laden serverbasierte Linux-Distributionen die Desktop-Umge
 
 ## Programm automatisch beim Linux-Start über systemd ausführen
 
-systemd ist der Standardsystem- und Dienstmanager in modernem Linux. Es ist unter anderem für die Ausführung und Verwaltung von Programmen während des Linux-Starts verantwortlich. Kompatible Programme stellen Service-Unit-Dateien bereit, die von systemd verwendet werden, um die Ausführung des Programms zu verwalten.  
+systemd ist der Standardsystem- und Dienstmanager in modernem Linux. 
+Es ist unter anderem für die Ausführung und Verwaltung von Programmen während des Linux-Starts verantwortlich. 
+Kompatible Programme stellen Service-Unit-Dateien bereit, die von systemd verwendet werden, um die Ausführung des Programms zu verwalten.  
 
 Sie können systemd so konfigurieren, dass Programme während des Linux-Starts automatisch ausgeführt werden, indem Sie die folgenden Schritte ausführen:  
 
