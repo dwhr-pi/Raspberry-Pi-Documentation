@@ -18,7 +18,7 @@ Auf der anderen Seite laden serverbasierte Linux-Distributionen die Desktop-Umge
     [Wird beim Start von GNOME ausgeführt](#)  
     [Wird beim Start von KDE ausgeführt](#)  
     [In einer neuen Bash-Sitzung ausführen](#)  
-
+<A name=""></A>
 ## Programm automatisch beim Linux-Start über systemd ausführen
 
 systemd ist der Standardsystem- und Dienstmanager in modernem Linux. 
@@ -84,7 +84,7 @@ Sie können systemd so konfigurieren, dass Programme während des Linux-Starts a
        $ sudo systemctl is-enabled mysql
        enabled
        ```
-
+<A name=""></A>
 ## Programm beim Linux-Start automatisch über cron ausführen  
 
 cron ist ein Daemon zum Ausführen geplanter Befehle. Die Befehle werden in der Cron-Job-Tabelle oder Crontab gespeichert und sind für jeden Benutzer im System eindeutig. 
@@ -144,7 +144,7 @@ Es wird während des Systemstarts entweder von systemd oder System V init gestar
        # m h  dom mon dow   Befehl
        @reboot /sbin/ip addr | grep inet\ | tail -n1 | awk '{ print $2 }' > /etc/issue && echo "" >> /etc/issue
        ```
-
+<A name=""></A>
 ## Programm automatisch beim Linux-Start über rc.local ausführen
 rc.local ist ein Erbe des System-V-Init-Systems. 
 Es ist das letzte Skript, das ausgeführt wird, bevor ein Anmeldebildschirm für die Desktop-Umgebung oder eine Anmeldeaufforderung am Terminal angezeigt wird. 
@@ -179,19 +179,19 @@ Sie können Ihr rc.local-Skript folgendermaßen konfigurieren:
        $ sudo chmod a+x /etc/rc.local
        ```
        Die Datei wird während des Systemstarts als Root-Benutzer ausgeführt.
-
+<A name=""></A>
 ## Programm beim Start von GNOME automatisch ausführen
 GNOME ist die Standard-Desktop-Umgebung für Linux-Distributionen wie Ubuntu und Red Hat. 
 GNOME kann so konfiguriert werden, dass Programme ausgeführt werden, wenn sich ein Benutzer anmeldet, und kann gemäß dem folgenden Artikel konfiguriert werden:  
 
 Verwandt: So führen Sie das Programm beim GNOME-Start automatisch aus.  
-
+<A name=""></A>
 ## Programm beim KDE-Start automatisch ausführen
 KDE ist eine weitere beliebte Desktop-Umgebung für Linux und ist die Standardeinstellung in Kubuntu und openSUSE. 
 Es kann einfach so konfiguriert werden, dass Programme ausgeführt werden, wenn sich ein Benutzer anmeldet, wie im folgenden Artikel beschrieben:  
 
 Verwandte: So führen Sie das Programm beim KDE-Start automatisch aus.  
-
+<A name=""></A>
 ## Programm bei neuer Bash-Sitzung automatisch ausführen
 Ein neues Shell-Programm wird gestartet, wenn Sie Ihre Terminalsitzung starten. 
 Bash ist die Standard-Shell für die meisten Linux-Distributionen, und wenn sie gestartet wird, sucht sie nach den folgenden Dateien in der bestimmten Reihenfolge und führt sie aus.  
