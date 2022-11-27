@@ -155,9 +155,9 @@ Sie können Ihr rc.local-Skript folgendermaßen konfigurieren:
 
 1. Öffnen oder erstellen Sie die Datei /etc/rc.local, falls sie nicht existiert, indem Sie Ihren bevorzugten Editor als Root-Benutzer verwenden.
 
-```
+    ```
        $ sudo vi /etc/rc.local
-```
+    ```
 2. Platzhaltercode in die Datei einfügen.
     ```
        #!/bin/bash
@@ -167,19 +167,20 @@ Sie können Ihr rc.local-Skript folgendermaßen konfigurieren:
    Es muss mit interpreter (/bin/bash) beginnen und mit einem Exit-Code enden (0 steht für Erfolg).
 	   
 3. Fügen Sie der Datei nach Bedarf Befehle und Logiken hinzu.
-       ```
+    ```
        #!/bin/bash
        
        /sbin/ip addr | grep inet\ | tail -n1 | awk '{ print $2 }' > /etc/issue
        echo "" >> /etc/issue
        
        exit 0
-       ```
+    ```
 
 4. Setzen Sie die Datei auf ausführbar.
-       ```
+    ```
        $ sudo chmod a+x /etc/rc.local
-       ```
+    ```
+
    Die Datei wird während des Systemstarts als Root-Benutzer ausgeführt.
 <A name=""></A>
 ## Programm beim Start von GNOME automatisch ausführen
