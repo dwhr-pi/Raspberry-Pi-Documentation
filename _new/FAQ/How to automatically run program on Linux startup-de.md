@@ -63,28 +63,28 @@ Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redh
 
     2. Prüfen Sie, ob die Wartungseinheit aktiviert ist (optional).  
 
-       ```
+```
        $ sudo systemctl is-enabled mysql
        disabled
-       ```
+```
 
        aktivierte Diensteinheit wird während des Bootens ausgeführt. 
 
     3. Aktivieren Sie die Service-Unit, die Sie während des Startvorgangs ausführen möchten.  
 
-	   ```
+```
        $ sudo systemctl enable mysql
        Synchronizing state of mysql.service with SysV service script with /lib/systemd/systemd-sysv-install.
        Executing: /lib/systemd/systemd-sysv-install enable mysql
        Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service ? /lib/systemd/system/mysql.service.
-       ```
+```
 
     4. Überprüfen Sie, ob die Serviceeinheit zur Bestätigung aktiviert ist (optional).  
 
-       ```
+```
        $ sudo systemctl is-enabled mysql
        enabled
-       ```
+```
 <A name=""></A>
 ## Programm beim Linux-Start automatisch über cron ausführen  
 
@@ -93,9 +93,9 @@ Es wird während des Systemstarts entweder von systemd oder System V init gestar
 
      1. Öffnen Sie den standardmäßigen Crontab-Editor.  
 
-       ```
+    ```
        $ crontab -e
-       ```
+    ```
 
        Sie müssen einen Editor für die Crontab auswählen, wenn der Benutzer den Befehl zum ersten Mal verwendet.  
 
