@@ -153,19 +153,19 @@ Es ist normalerweise ein Bash-Shell-Skript, und Sie können alles über das Skri
 
 Sie können Ihr rc.local-Skript folgendermaßen konfigurieren:  
 
-    1. Öffnen oder erstellen Sie die Datei /etc/rc.local, falls sie nicht existiert, indem Sie Ihren bevorzugten Editor als Root-Benutzer verwenden.
+1. Öffnen oder erstellen Sie die Datei /etc/rc.local, falls sie nicht existiert, indem Sie Ihren bevorzugten Editor als Root-Benutzer verwenden.
        ```
        $ sudo vi /etc/rc.local
        ```
-    2. Platzhaltercode in die Datei einfügen.
+2. Platzhaltercode in die Datei einfügen.
        ```
        #!/bin/bash
        
        exit 0
        ```
-       Es muss mit interpreter (/bin/bash) beginnen und mit einem Exit-Code enden (0 steht für Erfolg).
+   Es muss mit interpreter (/bin/bash) beginnen und mit einem Exit-Code enden (0 steht für Erfolg).
 	   
-    3. Fügen Sie der Datei nach Bedarf Befehle und Logiken hinzu.
+3. Fügen Sie der Datei nach Bedarf Befehle und Logiken hinzu.
        ```
        #!/bin/bash
        
@@ -175,11 +175,11 @@ Sie können Ihr rc.local-Skript folgendermaßen konfigurieren:
        exit 0
        ```
 
-    4. Setzen Sie die Datei auf ausführbar.
+4. Setzen Sie die Datei auf ausführbar.
        ```
        $ sudo chmod a+x /etc/rc.local
        ```
-       Die Datei wird während des Systemstarts als Root-Benutzer ausgeführt.
+   Die Datei wird während des Systemstarts als Root-Benutzer ausgeführt.
 <A name=""></A>
 ## Programm beim Start von GNOME automatisch ausführen
 GNOME ist die Standard-Desktop-Umgebung für Linux-Distributionen wie Ubuntu und Red Hat. 
@@ -205,7 +205,7 @@ Bash ist die Standard-Shell für die meisten Linux-Distributionen, und wenn sie 
 Diese Dateien enthalten Befehle und Logiken zum Einrichten geeigneter Umgebungsvariablen und zum Ausführen erforderlicher Programme in der Bash-Sprache. Es ist auch so konfiguriert, dass es normalerweise andere Dateien wie /etc/bashrc, /etc/bash.bashrc und ~/.bashrc ausführt.  
 Sie können jede dieser Dateien bearbeiten, um Ihr Programm auszuführen, wenn eine Bash-Sitzung gestartet wird. Unten ist ein Teil einer typischen ~/.bashrc-Datei:  
 
-       ```
+```
        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ '
  
        PATH=/home/user/bin:$PATH
@@ -213,5 +213,5 @@ Sie können jede dieser Dateien bearbeiten, um Ihr Programm auszuführen, wenn e
        export EDITOR=/usr/bin/vim
  
        alias ll="ls -l"
-       ``` 
+``` 
 
