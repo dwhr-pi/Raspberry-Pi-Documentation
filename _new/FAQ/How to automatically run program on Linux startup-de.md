@@ -30,7 +30,7 @@ Sie können systemd so konfigurieren, dass Programme während des Linux-Starts a
 
 1. Prüfen Sie, ob eine Service Unit für Ihr Programm existiert (optional).  
 
-```
+    ```
        $ sudo systemctl list-unit-files --type=service
        [sudo] password for user:
        UNIT FILE                              STATE
@@ -56,35 +56,35 @@ Sie können systemd so konfigurieren, dass Programme während des Linux-Starts a
        cloud-init.service                     enabled
        console-getty.service                  disabled
        ##### snipped #####
-```
+    ```
 	   
 Sie müssen Ihre eigene Service-Unit erstellen, wenn es sich um ein benutzerdefiniertes Programm handelt oder wenn Ihr Programm während der Installation keine enthält.  
 Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/assembly_working-with-systemd-unit-files_configuring-basic-system-settings).  
 
     2. Prüfen Sie, ob die Wartungseinheit aktiviert ist (optional).  
 
-```
+    ```
        $ sudo systemctl is-enabled mysql
        disabled
-```
+    ```
 
        aktivierte Diensteinheit wird während des Bootens ausgeführt. 
 
     3. Aktivieren Sie die Service-Unit, die Sie während des Startvorgangs ausführen möchten.  
 
-```
+    ```
        $ sudo systemctl enable mysql
        Synchronizing state of mysql.service with SysV service script with /lib/systemd/systemd-sysv-install.
        Executing: /lib/systemd/systemd-sysv-install enable mysql
        Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service ? /lib/systemd/system/mysql.service.
-```
+    ```
 
     4. Überprüfen Sie, ob die Serviceeinheit zur Bestätigung aktiviert ist (optional).  
 
-```
+    ```
        $ sudo systemctl is-enabled mysql
        enabled
-```
+    ```
 <A name=""></A>
 ## Programm beim Linux-Start automatisch über cron ausführen  
 
@@ -99,7 +99,7 @@ Es wird während des Systemstarts entweder von systemd oder System V init gestar
 
        Sie müssen einen Editor für die Crontab auswählen, wenn der Benutzer den Befehl zum ersten Mal verwendet.  
 
-       ```
+    ```
        $ crontab -e
        no crontab for user - using an empty one
        
@@ -109,7 +109,7 @@ Es wird während des Systemstarts entweder von systemd oder System V init gestar
          3. /bin/ed
        
        Choose 1-3 [1]:
-       ```
+    ```
        Für den Benutzer, der den Befehl ausführt, wird eine Crontab erstellt und mit den Rechten des Benutzers ausgeführt. 
 	   Wenn Ihr Programm als Root-Benutzer ausgeführt werden soll, führen Sie crontab -e als Root-Benutzer selbst aus.  
 
