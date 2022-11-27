@@ -10,7 +10,7 @@ Modernes Linux bootet zuerst in systemd, während ältere Linux-Versionen System
 Unabhängig davon werden sie schließlich cron und rc.local ausführen, bevor sie die Desktop-Umgebung wie GNOME oder KDE laden. 
 Auf der anderen Seite laden serverbasierte Linux-Distributionen die Desktop-Umgebung nicht, sondern bieten sofort eine Anmeldeaufforderung an der Konsole und führen dann die Standard-Shell wie Bash aus, nachdem sich der Benutzer angemeldet hat.  
 
-Methoden zum automatischen Ausführen des Programms beim Linux-Start:  
+    Methoden zum automatischen Ausführen des Programms beim Linux-Start:  
 
     * Verwaltung mit systemd  
     * Erstellen Sie einen Cronjob  
