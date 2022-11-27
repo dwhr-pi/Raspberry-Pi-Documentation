@@ -12,12 +12,12 @@ On the other hand, server-based Linux distributions will not load the desktop en
 
     Methods to automatically run program on Linux startup:  
 
-    * Manage using systemd  
-    * Create a cron job  
-    * Run using rc.local  
-    * Run on GNOME startup  
-    * Run on KDE startup  
-    * Run on new Bash session  
+    * [Manage using systemd]()  
+    * [Create a cron job]()  
+    * [Run using rc.local]()  
+    * [Run on GNOME startup]()  
+    * [Run on KDE startup]()  
+    * [Run on new Bash session]()  
 
 ## Automatically run program on Linux startup via systemd
 systemd is the standard system and service manager in modern Linux. 
@@ -55,7 +55,7 @@ You can configure systemd to run programs automatically during Linux startup fol
        ##### snipped #####
        ```
        You'll have to create your own service unit if it's a custom program or if your program doesn't come with one during installation
-       Related: Creating and modifying systemd unit files.  
+       Related: [Creating and modifying systemd unit files](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/assembly_working-with-systemd-unit-files_configuring-basic-system-settings).  
 
     2. Check if service unit enabled (optional).
 
