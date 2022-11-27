@@ -68,7 +68,7 @@ Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redh
        disabled
     ```
 
-       aktivierte Diensteinheit wird während des Bootens ausgeführt. 
+   aktivierte Diensteinheit wird während des Bootens ausgeführt. 
 
 3. Aktivieren Sie die Service-Unit, die Sie während des Startvorgangs ausführen möchten.  
 
