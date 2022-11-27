@@ -200,10 +200,10 @@ Ein neues Shell-Programm wird gestartet, wenn Sie Ihre Terminalsitzung starten.
 Bash ist die Standard-Shell für die meisten Linux-Distributionen, und wenn sie gestartet wird, sucht sie nach den folgenden Dateien in der bestimmten Reihenfolge und führt sie aus.  
 
     ```
-    1. /etc/profil
-    2. ~/.bash_profile
-    3. ~/.bash_login
-    4. ~/.profil
+		1. /etc/profil
+		2. ~/.bash_profile
+    	3. ~/.bash_login
+    	4. ~/.profil
     ```
 
 Diese Dateien enthalten Befehle und Logiken zum Einrichten geeigneter Umgebungsvariablen und zum Ausführen erforderlicher Programme in der Bash-Sprache. Es ist auch so konfiguriert, dass es normalerweise andere Dateien wie /etc/bashrc, /etc/bash.bashrc und ~/.bashrc ausführt.  
