@@ -18,7 +18,7 @@ On the other hand, server-based Linux distributions will not load the desktop en
     [Run on GNOME startup]()  
     [Run on KDE startup]()  
     [Run on new Bash session]()  
-
+<A name="">Manage using systemd</A>
 ## Automatically run program on Linux startup via systemd
 systemd is the standard system and service manager in modern Linux. 
 It is responsible for executing and managing programs during Linux startup, among many other things. 
@@ -78,7 +78,7 @@ You can configure systemd to run programs automatically during Linux startup fol
        $ sudo systemctl is-enabled mysql
        enabled
        ```
-
+<A name=""></A>
 ## Automatically run program on Linux startup via cron
 cron is a daemon to execute scheduled commands. The commands are stored in the cron job table or crontab and are unique for each user in the system. It's started during system boot either by systemd or System V init, and you can schedule your job or program to be executed right during the system boot itself by following these steps:
 
@@ -124,7 +124,7 @@ cron is a daemon to execute scheduled commands. The commands are stored in the c
        # m h  dom mon dow   command
        @reboot /sbin/ip addr | grep inet\ | tail -n1 | awk '{ print $2 }' > /etc/issue && echo "" >> /etc/issue
        ```
-
+<A name=""></A>
 ## Automatically run program on Linux startup via rc.local
 rc.local is a legacy from the System V init system. It is the last script to be executed before proceeding to a login screen for the desktop environment or a login prompt at the terminal. It's usually a Bash shell script, and you can run anything from the script.  
 You can configure your rc.local script following these steps:
@@ -154,14 +154,17 @@ You can configure your rc.local script following these steps:
        ```
        The file will be executed as the root user during system boot
 
+<A name=""></A>
 ## Automatically run program on GNOME startup
 GNOME is the default desktop environment for Linux distributions such as Ubuntu and Red Hat. GNOME can be configured to run programs when a user logs in and can be configured by following the below article:
 Related: How to automatically run program on GNOME startup
 
+<A name=""></A>
 ## Automatically run program on KDE startup
 KDE is another popular desktop environment for Linux and is the default in Kubuntu and openSUSE. It can easily be configured to run programs when a user logs in as detailed in the following article:
 Related: How to automatically run program on KDE startup
 
+<A name=""></A>
 ## Automatically run program on new Bash session
 A new shell program will be spawned when you start your terminal session. Bash is the default shell for most Linuxdistributions, and when started, it will look for the following files in the particular order and executes them.
 
