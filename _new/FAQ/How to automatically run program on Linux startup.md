@@ -1,5 +1,5 @@
 # How to automatically run program on Linux startup
-<!-- Quelle: https://www.simplified.guide/linux/automatically-run-program-on-startup>
+<!-- Quelle: https://www.simplified.guide/linux/automatically-run-program-on-startup -->
 <!-- -->
 Linux startup is divided into a few stages. You can set any program to start automatically at any stage, whether it could be a single command, a chain of commands, or an executable shell script. However, there could be some differences in startup procedure between different Linux distributions and versions.  
 

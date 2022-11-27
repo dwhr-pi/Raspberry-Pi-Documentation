@@ -1,5 +1,5 @@
 ﻿# So führen Sie das Programm beim Linux-Start automatisch aus
-<!-- Quelle: https://www.simplified.guide/linux/automatically-run-program-on-startup>
+<!-- Quelle: https://www.simplified.guide/linux/automatically-run-program-on-startup -->
 <!-- -->
 Der Linux-Start ist in einige Phasen unterteilt. Sie können jedes Programm so einstellen, dass es in jeder Phase automatisch startet, egal ob es sich um einen einzelnen Befehl, eine Befehlskette oder ein ausführbares Shell-Skript handelt. Es kann jedoch einige Unterschiede im Startvorgang zwischen verschiedenen Linux-Distributionen und -Versionen geben.  
 
