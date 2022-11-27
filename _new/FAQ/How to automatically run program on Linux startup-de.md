@@ -30,7 +30,7 @@ Sie können systemd so konfigurieren, dass Programme während des Linux-Starts a
 
 1. Prüfen Sie, ob eine Service Unit für Ihr Programm existiert (optional).  
 
-       ```
+```
        $ sudo systemctl list-unit-files --type=service
        [sudo] password for user:
        UNIT FILE                              STATE
@@ -56,7 +56,7 @@ Sie können systemd so konfigurieren, dass Programme während des Linux-Starts a
        cloud-init.service                     enabled
        console-getty.service                  disabled
        ##### snipped #####
-       ```
+```
 	   
 Sie müssen Ihre eigene Service-Unit erstellen, wenn es sich um ein benutzerdefiniertes Programm handelt oder wenn Ihr Programm während der Installation keine enthält.  
 Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/assembly_working-with-systemd-unit-files_configuring-basic-system-settings).  
