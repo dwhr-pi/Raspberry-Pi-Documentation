@@ -9,15 +9,15 @@ Es kann jedoch einige Unterschiede im Startvorgang zwischen verschiedenen Linux-
 Modernes Linux bootet zuerst in systemd, während ältere Linux-Versionen System V init verwenden. 
 Unabhängig davon werden sie schließlich cron und rc.local ausführen, bevor sie die Desktop-Umgebung wie GNOME oder KDE laden. 
 Auf der anderen Seite laden serverbasierte Linux-Distributionen die Desktop-Umgebung nicht, sondern bieten sofort eine Anmeldeaufforderung an der Konsole und führen dann die Standard-Shell wie Bash aus, nachdem sich der Benutzer angemeldet hat.  
-       ```
-    Methoden zum automatischen Ausführen des Programms beim Linux-Start:  
 
-    [Verwaltung mit systemd]()  
-    [Erstellen Sie einen Cronjob]()  
-    [Ausführen mit rc.local]()  
-    [Wird beim Start von GNOME ausgeführt]()  
-    [Wird beim Start von KDE ausgeführt]()  
-    [In einer neuen Bash-Sitzung ausführen]()  
+    ### Methoden zum automatischen Ausführen des Programms beim Linux-Start:  
+
+    [Verwaltung mit systemd](#)  
+    [Erstellen Sie einen Cronjob](#)  
+    [Ausführen mit rc.local](#)  
+    [Wird beim Start von GNOME ausgeführt](#)  
+    [Wird beim Start von KDE ausgeführt](#)  
+    [In einer neuen Bash-Sitzung ausführen](#)  
 
 ## Programm automatisch beim Linux-Start über systemd ausführen
 
