@@ -58,8 +58,8 @@ Sie können systemd so konfigurieren, dass Programme während des Linux-Starts a
        ##### snipped #####
        ```
 	   
-    Sie müssen Ihre eigene Service-Unit erstellen, wenn es sich um ein benutzerdefiniertes Programm handelt oder wenn Ihr Programm während der Installation keine enthält.  
-	Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/assembly_working-with-systemd-unit-files_configuring-basic-system-settings).  
+Sie müssen Ihre eigene Service-Unit erstellen, wenn es sich um ein benutzerdefiniertes Programm handelt oder wenn Ihr Programm während der Installation keine enthält.  
+Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/assembly_working-with-systemd-unit-files_configuring-basic-system-settings).  
 
     2. Prüfen Sie, ob die Wartungseinheit aktiviert ist (optional).  
 
