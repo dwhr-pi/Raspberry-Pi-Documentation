@@ -4,7 +4,7 @@
 Der Linux-Start ist in einige Phasen unterteilt. Sie können jedes Programm so einstellen, dass es in jeder Phase automatisch startet, egal ob es sich um einen einzelnen Befehl, eine Befehlskette oder ein ausführbares Shell-Skript handelt. 
 Es kann jedoch einige Unterschiede im Startvorgang zwischen verschiedenen Linux-Distributionen und -Versionen geben.  
 
-![Linux-CLI](img/cli.png)
+[![Linux-CLI](img/cli.png)]
 
 Modernes Linux bootet zuerst in systemd, während ältere Linux-Versionen System V init verwenden. 
 Unabhängig davon werden sie schließlich cron und rc.local ausführen, bevor sie die Desktop-Umgebung wie GNOME oder KDE laden. 
