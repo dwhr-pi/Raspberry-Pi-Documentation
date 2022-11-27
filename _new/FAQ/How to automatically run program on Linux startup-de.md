@@ -114,37 +114,37 @@ Es wird während des Systemstarts entweder von systemd oder System V init gestar
    Wenn Ihr Programm als Root-Benutzer ausgeführt werden soll, führen Sie crontab -e als Root-Benutzer selbst aus.  
 
 2. Fügen Sie eine Zeile hinzu, die mit @reboot beginnt.
-       ```
+    ```
        # m h  dom mon dow   Befehl
        @reboot
-       ```
+    ```
    @reboot definiert den Job, der während des Systemstarts ausgeführt werden soll.  
 
 3. Fügen Sie den Befehl ein, um Ihr Programm nach @reboot zu starten.  
 
-       ```
+    ```
        @reboot /sbin/ip addr | grep inet\ | tail -n1 | awk '{ print $2 }' > /etc/issue && echo "" >> /etc/issue
-       ```
+    ```
 
    Verwenden Sie nach Möglichkeit den vollständigen Pfad für Ihre Programme und schreiben Sie Ihre Befehle in eine einzige Zeile.  
 
 4. Speichern Sie die Datei, um sie in der Crontab zu installieren.  
 
-       ```
+    ```
        $ crontab -e
        crontab: installing new crontab
        $ 
-       ```
+    ```
 
    Die Datei wird in /var/spool/crontab/<Benutzername> gespeichert.  
 
 5. Prüfen Sie, ob crontab richtig konfiguriert ist (optional).  
 
-       ```
+    ```
        $ crontab -l
        # m h  dom mon dow   Befehl
        @reboot /sbin/ip addr | grep inet\ | tail -n1 | awk '{ print $2 }' > /etc/issue && echo "" >> /etc/issue
-       ```
+    ```
 <A name=""></A>
 ## Programm automatisch beim Linux-Start über rc.local ausführen
 rc.local ist ein Erbe des System-V-Init-Systems. 
