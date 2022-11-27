@@ -2,7 +2,9 @@
 <!-- Quelle: https://www.simplified.guide/linux/automatically-run-program-on-startup>
 <!-- -->
 Linux startup is divided into a few stages. You can set any program to start automatically at any stage, whether it could be a single command, a chain of commands, or an executable shell script. However, there could be some differences in startup procedure between different Linux distributions and versions.  
+
 ![Linux-CLI](img/cli.png)
+
 Modern Linux will first boot into systemd while older versions of Linux use System V init. Regardless, eventually, they will run cron and rc.local before loading the desktop environment, such as GNOME or KDE. On the other hand, server-based Linux distributions will not load the desktop environment but will immediately provide a login prompt at the console and then run the default shell, such as Bash, after the user logs in.  
 
 Methods to automatically run program on Linux startup:
@@ -47,7 +49,8 @@ You can configure systemd to run programs automatically during Linux startup fol
        ##### snipped #####
        ```
        You'll have to create your own service unit if it's a custom program or if your program doesn't come with one during installation
-Related: Creating and modifying systemd unit files
+       Related: Creating and modifying systemd unit files.  
+
     2. Check if service unit enabled (optional).
 
        ```
@@ -55,7 +58,8 @@ Related: Creating and modifying systemd unit files
        disabled
        ```
 
-       enabled service unit is executed during boot
+       enabled service unit is executed during boot  
+
     3. Enable service unit that you want to execute during startup.
        ```
        $ sudo systemctl enable mysql
@@ -71,6 +75,7 @@ Related: Creating and modifying systemd unit files
 
 ## Automatically run program on Linux startup via cron
 cron is a daemon to execute scheduled commands. The commands are stored in the cron job table or crontab and are unique for each user in the system. It's started during system boot either by systemd or System V init, and you can schedule your job or program to be executed right during the system boot itself by following these steps:
+
     1. Open the default crontab editor.
        ```
        $ crontab -e
