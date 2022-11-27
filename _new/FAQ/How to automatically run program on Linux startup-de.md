@@ -200,16 +200,16 @@ Ein neues Shell-Programm wird gestartet, wenn Sie Ihre Terminalsitzung starten.
 Bash ist die Standard-Shell für die meisten Linux-Distributionen, und wenn sie gestartet wird, sucht sie nach den folgenden Dateien in der bestimmten Reihenfolge und führt sie aus.  
 
 ```
-		1. /etc/profil
-		2. ~/.bash_profile
-    	3. ~/.bash_login
-    	4. ~/.profil
+	1. /etc/profil
+	2. ~/.bash_profile
+    3. ~/.bash_login
+    4. ~/.profil
 ```
 
 Diese Dateien enthalten Befehle und Logiken zum Einrichten geeigneter Umgebungsvariablen und zum Ausführen erforderlicher Programme in der Bash-Sprache. Es ist auch so konfiguriert, dass es normalerweise andere Dateien wie /etc/bashrc, /etc/bash.bashrc und ~/.bashrc ausführt.  
 Sie können jede dieser Dateien bearbeiten, um Ihr Programm auszuführen, wenn eine Bash-Sitzung gestartet wird. Unten ist ein Teil einer typischen ~/.bashrc-Datei:  
 
-    ```
+```
        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ '
  
        PATH=/home/user/bin:$PATH
@@ -217,5 +217,5 @@ Sie können jede dieser Dateien bearbeiten, um Ihr Programm auszuführen, wenn e
        export EDITOR=/usr/bin/vim
  
        alias ll="ls -l"
-    ``` 
+``` 
 
