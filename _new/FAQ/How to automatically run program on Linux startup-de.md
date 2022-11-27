@@ -91,7 +91,7 @@ Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redh
 cron ist ein Daemon zum Ausführen geplanter Befehle. Die Befehle werden in der Cron-Job-Tabelle oder Crontab gespeichert und sind für jeden Benutzer im System eindeutig. 
 Es wird während des Systemstarts entweder von systemd oder System V init gestartet, und Sie können Ihren Job oder Ihr Programm so planen, dass es direkt während des Systemstarts selbst ausgeführt wird, indem Sie die folgenden Schritte ausführen:  
 
-    1. Öffnen Sie den standardmäßigen Crontab-Editor.  
+1. Öffnen Sie den standardmäßigen Crontab-Editor.  
 
     ```
        $ crontab -e
