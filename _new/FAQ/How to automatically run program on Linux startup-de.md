@@ -61,7 +61,7 @@ Sie können systemd so konfigurieren, dass Programme während des Linux-Starts a
 Sie müssen Ihre eigene Service-Unit erstellen, wenn es sich um ein benutzerdefiniertes Programm handelt oder wenn Ihr Programm während der Installation keine enthält.  
 Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/assembly_working-with-systemd-unit-files_configuring-basic-system-settings).  
 
-    2. Prüfen Sie, ob die Wartungseinheit aktiviert ist (optional).  
+2. Prüfen Sie, ob die Wartungseinheit aktiviert ist (optional).  
 
     ```
        $ sudo systemctl is-enabled mysql
@@ -70,7 +70,7 @@ Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redh
 
        aktivierte Diensteinheit wird während des Bootens ausgeführt. 
 
-    3. Aktivieren Sie die Service-Unit, die Sie während des Startvorgangs ausführen möchten.  
+3. Aktivieren Sie die Service-Unit, die Sie während des Startvorgangs ausführen möchten.  
 
     ```
        $ sudo systemctl enable mysql
@@ -79,7 +79,7 @@ Siehe auch: [Erstellen und Ändern von systemd-Unit-Dateien](https://access.redh
        Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service ? /lib/systemd/system/mysql.service.
     ```
 
-    4. Überprüfen Sie, ob die Serviceeinheit zur Bestätigung aktiviert ist (optional).  
+4. Überprüfen Sie, ob die Serviceeinheit zur Bestätigung aktiviert ist (optional).  
 
     ```
        $ sudo systemctl is-enabled mysql
