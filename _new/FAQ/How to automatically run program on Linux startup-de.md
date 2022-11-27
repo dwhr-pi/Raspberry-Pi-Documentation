@@ -154,15 +154,16 @@ Es ist normalerweise ein Bash-Shell-Skript, und Sie können alles über das Skri
 Sie können Ihr rc.local-Skript folgendermaßen konfigurieren:  
 
 1. Öffnen oder erstellen Sie die Datei /etc/rc.local, falls sie nicht existiert, indem Sie Ihren bevorzugten Editor als Root-Benutzer verwenden.
-       ```
+
+```
        $ sudo vi /etc/rc.local
-       ```
+```
 2. Platzhaltercode in die Datei einfügen.
-       ```
+    ```
        #!/bin/bash
        
        exit 0
-       ```
+    ```
    Es muss mit interpreter (/bin/bash) beginnen und mit einem Exit-Code enden (0 steht für Erfolg).
 	   
 3. Fügen Sie der Datei nach Bedarf Befehle und Logiken hinzu.
