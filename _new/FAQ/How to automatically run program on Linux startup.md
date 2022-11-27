@@ -12,12 +12,12 @@ On the other hand, server-based Linux distributions will not load the desktop en
 
 ### Methods to automatically run program on Linux startup:  
 
-[Manage using systemd]()  
-[Create a cron job]()  
-[Run using rc.local]()  
-[Run on GNOME startup]()  
-[Run on KDE startup]()  
-[Run on new Bash session]()  
+- [Manage using systemd]()  
+- [Create a cron job]()  
+- [Run using rc.local]()  
+- [Run on GNOME startup]()  
+- [Run on KDE startup]()  
+- [Run on new Bash session]()  
 
 <A name="">Manage using systemd</A>
 ## Automatically run program on Linux startup via systemd
