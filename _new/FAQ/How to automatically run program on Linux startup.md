@@ -7,7 +7,7 @@ Linux startup is divided into a few stages. You can set any program to start aut
 
 Modern Linux will first boot into systemd while older versions of Linux use System V init. Regardless, eventually, they will run cron and rc.local before loading the desktop environment, such as GNOME or KDE. On the other hand, server-based Linux distributions will not load the desktop environment but will immediately provide a login prompt at the console and then run the default shell, such as Bash, after the user logs in.  
 
-Methods to automatically run program on Linux startup:
+Methods to automatically run program on Linux startup:  
     * Manage using systemd  
     * Create a cron job  
     * Run using rc.local  
