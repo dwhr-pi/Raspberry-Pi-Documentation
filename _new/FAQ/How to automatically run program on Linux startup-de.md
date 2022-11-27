@@ -12,12 +12,12 @@ Auf der anderen Seite laden serverbasierte Linux-Distributionen die Desktop-Umge
 
     ### Methoden zum automatischen Ausführen des Programms beim Linux-Start:  
 
-    [Verwaltung mit systemd](#)  
-    [Erstellen Sie einen Cronjob](#)  
-    [Ausführen mit rc.local](#)  
-    [Wird beim Start von GNOME ausgeführt](#)  
-    [Wird beim Start von KDE ausgeführt](#)  
-    [In einer neuen Bash-Sitzung ausführen](#)  
+[Verwaltung mit systemd](#)  
+[Erstellen Sie einen Cronjob](#)  
+[Ausführen mit rc.local](#)  
+[Wird beim Start von GNOME ausgeführt](#)  
+[Wird beim Start von KDE ausgeführt](#)  
+[In einer neuen Bash-Sitzung ausführen](#)  
 <A name=""></A>
 ## Programm automatisch beim Linux-Start über systemd ausführen
 
