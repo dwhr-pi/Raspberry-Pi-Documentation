@@ -28,7 +28,7 @@ Kompatible Programme stellen Service-Unit-Dateien bereit, die von systemd verwen
 
 Sie können systemd so konfigurieren, dass Programme während des Linux-Starts automatisch ausgeführt werden, indem Sie die folgenden Schritte ausführen:  
 
-       1. Prüfen Sie, ob eine Service Unit für Ihr Programm existiert (optional).  
+1. Prüfen Sie, ob eine Service Unit für Ihr Programm existiert (optional).  
 
        ```
        $ sudo systemctl list-unit-files --type=service
